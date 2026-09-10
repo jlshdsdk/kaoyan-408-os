@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本章导学 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html" class="active">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / 第5章 输入/输出管理 / 本章导学</nav>
+<h1>第5章 输入/输出管理</h1>
+
+<p>本章内容较为分散，从 <strong>I/O 管理基础</strong>（设备分类、I/O 接口、控制方式、软件层次）讲到<strong>设备独立性软件</strong>（缓冲、分配、SPOOLing），最后落到<strong>磁盘和固态硬盘</strong>。本章硬件相关知识较多，建议结合《计算机组成原理》的相关内容一起复习；统考中分值虽小，但命题通常较为直接，认真复习者基本能稳拿分。</p>
+
+<h2>考纲要求</h2>
+<ol>
+  <li><strong>（一）输入/输出（I/O）管理基础</strong>：设备（设备的基本概念、设备的分类、I/O 接口）；I/O 控制方式（轮询方式、中断方式、DMA 方式）；I/O 软件层次结构（中断处理程序、驱动程序、设备独立性软件、用户层 I/O 软件）；输入/输出应用程序接口（字符设备接口、块设备接口、网络设备接口、阻塞/非阻塞 I/O）</li>
+  <li><strong>（二）设备独立软件</strong>：缓冲区管理；设备分配与回收；假脱机技术（SPOOLing）；设备驱动程序接口</li>
+  <li><strong>（三）外存管理</strong>：磁盘（磁盘结构、格式化、分区、磁盘调度算法）；固态硬盘（读/写性能特性、磨损均衡）</li>
+</ol>
+
+<h2>复习提示</h2>
+<p>本章内容较为分散，重点掌握 <strong>I/O 接口、I/O 软件、I/O 控制方式、缓冲区管理、SPOOLing 技术，以及磁盘特性与调度算法</strong>。由于涉及较多硬件知识，建议结合计算机组成原理的相关内容复习。本章在历年统考中分值较小且命题直接：认真复习者一般能准确作答，未接触相关内容者则难以凭直觉判断——复习务必全面、反复。</p>
+
+<h2>章节地图</h2>
+<ul>
+  <li><a href="s5-1.html">5.1 I/O管理概述</a>——I/O 设备的分类（块/字符、独占/共享等）与 I/O 接口（设备控制器）的组成，轮询、中断、DMA 三种 I/O 控制方式，I/O 软件四层结构及各类应用程序接口。</li>
+  <li><a href="s5-2.html">5.2 设备独立性软件</a>——设备独立性软件的五项公共功能，单/双/环形缓冲与缓冲池的耗时分析，设备分配中的数据结构与安全分配，SPOOLing 假脱机技术，设备驱动程序接口。</li>
+  <li><a href="s5-3.html">5.3 磁盘和固态硬盘</a>——磁盘的结构与地址组织、格式化与分区，一次磁盘操作的时间构成（寻道、旋转延迟、传输），FCFS/SSTF/SCAN/C-SCAN 等磁盘调度算法，固态硬盘的读写特性与磨损均衡。</li>
+  <li><a href="s5-4.html">5.4 本章疑难点</a>——如何改进设备分配策略（设备无关性与多通路 I/O），用户缓冲区与内核缓冲区的定义及作用。</li>
+  <li><a href="quiz.html">本章习题</a>——按节整理的选择题与综合应用题，答案可折叠查看。</li>
+</ul>
+
+<h2>本章考点分布</h2>
+<ul>
+  <li><strong>I/O 控制方式</strong>是选择题常客：轮询、中断、DMA 三种方式下 CPU 的介入时机与干预粒度的比较，以及各自适用的传输单位，要求一一分清。</li>
+  <li><strong>I/O 软件四层结构</strong>高频考查"某一操作属于哪一层"：中断处理程序、设备驱动程序、设备独立性软件、用户层 I/O 软件的职责边界要能准确判断。</li>
+  <li><strong>缓冲区管理</strong>：单缓冲、双缓冲处理一块数据的总耗时计算常以选择题甚至小综合题出现；SPOOLing 技术如何把独占设备改造成共享设备也是常考点。</li>
+  <li><strong>磁盘调度算法</strong>是本章经典综合题：SSTF、SCAN、C-SCAN 等算法的寻道轨迹与移动道数要能逐步累加算出，选择题也常比较各算法的优劣与饥饿表现。</li>
+  <li><strong>磁盘时间构成与固态硬盘</strong>：寻道时间、旋转延迟、传输时间的计算偶有考查；固态硬盘"读快写慢、以页为单位写、磨损均衡"的特点近年偶尔进入选择题。</li>
+</ul>
+
+<nav class="pager"><a href="../ch4/quiz.html">← 本章习题</a><a href="../ch5/s5-1.html">下一页：5.1 I/O管理概述 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>

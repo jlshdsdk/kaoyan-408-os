@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本章导学 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html" class="active">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / 第3章 内存管理 / 本章导学</nav>
+<h1>第3章 内存管理</h1>
+
+<p>本章与进程管理并列为操作系统的核心章节，整体围绕<strong>分页机制</strong>一条主线展开：先用分页管理在物理内存的基础上提高内存利用率，再引入<strong>请求分页</strong>实现虚拟内存，让内存摆脱物理容量的限制。地址变换、缺页处理与置换算法环环相扣，是选择题和综合题都偏爱的高产地带。</p>
+
+<h2>考纲要求</h2>
+<ol>
+  <li><strong>（一）内存管理基础</strong>：内存管理概念（逻辑地址与物理地址空间、地址变换、内存共享、内存保护、内存分配与回收）；连续分配管理方式；页式管理；段式管理；段页式管理</li>
+  <li><strong>（二）虚拟内存管理</strong>：虚拟内存基本概念；请求页式管理；页框分配与回收；页置换算法；内存映射文件（Memory-Mapped Files）；虚拟存储器性能的影响因素及改进方式</li>
+</ol>
+
+<h2>复习提示</h2>
+<p>内存管理和进程管理是操作系统的核心内容，需要重点复习。本章以<strong>分页机制</strong>为绝对主线：先理解分页如何提高内存利用率，再进一步掌握请求分页如何实现虚拟内存、使程序摆脱物理内存大小的限制，从而提高处理器利用率。学习中要注重前后方法"为了克服谁的什么缺陷"这条演进线索。</p>
+
+<h2>章节地图</h2>
+<ul>
+  <li><a href="s3-1.html">3.1 内存管理概念</a>——程序的链接与装入、逻辑地址与物理地址、内存保护与共享，连续分配（单一/固定/动态分区及动态分区算法）、基本分页（页表、快表、多级页表）、分段与段页式管理及其地址变换。</li>
+  <li><a href="s3-2.html">3.2 虚拟内存管理</a>——局部性原理与虚拟存储器概念，请求分页的页表机制与缺页中断处理，页框分配与置换策略，OPT/FIFO/LRU/CLOCK 等置换算法及缺页率、有效访问时间计算，抖动与工作集。</li>
+  <li><a href="s3-3.html">3.3 本章疑难点</a>——集中对比分页管理与分段管理在目的、长度、地址空间维度、碎片等方面的异同。</li>
+  <li><a href="quiz.html">本章习题</a>——按节整理的选择题与综合应用题，答案可折叠查看。</li>
+</ul>
+
+<h2>本章考点分布</h2>
+<ul>
+  <li><strong>分页地址变换</strong>是本章的"地基考点"：页号/页内偏移的位数拆分、快表命中与缺失时的访存次数、多级页表下的页表项寻址，选择题与综合题都经常考。</li>
+  <li><strong>动态分区分配算法</strong>（首次适应、最佳适应、最坏适应等）的分配回收过程，以及连续分配与离散分配的碎片比较，常以选择题考查。</li>
+  <li><strong>页面置换算法</strong>是综合题重点：OPT、FIFO、LRU、CLOCK 需要逐访问序列模拟置换过程、统计缺页次数与缺页率，务必练熟画置换表。</li>
+  <li><strong>请求分页系统的性能分析</strong>：缺页率与有效访问时间的计算、抖动的成因及工作集与页框分配的关系，常以选择题形式考查。</li>
+  <li><strong>分段与段页式</strong>的地址结构划分与变换过程相对分页略考得少，但与分页的对比辨析（见 3.3）是选择题的经典素材。</li>
+</ul>
+
+<nav class="pager"><a href="../ch2/quiz.html">← 本章习题</a><a href="../ch3/s3-1.html">下一页：3.1 内存管理概念 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>

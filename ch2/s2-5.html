@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.5 本章疑难点 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html" class="active">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch2/index.html">第2章 进程与线程</a> / 2.5 本章疑难点</nav>
+<h1>2.5 本章疑难点</h1>
+<p>本章正文已把进程、调度、同步互斥与死锁逐一展开，这里再把三个最容易混淆、也最适合出题的问题集中对比，把概念彻底掰清。</p>
+
+<h2>1. 进程与程序的区别与联系</h2>
+<p>初学者常把两者混为一谈。一个直观的比喻：程序好比菜谱，进程则是「照着菜谱炒菜」的整个过程——菜谱本身静止不变，炒菜的过程却有始有终。二者的区别可从四个维度对比：</p>
+<table>
+  <thead><tr><th>对比维度</th><th>进程</th><th>程序</th></tr></thead>
+  <tbody>
+    <tr><td><strong>动态 vs 静态</strong></td><td>动态概念：程序及其数据在计算机上的<strong>一次执行活动</strong>，强调的是正在展开的过程</td><td>静态实体：一组<strong>有序指令的集合</strong>，本身不会「动」</td></tr>
+    <tr><td><strong>暂时 vs 永久</strong></td><td>具有生命周期，被动态地创建、运行直至消亡，是<strong>暂时</strong>存在的</td><td>作为代码的集合可长期保存在外存中，是<strong>永久</strong>存在的</td></tr>
+    <tr><td><strong>能否派生新进程</strong></td><td>能够通过创建原语（如 fork，见 2.1 节）创建新的进程</td><td>程序本身无法生成新进程</td></tr>
+    <tr><td><strong>组成不同</strong></td><td>由<strong>程序段、数据段和进程控制块（PCB）</strong>三部分组成</td><td>仅是一组有序指令的集合</td></tr>
+  </tbody>
+</table>
+<p>两者的<strong>联系</strong>同样关键：进程的<strong>运行实体是程序</strong>，脱离程序的进程没有任何意义；从静态视角看，进程就是「程序 + 数据 + PCB」。一份程序可以同时对应多个进程（如多个用户运行同一个编辑器，见 2.1 节程序段的共享），进程在其生命期内也可先后调用多个程序。</p>
+<div class="callout kao"><span class="callout-title">考点</span>这张对比表逐条都可出选择题与判断题，干扰项的典型手法是把两者的性质互换，如「程序是进程的一次执行活动」「进程是永久的、程序是暂时的」「程序也能创建新进程」。四句话记牢：<strong>一动一静、一暂一久、一能生一不能、组成多块 PCB</strong>。</div>
+
+<h2>2. 银行家算法的工作原理</h2>
+<p>银行家算法（详见 2.4.3）对付死锁的思路是<strong>回避</strong>而非事后处理：系统从不试图拆散已经形成的死锁，而是保证系统<strong>永远不进入不安全状态</strong>，让死锁在源头上没有发生的机会。其工作流程可概括为「先试探、再验证、后决定」：</p>
+<ol>
+  <li><strong>试探性分配</strong>：进程提出资源请求后，系统先检查当前是否有足够的资源满足该请求；若有，先在账面上做一次<strong>试探性分配</strong>，并不真正把资源交给进程。</li>
+  <li><strong>安全性检查</strong>：对试探分配后形成的新状态执行安全性算法，判断是否仍存在安全序列。</li>
+  <li><strong>正式决定</strong>：若新状态<strong>安全</strong>，则把试探性分配「转正」，正式将资源分给该进程；若<strong>不安全</strong>，则拒绝本次请求（让进程等待），并恢复到分配前的状态。如此便确保系统始终处于安全状态。</li>
+</ol>
+<div class="callout tip"><span class="callout-title">提示</span>手算安全性检查时不必机械地逐个进程推演，可以批量提速：若算到某一步，系统当前空闲资源已能满足<strong>余下任意一个进程的最大需求量</strong>，即可直接宣布系统安全——此后无论按什么顺序推进，空闲资源只会越滚越多，余下进程全都能顺利完工。反过来，若把当前所有可满足需求的进程作为一个集合同时推进、执行完毕并释放资源后，空闲资源（此时已达到系统空闲资源所能取得的最大值）仍不能满足任何剩余进程的最大需求，则可断定按任何方式推进系统都必然死锁。</div>
+<div class="callout kao"><span class="callout-title">考点</span>综合题要求完整书写「试探分配 → 安全性检查 → 恢复/正式分配」的判定过程（见本章综合题）；选择题爱考流程与概念边界，例如「银行家算法通过破坏死锁的四个必要条件之一来预防死锁」（错，它属于死锁<strong>避免</strong>策略，并不破坏必要条件，见 2.4 节四种策略的对比）、「银行家算法保证系统不进入不安全状态」（对）。</div>
+
+<h2>3. 进程同步、互斥的区别和联系</h2>
+<p>并发执行的进程之间存在两类制约关系，同步与互斥正是对这两类关系的刻画：</p>
+<table>
+  <thead><tr><th>对比项</th><th>互斥（间接制约）</th><th>同步（直接制约）</th></tr></thead>
+  <tbody>
+    <tr><td><strong>制约来源</strong></td><td>相互<strong>竞争</strong>使用临界资源</td><td>相互<strong>协作</strong>完成同一任务</td></tr>
+    <tr><td><strong>表现形式</strong></td><td>必须<strong>互斥访问</strong>临界资源：一个进程使用时，其他进程必须等待</td><td>在关键点<strong>等待对方发出的信号</strong>，以此协调执行次序</td></tr>
+    <tr><td><strong>典型例子</strong></td><td>多个进程争用一台打印机（见 2.3.1）</td><td>单缓冲系统中输入进程与计算进程「先写后读」（见 2.3.1）</td></tr>
+  </tbody>
+</table>
+<p>二者的<strong>联系</strong>在于：无论竞争还是协作，都源于并发进程对资源的共享与相互依赖，都必须借助同步机制（如信号量，见 2.3.4）加以协调才能正确工作；而且从广义上看，<strong>互斥也可以视为一种特殊的同步</strong>——它协调的正是各进程使用临界资源的次序。</p>
+<div class="callout kao"><span class="callout-title">考点</span>选择题常给一个具体场景（打印机、共享缓冲区、接力计算等），判断进程间是同步还是互斥关系。判别看「动机」：为<strong>争抢资源</strong>而等待是互斥（竞争关系/间接制约），为<strong>等待对方的信号或结果</strong>而等待是同步（协作关系/直接制约）。「同步 = 直接制约关系、互斥 = 间接制约关系」这组术语对应本身也常直接设空考查。</div>
+
+<nav class="pager"><a href="../ch2/s2-4.html">← 2.4 死锁</a><a href="../ch2/quiz.html">下一页：本章习题 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>

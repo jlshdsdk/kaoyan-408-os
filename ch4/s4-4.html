@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.4 本章疑难点 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html" class="active">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch4/index.html">第4章 文件管理</a> / 4.4 本章疑难点</nav>
+<h1>4.4 本章疑难点</h1>
+
+<h2>1. 文件的物理分配方式的比较</h2>
+<p>连续、链接、索引三种物理分配方式（详见 4.2.6）的差异，集中在三个问题上：访问第 n 条记录要几次访盘？空间利用率高不高？文件增删扩展方不方便？系统对比见表。</p>
+<table>
+  <thead><tr><th>分配方式</th><th>访问第 n 条记录</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>连续分配</strong></td><td>需访问磁盘 <strong>1</strong> 次</td><td>顺序存取时速度快；文件定长时可根据文件起始地址及记录长度直接算出第 n 条记录的位置，支持随机（直接）访问</td><td>文件存储要求<strong>连续</strong>的存储空间，会产生碎片，不利于文件的动态扩充</td></tr>
+    <tr><td><strong>链接分配</strong></td><td>需访问磁盘 <strong>n</strong> 次</td><td>可解决外存的碎片问题，提高外存空间的利用率，文件动态增长较方便</td><td>只能按照文件的指针链<strong>顺序访问</strong>，查找效率低；指针信息的存放消耗外存空间</td></tr>
+    <tr><td><strong>索引分配</strong></td><td>m 级索引需访问磁盘 <strong>m+1</strong> 次</td><td>可以<strong>随机访问</strong>，文件易于增删</td><td>索引表增加额外的存储空间开销；索引表的查找策略对文件系统效率影响较大</td></tr>
+  </tbody>
+</table>
+<p>「访问第 n 条记录」的访盘次数可以这样理解：连续分配下，记录连续存放，第 n 条记录的物理位置由起始块号加记录长度直接换算得到，一次访盘即可读出；链接分配必须从链头开始边读边沿指针后移，第 n 次访盘才读到目标记录；索引分配则先读索引块（m 级索引须逐层读 m 次），最后一次读数据块，合计 m+1 次。</p>
+<div class="callout kao"><span class="callout-title">考点</span>「访问第 n 条记录需几次访盘」是选择题的直接考法，务必记牢 <strong>1 次、n 次、m+1 次</strong>这三个数；另一类考法是优缺点配对，如「哪种方式不利于文件动态增长」（连续）、「哪种方式既能随机访问又便于增删」（索引）。注意结合 4.2.6 辨析：显式链接（FAT）由于 FAT 常驻内存，查链不占访盘次数，访问第 n 块实际只需 1 次访盘——这与表中隐式链接的 n 次形成对比，是常见的混合考查点。</div>
+
+<h2>2. 文件打开的过程描述</h2>
+<p>打开文件（open，见 4.2.7）的目的，是把文件的元数据从磁盘「搬」进内存并建立访问通道，避免之后每次读/写都重复检索目录。其内部过程分三步：</p>
+<ol>
+  <li><strong>检索目录</strong>：要求打开的文件必须是<strong>已经创建</strong>的文件，它应已登记在文件目录中，否则打开出错。检索到指定文件后，把其<strong>磁盘 inode 复制到内存的活动 inode 表</strong>中。</li>
+  <li><strong>核对打开方式</strong>：将参数 mode 所给出的打开方式，与活动 inode 中创建文件时记录的<strong>文件访问权限</strong>相比较，若合法，则此次打开操作成功。</li>
+  <li><strong>登记表项并返回描述符</strong>：打开合法时，为文件分配<strong>用户打开文件表</strong>表项和<strong>系统打开文件表</strong>表项，并为后者设置初值，通过指针建立表项与活动 inode 之间的联系，再把<strong>文件描述符 fd</strong> 返回给调用者。</li>
+</ol>
+<p>此后进程对该文件的读/写只须携带 fd，系统沿「用户打开文件表 → 系统打开文件表 → 活动 inode」的指针链即可定位文件，无须再检索目录——这正是「打开」操作的价值所在。术语上可与 4.2.7 的两级打开文件表对应起来：这里的「用户打开文件表」即进程（每个进程私有）的打开文件表，「活动 inode 表」即驻留内存的 inode 信息。</p>
+<div class="callout kao"><span class="callout-title">考点</span>选择题常考三点：①open 的动作次序——检索目录、权限核对、分配表项并返回 fd，把顺序调换即为错误选项；②文件必须已创建才能打开，按 mode 打开而权限不符则打开失败；③打开成功后按 fd 访问文件，不再需要检索目录。此外注意：当前读/写指针等进程私有的访问状态记录在打开文件表表项中，而不是记录在 inode 中，多个进程各自打开同一文件时读写指针互不影响。</div>
+
+<nav class="pager"><a href="../ch4/s4-3.html">← 4.3 文件系统</a><a href="../ch4/quiz.html">下一页：本章习题 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.3 本章疑难点 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html" class="active">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch3/index.html">第3章 内存管理</a> / 3.3 本章疑难点</nav>
+<h1>3.3 本章疑难点</h1>
+<p>分页与分段是本章最「形似而神异」的一对概念：两者都允许程序在内存中<strong>不连续</strong>存放，都依靠专门的地址变换机构完成逻辑地址到物理地址的映射，甚至连「页表/段表 + 表始址寄存器 + 越界检查」的变换骨架都十分相似。但两者在设计初衷与实现细节上存在本质区别，下表的逐项对比是选择题的常驻考点。</p>
+
+<h2>分页管理方式和分段管理方式的比较</h2>
+<table>
+  <thead><tr><th>对比项</th><th>分页</th><th>分段</th></tr></thead>
+  <tbody>
+    <tr><td><strong>目的</strong></td><td>仅是<strong>系统管理上的需要</strong>：为实现离散分配、提高内存利用率，并非用户的需要，对用户透明</td><td>段是信息的<strong>逻辑单位</strong>，含有一组意义相对完整的信息；分段的目的是<strong>更好地满足用户的需要</strong>（如方便编程、共享与保护）</td></tr>
+    <tr><td><strong>长度</strong></td><td>页的大小<strong>固定</strong>且由<strong>系统</strong>决定：由系统（机器硬件）把逻辑地址直接划分为页号和页内地址两部分</td><td>段的长度<strong>不固定</strong>，取决于用户所编写的程序，通常由编译程序在编译时根据信息的性质来划分</td></tr>
+    <tr><td><strong>地址空间</strong></td><td>程序地址空间是<strong>一维</strong>的：单一的线性地址空间，程序员用一个记忆符（一个地址值）即可表示一个地址</td><td>程序地址空间是<strong>二维</strong>的：程序员标识一个地址时，既需给出段名（段号），又需给出段内地址</td></tr>
+    <tr><td><strong>碎片</strong></td><td><strong>有内部碎片，无外部碎片</strong></td><td><strong>有外部碎片，无内部碎片</strong></td></tr>
+  </tbody>
+</table>
+<p>表中各条背后的道理，可以这样理解：</p>
+<ul>
+  <li><strong>为什么页定长、段变长</strong>：分页是系统的机械切分——按固定页面大小把逻辑地址「等分」，与程序内容无关，故由硬件一拆了之；分段按信息的逻辑意义（主程序段、子程序段、数据段等）划分，每段多长由程序本身决定，故交给编译程序处理。</li>
+  <li><strong>为什么一维对二维</strong>：分页系统中，页号与页内偏移由一个线性地址自动「除余」拆出，程序员眼中只有一个地址；分段系统中，同一个数值放在不同段里含义不同，必须「段号 + 段内地址」两个量才能唯一定位一个地址。</li>
+  <li><strong>为什么碎片类型相反</strong>：页长固定，分配单位也是页，进程最后一个页装不满的部分整体浪费在页内——即内部碎片；段长可变，按需分配后段与段之间会留下难以利用的小空隙——即外部碎片（可用紧凑技术缓解，见 3.1.2）。</li>
+</ul>
+<div class="callout kao"><span class="callout-title">考点</span>对比表逐行都是题眼，最高频的有三处：①碎片类型——「分段有外部碎片、无内部碎片；分页相反」，判断题常把它反过来设错；②地址空间维度——只给一个线性地址就能定位的是分页，必须给「段号 + 段内地址」两个量的是分段；③引入目的——分页为系统、分段为用户。此外「页大小由用户决定」「页的划分由编译程序完成」均属张冠李戴的错误说法。</div>
+<div class="callout tip"><span class="callout-title">提示</span>可用一组对仗口诀速记：<strong>页为系统、段为用户；页定长、段变长；页一维、段二维；页内碎片、段外碎片</strong>。段页式系统（见 3.1.5）先按用户视角分段、再按系统视角在段内分页，对用户分段、对内存分页，兼取两者之长，但也同时带有两者的开销。</div>
+
+<nav class="pager"><a href="../ch3/s3-2.html">← 3.2 虚拟内存管理</a><a href="../ch3/quiz.html">下一页：本章习题 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>

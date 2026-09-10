@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本章习题 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html" class="active">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch1/index.html">第1章 计算机系统概述</a> / 本章习题</nav>
+<h2>1.1 操作系统的基本概念 · 选择题</h2>
+
+<div class="q">
+<p><strong>第 1 题</strong> 操作系统是对（　）进行管理的软件。</p>
+<p class="mono">A. 软件　B. 硬件　C. 计算机资源　D. 应用程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：操作系统管理的对象是计算机系统中的全部硬件资源和软件资源，它们统称为计算机资源，故选 C。注意操作系统不仅管理处理机、存储器等硬件资源，还管理文件，而文件并不属于硬件资源，说明 A、B 都只覆盖了一半；D 应用程序只是运行在操作系统之上、被管理的对象之一，均以偏概全。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 2 题</strong> 下面的（　）资源不是操作系统应该管理的。</p>
+<p class="mono">A. CPU　B. 内存　C. 外存　D. 源程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：操作系统负责管理 CPU、内存、外存等软硬件资源，为系统提供高效、安全的运行环境。源程序虽以文件形式存放在外存中，但操作系统对文件的管理只关注存储分配、访问控制和文件属性等元数据，而不涉及文件内容本身；源程序的代码语义和编程逻辑属于用户数据，不是操作系统的管理对象，故选 D。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 3 题</strong> 下列选项中，（　）不是操作系统关心的问题。</p>
+<p class="mono">A. 管理计算机裸机<br>B. 设计、提供用户程序与硬件系统的界面<br>C. 管理计算机系统资源<br>D. 高级程序设计语言的编译器</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：操作系统的职责是管理计算机软硬件资源、扩充裸机以提供功能更强的"扩充机器"，并充当用户与硬件之间的中介，A、B、C 都在其关心范围内。高级程序设计语言的编译器本质上是一段应用程序（语言处理程序），并非操作系统关心的问题，故选 D。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 4 题</strong> 操作系统的基本功能是（　）。</p>
+<p class="mono">A. 提供功能强大的网络管理工具　B. 提供用户界面方便用户使用<br>C. 提供方便的可视化编辑程序　D. 控制和管理系统内的各种资源</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：操作系统的定义就是控制和管理整个计算机系统的硬件和软件资源，合理地组织、调度计算机的工作和资源的分配，故基本功能是 D。A、B、C 都可理解为应用程序为用户提供的服务，属于应用程序的功能而非操作系统的基本功能。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 5 题</strong> 下列关于并发性的叙述中，正确的是（　）。</p>
+<p class="mono">A. 并发性是指若干事件在同一时刻发生　B. 并发性是指若干事件在不同时刻发生<br>C. 并发性是指若干事件在同一时间间隔内发生　D. 并发性是指若干事件在不同时间间隔内发生</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：并发性是指若干事件在同一时间间隔内发生，故选 C。同一时刻发生的是并行性，A 混淆了并发与并行这两个概念；B、D 中"不同时刻/不同时间间隔发生"的表述与并发定义不符。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 6 题</strong> 系统调用是由操作系统提供给用户的，它（　）。</p>
+<p class="mono">A. 直接通过键盘交互方式使用　B. 只能通过用户程序间接使用<br>C. 是命令接口中的命令　D. 与系统的命令一样</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：系统调用是操作系统为应用程序使用内核功能提供的程序级接口，用户不能像操作命令那样直接通过键盘发出系统调用，只能在程序中调用它来间接请求内核服务，故选 B。键盘交互使用的是命令接口，而系统调用不属于命令接口中的命令，也与系统命令是两个不同层面的东西，C、D 错误。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 7 题</strong> 操作系统提供给编程人员的接口是（　）。</p>
+<p class="mono">A. 库函数　B. 高级语言　C. 系统调用　D. 子程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：操作系统向上提供的接口分为两类：命令接口面向终端用户，程序接口面向编程人员，程序接口即系统调用，故选 C。库函数由语言函数库提供，其中部分只是对系统调用的封装，并非操作系统直接提供的接口；高级语言和子程序与操作系统的接口无关。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 8 题</strong> 系统调用的目的是（　）。</p>
+<p class="mono">A. 请求系统服务　B. 中止系统服务<br>C. 申请系统资源　D. 释放系统资源</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：操作系统不允许用户程序直接操作硬件资源，用户程序只能通过系统调用请求内核为其提供服务，从而间接使用系统资源，故选 A。"中止系统服务"并无这种说法；申请、释放资源只是请求系统服务中的具体情形，概括性不如 A。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 9 题</strong> 以下关于操作系统的叙述中，错误的是（　）。</p>
+<p class="mono">A. 操作系统是管理资源的程序　B. 操作系统是管理用户程序执行的程序<br>C. 操作系统是能使系统资源提高效率的程序　D. 操作系统是用来编程的程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：操作系统是用来管理资源的程序，用户程序的执行也在操作系统的管理和调度之下完成；与裸机相比，配置操作系统后系统资源的利用率大大提高，A、B、C 都是对操作系统角色的正确概括。操作系统本身不是编程工具，不能直接用来编程，D 错误，故选 D。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 10 题</strong> 下列关于库函数和系统调用的区别与联系的说法中，错误的是（　）。</p>
+<p class="mono">A. 系统调用用于请求内核服务，部分库函数通过系统调用实现功能<br>B. 系统调用需要陷入内核态执行，而普通库函数（如字符串处理）通常在用户态执行<br>C. 所有库函数的实现都依赖系统调用，没有系统调用则无法完成任何功能<br>D. 库函数具有良好的可移植性，可跨平台使用；系统调用则与具体操作系统紧密耦合</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：并非所有库函数都依赖系统调用，例如字符串处理、数学计算这类纯计算函数完全在用户态即可完成，不涉及陷入内核，C 的说法过于绝对，故选 C。A、B、D 均正确：部分库函数（如文件操作）正是通过封装系统调用实现的；系统调用需陷入内核态而普通库函数在用户态运行；库函数可跨平台移植，系统调用则与具体操作系统紧密相关。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 11 题</strong>【2010 统考真题】下列选项中，操作系统提供给应用程序的接口是（　）。</p>
+<p class="mono">A. 系统调用　B. 中断　C. 库函数　D. 原语</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：操作系统提供给应用程序的接口是程序接口，即系统调用，应用程序通过它请求内核服务，故选 A。命令接口（如联机命令）面向终端用户而非应用程序；中断是系统内部的事件处理机制，原语是内核中不可分割的指令序列，库函数由语言库而非操作系统提供，均不符合题意。</p>
+</div></details>
+</div>
+
+<h2>1.2 操作系统发展历程 · 选择题</h2>
+
+<div class="q">
+<p><strong>第 1 题</strong> 提高单机资源利用率的关键技术是（　）。</p>
+<p class="mono">A. 脱机技术　B. 虚拟技术　C. 交换技术　D. 多道程序设计技术</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：多道程序设计技术让多个程序同时驻留主存并发运行，一道程序等待 I/O 时 CPU 立即转去执行另一道程序，显著提高了单机系统资源的利用率，故选 D。脱机技术提高的是外围设备（I/O）的利用率；虚拟技术和交换技术都以多道程序设计技术为前提，不是关键基础技术。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 2 题</strong> 批处理系统的主要缺点是（　）。</p>
+<p class="mono">A. 系统吞吐量小　B. CPU 利用率不高<br>C. 资源利用率低　D. 无交互能力</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：批处理系统中作业一旦投入运行，用户就无法干预，只能事先编制作业控制说明书来间接干预，缺少交互能力，这也正是后来分时系统出现的原因，故选 D。吞吐量大恰恰是批处理系统的优点，A 错误；多道批处理系统中 CPU 和各类资源的利用率都较高，B、C 也不成立。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 3 题</strong> 下列选项中，不属于多道程序设计的基本特征的是（　）。</p>
+<p class="mono">A. 制约性　B. 间断性　C. 顺序性　D. 共享性</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：引入多道程序后，程序并发执行，失去了封闭性和顺序性：多道程序因共享资源和相互协同而产生竞争、相互制约（制约性），程序的执行是断续进行的（间断性），且共享系统资源（共享性），故 A、B、D 都是多道程序的特征。顺序性是单道程序顺序执行时的特征，在多道环境下已不复存在，故选 C。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 4 题</strong> 操作系统的基本类型主要有（　）。</p>
+<p class="mono">A. 批处理操作系统、分时操作系统和多任务系统<br>B. 批处理操作系统、分时操作系统和实时操作系统<br>C. 单用户系统、多用户系统和批处理操作系统<br>D. 实时操作系统、分时操作系统和多用户系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：按发展历程和功能特点，操作系统的三种基本类型是批处理操作系统、分时操作系统和实时操作系统，故选 B。"多任务系统""单用户/多用户系统"是按其他角度的分类口径，并不是与三种基本类型并列的划分，A、C、D 均不正确。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 5 题</strong> 实时操作系统必须在（　）内处理来自外部的事件。</p>
+<p class="mono">A. 一个机器周期　B. 被控制对象规定时间　C. 周转时间　D. 时间片</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：实时操作系统要求能实时处理外部事件，即在规定的时间——被控制对象规定的时间内完成对外部事件的处理，否则可能造成严重后果，故选 B。机器周期是 CPU 的时钟尺度，时间片是分时系统的调度单位，周转时间是作业管理中的指标，都不是实时系统的时间约束口径。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 6 题</strong>（　）不是设计实时操作系统的主要追求目标。</p>
+<p class="mono">A. 安全可靠　B. 资源利用率　C. 及时响应　D. 快速处理</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：实时性和可靠性是实时操作系统最重要的两个目标：安全可靠体现可靠性，及时响应和快速处理体现实时性，A、C、D 都是主要目标。为了优先保证高优先级任务被快速处理，实时系统甚至允许"浪费"一部分系统资源，因此资源利用率不是其主要追求目标，故选 B。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 7 题</strong> 下列（　）应用工作最好采用实时操作系统平台。<br>
+I. 航空订票　II. 办公自动化　III. 机床控制　IV. AutoCAD　V. 工资管理系统　VI. 股票交易系统</p>
+<p class="mono">A. I、II 和 III　B. I、III 和 IV　C. I、IV 和 V　D. I、III 和 VI</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：实时系统用于必须对外部输入立即做出反应、拖延会产生严重后果的场合。航空订票的票额数据库直接反映航班可订机位，机床控制不及时会出差错，股票交易行情随时变化、延迟会造成交易偏差，故 I、III、VI 适用，选 D。办公自动化、AutoCAD、工资管理系统对响应时间没有严格约束，不需要实时平台。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 8 题</strong> 下列关于分时系统的叙述中，错误的是（　）。</p>
+<p class="mono">A. 分时系统主要用于批处理作业<br>B. 分时系统中每个任务依次轮流使用时间片<br>C. 分时系统的响应时间好<br>D. 分时系统是一种多用户操作系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：分时系统主要面向交互式作业而非批处理作业，A 错误，故选 A。B、C、D 均正确：系统按时间片轮转方式为各任务分配 CPU，是一种公平的分配策略；时间片轮转使每个任务都能在较短时间内得到响应，响应时间好；多个终端可同时连接同一台计算机，支持多用户使用。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 9 题</strong> 分时系统的一个重要性能是系统的响应时间，对操作系统的（　）因素进行改进有利于改善系统的响应时间。</p>
+<p class="mono">A. 加大时间片　B. 采用静态页式管理<br>C. 优先级＋非抢占式调度算法　D. 代码可重入</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：采用优先级＋非抢占式调度，重要作业可通过高优先级尽快获得响应，次要作业又因不会被抢占而不会迟迟得不到响应，整体上有利于改善系统的响应时间，故选 C。加大时间片会使后排进程等待更久，反而延迟响应时间；静态页式管理和代码可重入与系统响应时间基本无关。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 10 题</strong> 分时系统追求的目标是（　）。</p>
+<p class="mono">A. 充分利用 I/O 设备　B. 比较快速响应用户<br>C. 提高系统吞吐率　D. 充分利用内存</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：快速响应用户是导致分时系统出现的重要原因，也是其追求的核心目标，系统借助时间片轮转让各用户的请求都能得到及时处理，故选 B。提高吞吐率是批处理系统追求的目标；充分利用 I/O 设备、充分利用内存都不是分时系统的主要目标。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 11 题</strong> 在分时系统中，时间片一定时，（　）响应时间越长。</p>
+<p class="mono">A. 内存越多　B. 内存越少　C. 用户数越多　D. 用户数越少</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：分时系统的响应时间 \(T\) 近似等于时间片 \(Q\) 与用户数 \(N\) 的乘积（\(T \approx QN\)）。时间片固定时，用户数越多，轮转一圈所需的时间越长，响应时间就越长，故选 C。内存的多少与响应时间没有直接关系，A、B 错误；D 用户数越少响应时间应该越短。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 12 题</strong> 在分时系统中，为使多个进程能够及时与系统交互，最关键的问题是能在短时间内使所有就绪进程都能运行。当就绪进程数为 100 时，为保证响应时间不超过 2s，此时的时间片最大应为（　）。</p>
+<p class="mono">A. 10ms　B. 20ms　C. 50ms　D. 100ms</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：响应时间不超过 2s，意味着 100 个就绪进程必须在 2s 内各运行一次时间片，因此时间片最大为 \(2\text{s} / 100 = 20\text{ms}\)，故选 B。若时间片大于 20ms，最后一个进程的等待时间将超过 2s，不满足响应时间要求。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 13 题</strong> 操作系统有多种类型。允许多个用户以交互的方式使用计算机的操作系统，称为（　）；允许多个用户将若干作业提交给计算机系统集中处理的操作系统，称为（　）；在（　）的控制下，计算机系统能及时处理由过程控制反馈的数据，并及时做出响应；在 IBM-PC 中，操作系统称为（　）。</p>
+<p class="mono">A. 批处理系统　B. 分时操作系统　C. 实时操作系统　D. 微型计算机操作系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B、A、C、D</span></p>
+<p>解析：按空的顺序依次对应：多个用户交互式使用是分时操作系统的典型特征，第一空选 B；作业提交后集中处理是批处理系统的特征，第二空选 A；及时处理过程控制反馈数据并做出响应是实时操作系统的特征，第三空选 C；IBM-PC 属于微型计算机，其上配置的是微型计算机操作系统，第四空选 D。这四类正是操作系统发展过程中的几种主要类型。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 14 题</strong> 下列各种系统中，（　）可以使多个进程并行执行。</p>
+<p class="mono">A. 分时系统　B. 多处理器系统　C. 批处理系统　D. 实时系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：并行要求多个程序在同一时刻真正同时运行，这只有在每个程序各占用一个处理机时才可能实现，故选 B。分时、批处理、实时系统通常构建在单处理器上，宏观上多个进程同时推进，微观上仍是分时交替执行，属于并发而非并行。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 15 题</strong> 下列关于操作系统的叙述中，正确的是（　）。</p>
+<p class="mono">A. 批处理操作系统必须在响应时间内处理完一个任务<br>B. 实时操作系统须在规定时间内处理完来自外部的事件<br>C. 分时操作系统必须在周转时间内处理完来自外部的事件<br>D. 分时操作系统必须在调度时间内处理完来自外部的事件</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：实时操作系统要求在规定时间内完成对特定外部事件的处理，B 正确，故选 B。批处理系统追求吞吐量，并不存在"响应时间内处理完任务"的要求，A 错误；分时系统只追求及时响应，并不要求在周转时间或调度时间内处理完外部事件，C、D 错误。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 16 题</strong> 引入多道程序技术的前提条件之一是系统具有（　）。</p>
+<p class="mono">A. 多个 CPU　B. 多个终端　C. 中断功能　D. 分时功能</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：多道程序设计要求程序能够并发执行，而并发性的实现需要中断功能的支持：一道程序因请求 I/O 而暂停时，CPU 借助中断机制转去运行另一道程序，故选 C。多道程序并不要求多个 CPU 或多个终端；分时功能是多道程序技术发展带来的结果，而非其前提。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 17 题</strong>【2016 统考真题】下列关于批处理系统的叙述中，正确的是（　）。<br>
+I. 批处理系统允许多个用户与计算机直接交互<br>
+II. 批处理系统分为单道批处理系统和多道批处理系统<br>
+III. 中断技术使得多道批处理系统的 I/O 设备可与 CPU 并行工作</p>
+<p class="mono">A. 仅 II、III　B. 仅 II　C. 仅 I、II　D. 仅 I、III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：I 错误：批处理作业在执行过程中用户无法干预，只能靠作业控制说明书间接控制，不允许多个用户直接交互。II 正确：批处理系统按发展历程分为单道批处理系统和多道批处理系统。III 正确：多道批处理系统中一道程序因 I/O 请求暂停时，CPU 借助中断技术立即转去运行另一道程序，使 I/O 设备与 CPU 并行工作。综上仅 II、III 正确，故选 A。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 18 题</strong>【2017 统考真题】与单道程序系统相比，多道程序系统的优点是（　）。<br>
+I. CPU 利用率高<br>
+II. 系统开销小<br>
+III. 系统吞吐量大<br>
+IV. I/O 设备利用率高</p>
+<p class="mono">A. 仅 I、III　B. 仅 I、IV　C. 仅 II、III　D. 仅 I、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：多道程序系统中 CPU 总有作业可执行，不会因等待 I/O 而空转，因此 CPU 利用率（I）、系统吞吐量（III）和 I/O 设备利用率（IV）都得到提高。但系统需要付出额外开销来组织作业和切换作业，"系统开销小"（II）不成立，反而有所增大。故选 D。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 19 题</strong>【2018 统考真题】下列关于多任务操作系统的叙述中，正确的是（　）。<br>
+I. 具有并发和并行的特点<br>
+II. 需要实现对共享资源的保护<br>
+III. 需要运行在多 CPU 的硬件平台上</p>
+<p class="mono">A. 仅 I　B. 仅 II　C. 仅 I、II　D. I、II、III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：I 正确：多任务操作系统中各任务在单 CPU 上并发执行（宏观并行、微观交替），在多 CPU 上则真正并行。II 正确：多个任务必须互斥地访问共享资源，因此需要对共享资源进行保护。III 错误：单 CPU 通过分时使用即可支持多任务，并不要求多 CPU 硬件平台。故仅 I、II 正确，选 C。</p>
+</div></details>
+</div>
+
+<div class="q">
+<p><strong>第 20 题</strong>【2022 统考真题】下列关于多道程序系统的叙述中，不正确的是（　）。</p>
+<p class="mono">A. 支持进程的并发执行<br>B. 不必支持虚拟存储管理<br>C. 需要实现对共享资源的管理<br>D. 进程数越多，CPU 的利用率越高</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：并发和共享是多道程序系统最基本、必须实现的特征，A、C 正确；早期多道批处理系统把进程数据全部调入主存即可实现多道并发，即使不支持虚拟存储管理也能工作，B 正确。进程数越多并不意味着 CPU 利用率越高——进程过多会加剧资源竞争，甚至可能因竞争资源而死锁，反而使 CPU 利用率降低，D 不正确，故选 D。</p>
+</div></details>
+</div>
+
+<h2>1.3 操作系统的运行环境 · 选择题</h2>
+<div class="q">
+<p><strong>第 1 题</strong> 下列关于操作系统的说法中，错误的是（）。<br>I. 在通用操作系统管理下的计算机上运行程序，需要向操作系统预订运行时间<br>II. 在通用操作系统管理下的计算机上运行程序，需要确定起始地址，并从这个地址开始执行<br>III. 操作系统需要提供高级程序设计语言的编译器<br>IV. 管理计算机系统资源是操作系统关心的主要问题</p>
+<p class="mono">A. I　B. I、III　C. II、III　D. I、II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：说法I错误，通用操作系统使用时间片轮转等调度方式，用户运行程序无须预先预订运行时间；说法III错误，编译器属于操作系统的上层软件，并非操作系统需要提供的功能。说法II正确，程序执行前必须确定起始地址并从这个地址开始执行；说法IV正确，操作系统是计算机系统资源的管理者，管理计算机系统资源是其关心的主要问题。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 2 题</strong> 下列说法中，正确的是（）。<br>I. 批处理的主要缺点是需要大量内存<br>II. 当计算机提供了内核态和用户态时，输入/输出指令必须在内核态下执行<br>III. 操作系统中采用多道程序设计技术的最主要原因是提高CPU和外部设备的可靠性<br>IV. 操作系统中，通道技术是一种硬件技术</p>
+<p class="mono">A. I、II　B. I、III　C. II、IV　D. II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：说法I错误，批处理系统的主要缺点是缺少交互性，而非需要大量内存；说法III错误，采用多道程序设计技术的主要目的是提高系统利用率和吞吐量。说法II正确，输入/输出指令属于特权指令，只能在内核态下执行；说法IV正确，通道实际上是一种能执行通道程序、控制I/O操作的特殊处理器，属于硬件技术。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 3 题</strong> 下列关于系统调用的说法中，正确的是（）。<br>I. 用户程序使用系统调用命令，该命令经过编译后形成若干参数和陷入指令<br>II. 用户程序使用系统调用命令，该命令经过编译后形成若干参数和屏蔽中断指令<br>III. 用户程序创建一个新进程，需使用操作系统提供的系统调用接口<br>IV. 当操作系统完成用户请求的系统调用功能后，应使CPU从内核态转到用户态</p>
+<p class="mono">A. I、III　B. III、IV　C. I、III、IV　D. II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：说法I正确，系统调用命令经编译后形成传递参数的指令和陷入（trap）指令，如x86 Linux中的int 0x80；说法II错误，程序设计无法形成屏蔽中断指令，屏蔽中断属于特权操作。说法III正确，进程控制（如创建新进程）必须通过操作系统提供的系统调用接口完成；说法IV正确，系统调用返回、继续执行用户程序时，CPU状态从内核态转回用户态。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 4 题</strong> （）是操作系统必须提供的功能。</p>
+<p class="mono">A. 图形用户界面（GUI）　B. 为进程提供系统调用命令　C. 中断处理　D. 编译源程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：中断处理是操作系统必须提供的功能，因为计算机运行中的各种错误都需要中断处理，内核态与用户态之间的切换也依赖中断机制。图形用户界面并非所有操作系统都必须提供；编译源程序是编译程序等上层软件的工作，不属于操作系统。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 5 题</strong> CPU执行的指令被分为两类，其中有一类称为特权指令，它只允许（）使用。</p>
+<p class="mono">A. 管理员　B. 联机用户　C. 目标程序　D. 操作系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：内核（操作系统）可以执行CPU能执行的任何指令，而用户程序只能执行特权指令之外的指令，因此特权指令只能由操作系统使用。管理员和联机用户运行的目标程序都处于用户态，同样无权执行特权指令。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 6 题</strong> 在中断发生后，中断处理的程序属于（）。</p>
+<p class="mono">A. 用户程序　B. 可能是用户程序，也可能是OS程序　C. 操作系统程序　D. 单独的程序，既不是用户程序也不是OS程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：中断处理程序是操作系统专门为处理中断事件而设计的程序，属于OS程序。中断发生时CPU将从被中断状态转入内核态进行中断处理，被中断的程序可能是用户程序，但执行中断处理的一定是操作系统程序。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 7 题</strong> CPU的状态分为用户态和内核态，从用户态转换到内核态的唯一途径是（）。</p>
+<p class="mono">A. 修改程序状态字指令　B. 中断屏蔽　C. 中断　D. 中断处理程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：从用户态转换到内核态不是通过指令修改CPU的状态标志位，而是由CPU在中断（含内中断与外中断）发生时自动完成的。修改程序状态字的指令本身是特权指令，不能在用户态执行；中断屏蔽只是推迟中断响应，并不能完成状态转换；中断处理程序一般在内核态执行，无法完成“转换成内核态”这一任务。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 8 题</strong> 下列指令中，可以在用户态执行的是（）。<br>I. 置时钟指令　II. 停机指令　III. 存数指令　IV. 寄存器清零指令</p>
+<p class="mono">A. I、IV　B. III、IV　C. II、III、IV　D. II、III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：置时钟指令直接管理系统资源，停机指令属于系统控制指令，二者都是特权指令，必须在内核态执行。存数指令和寄存器清零指令是普通的数据处理指令，不会影响系统的安全和整体状态，可以在用户态执行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 9 题</strong> 下列指令中，必须在内核态执行的是（）。<br>I. 陷入指令　II. 系统调用指令　III. 开中断指令　IV. 转移指令　V. 中断屏蔽字设置指令</p>
+<p class="mono">A. I、II、III、IV　B. I、III　C. II、III、V　D. I、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：陷入指令由用户程序在用户态执行，用于主动引发访管中断进入内核态；而系统调用指令必然在内核态执行。开中断、关中断指令属于特权指令，中断屏蔽字寄存器是中断控制器（I/O接口）的一部分，设置它相当于对I/O端口进行设置，二者都必须在内核态执行；转移指令是普通的程序流程控制指令，可在用户态执行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 10 题</strong> 下列程序中，必须在内核态执行的是（）。<br>I. 磁盘调度程序　II. 中断处理程序　III. 设备驱动程序　IV. 操作系统初始化程序</p>
+<p class="mono">A. I、II、III、IV　B. I、II、III　C. I、II、IV　D. II、III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：磁盘调度程序控制磁头运行，与硬件密切相关，运行在内核态；中断处理程序在内核态执行；设备驱动程序用于与硬件设备通信，运行在内核态；操作系统初始化程序负责初始化系统资源、设置环境、加载驱动程序等，同样运行在内核态。四者都必须在内核态执行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 11 题</strong> 当CPU处于内核态时，它可以执行的指令是（）。</p>
+<p class="mono">A. 只有特权指令　B. 只有非特权指令　C. 只有访管指令　D. 除访管指令之外的全部指令</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：访管指令（Trap指令）是在用户态执行的指令，用户程序有意识地用它引起访管中断，从而将控制权交给内核；在内核态，CPU可以执行除访管指令之外的任何指令。因此内核态并非只执行特权指令，也不是只执行非特权指令或访管指令。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 12 题</strong> 下列中断事件中，能引起外中断（外部中断）的事件是（）。<br>I. 时钟中断　II. 访管中断　III. 缺页中断</p>
+<p class="mono">A. I　B. III　C. I和II　D. II和III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：外中断由CPU外部的事件引起，如I/O设备的请求、时钟信号等，时钟中断属于典型的外中断。访管中断由执行陷入（访管）指令引起，缺页中断由访存缺页引起，二者都源自CPU内部，属于内中断（异常）。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 13 题</strong> 下列关于库函数和系统调用的说法中，不正确的是（）。</p>
+<p class="mono">A. 库函数运行在用户态，系统调用运行在内核态　B. 使用库函数时开销较小，使用系统调用时开销较大　C. 库函数不方便被替换，系统调用通常很方便被替换　D. 库函数可以很方便地调试，而系统调用很麻烦</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：本题选不正确项。库函数是被封装在库文件中的可复用代码块，运行在用户态，可以很方便地替换和调试；系统调用面向硬件、运行在内核态，需要在用户空间和内核空间之间进行上下文切换，开销较大且通常不可替换。选项C恰好把两者的可替换性说反了，不正确；A、B、D均符合实际。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 14 题</strong> 下列关于系统调用和一般过程调用的说法中，正确的是（）。</p>
+<p class="mono">A. 两者都需要将当前CPU中的PSW和PC的值压栈，以保存现场信息　B. 系统调用的被调用过程一定运行在内核态　C. 一般过程调用的被调用过程一定运行在用户态　D. 两者的调用过程与被调用过程一定都运行在用户态</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：系统调用的被调用过程是操作系统中的系统级程序，必须运行在内核态，B正确。系统调用需要保存PSW和PC的值，而一般过程调用只需保存PC的值，A错误；一般过程调用的被调用程序与调用程序运行在同一个状态，可能是系统态也可能是用户态，C、D错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 15 题</strong> 用户在程序中试图读某文件的第100个逻辑块，使用操作系统提供的（）接口。</p>
+<p class="mono">A. 系统调用　B. 键盘命令　C. 原语　D. 图形用户接口</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：在程序中读文件的逻辑块属于文件I/O操作，需要在内核态运行完成，用户程序通过操作系统提供的系统调用接口发出请求。键盘命令和图形用户接口属于作业级接口，供用户在命令行或图形界面下直接操作，无法嵌入程序中调用。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 16 题</strong> 【2011统考真题】下列选项中，在用户态执行的是（）。</p>
+<p class="mono">A. 命令解释程序　B. 缺页处理程序　C. 进程调度程序　D. 时钟中断处理程序</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：命令解释程序属于命令接口，面向用户，在用户态执行。缺页处理和时钟中断处理都属于中断/异常处理，在内核态执行；进程调度是操作系统内核的工作，无须用户干预，也在内核态执行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 17 题</strong> 【2012统考真题】下列选项中，不可能在用户态发生的事件是（）。</p>
+<p class="mono">A. 系统调用　B. 外中断　C. 进程切换　D. 缺页</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：本题关键在区分“发生”与“执行”。系统调用发生在用户态，其被调用程序在内核态执行；外中断是用户态到内核态的“门”，也发生在用户态；缺页在用户态产生缺页中断后进入内核态处理。而进程切换是系统调用执行过程中由内核完成的事件，只能发生在内核态。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 18 题</strong> 【2012统考真题】中断处理和子程序调用都需要压栈，以便保护现场，中断处理一定会保存而子程序调用不需要保存其内容的是（）。</p>
+<p class="mono">A. 程序计数器　B. 程序状态字寄存器　C. 通用数据寄存器　D. 通用地址寄存器</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：中断随时可能发生，可能在两条指令之间改变程序状态字寄存器（PSW）中的标志位，而中断返回后可能还要依据原来的PSW内容进行跳转等操作，因此中断处理一定会保存PSW。子程序调用是编译器可控的流程，返回后一定不需要用到调用前的PSW内容，故无须保存；程序计数器两者都会保存，通用寄存器的内容则都不一定会保存。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 19 题</strong> 【2013统考真题】下列选项中，会导致用户进程从用户态切换到内核态的操作是（）。<br>I. 整数除以零　II. sin()函数调用　III. read系统调用</p>
+<p class="mono">A. 仅I、II　B. 仅I、III　C. 仅II、III　D. I、II和III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：整数除以零是非法操作，CPU会检测到异常并切换到内核态进行异常处理；read系统调用在用户态发起后，通过Trap指令陷入内核态，由CPU执行相应的系统调用服务例程。sin()是C语言中普通的运算类库函数，不会引发系统调用，全程在用户态执行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 20 题</strong> 【2014统考真题】下列指令中，不能在用户态执行的是（）。</p>
+<p class="mono">A. Trap指令　B. 跳转指令　C. 压栈指令　D. 关中断指令</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：Trap指令、跳转指令和压栈指令均可在用户态执行，其中Trap指令负责由用户态转换为内核态。关中断指令是特权指令，必须在内核态执行——中断是现代操作系统正常运行的核心保障之一，能把它关掉的必然是权限非常大的内核。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 21 题</strong> 【2015统考真题】处理外中断时，应该由操作系统保存的是（）。</p>
+<p class="mono">A. 程序计数器（PC）的内容　B. 通用寄存器的内容　C. 快表（TLB）中的内容　D. Cache中的内容</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：外中断处理过程中，PC的值由中断隐指令（硬件）自动保存，而通用寄存器的内容由操作系统负责保存。快表（TLB）和Cache中的内容在外中断处理过程中通常无须保存，直接将有效位清0即可。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 22 题</strong> 【2015统考真题】假定下列指令已装入指令寄存器，则执行时不可能导致CPU从用户态变为内核态（系统态）的是（）。</p>
+<p class="mono">A. DIV R0, R1　;(R0)/(R1)→R0　　B. INT n　;产生软中断<br>C. NOT R0　;寄存器R0的内容取非　　D. MOV R0, addr　;把地址addr处的内存数据放入寄存器R0</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：部分指令可能发生异常从而转入内核态：DIV指令有除零异常的可能；INT n是软中断指令，用于触发中断并跳转到相应处理程序，可在用户态和内核态之间切换以实现系统调用；MOV指令访存时有缺页异常的可能。NOT指令只对寄存器内容取非，不会发生任何异常，不可能引起CPU状态的切换。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 23 题</strong> 【2016统考真题】异常是指令执行过程中在处理器内部发生的特殊事件，中断是来自处理器外部的请求事件。下列关于中断或异常情况的叙述中，错误的是（）。</p>
+<p class="mono">A. “访存时缺页”属于中断　B. “整数除以0”属于异常　C. “DMA传送结束”属于中断　D. “存储保护错”属于异常</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：本题选错误项。“访存时缺页”源自CPU执行指令内部的事件，属于异常（内中断）而非中断，A错误。整数除以0、存储保护错都发生在处理器内部，属于异常；DMA传送结束是来自CPU外部设备的请求事件，属于中断，B、C、D叙述正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 24 题</strong> 【2017统考真题】执行系统调用的过程包括如下主要操作：<br>①返回用户态　②执行陷入（Trap）指令　③传递系统调用参数　④执行相应的服务程序<br>正确的执行顺序是（）。</p>
+<p class="mono">A. ②→③→①→④　B. ②→④→③→①　C. ③→②→④→①　D. ③→④→②→①</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：执行系统调用时，正在运行的进程先传递系统调用参数（③），然后由陷入（Trap）指令将CPU模式从用户态转换为内核态，并将返回地址压入堆栈（②），接下来CPU执行相应的内核态服务程序（④），最后返回用户态（①）。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 25 题</strong> 【2018统考真题】定时器产生时钟中断后，由时钟中断服务程序更新的部分内容是（）。<br>I. 内核中时钟变量的值　II. 当前进程占用CPU的时间　III. 当前进程在时间片内的剩余执行时间</p>
+<p class="mono">A. 仅I、II　B. 仅II、III　C. 仅I、III　D. I、II、III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：时钟中断的主要工作是处理与时间有关的信息，并决定是否执行调度程序。与时间有关的信息包括系统时间（内核中时钟变量的值）、当前进程占用CPU的时间、时间片内的剩余执行时间、延时及各种定时器，I、II、III都会被时钟中断服务程序更新。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 26 题</strong> 【2019统考真题】下列关于系统调用的叙述中，正确的是（）。<br>I. 在执行系统调用服务程序的过程中，CPU处于内核态<br>II. 操作系统通过提供系统调用避免用户程序直接访问外设<br>III. 不同的操作系统为应用程序提供了统一的系统调用接口<br>IV. 系统调用是操作系统内核为应用程序提供服务的接口</p>
+<p class="mono">A. 仅I、IV　B. 仅II、III　C. 仅I、II、IV　D. 仅I、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：用户可在用户态发起系统调用，但执行具体的系统调用服务程序时处于内核态，I正确；设备管理是操作系统的职能，用户程序须通过系统调用间接使用外设，避免直接访问，II正确；系统调用正是内核为应用程序提供服务的接口，IV正确。不同操作系统的底层逻辑和实现方式不同，为应用程序提供的系统调用接口并不统一，III错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 27 题</strong> 【2020统考真题】下列与中断相关的操作中，由操作系统完成的是（）。<br>I. 保存被中断程序的中断点　II. 提供中断服务　III. 初始化中断向量表　IV. 保存中断屏蔽字</p>
+<p class="mono">A. 仅I、II　B. 仅I、II、IV　C. 仅III、IV　D. 仅II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：CPU检测到中断信号后，断点（PC和PSW）由硬件（中断隐指令）自动保存，I不是由操作系统完成的。中断向量表由操作系统初始化，III正确；随后操作系统执行中断服务程序，保存中断屏蔽字、保存各通用寄存器的值并提供与中断信号对应的中断服务，II、IV正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 28 题</strong> 【2021统考真题】下列指令中，只能在内核态执行的是（）。</p>
+<p class="mono">A. Trap指令　B. I/O指令　C. 数据传送指令　D. 设置断点指令</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：I/O指令属于对I/O设备操作的特权指令，只能在内核态执行。Trap指令、数据传送指令和设置断点指令都是提供给用户使用的指令，可以在用户态执行，只是执行时可能引发CPU从用户态到内核态的切换。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 29 题</strong> 【2021统考真题】下列选项中，通过系统调用完成的操作是（）。</p>
+<p class="mono">A. 页置换　B. 进程调度　C. 创建新进程　D. 生成随机整数</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：系统调用由用户进程发起，用于请求操作系统的服务，创建新进程即通过系统调用完成，如Linux中的fork()。页置换是内存不够时操作系统自主完成的；进程调度完全由操作系统完成，无法通过系统调用完成；生成随机整数是普通的函数调用（如random()），不涉及请求操作系统服务。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 30 题</strong> 【2022统考真题】下列关于CPU模式的叙述中，正确的是（）。</p>
+<p class="mono">A. CPU处于用户态时只能执行特权指令　B. CPU处于内核态时只能执行特权指令　C. CPU处于用户态时只能执行非特权指令　D. CPU处于内核态时只能执行非特权指令</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：CPU处于用户态时只能执行非特权指令，C正确、A错误；CPU处于内核态时，特权指令和非特权指令都可以执行，B、D错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 31 题</strong> 【2022统考真题】执行系统调用的过程涉及下列操作，其中由操作系统完成的是（）。<br>I. 保存断点和程序状态字　II. 保存通用寄存器的内容　III. 执行系统调用服务例程　IV. 将CPU模式改为内核态</p>
+<p class="mono">A. 仅I、III　B. 仅II、III　C. 仅II、IV　D. 仅II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：发生系统调用时，CPU通过执行软中断（陷入）指令进入内核处理，该响应过程与中断、异常相同：由硬件负责保存断点和程序状态字，并将CPU模式改为内核态，I、IV不是由操作系统完成的。随后执行操作系统内核的系统调用入口程序，由它保存通用寄存器的内容，再调用相应的系统调用服务例程，II、III由操作系统完成。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 32 题</strong> 【2023统考真题】在操作系统内核中，中断向量表适合采用的数据结构是（）。</p>
+<p class="mono">A. 数组　B. 队列　C. 单向链表　D. 双向链表</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：中断向量表以中断类型号（向量号）为索引存放对应中断服务程序的入口地址，向量号连续且固定，内核需要按向量号随机检索表项。数组可以凭借下标在O(1)时间内直接定位，最为适合；单向/双向链表只能顺序遍历查找，队列只支持先进先出的访问方式，均无法高效地按向量号随机访问。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 33 题</strong> 【2024统考真题】下列关于中断、异常和系统调用的叙述中，错误的是（）。</p>
+<p class="mono">A. 中断或异常发生时，CPU处于内核态　B. 每个系统调用都有对应的内核服务例程　C. 中断处理程序开始执行时，CPU处于内核态　D. 系统添加新类型设备时，需要注册相应的中断服务例程</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：本题选错误项。中断或异常“发生”时CPU可能处于用户态（如用户程序执行引发异常、外部设备发出中断请求），响应之后才由硬件切换到内核态，A错误。每个系统调用都有与之对应的内核服务例程，B正确；进入中断处理程序前硬件已将CPU切换为内核态，C正确；系统添加新类型设备时，需向中断向量表注册相应的中断服务例程，D正确。</p>
+</div></details>
+</div>
+
+<h2>1.6 虚拟机 · 选择题</h2>
+<div class="q">
+<p><strong>第 1 题</strong> 用（）设计的操作系统结构清晰且便于调试。</p>
+<p class="mono">A. 分层式架构　B. 模块化架构　C. 微内核架构　D. 宏内核架构</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：分层式结构将操作系统按功能划分为若干层，每层只能调用紧邻低层提供的功能和服务，简化了系统的设计和实现，便于调试和验证——调试某层时若发现错误，错误必然出在这一层，因为其低层都已调试通过。模块化、微内核和宏内核结构中各模块间的耦合与依赖关系都更为复杂，不具备这种清晰的层次结构。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 2 题</strong> 下列关于分层式结构操作系统的说法中，（）是错误的。</p>
+<p class="mono">A. 各层之间只能是单向依赖或单向调用　B. 容易实现在系统中增加或替换一层而不影响其他层　C. 具有非常灵活的依赖关系　D. 系统效率较低</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：单向依赖是分层式OS的特点；层次定义好后，各层之间的依赖关系也就固定了，因此依赖关系往往不够灵活，C错误、A正确。只要不改变层间接口，增加或替换一个模块或整层就不会影响其他层，易于扩充和维护，B正确；每执行一个功能通常都要自上而下穿越多层，带来额外开销，导致系统效率降低，D正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 3 题</strong> 下列选项中，（）不属于模块化操作系统的特点。</p>
+<p class="mono">A. 很多模块化的操作系统，可以支持动态加载新模块到内核，适应性强　B. 内核中的某个功能模块出错不会导致整个系统崩溃，可靠性高　C. 内核中的各个模块可以相互调用，无须通过消息传递进行通信，效率高　D. 各模块间相互依赖，相比于分层式操作系统，模块化操作系统更难调试和验证</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：模块化OS的各功能模块都在内核中，并且模块之间相互调用、相互依赖，任何一个模块出错都可能导致整个内核崩溃，B的说法属于“移花接木”——内核外模块出错不致崩溃、可靠性高是微内核结构的特点。A、C、D均为模块化OS的实际特点：可动态加载模块、适应性强；模块间直接调用、无须消息传递、效率高；模块间相互依赖，比分层式更难调试和验证。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 4 题</strong> 相对于微内核系统，（）不属于大内核操作系统的缺点。</p>
+<p class="mono">A. 占用内存空间大　B. 缺乏可扩展性而不方便移植　C. 内核切换太慢　D. 可靠性较低</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：大内核将大量系统功能封装在内核中，因此占用内存空间大、可扩展性差而不便移植，且某个模块出错可能波及整个内核，可靠性较低，A、B、D都是其缺点。微内核和宏内核的优缺点是对立的：“内核切换太慢”正是微内核的缺点——它需要频繁地在用户态和内核态之间切换，切换开销偏大。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 5 题</strong> 下列说法中，（）不适合描述微内核操作系统。</p>
+<p class="mono">A. 内核足够小　B. 功能分层设计　C. 基于C/S模式　D. 策略与机制分离</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：功能分层设计是分层式OS的特点，不适合描述微内核OS。微内核OS通常从四个方面描述：内核足够小、基于客户/服务器（C/S）模式、应用“机制与策略分离”原理、采用面向对象技术。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 6 题</strong> 对于以下五种服务，在采用微内核结构的操作系统中，（）不宜放在微内核中。<br>I. 进程间通信机制　II. 低级I/O　III. 低级进程管理和调度　IV. 中断和陷入处理　V. 文件系统服务</p>
+<p class="mono">A. I、II和III　B. II和V　C. 仅V　D. IV和V</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：进程间通信是微内核最频繁使用的功能，几乎所有的微内核OS都将其放入微内核；低级I/O与硬件紧密相关，低级进程管理和调度属于调度功能的机制部分，中断和陷入处理负责捕获并响应中断事件后再交给相关服务器，这四者都应放在微内核中。文件系统服务放在微内核之外的文件服务器中实现，不宜放入微内核。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 7 题</strong> 相对于传统操作系统结构，采用微内核结构设计和实现操作系统有诸多好处，下列（）是微内核结构的特点。<br>I. 使系统更高效　II. 添加系统服务时不必修改内核　III. 微内核结构没有单一内核稳定　IV. 使系统更可靠</p>
+<p class="mono">A. I、II、IV　B. I、III、IV　C. II、IV　D. I、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：微内核需要频繁地在内核态和用户态之间切换，被移出内核的各服务程序之间的交互都要借助微内核通信，执行开销相对偏大，影响系统效率，I不是其优势。一般来说内核提供的服务越少内核越稳定，“没有单一内核稳定”的说法错误，III错误。添加系统服务时不必修改内核、使系统更可靠正是微内核结构的优点，II、IV正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 8 题</strong> 下列关于操作系统结构的说法中，正确的是（）。<br>I. 当前广泛使用的Windows操作系统，采用的是分层式OS结构<br>II. 模块化的OS结构设计的基本原则是，每一层都仅使用其底层所提供的功能和服务，这样就使系统的调试和验证都变得容易<br>III. 因为微内核结构能有效支持多处理机运行，所以非常适合于分布式系统环境<br>IV. 采用微内核结构设计和实现操作系统具有诸多好处，如添加系统服务时不必修改内核，使系统更高效</p>
+<p class="mono">A. I和II　B. I和III　C. III　D. III和IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：Windows是融合了宏内核和微内核特点的操作系统，并非分层式结构，I错误；“每一层都仅使用其底层所提供的功能和服务”是层次化（分层式）架构的设计原则，II张冠李戴。微内核架构将核心功能和其他服务分离，使不同服务可在不同处理器上并行执行，支持消息传递和远程过程调用，适合分布式系统环境，III正确；添加服务不必修改内核使可扩展性更强，但微内核的主要问题是性能开销，“使系统更高效”错误，IV错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 9 题</strong> 下列关于微内核操作系统的描述中，不正确的是（）。</p>
+<p class="mono">A. 可提高操作系统的可靠性　B. 可提高操作系统的执行效率　C. 可提高操作系统的可移植性　D. 可提高操作系统的可拓展性</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：微内核会增加上下文切换、消息传递、数据拷贝等开销，这些开销会降低操作系统的执行效率，尤其是频繁调用的服务，B不正确。微内核结构下各服务相互独立，内核外模块出错不致系统崩溃，可提高可靠性；与硬件紧密相关的部分集中在很小的内核中，可提高可移植性；添加系统服务时不必修改内核，可拓展性好，A、C、D均正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 10 题</strong> 下列关于操作系统外核（exokernel）的说法中，错误的是（）。</p>
+<p class="mono">A. 外核可以给用户进程分配未经抽象的硬件资源　B. 用户进程通过调用“库”请求操作系统外核的服务　C. 外核负责完成进程调度　D. 外核可以减少虚拟硬件资源的“映射”开销，提升系统效率</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：在拥有外核的系统中，外核只负责硬件资源的分配、回收、保护等，进程管理相关的工作（如进程调度）仍由内核负责，C错误。外核可以直接给用户进程分配未经抽象的硬件资源，用户进程通过调用“库”请求外核的服务；由于省去了传统OS对硬件资源的层层抽象与映射，可减少虚拟硬件资源的“映射”开销、提升系统效率，A、B、D正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 11 题</strong> 对于计算机操作系统引导，描述不正确的是（）。</p>
+<p class="mono">A. 计算机的引导程序驻留在ROM中，开机后自动执行　B. 引导程序先做关键部位的自检，并识别已连接的外设　C. 引导程序会将硬盘中存储的操作系统全部加载到内存中　D. 若计算机中安装了双系统，引导程序会与用户交互加载有关系统</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：常驻内存的只是操作系统内核，操作系统的其他部分仅在需要时才调入内存，引导程序并不会把硬盘中的操作系统“全部”加载进内存，C不正确。ROM中的自举程序开机后自动执行，先完成关键部位自检并识别已连接的外设，再逐级加载；计算机安装了双系统时，启动管理器会与用户交互，选择加载相应的系统，A、B、D正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 12 题</strong> 存放操作系统自举程序的芯片是（）。</p>
+<p class="mono">A. SRAM　B. DRAM　C. ROM　D. CMOS</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：BIOS（基本输入/输出系统）是一组固化在主板ROM芯片上的程序，包含系统设置程序、基本输入/输出程序、开机自检程序和系统启动自举程序等，因此自举程序存放在ROM中。SRAM和DRAM是易失性的半导体存储器，断电后信息丢失，不能固化固件；CMOS芯片用于存放BIOS的系统设置参数。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 13 题</strong> 计算机操作系统的引导程序位于（）中。</p>
+<p class="mono">A. 主板BIOS　B. 片外Cache　C. 主存ROM区　D. 硬盘</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：操作系统的引导程序位于装有操作系统的硬盘活动分区的引导扇区中。注意区分：ROM中存放的是自举程序（BIOS的组成部分），用于启动具体设备、把引导程序装入内存，它并不是引导操作系统本身的引导程序。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 14 题</strong> 在操作系统引导过程中，下列关于各阶段核心功能的描述，正确的是（）。</p>
+<p class="mono">A. BIOS直接加载并执行操作系统内核　B. MBR解析硬盘分区表，并加载活动分区的引导扇区　C. 启动管理器由BIOS直接从磁盘读取并执行　D. 内核初始化阶段仅加载设备驱动，不初始化进程调度相关数据结构</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：BIOS执行硬件自检后，仅将主引导记录（MBR）读入内存并执行，并不直接加载操作系统内核，A错误。MBR位于硬盘首扇区，通过解析分区表定位活动分区，并加载其分区引导记录（PBR），B正确。启动管理器由PBR负责加载，而不是由BIOS直接从磁盘读取执行，C错误；内核初始化阶段除加载设备驱动外，还需要初始化进程控制块、调度队列和空闲进程等调度相关数据结构，D错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 15 题</strong> 检查分区表是否正确，确定哪个分区为活动分区，并在程序结束时将该分区的启动程序（操作系统引导扇区）调入内存加以执行，这是（）的任务。</p>
+<p class="mono">A. MBR　B. 引导程序　C. 操作系统　D. BIOS</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：BIOS将控制权交给排在首位的启动设备后，CPU把该设备主引导扇区的内容即主引导记录（MBR）装入内存执行，由MBR检查分区表、查找活动分区，并将该分区的引导扇区内容（分区引导记录，PBR）装入内存加以执行。题干所述正是MBR的任务。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 16 题</strong> 下列关于虚拟机的说法中，正确的是（）。<br>I. 虚拟机可以用软件实现　II. 虚拟机可以用硬件实现　III. 多台虚拟机可同时运行在同一物理机器上，它实现了真正的并行</p>
+<p class="mono">A. I和II　B. I和III　C. 仅I　D. I、II和III</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：虚拟机可以用软件（虚拟机管理程序）实现；软件能实现的功能也能由硬件实现，软硬件的分界面是系统结构设计者的任务，I、II正确。实现真正并行的是多核（多处理机）系统；多台虚拟机同时运行在同一物理机器上，本质上类似于多个程序并发运行在同一个系统中，并非真正的并行，III错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 17 题</strong> 下列关于VMware Workstation虚拟机的说法中，错误的是（）。</p>
+<p class="mono">A. 真实硬件不会直接执行虚拟机中的敏感指令　B. 虚拟机中只能安装一种操作系统　C. 虚拟机是运行在计算机中的一个应用程序　D. 虚拟机文件封装在一个文件夹中，并存储在数据存储器中</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：VMware Workstation属于第二类虚拟机管理程序，若真实硬件直接执行虚拟机中的敏感指令，指令非法时可能导致宿主操作系统崩溃，实际上由VMM模拟真实硬件环境来执行，A正确。虚拟机看起来与真实物理计算机没什么两样，当然可以安装多个不同的操作系统，B错误。VMware Workstation就是安装在计算机上的一个应用程序，创建虚拟机时虚拟机文件封装在一个文件夹中并存储在数据存储器中，C、D正确。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 18 题</strong> 虚拟机的实现离不开虚拟机管理程序（VMM），下列关于VMM的说法中正确的是（）。<br>I. 第一类VMM直接运行在硬件上，其效率通常高于第二类VMM<br>II. 由于VMM的上层需要支持操作系统的运行、应用程序的运行，因此实现VMM的代码量通常大于实现一个完整操作系统的代码量<br>III. VMM可将一台物理机器虚拟化为多台虚拟机器<br>IV. 为了支持客户操作系统的运行，第二类VMM需要完全运行在最高特权级</p>
+<p class="mono">A. I、II和III　B. I和III　C. I、III和IV　D. I、II、III和IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：B</span></p>
+<p>解析：第一类VMM直接运行在硬件之上，无须经过宿主操作系统的转接，其效率通常高于第二类VMM，I正确。VMM只负责资源的虚拟化与调度分派，其代码量远小于一个完整的操作系统，II错误。VMM可将一台物理机器虚拟化为多台虚拟机器，III正确。第二类VMM作为宿主操作系统之上的程序运行，部分功能在用户态、部分功能借助内核在内核态执行，并非完全运行在最高特权级，IV错误。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 19 题</strong> 【2013统考真题】计算机开机后，操作系统最终被加载到（）。</p>
+<p class="mono">A. BIOS　B. ROM　C. EPROM　D. RAM</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：BIOS是固化在ROM中的一组程序，而非存放操作系统的位置；ROM/EPROM中存放的是自举程序等固件。开机引导的最终结果是操作系统内核从硬盘被装入RAM（内存）中运行。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 20 题</strong> 【2022统考真题】下列选项中，需要在操作系统进行初始化过程中创建的是（）。</p>
+<p class="mono">A. 中断向量表　B. 文件系统的根目录　C. 硬盘分区表　D. 文件系统的索引节点表</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：A</span></p>
+<p>解析：中断向量表由操作系统在初始化过程中建立，用以登记各类中断服务程序的入口地址，A正确。文件系统的根目录和索引节点表是在对磁盘进行文件系统格式化时建立的，硬盘分区表则由分区工具在对磁盘分区时创建，它们都不属于操作系统初始化过程创建的内容。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 21 题</strong> 【2023统考真题】与宏内核操作系统相比，下列特征中，微内核操作系统具有的是（）。<br>I. 较好的性能　II. 较高的可靠性　III. 较高的安全性　IV. 较强的可扩展性</p>
+<p class="mono">A. 仅II、IV　B. 仅I、II、III　C. 仅I、III、IV　D. 仅II、III、IV</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：D</span></p>
+<p>解析：微内核将大量系统服务移出内核，单个服务出错通常不会波及整个系统，可靠性较高；内核精简且服务相互隔离，安全性较高；添加系统服务时不必修改内核，可扩展性较强，II、III、IV正确。微内核需要频繁地在用户态和内核态之间切换并传递消息，性能较差，I不是微内核的特征。</p>
+</div></details>
+</div>
+<div class="q">
+<p><strong>第 22 题</strong> 【2025统考真题】下列关于虚拟化技术的叙述中，错误的是（）。</p>
+<p class="mono">A. 操作系统可以运行在虚拟机上　B. 虚拟化技术支持在一台计算机上构建多个虚拟机　C. 虚拟机监控程序（VMM）与操作系统的特权级相同　D. 虚拟化技术支持在一台计算机上模拟不同的指令集体系结构</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：C</span></p>
+<p>解析：本题选错误项。VMM必须能截获并模拟客户操作系统执行的敏感指令，因此要运行在比客户操作系统更高的特权级（第一类VMM位于最高特权级，客户OS运行在受控的较低特权级），二者特权级并不相同，C错误。虚拟机上可以安装并运行操作系统，A正确；虚拟化的核心能力之一就是在一台计算机上构建多个虚拟机，B正确；通过指令模拟等技术还可以在一台计算机上模拟不同的指令集体系结构，D正确。</p>
+</div></details>
+</div>
+
+<h2>综合应用题</h2>
+
+<p><strong>第 1 题</strong> 有两个程序，程序 A 依次使用 CPU 计 10s、设备甲计 5s、CPU 计 5s、设备乙计 10s、CPU 计 10s；程序 B 依次使用设备甲计 10s、CPU 计 10s、设备乙计 5s、CPU 计 5s、设备乙计 10s。假设先执行程序 A 再执行程序 B，在单道程序环境下，CPU 的利用率是多少？在多道程序环境下，CPU 的利用率是多少？</p>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：单道程序环境下 CPU 利用率为 50%；多道程序环境下 CPU 利用率约为 88.9%。</span></p>
+<p><strong>（1）单道程序环境</strong>：内存中始终只有一道程序，程序 A 全部执行完才开始执行程序 B，两程序只能顺序执行。</p>
+<ul>
+<li>程序 A 总耗时 = 10s + 5s + 5s + 10s + 10s = 40s，其中占用 CPU 的时间 = 10s + 5s + 10s = 25s；</li>
+<li>程序 B 总耗时 = 10s + 10s + 5s + 5s + 10s = 40s，其中占用 CPU 的时间 = 10s + 5s = 15s；</li>
+<li>两个程序运行总时间 = 40s + 40s = 80s，CPU 工作时间 = 25s + 15s = 40s；</li>
+<li>CPU 利用率 = \( \dfrac{40\,\text{s}}{80\,\text{s}} = 50\% \)。</li>
+</ul>
+<table>
+<caption>单道环境下的执行过程（甘特图）</caption>
+<tr><th>程序＼时间/s</th><td>0～10</td><td>10～15</td><td>15～20</td><td>20～30</td><td>30～40</td><td>40～50</td><td>50～60</td><td>60～65</td><td>65～70</td><td>70～80</td></tr>
+<tr><th>程序 A</th><td>CPU</td><td>设备甲</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><th>程序 B</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>设备甲</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>设备乙</td></tr>
+</table>
+<p>可见单道执行时，程序进行 I/O 的 55s（A 的 25s + B 的 30s）内 CPU 只能空等，利用率低。</p>
+<p><strong>（2）多道程序环境</strong>：两道程序同时驻留内存并发执行，一道程序使用设备（I/O）时，CPU 可切换去执行另一道程序；但 CPU 与每台设备同一时刻只能被一个程序占用，其余程序须排队等待。逐步分析如下：</p>
+<ul>
+<li>t = 0s：程序 A 获得 CPU（用 10s），程序 B 同时使用设备甲（用 10s）；</li>
+<li>t = 10s：A 用完 CPU，转用设备甲（用 5s）；B 恰好用完设备甲，随即获得 CPU（用 10s）；</li>
+<li>t = 15s：A 用完设备甲，申请 CPU，但 CPU 正被 B 占用，A 只能等待；</li>
+<li>t = 20s：B 用完 CPU，转用设备乙（用 5s）；CPU 空闲，A 立即获得 CPU（用 5s）；</li>
+<li>t = 25s：A 用完 CPU，转用设备乙（用 10s）；B 用完设备乙，随即获得 CPU（用 5s）；</li>
+<li>t = 30s：B 用完 CPU，申请设备乙，但设备乙正被 A 占用，B 只能等待；</li>
+<li>t = 35s：A 用完设备乙，随即获得 CPU（用 10s）；B 同时获得设备乙（用 10s）；</li>
+<li>t = 45s：两个程序同时完成。</li>
+</ul>
+<table>
+<caption>多道环境下的执行过程（甘特图）</caption>
+<tr><th>程序＼时间/s</th><td>0～10</td><td>10～15</td><td>15～20</td><td>20～25</td><td>25～35</td><td>35～45</td></tr>
+<tr><th>程序 A</th><td>CPU</td><td>设备甲</td><td>等待 CPU</td><td>CPU</td><td>设备乙</td><td>CPU</td></tr>
+<tr><th>程序 B</th><td>设备甲</td><td>CPU</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>设备乙</td></tr>
+</table>
+<p>CPU 工作时间 = 10s + 5s + 10s（程序 A）+ 10s + 5s（程序 B）= 40s；两程序运行总时间 = 45s。CPU 利用率 = \( \dfrac{40\,\text{s}}{45\,\text{s}} \approx 88.9\% \)。</p>
+<p>可见多道程序设计使 CPU 与设备并行工作，将总时间从 80s 缩短到 45s，CPU 利用率从 50% 提高到约 88.9%。</p>
+<div class="callout tip"><span class="callout-title">提示</span>此类题目务必先画甘特图：横坐标标时间刻度，纵坐标标程序名，再用不同线型画出各程序占用 CPU、各设备的时段。注意 CPU、打印机等资源同一时刻只能被一个程序使用，另一程序的请求只能排队等待。</div>
+</div></details>
+
+<p><strong>第 2 题</strong> 设某计算机系统有一个 CPU、一台输入设备、一台打印机。现有两个进程同时进入就绪态，并且进程 A 先得到 CPU 运行，进程 B 后运行。进程 A 的运行轨迹为：计算 50ms，打印信息 100ms，再计算 50ms，打印信息 100ms，结束。进程 B 的运行轨迹为：计算 50ms，输入数据 80ms，再计算 100ms，结束。画出它们的甘特图，并说明：</p>
+<ol>
+<li>开始运行后，CPU 有无空闲等待？若有，在哪段时间内等待？计算 CPU 的利用率。</li>
+<li>进程 A 运行时有无等待现象？若有，则在何时发生等待现象？</li>
+<li>进程 B 运行时有无等待现象？若有，则在何时发生等待现象？</li>
+</ol>
+<details class="qa"><summary>查看答案与解析</summary>
+<div class="qa-body">
+<p><span class="answer-tag">答案：CPU 有空闲等待，空闲时段为 100～150ms，CPU 利用率约为 76.7%；进程 A 无等待现象；进程 B 有等待现象，分别发生在 0～50ms 和 180～200ms。</span></p>
+<p>因进程 A 先得到 CPU，逐步分析调度过程：</p>
+<ul>
+<li>t = 0ms：A 获得 CPU 计算 50ms；B 就绪等待；</li>
+<li>t = 50ms：A 计算完毕，转用打印机打印 100ms；B 获得 CPU 计算 50ms；</li>
+<li>t = 100ms：B 计算完毕，转用输入设备输入 80ms；A 仍在打印——CPU 上无进程可运行，<strong>CPU 开始空闲</strong>；</li>
+<li>t = 150ms：A 打印完毕，申请 CPU，此时 CPU 空闲，A 立即获得 CPU 计算 50ms；B 仍在输入；</li>
+<li>t = 180ms：B 输入完毕，申请 CPU，但 CPU 正被 A 占用，B 等待；</li>
+<li>t = 200ms：A 计算完毕，转用打印机打印 100ms；B 获得 CPU 计算 80ms；</li>
+<li>t = 280ms：B 计算完毕，结束；</li>
+<li>t = 300ms：A 打印完毕，结束。</li>
+</ul>
+<table>
+<caption>两进程运行时的甘特图（单位：ms）</caption>
+<tr><th>＼时间/ms</th><td>0～50</td><td>50～100</td><td>100～150</td><td>150～180</td><td>180～200</td><td>200～280</td><td>280～300</td></tr>
+<tr><th>CPU</th><td>A 计算</td><td>B 计算</td><td>空闲</td><td>A 计算</td><td>A 计算</td><td>B 计算</td><td>空闲</td></tr>
+<tr><th>进程 A</th><td>计算</td><td>打印</td><td>打印</td><td>计算</td><td>计算</td><td>打印</td><td>打印</td></tr>
+<tr><th>进程 B</th><td>等待</td><td>计算</td><td>输入</td><td>输入</td><td>等待 CPU</td><td>计算</td><td>已结束</td></tr>
+</table>
+<p><strong>1）</strong>CPU 有空闲等待。空闲时段为 <strong>100～150ms</strong>（共 50ms）：此时 A 在打印、B 在输入，两进程都在使用 I/O 设备，无进程需要 CPU。CPU 的忙碌时间 = 50ms（A 计算）+ 50ms（B 计算）+ 50ms（A 再计算）+ 80ms（B 再计算）= 230ms；从开始运行到两进程全部结束共经历 300ms。CPU 利用率 = \( \dfrac{230\,\text{ms}}{300\,\text{ms}} \approx 76.7\% \)。</p>
+<p><strong>2）</strong>进程 A 运行时<strong>无等待现象</strong>：A 在 t = 50ms 和 t = 200ms 申请打印机时打印机均空闲，在 t = 150ms 申请 CPU 时 CPU 也空闲，每次申请资源都能立即得到满足。</p>
+<p><strong>3）</strong>进程 B 运行时<strong>有等待现象</strong>，共两段：① 0～50ms，B 就绪时 CPU 已被先到的 A 占用，只能等待；② 180～200ms，B 输入完毕申请 CPU 时，CPU 正被 A 的第二次计算占用，等待了 200ms − 180ms = 20ms。</p>
+</div></details>
+
+<nav class="pager"><a href="../ch1/s1-7.html">← 1.7 本章疑难点</a><a href="../ch2/index.html">下一页：本章导学 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>
