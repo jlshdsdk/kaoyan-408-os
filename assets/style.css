@@ -1,0 +1,130 @@
+/* 考研408操作系统带学 · 公共样式 */
+:root {
+  --ink: #24292f;
+  --muted: #57606a;
+  --brand: #0f6b4f;
+  --brand-light: #e6f2ee;
+  --accent: #b45309;
+  --accent-light: #fef3c7;
+  --line: #d8dee4;
+  --bg: #ffffff;
+  --bg-soft: #f6f8fa;
+  --code-bg: #f0f3f6;
+  --radius: 8px;
+  --maxw: 980px;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  line-height: 1.75;
+}
+main { max-width: var(--maxw); margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+
+/* 顶部导航 */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+.site-header .bar {
+  max-width: var(--maxw); margin: 0 auto; padding: .6rem 1.25rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem;
+}
+.brand { font-weight: 700; color: var(--brand); text-decoration: none; font-size: 1.05rem; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: .25rem .15rem; }
+.chapter-nav a {
+  color: var(--muted); text-decoration: none; font-size: .92rem;
+  padding: .15rem .55rem; border-radius: 999px;
+}
+.chapter-nav a:hover { background: var(--brand-light); color: var(--brand); }
+.chapter-nav a.active { background: var(--brand); color: #fff; }
+
+/* 面包屑与分页 */
+.crumbs { color: var(--muted); font-size: .9rem; margin: .8rem 0 1rem; }
+.crumbs a { color: var(--brand); text-decoration: none; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; }
+.pager a {
+  color: var(--brand); text-decoration: none; border: 1px solid var(--line);
+  padding: .45rem .9rem; border-radius: var(--radius); background: var(--bg-soft);
+}
+.pager a:hover { background: var(--brand-light); }
+
+/* 正文排版 */
+article h1 { font-size: 1.65rem; border-bottom: 2px solid var(--brand); padding-bottom: .35rem; }
+article h2 { font-size: 1.3rem; margin-top: 2rem; border-left: 4px solid var(--brand); padding-left: .6rem; }
+article h3 { font-size: 1.12rem; margin-top: 1.5rem; color: #1a3c34; }
+article p { margin: .7rem 0; }
+article strong { color: #1a3c34; }
+a { color: var(--brand); }
+
+/* 图与表 */
+figure { margin: 1.2rem 0; text-align: center; }
+figure img {
+  max-width: 100%; height: auto; border: 1px solid var(--line);
+  border-radius: var(--radius); background: #fff; padding: 4px;
+}
+figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; }
+
+/* 代码与等宽 */
+pre, code, .mono { font-family: Consolas, "Courier New", "Cascadia Mono", monospace; }
+pre {
+  background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: .8rem 1rem; overflow-x: auto; font-size: .88rem; line-height: 1.5;
+}
+code { background: var(--code-bg); padding: .1em .35em; border-radius: 4px; font-size: .92em; }
+pre code { background: none; padding: 0; }
+
+/* 表格 */
+table { border-collapse: collapse; margin: 1rem auto; font-size: .92rem; }
+th, td { border: 1px solid var(--line); padding: .35rem .7rem; text-align: center; }
+th { background: var(--bg-soft); }
+table.plain td, table.plain th { text-align: left; }
+
+/* 提示框 */
+.callout { border-radius: var(--radius); padding: .7rem 1rem; margin: 1rem 0; border: 1px solid; }
+.callout .callout-title { font-weight: 700; margin-right: .4em; }
+.callout.kao { border-color: #c3e6d5; background: var(--brand-light); }
+.callout.kao .callout-title { color: var(--brand); }
+.callout.notice { border-color: #f5d9a8; background: var(--accent-light); }
+.callout.notice .callout-title { color: var(--accent); }
+.callout.tip { border-color: var(--line); background: var(--bg-soft); }
+.callout.tip .callout-title { color: var(--muted); }
+
+/* 徽标 */
+.badge {
+  display: inline-block; font-size: .78rem; padding: .05rem .55rem;
+  border-radius: 999px; vertical-align: middle; margin-left: .35rem;
+}
+.badge.extra { background: #ede4f7; color: #6b21a8; border: 1px solid #d8b4fe; }
+.badge.mast { background: #fde8e8; color: #b91c1c; border: 1px solid #fca5a5; }
+
+/* 折叠答案 */
+details.qa {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  margin: .9rem 0; background: var(--bg-soft);
+}
+details.qa > summary {
+  cursor: pointer; padding: .5rem .9rem; font-weight: 600; color: var(--brand);
+  list-style: none;
+}
+details.qa > summary::before { content: "▸ "; }
+details.qa[open] > summary::before { content: "▾ "; }
+details.qa .qa-body { padding: .3rem 1rem .8rem; background: #fff; border-radius: 0 0 var(--radius) var(--radius); }
+.answer-tag { color: #b91c1c; font-weight: 700; }
+
+/* 首页卡片 */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+.card {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: .9rem 1.1rem; background: var(--bg-soft);
+}
+.card h3 { margin: .2rem 0 .4rem; }
+.card a { text-decoration: none; color: var(--brand); font-weight: 600; }
+.card p { margin: .3rem 0; color: var(--muted); font-size: .92rem; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+.site-footer .bar { max-width: var(--maxw); margin: 0 auto; padding: 1rem 1.25rem; }
+@media print { .site-header, .site-footer, .pager { display: none; } }

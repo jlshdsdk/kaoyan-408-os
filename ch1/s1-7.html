@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.7 本章疑难点 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html" class="active">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch1/index.html">第1章 计算机系统概述</a> / 1.7 本章疑难点</nav>
+<h1>1.7 本章疑难点</h1>
+<p>本节集中辨析本章最容易混淆的四组概念，均为选择题的「命题富矿」，建议结合 1.1～1.4 的正文反复对照。</p>
+
+<h2>1. 并行性与并发性的区别和联系</h2>
+<p>两者既相似又有区别：<strong>并行性</strong>指多个事件在<strong>同一时刻</strong>发生；<strong>并发性</strong>指多个事件在<strong>同一时间间隔内</strong>发生。在多道程序环境下，并发性表现为<strong>宏观上</strong>多个程序同时运行；但在单处理器系统中，任一时刻仅能执行一个程序，因此<strong>微观上</strong>这些程序分时交替执行。若系统配备多个处理器，则可以把并发执行的程序分配到不同处理器上，实现真正的并行。</p>
+<table>
+  <thead><tr><th></th><th>并发性</th><th>并行性</th></tr></thead>
+  <tbody>
+    <tr><td><strong>时间口径</strong></td><td>同一时间间隔内</td><td>同一时刻</td></tr>
+    <tr><td><strong>微观表现</strong></td><td>分时交替执行</td><td>同时执行</td></tr>
+    <tr><td><strong>硬件要求</strong></td><td>单处理器即可实现</td><td>需要多个处理器（多核/多处理机）</td></tr>
+  </tbody>
+</table>
+
+<h2>2. 特权指令与非特权指令</h2>
+<p><strong>特权指令</strong>是具有特殊权限的指令，用于执行清内存、置时钟、分配系统资源、修改虚存页表、调整用户访问权限等关键操作。由于权限极高、使用不当可能导致系统崩溃，为保障系统安全，特权指令<strong>仅允许在内核态执行</strong>；实际上，CPU 在内核态下可执行<strong>完整的指令集</strong>（特权指令+非特权指令）。</p>
+<p>为防止用户程序误用特权指令，<strong>用户态下仅允许执行非特权指令</strong>；用户程序试图执行特权指令时，硬件将触发异常加以阻止。因此，操作系统中涉及特权操作的部分必须运行在内核态，以确保系统的安全性与可靠性。要注意的结论是：<strong>从用户态切换至内核态的唯一途径是中断或异常</strong>。</p>
+
+<h2>3. 访管指令与访管中断</h2>
+<p><strong>访管指令（Trap 指令）</strong>是一条可在用户态执行的特殊指令。用户程序需要请求操作系统服务时，会<strong>主动</strong>执行该指令，引发一个自愿中断——<strong>访管中断</strong>，使系统从用户态切换到内核态，由操作系统内核处理相应请求。<strong>系统调用正是通过访管指令实现的</strong>。</p>
+<p>为什么需要访管指令？因为用户程序运行在用户态，而 I/O 操作、进程创建、内存分配等任务涉及特权资源，无法在用户态直接完成，必须借助访管指令主动触发中断、进入内核态获取所需服务。特别值得注意的是：<strong>访管指令本身并不是特权指令</strong>——它的核心作用是为用户提供一种受控且主动的内核态入口机制，在保障系统安全的同时，实现用户程序与操作系统的高效交互。</p>
+<div class="callout notice"><span class="callout-title">易错</span>「访管指令是特权指令」是典型错误说法：访管指令在<strong>用户态</strong>就能执行（否则用户程序无从发起系统调用），而陷入后的系统调用服务程序在内核态执行；「调用发生在用户态、执行在内核态」要分开表述。</div>
+
+<h2>4. 定义微内核结构操作系统的四个方面</h2>
+<ol>
+  <li><strong>足够小的内核</strong>：微内核仅包含最基础的核心功能，如进程间通信、基本调度等；</li>
+  <li><strong>基于客户/服务器模式</strong>：内核作为服务器提供基础服务，应用程序作为客户端请求服务；</li>
+  <li><strong>机制与策略分离</strong>：机制指实现功能的具体执行机构，策略是在机制基础上通过参数或算法实现优化或差异化目标。传统操作系统把机制置于底层、策略置于高层；微内核操作系统则把<strong>机制保留在内核中、策略移至用户态服务进程</strong>，从而显著减小内核规模；</li>
+  <li><strong>采用面向对象技术</strong>：通过「抽象」「封装」「继承」等特性有效控制系统复杂性，提升操作系统的正确性、可靠性与可扩展性，因而被广泛应用于现代操作系统设计。</li>
+</ol>
+<div class="callout tip"><span class="callout-title">提示</span>这四个方面是简答式记忆点，也常被拆成单选判断（如「微内核基于客户/服务器模式」「机制与策略分离使内核规模减小」），四条原文表述建议完整背一遍。</div>
+
+<nav class="pager"><a href="../ch1/s1-6.html">← 1.6 虚拟机</a><a href="../ch2/s2-1.html">下一页：2.1 进程与线程简介 →</a></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>
