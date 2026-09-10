@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.4 本章疑难点 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header"><div class="bar">
+<a class="brand" href="../index.html">408 操作系统带学</a>
+<nav class="chapter-nav"><a href="../index.html">首页</a><a href="../ch1/index.html">第1章</a><a href="../ch2/index.html">第2章</a><a href="../ch3/index.html">第3章</a><a href="../ch4/index.html">第4章</a><a href="../ch5/index.html" class="active">第5章</a></nav></div></header>
+<main>
+<nav class="crumbs"><a href="../index.html">首页</a> / <a href="../ch5/index.html">第5章 输入/输出管理</a> / 5.4 本章疑难点</nav>
+<h1>5.4 本章疑难点</h1>
+
+<p>本章最后梳理两个容易混淆的疑难问题：一个是设备分配策略如何做到灵活、成功率高；另一个是用户缓冲区与内核缓冲区到底有什么区别、各自起什么作用。</p>
+
+<h2>疑难点一：如何改进设备分配策略，以提高其灵活性和成功率？</h2>
+
+<p>可以从以下两个方面对基本的设备分配程序加以改进。</p>
+
+<h3>1）增强设备无关性</h3>
+<p>进程使用<strong>逻辑设备名</strong>发起 I/O 请求。系统首先从<strong>系统设备表（SDT）</strong>中查找该类设备的第一个<strong>设备控制表（DCT）</strong>；若该设备正忙，则继续查找下一个 DCT；仅当<strong>所有同类设备均处于忙碌状态</strong>时，才把进程挂起，并将其加入该类设备的等待队列。反过来说，只要存在一个可用设备，系统就进入后续的安全性检查与分配流程，不会让进程白等。</p>
+
+<h3>2）支持多通路 I/O 结构</h3>
+<p>为避免 I/O 瓶颈，现代系统常采用<strong>多通路</strong>设计：一台设备可以连接多个控制器，一个控制器也可以连接多个通道。在这种结构下，控制器与通道的分配同样要<strong>逐级尝试</strong>：若设备所连接的第一个控制器（或该控制器所连接的第一个通道）正忙，就尝试下一个；仅当所有相关控制器（或通道）均不可用时，分配才宣告失败，进程被挂入相应的等待队列；只要有一个可用，即可完成分配。</p>
+
+<p>在具有通道的系统中，设备分配需要依次访问 <strong>SDT → DCT → COCT → CHCT</strong>。成功分配一个设备必须同时满足：<strong>设备可用、控制器可用、通道可用</strong>。因此常称——「设备分配，要过三关」。</p>
+
+<div class="callout kao"><span class="callout-title">考点</span>两条改进策略（增强设备无关性、多通路 I/O）与「三关」是本章收尾的常考内容：分配时要逐层查找、逐级尝试，<strong>只有全部同类设备（或全部相关控制器、通道）都忙才挂起进程</strong>，只要有一个空闲就继续分配流程。数据结构的访问顺序 SDT→DCT→COCT→CHCT 要能默写，并对应「设备—控制器—通道」三级层次。</div>
+
+<h2>疑难点二：用户缓冲区与内核缓冲区的定义及作用分别是什么？</h2>
+
+<h3>用户缓冲区</h3>
+<p>用户进程在读取文件时，通常会预先申请一块内存区域（如一个数组），称为<strong>缓冲区（Buffer）</strong>，用于暂存从文件中读取的数据。每次调用 <code>read</code> 系统调用时，操作系统把读取的数据填充到该缓冲区中，应用程序便可直接从中获取数据；其中的数据处理完毕后，再发起下一次 <code>read</code> 系统调用重新填充缓冲区。</p>
+<p><strong>用户缓冲区的主要作用是减少系统调用的次数</strong>，进而降低因频繁在用户态与内核态之间切换所带来的开销。</p>
+
+<h3>内核缓冲区</h3>
+<p><strong>内核缓冲区</strong>是操作系统在<strong>内核空间</strong>中维护的缓冲区。它对读、写两个方向的工作方式不同：</p>
+<ul>
+  <li><strong>读方向</strong>：用户进程请求读取磁盘数据时，系统并不直接访问磁盘，而是先检查内核缓冲区中是否已缓存所需数据——若存在，直接把数据从内核缓冲区复制到用户缓冲区；若不存在，内核才发起磁盘 I/O 请求，并把当前进程挂起、转而调度其他进程执行；磁盘数据被读入内核缓冲区后，再复制到用户缓冲区，并唤醒该进程。</li>
+  <li><strong>写方向</strong>：用户进程提交的数据通常不会立即写入磁盘，而是先写入内核缓冲区；当缓冲区中的数据积累到一定量，或满足特定刷新条件时，内核才把数据<strong>批量</strong>写入磁盘。</li>
+</ul>
+<p><strong>内核缓冲区的核心目的是提升磁盘 I/O 的整体效率</strong>，尤其对写操作具有突出的优化效果。</p>
+
+<h3>两者对比</h3>
+<table>
+  <thead><tr><th>维度</th><th>用户缓冲区</th><th>内核缓冲区</th></tr></thead>
+  <tbody>
+    <tr><td><strong>位置</strong></td><td>用户进程自行申请的用户空间内存（如数组）</td><td>操作系统在内核空间中维护</td></tr>
+    <tr><td><strong>管理者</strong></td><td>应用程序自己填充与消费</td><td>操作系统统一管理，对用户透明</td></tr>
+    <tr><td><strong>主要作用</strong></td><td>减少系统调用次数，降低用户态/内核态切换开销</td><td>缓存磁盘数据、合并延迟写入，减少直接磁盘 I/O 的次数</td></tr>
+    <tr><td><strong>对读操作</strong></td><td>承接每次 <code>read</code> 填入的数据</td><td>命中则直接复制给用户，未命中才发起磁盘 I/O</td></tr>
+    <tr><td><strong>对写操作</strong></td><td>—（写路径中暂存待发送的数据）</td><td>数据先入内核缓冲区，积累到一定量或满足刷新条件才批量落盘</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip"><span class="callout-title">提示</span>内核缓冲区「写操作先缓冲、满足条件再批量落盘」的做法，与 5.3.3 节「提高磁盘 I/O 速度的方法」中的<strong>延迟写</strong>是同一思想：合并多次写操作、减少 I/O 次数。分清记忆：用户缓冲区省的是<strong>系统调用与态切换</strong>的开销，内核缓冲区省的是<strong>磁盘 I/O</strong> 的开销。</div>
+
+<nav class="pager"><a href="../ch5/s5-3.html">← 5.3 磁盘和固态硬盘</a><span></span></nav>
+</main>
+<footer class="site-footer"><div class="bar">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流。插图版权归原书作者所有。</div></footer>
+</body>
+</html>
