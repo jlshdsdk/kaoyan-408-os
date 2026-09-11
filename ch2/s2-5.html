@@ -11,24 +11,27 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span style="opacity:.55">/</span> 2.5 本章疑难点</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span class="sep">/</span> 2.5 本章疑难点</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html" class="active">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html" active>2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>2.5 本章疑难点</h1>
 <p>本章正文已把进程、调度、同步互斥与死锁逐一展开，这里再把三个最容易混淆、也最适合出题的问题集中对比，把概念彻底掰清。</p>
 
-<h2>1. 进程与程序的区别与联系</h2>
+<h2 id="toc-1">1. 进程与程序的区别与联系</h2>
 <p>初学者常把两者混为一谈。一个直观的比喻：程序好比菜谱，进程则是「照着菜谱炒菜」的整个过程——菜谱本身静止不变，炒菜的过程却有始有终。二者的区别可从四个维度对比：</p>
 <table>
   <thead><tr><th>对比维度</th><th>进程</th><th>程序</th></tr></thead>
@@ -42,7 +45,7 @@
 <p>两者的<strong>联系</strong>同样关键：进程的<strong>运行实体是程序</strong>，脱离程序的进程没有任何意义；从静态视角看，进程就是「程序 + 数据 + PCB」。一份程序可以同时对应多个进程（如多个用户运行同一个编辑器，见 2.1 节程序段的共享），进程在其生命期内也可先后调用多个程序。</p>
 <div class="callout kao"><span class="callout-title">考点</span>这张对比表逐条都可出选择题与判断题，干扰项的典型手法是把两者的性质互换，如「程序是进程的一次执行活动」「进程是永久的、程序是暂时的」「程序也能创建新进程」。四句话记牢：<strong>一动一静、一暂一久、一能生一不能、组成多块 PCB</strong>。</div>
 
-<h2>2. 银行家算法的工作原理</h2>
+<h2 id="toc-2">2. 银行家算法的工作原理</h2>
 <p>银行家算法（详见 2.4.3）对付死锁的思路是<strong>回避</strong>而非事后处理：系统从不试图拆散已经形成的死锁，而是保证系统<strong>永远不进入不安全状态</strong>，让死锁在源头上没有发生的机会。其工作流程可概括为「先试探、再验证、后决定」：</p>
 <ol>
   <li><strong>试探性分配</strong>：进程提出资源请求后，系统先检查当前是否有足够的资源满足该请求；若有，先在账面上做一次<strong>试探性分配</strong>，并不真正把资源交给进程。</li>
@@ -52,7 +55,7 @@
 <div class="callout tip"><span class="callout-title">提示</span>手算安全性检查时不必机械地逐个进程推演，可以批量提速：若算到某一步，系统当前空闲资源（Work 向量）已能满足<strong>余下任意一个进程的尚需量 Need</strong>（注意安全性算法比较的是 Need ≤ Work，而不是最大需求 Max ≤ Work），即可直接宣布系统安全——此后无论按什么顺序推进，空闲资源只会越滚越多，余下进程全都能顺利完工。反过来，若把当前所有可满足需求的进程作为一个集合同时推进、执行完毕并释放资源后，空闲资源（此时已达到系统空闲资源所能取得的最大值）仍不能满足任何剩余进程的尚需量，则说明找不到安全序列，系统处于<strong>不安全状态</strong>——按当前请求推进<strong>可能</strong>导致死锁（这也是银行家算法拒绝该请求的原因），但并非必然死锁。</div>
 <div class="callout kao"><span class="callout-title">考点</span>综合题要求完整书写「试探分配 → 安全性检查 → 恢复/正式分配」的判定过程（见本章综合题）；选择题爱考流程与概念边界，例如「银行家算法通过破坏死锁的四个必要条件之一来预防死锁」（错，它属于死锁<strong>避免</strong>策略，并不破坏必要条件，见 2.4 节四种策略的对比）、「银行家算法保证系统不进入不安全状态」（对）。</div>
 
-<h2>3. 进程同步、互斥的区别和联系</h2>
+<h2 id="toc-3">3. 进程同步、互斥的区别和联系</h2>
 <p>并发执行的进程之间存在两类制约关系，同步与互斥正是对这两类关系的刻画：</p>
 <table>
   <thead><tr><th>对比项</th><th>互斥（间接制约）</th><th>同步（直接制约）</th></tr></thead>
@@ -65,11 +68,14 @@
 <p>二者的<strong>联系</strong>在于：无论竞争还是协作，都源于并发进程对资源的共享与相互依赖，都必须借助同步机制（如信号量，见 2.3.4）加以协调才能正确工作；而且从广义上看，<strong>互斥也可以视为一种特殊的同步</strong>——它协调的正是各进程使用临界资源的次序。</p>
 <div class="callout kao"><span class="callout-title">考点</span>选择题常给一个具体场景（打印机、共享缓冲区、接力计算等），判断进程间是同步还是互斥关系。判别看「动机」：为<strong>争抢资源</strong>而等待是互斥（竞争关系/间接制约），为<strong>等待对方的信号或结果</strong>而等待是同步（协作关系/直接制约）。「同步 = 直接制约关系、互斥 = 间接制约关系」这组术语对应本身也常直接设空考查。</div>
 
+</article>
 <nav class="pager"><a href="../ch2/s2-4.html">← 2.4 死锁</a><a href="../ch2/quiz.html">下一页：本章习题 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">1. 进程与程序的区别与联系</a></li><li class="lv2"><a href="#toc-2">2. 银行家算法的工作原理</a></li><li class="lv2"><a href="#toc-3">3. 进程同步、互斥的区别和联系</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -79,6 +85,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

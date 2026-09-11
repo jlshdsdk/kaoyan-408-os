@@ -14,20 +14,23 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch4/index.html">第4章 文件管理</a> <span style="opacity:.55">/</span> 4.2 目录与文件</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch4/index.html">第4章 文件管理</a> <span class="sep">/</span> 4.2 目录与文件</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html" class="active">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html" active>4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>4.2 目录与文件</h1>
 
 <p>有了文件，还必须有办法把成千上万个文件<strong>组织起来、找得到、管得好</strong>——这就是目录要解决的问题。本节从文件控制块与索引节点出发，依次讨论目录结构的设计、文件的物理分配方式、文件的基本操作，最后落到文件共享与保护机制，知识点密集且环环相扣。学习本节前，请先带着三个问题：</p>
@@ -38,7 +41,7 @@
 </ol>
 <div class="callout notice"><span class="callout-title">提醒</span>历年考试表明，多数读者对进程与内存两部分掌握较好，但对文件管理与 I/O 管理往往基础薄弱，甚至在很基本的问题上失分。究其原因，是对概念的理解不够全面透彻，请务必重视本节。</div>
 
-<h2>4.2.1 目录的基本概念</h2>
+<h2 id="toc-1">4.2.1 目录的基本概念</h2>
 <p>现代计算机系统中要存储大量文件，必须借助<strong>文件目录</strong>对文件进行有效组织。文件目录本身是一种数据结构，负责记录每个文件的属性、在外存中的存储位置等元数据，使得检索文件时能够快速定位其物理地址。目录管理需要满足以下四项基本要求：</p>
 <ul>
   <li><strong>实现按名存取</strong>：用户只需提供文件名，系统即可自动定位该文件在外存中的位置——这是目录管理最基本的功能；</li>
@@ -47,10 +50,10 @@
   <li><strong>允许文件重名</strong>：不同用户可以对各自所属的文件使用相同的名字，以符合各自的命名习惯。</li>
 </ul>
 
-<h2>4.2.2 文件控制块和索引节点</h2>
+<h2 id="toc-2">4.2.2 文件控制块和索引节点</h2>
 <p>为便于管理文件，系统引入了<strong>文件控制块（File Control Block，FCB）</strong>这一重要数据结构。</p>
 
-<h3>1. 文件控制块（FCB）</h3>
+<h3 id="toc-3">1. 文件控制块（FCB）</h3>
 <p>FCB 是存放控制文件所需各种信息的数据结构，用于实现<strong>按名存取</strong>。每个文件对应一个 FCB，而<strong>所有 FCB 的集合就构成文件目录</strong>（也称目录文件）。每当创建一个新文件，系统就为它建立一个 FCB，记录其各项属性。</p>
 <figure>
   <img src="../assets/ch4/ch4-p269-01.png" loading="lazy" alt="一个典型的FCB：包含文件名、类型、文件权限（读、写）、文件大小、文件数据块指针等信息项">
@@ -64,7 +67,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>文件属性信息的存储位置（2009 统考）：文件的访问控制等属性信息应存放在 FCB 中，而不是文件分配表、用户口令表等结构里。</div>
 
-<h3>2. 索引节点</h3>
+<h3 id="toc-4">2. 索引节点</h3>
 <p>当文件数量庞大时，传统 FCB 目录的问题就暴露出来了：查找文件时系统需<strong>逐块读入目录项并逐一比对文件名</strong>，而只有文件名匹配成功时才真正需要该文件的物理地址——也就是说，检索阶段除文件名之外的其他描述信息完全是"陪跑"的。为此，UNIX 等系统采用<strong>文件名与文件描述信息分离</strong>的设计：把描述信息单独组织成<strong>索引节点（inode）</strong>，简称 i 节点；目录项则只由<strong>文件名 + 索引节点号（索引节点指针）</strong>构成。</p>
 <figure>
   <img src="../assets/ch4/ch4-p270-01.png" loading="lazy" alt="UNIX的文件目录结构：目录项仅由文件名和索引节点编号两列构成，文件名1、文件名2各对应一个索引节点编号">
@@ -104,9 +107,9 @@
 </ul>
 <div class="callout notice"><span class="callout-title">易错</span>链接计数属于<strong>磁盘</strong>索引节点，而访问计数、状态、逻辑设备号、链接指针是<strong>内存</strong>索引节点新增的内容——"内存有、磁盘无"是选择题常设的坑。</div>
 
-<h2>4.2.3 目录结构</h2>
+<h2 id="toc-5">4.2.3 目录结构</h2>
 
-<h3>1. 单级目录结构<span class="badge extra">课外拓展</span></h3>
+<h3 id="toc-6">1. 单级目录结构<span class="badge extra">课外拓展</span></h3>
 <p>最简单的做法：整个文件系统只维护一张全局目录表，每个文件占一个目录项。</p>
 <figure>
   <img src="../assets/ch4/ch4-p270-02.png" loading="lazy" alt="单级目录结构：一张目录表中依次存放FCB1～FCBn，分别指向文件1～文件n">
@@ -114,7 +117,7 @@
 </figure>
 <p>创建文件时先遍历整张目录表确认无同名文件，再新增一个 FCB 并填入属性；访问时按文件名找到 FCB，经合法性检查后执行操作；删除时先定位 FCB，回收其占用的存储空间，再清除该 FCB。单级目录虽然实现了按名存取，但<strong>查找效率低、不允许文件重名、难以支持文件共享</strong>，无法满足多用户环境，仅适用于早期单用户的简单文件系统。</p>
 
-<h3>2. 两级目录结构<span class="badge extra">课外拓展</span></h3>
+<h3 id="toc-7">2. 两级目录结构<span class="badge extra">课外拓展</span></h3>
 <p>为克服单级目录的缺陷，把文件目录分成两层：<strong>主文件目录（MFD）</strong>和<strong>用户文件目录（UFD）</strong>。</p>
 <figure>
   <img src="../assets/ch4/ch4-p271-01.png" loading="lazy" alt="两级目录结构：主文件目录按 User1～User4 分别指向各用户的用户文件目录，各UFD内包含 TEST、DATA、CAT 等各自的文件">
@@ -122,7 +125,7 @@
 </figure>
 <p>MFD 的每个目录项记录一个用户名及其 UFD 的存储位置；每个 UFD 则包含该用户所有文件的 FCB。用户访问文件时，系统只需在其专属 UFD 中查找。这既解决了不同用户间的<strong>文件重名</strong>问题，又通过隔离用户命名空间增强了安全性，检索效率也随之提升。但由于每个用户只有一个扁平的 UFD，无法对文件分类管理，组织复杂文件集合时灵活性不足。</p>
 
-<h3>3. 树形目录结构</h3>
+<h3 id="toc-8">3. 树形目录结构</h3>
 <p>把两级目录加以推广，就得到目前绝大多数操作系统（UNIX、Linux、Windows）采用的<strong>树形目录结构</strong>。</p>
 <figure>
   <img src="../assets/ch4/ch4-p271-02.png" loading="lazy" alt="树形目录结构：根目录下分出 dev、home、bin、usr 等子目录，子目录下再嵌套 hda、cp 等文件或目录，形似一棵自根向下的树">
@@ -137,7 +140,7 @@
 <p><strong>优点</strong>：便于文件分类，层次清晰，便于管理与保护——不同性质或归属的文件可分布在目录树的不同分支或子树中，还能对各节点设置独立的存取权限，实现精细化控制。<strong>缺点</strong>：查找一个文件需按路径名逐级访问中间目录节点，磁盘 I/O 次数较多，可能影响查询速度。</p>
 <div class="callout kao"><span class="callout-title">考点</span>设置当前工作目录的作用（2010 统考）——<strong>加快文件的检索速度</strong>：从当前目录出发的相对路径避免了每次都从根目录逐层查找。</div>
 
-<h3>4. 无环图目录结构<span class="badge extra">课外拓展</span></h3>
+<h3 id="toc-9">4. 无环图目录结构<span class="badge extra">课外拓展</span></h3>
 <p>树形目录便于分类，但难以支持文件共享。为此，在树形结构的基础上引入<strong>指向同一节点的有向边</strong>，使目录结构演变为一个<strong>有向无环图</strong>。</p>
 <figure>
   <img src="../assets/ch4/ch4-p272-01.png" loading="lazy" alt="无环图目录结构：root 下有 dict、spell 等目录，list 节点同时被两条有向边指向，同一文件或子目录可出现在两个目录中">
@@ -145,7 +148,7 @@
 </figure>
 <p>这种结构允许目录共享子目录或文件：同一个文件或子目录可以同时出现在两个或多个目录中，实现跨目录共享。但共享也给删除操作带来了麻烦——若某用户请求删除一个共享节点时系统直接将其物理删除，其他共享用户的后续访问就会失败。解决办法是<strong>为每个共享节点维护一个共享计数器</strong>：新增一条共享链时计数器加 1，收到删除请求时减 1；<strong>仅当计数器归零才真正删除该节点</strong>，否则只断开请求用户的那条共享链，节点继续保留给他人使用。无环图目录有效支持了灵活共享，代价是需要额外维护引用计数等共享状态，管理开销增加。</p>
 
-<h2>4.2.4 目录的操作</h2>
+<h2 id="toc-10">4.2.4 目录的操作</h2>
 <p>在理解文件系统的设计之前，先明确目录层面支持哪些基本操作——它们构成用户与文件系统交互的核心接口：</p>
 <ul>
   <li><strong>搜索</strong>：访问文件时在相应目录中查找对应的目录项。系统通常支持从根目录或当前工作目录出发，可用精确文件名或部分文件名检索；</li>
@@ -158,20 +161,20 @@
   <li><strong>改变目录</strong>：切换当前工作目录，可指定绝对路径或相对路径；未显式指定时系统通常默认返回用户的主目录。</li>
 </ul>
 
-<h2>4.2.5 目录实现<span class="badge extra">课外拓展</span></h2>
+<h2 id="toc-11">4.2.5 目录实现<span class="badge extra">课外拓展</span></h2>
 <p>访问文件时，操作系统根据路径名定位目录项，再由目录项中的信息找到文件的磁盘块。目录实现的<strong>核心目标是高效支持查找</strong>，主要有两种方法：</p>
-<h3>1. 线性列表</h3>
+<h3 id="toc-12">1. 线性列表</h3>
 <p>最简单的实现：用由"文件名 + 数据块指针"组成的线性列表充当目录。创建文件时先遍历目录确保无同名文件，再新增目录项；删除文件时按文件名查找并释放其占用的空间。为了重用被删除的目录项，常见策略有：把该项标记为未使用、将其挂入空闲链表，或把末尾项移到空位并缩短目录长度；若改用链表组织目录项，还能进一步降低删除操作的时间开销。线性列表<strong>实现简单</strong>，但<strong>查找效率低</strong>——目录规模越大，扫描开销越高。</p>
-<h3>2. 哈希表</h3>
+<h3 id="toc-13">2. 哈希表</h3>
 <p>根据文件名计算哈希值，以此索引到哈希表中的某个元素，该元素通常存放指向实际目录项的指针。哈希表的<strong>查找、插入、删除都具有很高的性能</strong>，但必须妥善处理<strong>哈希冲突</strong>（不同文件名映射到同一表元素的情况）。</p>
 <div class="callout tip"><span class="callout-title">提示</span>目录查询依赖磁盘 I/O，频繁访问开销大，因此系统通常把当前活跃的目录<strong>缓存到内存</strong>中，后续访问直接在内存进行，从而大幅减少磁盘操作。</div>
 
-<h2>4.2.6 文件的物理结构</h2>
+<h2 id="toc-14">4.2.6 文件的物理结构</h2>
 <p>文件的物理结构研究<strong>文件数据在磁盘上如何分布与组织</strong>，可从两个互补的视角理解：①<strong>文件分配方式</strong>——如何为文件分配磁盘块，属于对非空闲块的管理；②<strong>文件存储空间管理</strong>——如何跟踪和分配空闲磁盘块，属于对空闲块的管理（见 4.3 节）。</p>
 <p>如同内存被划分为固定大小的页，磁盘也被划分为若干<strong>磁盘块</strong>，大小通常与内存页面一致，所有磁盘 I/O 都以块为单位在内存与磁盘间交换数据。</p>
 <div class="callout kao"><span class="callout-title">考点</span>不同物理结构的特点与比较（2009、2011、2013、2020 统考）。文件分配方式直接决定文件的物理结构，常用策略有连续、链接、索引三种。注意与文件的<strong>逻辑结构</strong>区分：可类比数据结构中"线性表"（逻辑结构）与"顺序表/链表"（物理实现）的关系——逻辑结构描述"是什么"，物理结构说明"怎么存"。</div>
 
-<h3>1. 连续分配</h3>
+<h3 id="toc-15">1. 连续分配</h3>
 <p>连续分配要求每个文件在磁盘上占有<strong>一组连续的块</strong>。磁盘地址本身具有线性顺序，这种布局使访问文件所需的寻道次数和寻道时间最小。</p>
 <p>采用连续分配时，逻辑文件中的记录依次存入相邻物理块，<strong>目录项记录起始块号和所占总块数</strong>。设文件长 \(n\) 块、从块 \(b\) 开始存放，则文件占据块 \(b, b+1, b+2, \dots, b+n-1\)；要访问第 \(i\) 块，直接计算并访问块 \(b+i-1\) 即可，无须任何查找。</p>
 <figure>
@@ -184,7 +187,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>连续分配的应用和分析（2011、2012、2014 统考）。抓住两个关键词："<strong>随机（直接）访问快</strong>"与"<strong>难扩展、有外部碎片</strong>"。</div>
 
-<h3>2. 链接分配</h3>
+<h3 id="toc-16">2. 链接分配</h3>
 <p>链接分配采用<strong>离散方式</strong>分配磁盘块，主要优点：①消除外部碎片，显著提高磁盘空间利用率；②可动态分配盘块，无须预知文件大小；③文件的插入、删除和修改十分便捷。按指针存放位置不同，分为隐式链接和显式链接。</p>
 <h4>（1）隐式链接</h4>
 <p>每个文件对应一个由磁盘块构成的链表，各块可分散在磁盘任意位置。<strong>目录项中记录文件第一块和最后一块的指针（盘块号）</strong>；除最后一块外，每个盘块中都存有指向下一个盘块的指针，这些指针对用户完全透明。</p>
@@ -209,7 +212,7 @@
   <li><strong>缺点</strong>：FAT 需要常驻内存，磁盘容量越大，表越大，内存开销越显著。</li>
 </ul>
 
-<h3>3. 索引分配</h3>
+<h3 id="toc-17">3. 索引分配</h3>
 <h4>（1）单级索引分配</h4>
 <p>打开文件时，其实只需把<strong>该文件占用的盘块号</strong>调入内存，无须加载整个 FAT。于是可以把每个文件的所有盘块号集中存放于一处：系统为每个文件分配一个专用的<strong>索引块（索引表）</strong>，把分配给它的所有盘块号记录其中，访问文件时一次性载入。</p>
 <figure>
@@ -250,9 +253,9 @@
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>混合索引分配的原理（2013 统考）与相关计算（2010、2015、2018、2022 统考）；多级索引块的访问效率分析（2018、2022 统考）。典型问法："读文件偏移 X 字节处共需访问磁盘几次"——先按各级容量判断偏移落在哪级间址，再数"索引块 + 数据块"的读盘次数。</div>
 
-<h2>4.2.7 文件的操作</h2>
+<h2 id="toc-18">4.2.7 文件的操作</h2>
 <p>文件是一种抽象数据类型，要正确定义它，就得明确可对它执行哪些操作。操作系统通过一系列系统调用实现文件的创建、删除、读/写、打开和关闭。</p>
-<h3>1. 文件的基本操作</h3>
+<h3 id="toc-19">1. 文件的基本操作</h3>
 <h4>（1）创建文件</h4>
 <p>创建文件涉及元数据分配、存储空间预留与目录注册等多个步骤：</p>
 <ol>
@@ -279,7 +282,7 @@
 <p>先按文件名在目录中查找目录项，取得索引节点号，从而定位文件在外存中的数据块；再依据当前读指针的位置从指定块读取数据，并更新读指针。</p>
 <h4>（4）写文件</h4>
 <p>同样先通过文件名查找目录项、取得索引节点号以定位外存数据块，然后按当前写指针的位置把数据写入相应块并更新写指针。若写入超出当前已分配的空间，系统会动态分配新的磁盘块，并更新 inode（或 FCB）中的块指针。</p>
-<h3>2. 文件的打开与关闭</h3>
+<h3 id="toc-20">2. 文件的打开与关闭</h3>
 <p>若每次读/写都从检索目录开始，开销会非常大。为此，多数操作系统规定：用户<strong>首次访问</strong>某文件时必须先用系统调用 <code>open</code> 将其打开。系统维护一个称为<strong>打开文件表</strong>的数据结构记录当前活跃的文件信息。所谓"打开"，是指系统根据文件路径定位到目录项后，把关键信息载入内存，在打开文件表中创建一个表目，并把该表目的索引号（<strong>文件描述符</strong>）返回给用户。此后再操作该文件，只需提供文件描述符，系统直接从内存获取信息，显著降低目录检索开销。</p>
 <p>为兼顾效率与管理灵活性，现代操作系统采用<strong>两级打开文件表</strong>结构：</p>
 <figure>
@@ -310,9 +313,9 @@
   <li><strong>访问权限</strong>：进程打开文件时需指定访问模式（只读、读/写、追加、创建等），该信息保存在进程的打开文件表中，操作系统据此判断是否允许后续 I/O 请求。</li>
 </ul>
 
-<h2>4.2.8 文件共享</h2>
+<h2 id="toc-21">4.2.8 文件共享</h2>
 <p>文件共享让多个用户访问<strong>同一个物理副本</strong>。若缺乏共享机制，每个需要该文件的用户都得持有独立副本，既浪费存储又易造成数据不一致。前文的无环图目录结构可用于实现共享，但若建立链接时把被共享文件的<strong>盘块号复制</strong>到相应目录项中，那么当某用户向文件追加数据并分配新盘块时，新增盘块只出现在其操作所对应的目录里，对其他用户不可见——这样并没实现真正的共享。真正的共享方案有两种：</p>
-<h3>1. 基于索引节点的共享方式（硬链接）</h3>
+<h3 id="toc-22">1. 基于索引节点的共享方式（硬链接）</h3>
 <p>硬链接是一种基于索引节点的共享机制：文件的物理地址和属性信息不再放在目录项中，而是<strong>集中存放在索引节点内</strong>；目录项仅包含文件名及指向该索引节点的指针。索引节点中有一个<strong>链接计数 count</strong>（引用计数），记录当前指向它的目录项数量。</p>
 
 <figure>
@@ -321,7 +324,7 @@
 </figure>
 <p>用户 A 创建新文件时即成为文件拥有者，系统为其创建索引节点并把 count 置为 1；用户 B 要共享该文件时，系统在 B 的目录中新增一个目录项并设好指向该索引节点的指针，count 增至 2，但拥有者仍是 A。那么，A 不再需要该文件时能直接删除吗？<strong>不能</strong>。若删除操作连带移除索引节点，B 的指针就会悬空，而 B 可能正在对该文件执行写操作，操作会中断失败。因此 A 只应删除<strong>自己的目录项</strong>，并把 count 减 1；只要 count &gt; 0，文件及其索引节点就保留，B 可继续使用；仅当 count = 0 时，系统才真正释放该文件及其索引节点。</p>
 <div class="callout kao"><span class="callout-title">考点</span>硬链接的原理与相关分析（2009、2017 统考）：链接计数 count 的增减时机，以及"拥有者先删除后文件为何仍存在"是常考的设问点。</div>
-<h3>2. 利用符号链实现文件共享（软链接）</h3>
+<h3 id="toc-23">2. 利用符号链实现文件共享（软链接）</h3>
 <p>为使用户 B 共享用户 A 的文件 F，系统可创建一个 <strong>LINK 类型的新文件 L</strong>，写入 B 的目录中，从而建立 B 的目录与文件 F 之间的链接。文件 L 的内容只有一个东西——被链接文件 F 的<strong>路径名</strong>。这种方式称为<strong>符号链接</strong>，也称软链接，功能类似 Windows 的快捷方式：B 访问 L 时，操作系统识别出它是 LINK 类型，便按其中记录的路径名逐级查找定位到 F，再对 F 执行读/写。</p>
 <figure>
   <img src="../assets/ch4/ch4-p281-01.png" loading="lazy" alt="利用符号链的共享方式：A用户目录经索引节点(count=1)指向文件F；B用户目录中的文件L是Link类型，其中记录了文件F的路径“/Wang/F”，L有自己的索引节点(count=1)和物理地址">
@@ -347,9 +350,9 @@
 </table>
 <p>可以这样概括：文件共享要"软硬"兼施——硬链接是多个目录项指向同一个索引节点，只要还有一个指针存在，索引节点就不会被删除；软链接是保存到达共享文件的路径，访问时按路径查找。可见硬链接的查找速度通常优于软链接，因为它直接通过指针访问。</p>
 
-<h2>4.2.9 文件保护</h2>
+<h2 id="toc-24">4.2.9 文件保护</h2>
 <p>为防止文件在共享中被意外破坏或被未授权用户篡改，文件系统必须控制用户访问文件的行为，明确哪些用户可对文件执行读/写、执行等操作。常见实现方式有<strong>口令保护、加密保护和访问控制</strong>三类：口令与加密主要用于防止他人非法获取或窃取文件内容，访问控制则用于精细管理用户对文件的具体访问权限。</p>
-<h3>1. 访问类型</h3>
+<h3 id="toc-25">1. 访问类型</h3>
 <p>文件保护通常通过限制用户可执行的访问类型来实现，主要受控操作包括：</p>
 <ul>
   <li><strong>读</strong>：从文件中读取数据；</li>
@@ -360,7 +363,7 @@
   <li><strong>列表清单</strong>：列出目录中文件的名称及其属性。</li>
 </ul>
 <p>系统还可对重命名、复制、编辑等高层操作加以控制，但这些功能通常由应用程序调用系统调用来实现，真正的保护机制只在底层提供——例如复制文件本质上是由一系列"读"操作完成的，用户只要拥有读权限，便隐含具备了复制和打印的能力。</p>
-<h3>2. 访问控制</h3>
+<h3 id="toc-26">2. 访问控制</h3>
 <p>实现访问控制最常用的方法是按用户身份管理权限，最普遍的机制是为每个文件和目录附加一个<strong>访问控制列表（Access-Control List，ACL）</strong>，明确指定各用户名及其被允许的访问类型。优点是支持灵活而复杂的访问策略，缺点是列表长度不可预知，带来复杂的空间管理开销。为此，现代系统常采用<strong>精简的 ACL</strong>，把用户划为三类：</p>
 <ol>
   <li><strong>拥有者</strong>：创建文件的用户；</li>
@@ -380,18 +383,21 @@
 </ul>
 <div class="callout notice"><span class="callout-title">易错</span>口令与加密主要用于防止文件被<strong>非法获取或窃取</strong>，并不区分具体的访问操作类型（读/写、执行等），因此<strong>无法替代</strong>基于权限的访问控制，只能作为补充手段。此外，多级目录结构下保护需求还涵盖子目录及其全部内容，系统须提供专门的目录保护机制。</div>
 
-<h2>4.2.10 本节小结</h2>
+<h2 id="toc-27">4.2.10 本节小结</h2>
 <p>开头提出的三个问题，答案如下：</p>
 <p><strong>1）目录管理的基本要求是什么？</strong>①实现"按名存取"，这是目录管理最基本的功能；②提高目录检索速度，加快文件存取；③为支持安全共享，目录需提供访问控制信息，管理不同用户对文件的使用权限；④支持重名，允许不同用户为各自的文件使用相同名称。</p>
 <p><strong>2）在目录中查找某个文件可采用哪些方法？</strong>可采用<strong>线性列表法</strong>或<strong>哈希表法</strong>。线性列表法把文件名组织成线性表，查找时依次与各表项比较；若文件名有序，还可用折半查找，但插入新文件时要维护有序性，带来额外开销。哈希表法通过哈希函数把文件名映射为指向目录项的指针，查找迅速，但需妥善处理哈希冲突。</p>
 <p><strong>3）单个文件的逻辑结构与物理结构之间是否存在制约关系？</strong>逻辑结构是用户可见的文件组织形式，物理结构是文件在存储器上的实际存放方式，与存取方法及存储介质特性密切相关。二者<strong>没有直接制约关系</strong>，但物理结构选择不当，就难以体现逻辑结构的特点——例如逻辑上为顺序结构的文件若采用隐式链接的物理结构，即使理论上能快速定位某条记录，实际仍要在磁盘上逐块查找。</p>
 <p>学到这里应当体会到：现代操作系统的设计中处处可见面向对象思想的影子。本章的"文件"实质上是一种<strong>抽象数据类型</strong>——面对任何一种数据结构，自然要关注它的逻辑结构、物理结构和所支持的操作，文件也不例外。</p>
 
+</article>
 <nav class="pager"><a href="../ch4/s4-1.html">← 4.1 文件系统基础</a><a href="../ch4/s4-3.html">下一页：4.3 文件系统 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">4.2.1 目录的基本概念</a></li><li class="lv2"><a href="#toc-2">4.2.2 文件控制块和索引节点</a></li><li class="lv3"><a href="#toc-3">1. 文件控制块（FCB）</a></li><li class="lv3"><a href="#toc-4">2. 索引节点</a></li><li class="lv2"><a href="#toc-5">4.2.3 目录结构</a></li><li class="lv3"><a href="#toc-6">1. 单级目录结构课外拓展</a></li><li class="lv3"><a href="#toc-7">2. 两级目录结构课外拓展</a></li><li class="lv3"><a href="#toc-8">3. 树形目录结构</a></li><li class="lv3"><a href="#toc-9">4. 无环图目录结构课外拓展</a></li><li class="lv2"><a href="#toc-10">4.2.4 目录的操作</a></li><li class="lv2"><a href="#toc-11">4.2.5 目录实现课外拓展</a></li><li class="lv3"><a href="#toc-12">1. 线性列表</a></li><li class="lv3"><a href="#toc-13">2. 哈希表</a></li><li class="lv2"><a href="#toc-14">4.2.6 文件的物理结构</a></li><li class="lv3"><a href="#toc-15">1. 连续分配</a></li><li class="lv3"><a href="#toc-16">2. 链接分配</a></li><li class="lv3"><a href="#toc-17">3. 索引分配</a></li><li class="lv2"><a href="#toc-18">4.2.7 文件的操作</a></li><li class="lv3"><a href="#toc-19">1. 文件的基本操作</a></li><li class="lv3"><a href="#toc-20">2. 文件的打开与关闭</a></li><li class="lv2"><a href="#toc-21">4.2.8 文件共享</a></li><li class="lv3"><a href="#toc-22">1. 基于索引节点的共享方式（硬链接）</a></li><li class="lv3"><a href="#toc-23">2. 利用符号链实现文件共享（软链接）</a></li><li class="lv2"><a href="#toc-24">4.2.9 文件保护</a></li><li class="lv3"><a href="#toc-25">1. 访问类型</a></li><li class="lv3"><a href="#toc-26">2. 访问控制</a></li><li class="lv2"><a href="#toc-27">4.2.10 本节小结</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -401,6 +407,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

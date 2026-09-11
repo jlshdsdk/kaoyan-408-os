@@ -14,27 +14,30 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span style="opacity:.55">/</span> 2.1 进程与线程简介</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span class="sep">/</span> 2.1 进程与线程简介</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html" class="active">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html" active>2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>2.1 进程与线程简介</h1>
 
 <p>进程管理是操作系统的核心，也是每年必考的重点。学习本节前，请先带着三个问题：<strong>为什么要引入进程？什么是进程、进程由什么组成？引入进程主要解决了多道程序并发执行中的哪些关键问题？</strong>学完本节后回到这三个问题，检验自己能否独立作答。</p>
 
-<h2>2.1.1 进程的概念和特征</h2>
+<h2 id="toc-1">2.1.1 进程的概念和特征</h2>
 
-<h3>1. 进程的概念</h3>
+<h3 id="toc-2">1. 进程的概念</h3>
 <p>在多道程序环境下，多个程序并发执行，而<strong>并发性破坏了程序原有的封闭性</strong>：执行过程呈现间断性，执行结果也可能不可再现。为了有效描述和控制程序的并发行为，操作系统引入了<strong>进程（Process）</strong>这一核心概念，用它来支撑操作系统的两大基本特性——<strong>并发性与共享性</strong>。</p>
 <p>要让一个参与并发执行的程序能独立运行，必须为它配置一个专门的数据结构，即<strong>进程控制块（Process Control Block，PCB）</strong>。操作系统通过 PCB 记录进程的基本信息和运行状态，从而实现对进程的控制与管理。通常把<strong>程序段、相关数据段和 PCB</strong> 三者共同构成的整体称为<strong>进程实体</strong>（也称<strong>进程映像</strong>）。由此得到一个重要结论：<strong>创建进程的本质是创建它的 PCB；相应地，撤销进程就是释放该 PCB 及相关资源。</strong></p>
 <p>从不同视角出发，进程有几种比较典型的定义：</p>
@@ -46,7 +49,7 @@
 <p>传统操作系统给出的正式定义是：<strong>「进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。」</strong>注意定义中的「资源」不仅包括内存空间、I/O 设备等硬件资源，也包括 CPU 的使用权（通常通过时间片的分配来实现）。也正因为进程是资源分配与调度的基本单位，它必然不是静态的程序，而是一个<strong>动态的、具有生命周期的过程性实体</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>「进程 vs 程序」是经典选择题：程序是静态的指令集合，以文件形式存放在外存；进程是动态的执行过程，有生命周期。<strong>创建进程的本质是创建 PCB，PCB 是进程存在的唯一标志</strong>；程序本身静态，可被多个进程共享运行（一个程序可对应多个进程）。</div>
 
-<h3>2. 进程的特征</h3>
+<h3 id="toc-3">2. 进程的特征</h3>
 <p>进程源于多道程序并发执行的需求，与静态的程序有本质区别，其核心特征有四个：</p>
 <ul>
   <li><strong>动态性</strong>：进程是程序的一次执行实例，有明确的生命周期，会经历创建、就绪、运行、阻塞、终止等状态变化。<strong>动态性是进程最根本的特征</strong>，也是区分进程与静态程序的关键。</li>
@@ -56,10 +59,10 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>四大特征较少直接设问，但常以判断句间接考查：「进程最根本的特征是动态性」「引入进程的根本目的是支持并发执行」「没有 PCB 的程序无法被调度」。理解各特征的成因与表现，是后续分析进程调度、同步互斥、死锁等问题的基础。</div>
 
-<h2>2.1.2 进程的组成</h2>
+<h2 id="toc-4">2.1.2 进程的组成</h2>
 <p>进程是操作系统进行资源分配和调度的基本单位，由<strong>程序段、数据段和进程控制块（PCB）</strong>三部分共同构成，其中 <strong>PCB 是最核心的组成部分</strong>。</p>
 
-<h3>1. 进程控制块（PCB）</h3>
+<h3 id="toc-5">1. 进程控制块（PCB）</h3>
 <p>进程创建时，操作系统为它分配一个 PCB；PCB <strong>常驻内存</strong>、可随时被系统访问，进程终止时被回收。<strong>PCB 是进程存在的唯一标志</strong>——系统唯有通过 PCB 才能感知并管理进程。在进程的整个生命期内，对进程的一切操作都离不开对 PCB 的访问与更新：调度前从 PCB 读取当前状态、优先级等信息；进程被选中后，根据 PCB 保存的 CPU 上下文（寄存器值）恢复执行现场，并按其中记录的内存地址定位程序段和数据段；运行中涉及同步、通信或访问文件，也要查询 PCB 中的资源信息；进程暂停时，当前 CPU 状态保存回 PCB；进程终止时，PCB 被回收，进程随之消亡。</p>
 <p>PCB 主要包含四类信息（教材表 2.1）：</p>
 <figure>
@@ -81,17 +84,17 @@
   <li><strong>索引方式</strong>：为每种状态建立一个索引表（如就绪索引表、阻塞索引表），表项指向对应状态的 PCB。</li>
 </ul>
 
-<h3>2. 程序段</h3>
+<h3 id="toc-6">2. 程序段</h3>
 <p>程序段是进程中可被 CPU 执行的代码部分。<strong>程序本身是静态的，可以被多个进程共享</strong>：例如多个用户同时运行同一个文本编辑器时，内存中只需保留一份代码副本，各进程通过各自的 PCB 指向该共享代码段，从而节省内存空间、提高系统效率。</p>
 
-<h3>3. 数据段</h3>
+<h3 id="toc-7">3. 数据段</h3>
 <p>数据段包含进程运行所需的各种数据，既有程序处理的原始输入，也有执行过程中产生的中间结果和最终输出。与程序段不同，<strong>每个进程的数据段是私有的</strong>——即使多个进程运行同一程序，它们的数据段也彼此隔离。这种设计有效保障了进程间的独立性与安全性。</p>
 <div class="callout kao"><span class="callout-title">考点</span>「进程 = 程序段 + 数据段 + PCB」和「PCB 是进程存在的唯一标志」是高频判断句。对照表 2.1 的四类信息可以确认：进程的全局变量存放在数据段，<strong>不属于 PCB</strong>。</div>
 
-<h2>2.1.3 进程的内存映像</h2>
+<h2 id="toc-8">2.1.3 进程的内存映像</h2>
 <p>程序被加载运行时，操作系统会为它建立一个虚拟地址空间，该空间的逻辑布局称为<strong>进程的内存映像</strong>，它反映进程在运行时代码、数据、堆、栈等部分的组织方式。与磁盘上的静态可执行文件不同，内存映像是<strong>动态</strong>的；在虚拟内存机制（见 3.2 节）下，进程的整个地址空间也无须全部驻留物理内存——只有实际访问某一部分时，系统才通过缺页中断把它从磁盘调入内存。统考曾考查（2025）进程虚拟地址空间中各区域存放的内容，建议逐区掌握。</p>
 
-<h3>典型进程虚拟地址空间的组成</h3>
+<h3 id="toc-9">典型进程虚拟地址空间的组成</h3>
 <table>
   <thead><tr><th>区域</th><th>存放内容</th><th>特点</th></tr></thead>
   <tbody>
@@ -110,7 +113,7 @@
 <p>从图 2.1 可以看出：最高地址处是用户栈（随函数调用向下增长），其下方是共享库的映射区域；再往下是动态生成的堆（由 malloc() 等函数向上扩展）；堆下方是读/写数据段（.data 和 .bss），底部是只读代码段（.init、.text、.rodata）。注意：<strong>代码段和数据段的大小在程序加载时就已确定，而堆和栈可在运行过程中动态扩展和收缩</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>「给一个变量，判断它在哪个区域」是高频考法（2025 统考）：全局/静态变量→数据段（已初始化 .data、未初始化 .bss）；局部变量与函数实参→栈；malloc 申请的内存→堆；字符串常量→只读代码段（.rodata）；进程优先级等信息→PCB（内核区，不属于进程虚拟地址空间）。</div>
 
-<h2>2.1.4 进程的状态与转换</h2>
+<h2 id="toc-10">2.1.4 进程的状态与转换</h2>
 <p>进程在生命周期中，由于与其他进程相互制约、系统运行环境不断变化，状态会不断转换。通常进程具有五种状态，其中前三种为<strong>基本状态</strong>：</p>
 <ul>
   <li><strong>运行态（Running）</strong>：进程正在 CPU 上执行。单 CPU 系统中，任一时刻<strong>最多只有一个</strong>进程处于运行态。</li>
@@ -138,10 +141,10 @@
 </table>
 <div class="callout kao"><span class="callout-title">考点</span>「引起进程状态转换的事件」是统考超高频考点（2014、2015、2018、2023、2025 均考过）。记三条铁律：①<strong>阻塞态不能直接转入运行态</strong>——被唤醒后只能回到就绪队列重新排队，图 2.2 中没有这条箭头；同理「就绪→阻塞」也不存在，因为阻塞操作只能由处于运行态的进程发起（见 2.1.5）；②运行→阻塞是<strong>主动</strong>行为，阻塞→就绪是<strong>被动</strong>行为；③运行→就绪的两个原因是「时间片到」和「被更高优先级进程抢占」。</div>
 
-<h2>2.1.5 进程控制</h2>
+<h2 id="toc-11">2.1.5 进程控制</h2>
 <p>进程控制的功能是对系统中所有进程进行有效管理，主要包括创建新进程、撤销已有进程、实现进程状态转换等操作。这些控制操作通常以<strong>原语</strong>的形式实现：<strong>原语在执行期间不允许被中断</strong>，是一个不可分割的基本单位，从而保证关键操作的原子性和一致性。</p>
 
-<h3>1. 进程的创建</h3>
+<h3 id="toc-12">1. 进程的创建</h3>
 <p>操作系统允许一个进程创建另一个进程：创建者称为<strong>父进程</strong>，被创建的进程称为<strong>子进程</strong>。子进程创建时会<strong>复制</strong>父进程的当前状态，包括程序代码、数据段、堆栈内容、打开的文件描述符、环境变量等；但子进程与父进程是<strong>相互独立的实体</strong>，拥有各自的 PCB 和虚拟地址空间（2020、2024 统考考查过父子进程的关系和特点）。</p>
 <p>终端用户登录系统、作业调度启动批处理任务、系统提供服务、用户程序发起应用请求等，都会触发进程的创建。创建原语的具体步骤如下（2021 统考考查创建新进程时的操作；2010 统考考查导致创建进程的操作）：</p>
 <ol>
@@ -151,7 +154,7 @@
   <li><strong>插入就绪队列</strong>：若系统允许新进程参与调度，则将其 PCB 插入就绪队列，等待调度。</li>
 </ol>
 
-<h3>2. 进程的终止</h3>
+<h3 id="toc-13">2. 进程的终止</h3>
 <p>引起进程终止的事件主要包括三类：</p>
 <ul>
   <li><strong>正常结束</strong>：进程完成预定任务后主动退出；</li>
@@ -168,7 +171,7 @@
 </ol>
 <p>在某些系统中，一个进程终止时其所有子孙进程也必须随之终止，这种机制称为<strong>级联终止</strong>。但并非所有操作系统都采用这一策略：以 Linux 为例，父进程终止时其子进程不会被自动终止，而是由 init 进程（PID=1）收养，继续正常运行。</p>
 
-<h3>3. 进程的阻塞和唤醒</h3>
+<h3 id="toc-14">3. 进程的阻塞和唤醒</h3>
 <p><strong>阻塞（Block）是进程的主动行为</strong>：正在运行的进程因等待某个外部事件（请求的系统资源暂时不可用、等待 I/O 操作完成、等待接收数据、等待信号量等）而暂时无法继续执行时，会主动调用阻塞原语，使自己从运行态转换为阻塞态。因此，<strong>只有处于运行态的进程才能执行阻塞操作</strong>（2018、2022、2023 统考考查进程阻塞的事件）。阻塞原语的执行过程：</p>
 <ol>
   <li>保存当前进程的 CPU 现场（如程序计数器、状态寄存器等）到其 PCB 中；</li>
@@ -184,10 +187,10 @@
 <p>需要注意：<strong>Block 与 Wakeup 是一对作用相反的原语，必须成对使用</strong>。若某进程调用了 Block 进入阻塞态，而系统中没有任何机制调用对应的 Wakeup，它将永久停留在阻塞态、无法再被调度执行。设计并发程序时，必须确保每个阻塞操作都有相应的唤醒路径。</p>
 <div class="callout kao"><span class="callout-title">考点</span>进程控制类选择题爱考「哪一步不属于」：<strong>创建原语不分配 CPU</strong>——创建完成时进程只是被插入就绪队列等待调度，分配 CPU 是调度程序的工作；阻塞只能发生在<strong>运行态</strong>；唤醒的结果是<strong>就绪态</strong>而不是运行态。</div>
 
-<h2>2.1.6 进程的通信</h2>
+<h2 id="toc-15">2.1.6 进程的通信</h2>
 <p><strong>进程通信（IPC）</strong>是指进程之间的信息交换。按通信效率和数据量的不同，可分为两类：<strong>低级通信</strong>主要用于传递控制信息（如同步、互斥），典型代表是 PV 操作（见 2.3 节）；<strong>高级通信</strong>用于高效传输大量数据，主要包括共享存储、消息传递、管道通信和信号等方式。</p>
 
-<h3>1. 共享存储</h3>
+<h3 id="toc-16">1. 共享存储</h3>
 <p>进程的地址空间通常相互隔离，一个进程不能直接访问另一个进程的内存。为实现高效的数据交换，操作系统提供了<strong>共享存储</strong>机制：通过特殊的系统调用创建一段独立的内存区域，并将其映射到多个进程的虚拟地址空间中，使这些进程都能<strong>直接读写</strong>该区域来交换信息，如图 2.3 所示。</p>
 <figure>
   <img src="../assets/ch2/ch2-p056-01.png" loading="lazy" alt="图2.3 共享存储：左右两个进程各自与中间的共享空间之间画有双向箭头，表示两个进程都能直接读写同一块共享区域来交换信息">
@@ -195,7 +198,7 @@
 </figure>
 <p>由于多个进程可能并发访问同一块内存，<strong>同步互斥机制必须由用户程序自行引入</strong>（如信号量的 P、V 操作），以避免数据竞争或不一致；操作系统只负责分配共享内存区并完成地址映射，<strong>不会自动提供同步保护</strong>，具体的读/写逻辑与同步控制均需用户程序自行设计实现。可以通俗地理解：甲和乙之间放着一个公共的大布袋，甲把要传递的物品放进布袋，乙再从中取出；乙不能直接伸手拿甲手里的东西，甲也不能直接取走乙的东西，所有交换都必须通过这个公共区域完成。</p>
 
-<h3>2. 消息传递</h3>
+<h3 id="toc-17">2. 消息传递</h3>
 <p>当进程之间没有共享内存、或出于安全等考虑不便使用共享存储时，可采用操作系统提供的<strong>消息传递</strong>机制：进程间的数据交换以<strong>格式化的消息（Message）</strong>为单位，通过操作系统提供的<strong>发送原语</strong>和<strong>接收原语</strong>进行。通信的底层细节被封装在内核中、对用户透明，从而简化了应用程序设计。消息传递是目前<strong>应用最广泛</strong>的进程间通信机制——微内核操作系统中微内核与服务器之间的交互正是基于它；此外它还很好地支持多处理器系统、分布式系统和计算机网络，是这些环境中的主流通信方式。</p>
 <p>消息传递可分为两种基本模式：</p>
 <ul>
@@ -204,7 +207,7 @@
 </ul>
 <p>两种模式可以用寄信来类比：直接通信好比邮差把信件亲手交到乙本人手中；间接通信好比乙家门口设有一个邮箱，邮差只需把信投入邮箱，乙随后自行取阅。无论哪种方式，消息的投递都由「邮差」——操作系统内核——可靠完成。</p>
 
-<h3>3. 管道通信</h3>
+<h3 id="toc-18">3. 管道通信</h3>
 <p><strong>管道通信</strong>是一种基于<strong>先进先出（FIFO）</strong>原则的进程间通信机制，常用于具有亲缘关系的进程（如父子进程）之间，以生产者—消费者模式进行数据交换（见图 2.5）。从编程接口上看，管道（Pipe）表现为一种<strong>特殊的共享文件</strong>，支持标准的 read() 和 write() 操作；但从实现上看，它并不是存储在磁盘上的文件，而是<strong>由操作系统内核维护的一块固定大小的内存缓冲区</strong>（如 64KB 的环形缓冲区，不会像普通文件那样无限制增长）。</p>
 <figure>
   <img src="../assets/ch2/ch2-p056-02.png" loading="lazy" alt="图2.5 管道通信：左侧进程经上方的管道1向右侧进程发送数据，右侧进程经下方的管道2向左侧进程发送数据，两条管道分别承担两个传输方向">
@@ -219,7 +222,7 @@
 <p>在 Linux 系统中，管道由父进程通过 pipe() 系统调用创建；由于子进程创建时会继承父进程的文件描述符表，因此能通过这些描述符访问同一管道，从而与父进程通信。若读进程的消费速度快于写进程，管道中的数据会被迅速读空，此时任何 read() 调用都会被阻塞，等待写进程再次写入——即管道的<strong>自动阻塞与唤醒</strong>由内核保证。</p>
 <div class="callout notice"><span class="callout-title">易错</span>从管道中读取数据是<strong>一次性操作</strong>：数据一旦被读出，其占用的缓冲区空间即被释放，供后续写入使用；普通管道<strong>仅支持单向通信</strong>，若需双向通信，必须创建两个管道、分别用于两个方向的数据传输——这正是图 2.5 中画了两条管道的原因。</div>
 
-<h3>4. 信号</h3>
+<h3 id="toc-19">4. 信号</h3>
 <p><strong>信号（Signal）</strong>是一种用于<strong>通知进程某个事件已发生</strong>的机制。不同的系统事件对应不同的信号类型，每类信号对应一个序号，例如 Linux 内核实现了约 30 种信号（编号通常为 1～30）。</p>
 <p>内核在进程的 PCB 中用一个 n 位向量（Linux 使用一个 32 位整型变量）记录该进程当前<strong>待处理的信号</strong>：向某进程发送一个信号时，内核把对应位置 1；该信号被成功处理后，对应位清零。PCB 中还维护另一个 n 位向量，记录被<strong>阻塞（屏蔽）</strong>的信号——某位为 1 时，对应的信号不会被立即处理，而是暂存起来，直到解除阻塞。</p>
 <p>信号的发送主要有两种方式：</p>
@@ -235,9 +238,9 @@
 <p>信号处理程序执行结束后，通常返回到原程序被中断的位置，继续执行后续指令。</p>
 <div class="callout kao"><span class="callout-title">考点</span>信号用于「通知事件已发生」，交换的是控制信息而非大批量数据。重点记住三点：①待处理信号与被屏蔽（阻塞）信号各用一个 n 位向量记录在 PCB 中；②发送者可以是内核（如非法指令触发 SIGILL），也可以是进程（kill()，可发给自己）；③检查待处理信号的时机是<strong>从内核态返回用户态时</strong>。</div>
 
-<h2>2.1.7 线程和多线程模型</h2>
+<h2 id="toc-20">2.1.7 线程和多线程模型</h2>
 
-<h3>1. 线程的基本概念</h3>
+<h3 id="toc-21">1. 线程的基本概念</h3>
 <p>引入进程的目的是使多道程序能够并发执行，从而提高资源利用率和系统吞吐量；而引入<strong>线程（Thread）</strong>，则是为了进一步<strong>降低程序并发执行时的时空开销</strong>，提升操作系统的并发性能。线程可以被通俗地理解为「轻量级进程」，它是<strong>程序执行流的最小单元</strong>，也是<strong>处理器调度的基本单位</strong>。在多线程操作系统中，进程不再作为基本的执行实体，但仍保留与执行相关的状态——所谓进程处于「执行」状态，实际上是指该进程中的某个线程正在运行（2011、2019、2024 统考考查线程的特点）。线程的主要属性如下：</p>
 <ul>
   <li><strong>轻量级执行实体</strong>：线程本身不拥有独立的系统资源（如地址空间、打开的文件等），但拥有运行所必需的私有数据结构，包括线程 ID、程序计数器、寄存器集合和栈；每个线程都有唯一的标识符和一个线程控制块（TCB），记录其执行上下文（寄存器状态、栈指针等）。</li>
@@ -248,7 +251,7 @@
 </ul>
 <p>引入线程后，进程的内涵发生重要变化：<strong>进程成为除 CPU 以外的系统资源分配单位，线程成为 CPU 调度和执行的基本单位</strong>。当线程切换发生在同一进程内部时，由于地址空间等资源无须切换，其开销远小于进程切换。</p>
 
-<h3>2. 线程与进程的比较</h3>
+<h3 id="toc-22">2. 线程与进程的比较</h3>
 <table>
   <thead><tr><th>维度</th><th>进程</th><th>线程</th></tr></thead>
   <tbody>
@@ -262,12 +265,12 @@
 </table>
 <div class="callout kao"><span class="callout-title">考点</span>两句核心结论必须条件反射（2012 统考考查进程和线程的比较）：①引入线程后，<strong>进程是资源分配的基本单位，线程是调度的基本单位</strong>；②同一进程内的线程切换<strong>不会</strong>引起进程切换，跨进程的线程切换<strong>才会</strong>引起进程切换。</div>
 
-<h3>3. 线程的状态与生命周期</h3>
+<h3 id="toc-23">3. 线程的状态与生命周期</h3>
 <p>线程之间共享资源，并存在同步与互斥等制约关系，执行过程同样具有明显的间断性。相应地，线程在其生命周期中有三种基本状态——<strong>运行态</strong>（已获得 CPU，正在执行）、<strong>就绪态</strong>（已具备所有运行条件，只差 CPU）、<strong>阻塞态</strong>（因等待某一事件如 I/O 完成、锁释放而暂时无法执行）；这三种状态之间的转换与进程基本状态之间的转换是类似的。</p>
 <p>线程具有完整的生命周期：由创建而产生，经调度而执行，最终因终止而消亡，操作系统为此提供相应的系统调用或库函数。用户程序启动时通常仅有一个初始线程，其主要任务是创建其他线程：调用线程创建函数并传入必要参数（指向线程主函数的入口地址、堆栈大小、调度优先级等），创建成功后系统返回唯一的线程标识符。调度器根据线程优先级等策略决定哪个线程获得 CPU；线程运行期间可能与其他线程进行同步或互斥操作，以保证数据一致性。</p>
 <p>线程终止的原因有多种：正常执行完主函数、运行中发生未处理的异常被迫退出、主动调用线程终止函数、或被其他线程通过取消机制强制终止。在大多数操作系统中，<strong>线程终止后并不会立即释放所占用的资源</strong>——只有当进程中的其他线程执行了相应的分离操作后，被终止的线程才会与资源分离，其资源才能被系统回收并供其他线程使用；已被终止但尚未释放资源的线程仍可被其他线程调用，以使其重新恢复运行。</p>
 
-<h3>4. 线程控制块（TCB）</h3>
+<h3 id="toc-24">4. 线程控制块（TCB）</h3>
 <p>与进程类似，操作系统为每个线程维护一个<strong>线程控制块（Thread Control Block，TCB）</strong>，用于记录和管理线程的运行信息（2024 统考考查线程的私有资源）。TCB 通常包含：</p>
 <ol>
   <li>线程标识符（Thread ID）；</li>
@@ -280,7 +283,7 @@
 <p>同一进程中的所有线程<strong>共享</strong>该进程的地址空间和全局变量；每个线程拥有<strong>独立的私有栈</strong>，这些栈位于进程的地址空间内——因此从技术上讲，一个线程可以访问另一个线程的栈内容，但这种做法严重违反编程规范，会破坏线程封装性和程序正确性，实际开发中应严格避免。</p>
 <div class="callout kao"><span class="callout-title">考点</span>「线程私有 vs 线程共享」的划分是必考内容：<strong>私有</strong>——TCB、寄存器集合（含程序计数器）、栈、线程局部存储；<strong>共享</strong>——代码段、数据段、堆、全局变量、打开的文件描述符。看到「某线程的栈指针」要立刻反应：它是线程私有的，不属于进程级共享资源。</div>
 
-<h3>5. 线程的实现方式</h3>
+<h3 id="toc-25">5. 线程的实现方式</h3>
 <p>线程的实现可以分为两类：<strong>用户级线程（User-Level Thread，ULT）</strong>和<strong>内核级线程（Kernel-Level Thread，KLT）</strong>，后者也称为<strong>内核支持的线程</strong>（2019 统考考查两种线程的特点与比较）。</p>
 
 <p><strong>（1）用户级线程（ULT）</strong>——「从用户视角看到的线程」：所有线程管理工作（创建、切换、撤销等）均由应用程序在<strong>用户空间（用户态）</strong>完成，无须操作系统介入，因此<strong>内核完全感知不到这些线程的存在</strong>。应用程序只需引入一个<strong>线程库</strong>，即可被开发为多线程程序：用户程序启动时仅包含一个初始线程，执行过程中它可在任意时刻调用线程库提供的创建函数，在同一进程中派生新的线程（教材图 2.6(a) 展示的用户级方式）。</p>
@@ -325,13 +328,13 @@
 </ul>
 <p>目前广泛使用的三种主流线程库：<strong>POSIX Pthreads</strong>（POSIX 标准定义的线程 API，具体实现可基于用户级或内核级线程）、<strong>Windows 线程 API</strong>（直接构建于 Windows 内核之上，属于内核级线程实现）和 <strong>Java 线程 API</strong>（允许在 Java 程序中直接创建线程；由于 JVM 运行于宿主操作系统之上，Java 线程通常通过调用宿主系统的线程库实现——在 Windows 上使用 Windows API，在类 UNIX 系统上则使用 Pthreads）。</p>
 
-<h2>2.1.8 本节小结</h2>
+<h2 id="toc-26">2.1.8 本节小结</h2>
 <p>本节开头提出的三个问题，参考答案如下。</p>
-<h3>1）为什么要引入进程？</h3>
+<h3 id="toc-27">1）为什么要引入进程？</h3>
 <p>在多道程序环境下，多个程序并发执行并共享系统资源，运行过程中相互制约，表现出间断性、异步性和不可预测性；而传统的「程序」仅是一组静态的指令集合，无法反映其在内存中的动态执行行为——例如无法体现程序何时开始、何时暂停、如何与其他程序交互。为了准确刻画程序并发执行的动态特性，并为操作系统提供有效的管理机制，进程这一概念被引入。<strong>进程是程序并发执行的基本单位，也是操作系统进行资源分配和调度的实体。</strong></p>
-<h3>2）什么是进程？进程由什么组成？</h3>
+<h3 id="toc-28">2）什么是进程？进程由什么组成？</h3>
 <p>进程是一个具有独立功能的程序在其特定数据集上的一次执行过程。它是动态的、活动的实体：不仅包含程序代码，还包含当前的执行状态（如程序计数器的值、处理器寄存器的内容等）。<strong>一个进程实体由程序段、相关数据段和 PCB 三部分构成</strong>，其中 PCB 是进程存在的唯一标志，操作系统通过 PCB 感知并控制进程的整个生命周期。</p>
-<h3>3）引入进程主要解决了多道程序并发执行中的哪些关键问题？</h3>
+<h3 id="toc-29">3）引入进程主要解决了多道程序并发执行中的哪些关键问题？</h3>
 <ul>
   <li><strong>失去封闭性</strong>：在缺乏进程机制的环境中，程序执行易受其他程序干扰（如共享内存被修改），导致行为不可控；进程通过地址空间隔离，为每个程序提供独立、受保护的执行环境，从而恢复一定程度的封闭性。</li>
   <li><strong>执行过程的间断性</strong>：程序可能因 I/O 请求、时间片用尽或调度决策而被中断；进程利用 PCB 保存和恢复执行上下文，确保中断后能准确、连续地继续执行。</li>
@@ -339,15 +342,18 @@
 </ul>
 <p>通过为每个程序建立独立的进程实体，操作系统得以高效实现调度、切换、资源分配与保护，显著提升系统资源利用率和并发处理能力。</p>
 
-<h3>一个帮助理解的类比：进程 = 人的生命历程</h3>
+<h3 id="toc-30">一个帮助理解的类比：进程 = 人的生命历程</h3>
 <p>进程是一个抽象的逻辑实体，初学时感到模糊很正常。可以把进程类比为「人的生命历程」：生命历程是动态的、过程性的存在，而非静态的描述；进程同样不是一段固定的程序代码，而是一次正在执行的活动。研究生命历程必须先明确主体「人」；对应地，进程的主体是<strong>进程映像</strong>（程序段、数据段和 PCB 组成），其中 PCB 就如同人的「身份标识」，记录该进程的唯一身份与当前状态。人在一生中会经历出生、成长、奋斗、受挫、康复、衰老乃至离世；进程也在创建、就绪、运行、阻塞、终止等状态之间转换——例如一个人从「充满斗志」（就绪）进入「发奋图强」（运行）；遭遇挫折可能陷入「失落」（阻塞）；在他人鼓励下又重新「充满斗志」（回到就绪）。这正对应进程从就绪态转换为运行态、因等待事件进入阻塞态、事件发生后再次返回就绪态的典型状态迁移。</p>
 <p>当然，任何类比都有其局限性：比喻有助于建立直觉，但不能替代严谨的技术定义。建议读者在借助类比形成初步理解后，回头重读本节前文的正式阐述——这种「感性认知→理性回归」的学习路径，往往能带来更深刻、更准确的理解。最后给出一点学习建议：许多同学过于关注定理和公式的应用而忽视基础概念的理解，但公式和定理的应用固然重要，<strong>唯有深入理解基础概念，才能真正透彻地掌握一门学科</strong>——进程正是这样一个必须吃透的奠基性概念。</p>
 
+</article>
 <nav class="pager"><a href="../ch2/index.html">← 本章导学</a><a href="../ch2/s2-2.html">下一页：2.2 CPU调度 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">2.1.1 进程的概念和特征</a></li><li class="lv3"><a href="#toc-2">1. 进程的概念</a></li><li class="lv3"><a href="#toc-3">2. 进程的特征</a></li><li class="lv2"><a href="#toc-4">2.1.2 进程的组成</a></li><li class="lv3"><a href="#toc-5">1. 进程控制块（PCB）</a></li><li class="lv3"><a href="#toc-6">2. 程序段</a></li><li class="lv3"><a href="#toc-7">3. 数据段</a></li><li class="lv2"><a href="#toc-8">2.1.3 进程的内存映像</a></li><li class="lv3"><a href="#toc-9">典型进程虚拟地址空间的组成</a></li><li class="lv2"><a href="#toc-10">2.1.4 进程的状态与转换</a></li><li class="lv2"><a href="#toc-11">2.1.5 进程控制</a></li><li class="lv3"><a href="#toc-12">1. 进程的创建</a></li><li class="lv3"><a href="#toc-13">2. 进程的终止</a></li><li class="lv3"><a href="#toc-14">3. 进程的阻塞和唤醒</a></li><li class="lv2"><a href="#toc-15">2.1.6 进程的通信</a></li><li class="lv3"><a href="#toc-16">1. 共享存储</a></li><li class="lv3"><a href="#toc-17">2. 消息传递</a></li><li class="lv3"><a href="#toc-18">3. 管道通信</a></li><li class="lv3"><a href="#toc-19">4. 信号</a></li><li class="lv2"><a href="#toc-20">2.1.7 线程和多线程模型</a></li><li class="lv3"><a href="#toc-21">1. 线程的基本概念</a></li><li class="lv3"><a href="#toc-22">2. 线程与进程的比较</a></li><li class="lv3"><a href="#toc-23">3. 线程的状态与生命周期</a></li><li class="lv3"><a href="#toc-24">4. 线程控制块（TCB）</a></li><li class="lv3"><a href="#toc-25">5. 线程的实现方式</a></li><li class="lv2"><a href="#toc-26">2.1.8 本节小结</a></li><li class="lv3"><a href="#toc-27">1）为什么要引入进程？</a></li><li class="lv3"><a href="#toc-28">2）什么是进程？进程由什么组成？</a></li><li class="lv3"><a href="#toc-29">3）引入进程主要解决了多道程序并发执行中的哪些关键问题？</a></li><li class="lv3"><a href="#toc-30">一个帮助理解的类比：进程 = 人的生命历程</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -357,6 +363,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

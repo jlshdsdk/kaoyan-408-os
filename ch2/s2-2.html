@@ -14,20 +14,23 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span style="opacity:.55">/</span> 2.2 CPU调度</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span class="sep">/</span> 2.2 CPU调度</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html" class="active">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html" active>2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>2.2 CPU 调度</h1>
 <p>在多道程序系统中，「让谁上 CPU」是绕不开的问题。学习本节前，建议先带着教材提出的两个问题思考，学完后到 2.2.7 小结中对照参考答案：</p>
 <ol>
@@ -35,12 +38,12 @@
   <li>结合本节学到的调度算法，思考哪些调度算法比较适合分时系统和实时系统？</li>
 </ol>
 
-<h2>2.2.1 调度的概念</h2>
+<h2 id="toc-1">2.2.1 调度的概念</h2>
 
-<h3>1. 调度的基本概念</h3>
+<h3 id="toc-2">1. 调度的基本概念</h3>
 <p>多道程序系统中，进程数量通常远多于 CPU 的个数，多个进程争用 CPU 的情况在所难免。<strong>CPU 调度</strong>就是按照一定的算法（兼顾公平性与效率），从就绪队列中选择一个进程，并把 CPU 分配给它运行，从而实现多个进程的并发执行。CPU 调度是多道程序操作系统的基础，也是操作系统设计的核心问题之一。</p>
 
-<h3>2. 调度的层次</h3>
+<h3 id="toc-3">2. 调度的层次</h3>
 <p>一个作业从提交到完成，通常要经历<strong>高级调度、中级调度、低级调度</strong>三级调度，如图 2.8 所示。</p>
 <figure>
   <img src="../assets/ch2/ch2-p079-01.png" loading="lazy" alt="CPU 的三级调度示意图：后备队列中的批量作业与交互型作业经作业调度进入就绪队列，经进程调度使用 CPU；内存紧张时经中级调度在就绪（阻塞）队列与就绪、挂起（阻塞、挂起）队列之间换入换出">
@@ -51,7 +54,7 @@
 <p><strong>（3）低级调度（进程调度）</strong>。按照特定算法从就绪队列中选择一个进程，将 CPU 分配给它。这是<strong>最基础、最频繁</strong>的一级调度，<strong>所有操作系统都必须存在</strong>，通常每几十毫秒执行一次。</p>
 <div class="callout kao"><span class="callout-title">考点</span>三级调度的「层次—别名—对象」对应关系是选择题常客：作业调度 = 高级调度（内存↔外存，每个作业仅调入调出一次）、内存调度 = 中级调度（实质是对换，针对挂起态进程）、进程调度 = 低级调度（最频繁、任何系统必备）。频率排序：作业调度 &lt; 中级调度 &lt; 进程调度。</div>
 
-<h3>3. 三级调度的联系</h3>
+<h3 id="toc-4">3. 三级调度的联系</h3>
 <p>三级调度协同工作，共同完成作业从提交到终止的全过程。其中进程调度是最基本且不可或缺的，作业调度和中级调度则根据系统类型与设计目标选择性配置：</p>
 <ol>
   <li><strong>作业调度为进程活动做准备</strong>：将作业调入内存并创建进程，使其具备参与调度的资格；</li>
@@ -60,9 +63,9 @@
   <li><strong>调度频率依次升高</strong>：作业调度频率最低，中级调度次之，进程调度频率最高。</li>
 </ol>
 
-<h2>2.2.2 进程调度</h2>
+<h2 id="toc-5">2.2.2 进程调度</h2>
 
-<h3>1. 进程调度的任务</h3>
+<h3 id="toc-6">1. 进程调度的任务</h3>
 <p>进程调度的任务主要包括三步：</p>
 <ol>
   <li><strong>保存 CPU 现场信息</strong>：调度发生时，把当前进程的 CPU 状态（程序计数器、通用寄存器等）完整保存到其 PCB 中，以便日后从断点恢复；</li>
@@ -70,7 +73,7 @@
   <li><strong>完成 CPU 分配</strong>：由分派器把选中进程 PCB 中保存的 CPU 现场装入处理器寄存器，移交 CPU 控制权，使其从上次断点处恢复执行。</li>
 </ol>
 
-<h3>2. 调度程序（调度器）</h3>
+<h3 id="toc-7">2. 调度程序（调度器）</h3>
 <p>实现 CPU 调度与分派的软件组件称为<strong>调度程序（调度器）</strong>，通常由三部分组成，如图 2.9 所示。</p>
 <figure>
   <img src="../assets/ch2/ch2-p080-01.png" loading="lazy" alt="调度程序的结构示意图：排队器维护就绪队列，分派器与上下文切换器配合完成 CPU 控制权的移交">
@@ -83,7 +86,7 @@
 </ol>
 <p>上下文切换要执行大量 load/store 指令来保存寄存器内容，开销较大。目前已出现硬件加速手段：通常配置<strong>两组寄存器</strong>，一组供内核使用、一组供用户使用，切换上下文时只需改变指针使其指向所需的寄存器组即可。</p>
 
-<h3>3. 调度的时机、切换与过程</h3>
+<h3 id="toc-8">3. 调度的时机、切换与过程</h3>
 <p>调度程序是操作系统内核程序：只有请求调度的事件发生后才会运行调度程序，调度出新的就绪进程之后才会进行进程切换。理论上三步按序执行，但实际内核运行中，即使发生了引发调度的条件，也<strong>不一定能立即调度与切换</strong>。</p>
 <p>现代操作系统中，通常在以下情况下需要进行进程调度与切换：</p>
 <ol>
@@ -102,7 +105,7 @@
 <p>若在上述不可调度期间出现了调度条件，系统会置一个<strong>调度请求标志</strong>，待当前临界区或中断处理完成后，再按标志执行调度与切换。</p>
 <div class="callout notice"><span class="callout-title">易错</span>「临界区中不能调度」的准确理解：进程在<strong>内核临界区</strong>（如访问就绪队列这类内核数据结构）中时不能被切换出去；若不可调度期发生了调度条件，靠「调度请求标志」延迟处理，而不是把调度请求丢掉。</div>
 
-<h3>4. 进程调度的方式</h3>
+<h3 id="toc-9">4. 进程调度的方式</h3>
 <p>进程调度方式解决的问题是：某进程正在 CPU 上执行时，若有更重要、更紧迫（优先级更高）的进程进入就绪队列，系统该如何分配 CPU。通常分两种：</p>
 <ul>
   <li><strong>非抢占调度方式（非剥夺方式）</strong>：即便有更紧迫的进程进入就绪队列，仍让当前进程继续执行，直到它运行完成（正常结束或异常终止），或因某事件（如等待 I/O、执行 Block 原语）<strong>主动</strong>进入阻塞态，才把 CPU 分给其他进程。优点是实现简单、系统开销小，适用于早期批处理系统；但无法满足分时系统和大多数实时系统对及时响应的要求。</li>
@@ -110,17 +113,17 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>不可抢占 vs 可抢占的对比常与具体算法绑定考查：FCFS、高响应比优先是典型的非抢占式；RR 靠时钟中断强制剥夺；抢占式优先级调度和最短剩余时间优先则是典型的抢占式。「抢占必须遵循原则（优先级/短进程优先/时间片），不能任意抢占」本身就是考点。</div>
 
-<h3>5. 闲逛进程</h3>
+<h3 id="toc-10">5. 闲逛进程</h3>
 <p>当进程切换发生时，若系统中没有就绪进程，操作系统会调度<strong>闲逛进程（Idle Process）</strong>运行，它的 <strong>PID 为 0</strong>。闲逛进程优先级最低，仅在无其他就绪进程时运行；一旦有新进程进入就绪队列，它立即让出 CPU。其主要任务是在空闲循环中不断检测中断请求。闲逛进程<strong>不占用除 CPU 外的其他系统资源</strong>，也<strong>不会因等待事件而被阻塞</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>闲逛进程的细节（PID=0、优先级最低、不让出 CPU 除非有新就绪进程、不阻塞、不占用其他资源）适合出选择题逐项判断。</div>
 
-<h3>6. 两种线程的调度</h3>
+<h3 id="toc-11">6. 两种线程的调度</h3>
 <ul>
   <li><strong>用户级线程调度</strong>：内核并不知道线程的存在，仍<strong>以进程为单位</strong>分配 CPU 时间；获得 CPU 后由进程内部的用户级线程库决定具体运行哪个线程。线程切换在同一进程内完成，只需保存少量寄存器状态，开销极小。缺点是若一个线程执行阻塞操作（如 I/O），<strong>整个进程都会被阻塞</strong>。</li>
   <li><strong>内核级线程调度</strong>：内核直接感知并管理每个线程，<strong>调度时选择的是线程而非进程</strong>。每个线程拥有独立的内核上下文，可被单独赋予时间片；时间片用完或被更高优先级线程抢占时会被强制挂起。由于涉及完整的上下文切换、地址空间更新（跨进程的线程切换时）以及可能的 TLB 刷新和缓存失效，切换开销远高于用户级线程（通常高出数倍）。</li>
 </ul>
 
-<h2>2.2.3 调度的目标</h2>
+<h2 id="toc-12">2.2.3 调度的目标</h2>
 <p>不同调度算法特性不同，为客观比较优劣，人们提出了多种衡量标准。</p>
 <p><strong>1）CPU 利用率</strong>。CPU 是最重要且昂贵的资源之一，应尽可能使其保持忙碌：</p>
 $$\text{CPU 利用率}=\frac{\text{CPU 有效工作时间}}{\text{CPU 有效工作时间}+\text{CPU 空闲等待时间}}$$
@@ -135,9 +138,9 @@ $$\text{带权周转时间}=\frac{\text{作业周转时间}}{\text{作业实际�
 <p><strong>5）响应时间</strong>：从用户提交请求到系统<strong>首次产生响应</strong>所经历的时间。交互式系统中用户更关注快速反馈而非整体完成时间，因此响应时间通常比周转时间更具实际意义。</p>
 <p>需要强调：不存在一种调度算法能同时满足所有用户需求和系统目标。设计时要兼顾特定应用场景（实时任务的快速响应、交互式进程的低延迟）、系统整体效率（如降低平均周转时间）以及算法自身的实现开销。</p>
 
-<h2>2.2.4 进程切换</h2>
+<h2 id="toc-13">2.2.4 进程切换</h2>
 <p>进程的创建、撤销以及 I/O 操作都要通过系统调用进入内核完成，进程切换同样在内核支持下实现——任何进程都是在操作系统内核的支持下运行的，与内核紧密相关。</p>
-<h3>1. 上下文切换</h3>
+<h3 id="toc-14">1. 上下文切换</h3>
 <p>把 CPU 切换到另一个进程，需<strong>保存当前进程的状态、恢复另一个进程的状态</strong>，这一任务称为<strong>上下文切换</strong>。进程上下文由其 PCB 表示，包括 CPU 寄存器的值、进程状态、内存管理信息等。切换流程为：</p>
 <ol>
   <li>挂起当前进程，将其 CPU 上下文保存到其 PCB 中；</li>
@@ -146,17 +149,17 @@ $$\text{带权周转时间}=\frac{\text{作业周转时间}}{\text{作业实际�
   <li>恢复新进程的 CPU 上下文；</li>
   <li>跳转到新进程 PCB 中程序计数器所指向的位置，开始执行该进程。</li>
 </ol>
-<h3>2. 上下文切换的消耗</h3>
+<h3 id="toc-15">2. 上下文切换的消耗</h3>
 <p>上下文切换是<strong>开销较大</strong>的操作，需执行大量寄存器保存与恢复指令。单次切换仅微秒量级，但高负载系统中每秒可能发生数十甚至上百次切换，累积的 CPU 时间消耗十分可观。为减少开销，某些处理器架构提供<strong>多个寄存器组</strong>，切换寄存器组指针即可完成上下文切换；但大多数通用处理器仍需完整保存和恢复寄存器状态。</p>
-<h3>3. 上下文切换与模式切换</h3>
+<h3 id="toc-16">3. 上下文切换与模式切换</h3>
 <p><strong>模式切换</strong>（用户态与内核态之间的切换）与上下文切换是两个不同的概念：模式切换发生在<strong>同一进程内部</strong>，如用户进程因系统调用或中断进入内核态执行，完成后返回用户态<strong>继续执行该进程</strong>——当前进程并未改变，不涉及上下文切换；而上下文切换意味着从一个进程切换到另一个进程，必须保存旧进程上下文并恢复新进程上下文。由于要访问和修改内核数据结构（如 PCB），上下文切换<strong>只能由内核完成</strong>，且整个过程<strong>运行在内核态</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>进程的上下文切换是 2024、2025 真题考点，进程调度前后 CPU 模式的变化（切换在内核态完成）是 2023 真题考点。模式切换 ≠ 上下文切换：系统调用进出内核只是同一进程的模式切换，不换进程。</div>
 <div class="callout notice"><span class="callout-title">易错</span>区分<strong>调度</strong>与<strong>切换</strong>：调度是<strong>决策</strong>行为（决定把 CPU 分给哪个进程），切换是<strong>执行</strong>行为（实际完成 CPU 控制权的转移）。通常先由调度程序做出决策，随后触发上下文切换落实决策。</div>
 
-<h2>2.2.5 CPU 调度算法</h2>
+<h2 id="toc-17">2.2.5 CPU 调度算法</h2>
 <p>操作系统中存在多种调度算法：有的适用于作业调度，有的适用于进程调度，也有的两者均适用。下面依次介绍几种常用算法。</p>
 
-<h3>1. 先来先服务（FCFS）调度算法</h3>
+<h3 id="toc-18">1. 先来先服务（FCFS）调度算法</h3>
 <p>FCFS 是<strong>最简单</strong>的调度算法，既可用于作业调度也可用于进程调度：作业调度时，每次从后备作业队列中选择<strong>最早进入</strong>该队列的一个或多个作业调入内存、分配资源并创建进程；进程调度时，每次从就绪队列中选择最早进入的进程，把 CPU 分给它，直到其运行完成或因某事件进入阻塞态才交出 CPU。</p>
 <p><strong>例题</strong>：系统中有 4 个作业，提交时间分别为 8.0、8.4、8.8、9.0，运行时间依次为 2、1、0.5、0.2。采用 FCFS 时，各作业按提交顺序依次运行：作业 1 在 8.0 到达即开跑，10.0 完成；作业 2 从 10.0 运行到 11.0；作业 3 从 11.0 到 11.5；作业 4 从 11.5 到 11.7。各作业的等待时间 = 开始运行时间 − 提交时间，周转时间 = 完成时间 − 提交时间，带权周转时间 = 周转时间 ÷ 运行时间，结果如表 2.2 所示。</p>
 <table>
@@ -176,7 +179,7 @@ $$\text{带权周转时间}=\frac{\text{作业周转时间}}{\text{作业实际�
 </figure>
 <p>FCFS 属于<strong>非抢占式</strong>算法。表面上对所有作业公平，但若一个长作业先到达，其后大量短作业都要长时间等待，因此<strong>不适合分时系统和实时系统</strong>。不过 FCFS 常被结合到其他策略中使用，例如采用优先级调度的系统中，相同优先级的进程通常按 FCFS 调度。FCFS 实现简单但效率较低：<strong>有利于长作业（CPU 繁忙型）作业，不利于短作业（I/O 繁忙型）作业</strong>——I/O 繁忙型作业本可频繁让出 CPU 提高并发性，但排在长作业之后时仍需长时间等待，优势难以发挥。</p>
 
-<h3>2. 短作业优先（SJF）调度算法</h3>
+<h3 id="toc-19">2. 短作业优先（SJF）调度算法</h3>
 <p>SJF 按<strong>作业（进程）的预计运行时间</strong>调度：作业调度时从后备队列中选择一个或多个<strong>估计运行时间最短</strong>的作业调入内存并创建进程；用于进程调度时称为<strong>短进程优先（SPF）</strong>，即从就绪队列中选估计运行时间最短的进程投入运行，直至完成或因事件阻塞才释放 CPU。</p>
 <p><strong>例题</strong>：仍用表 2.2 那组作业（提交时间 8.0、8.4、8.8、9.0，运行时间 2、1、0.5、0.2），改用 SJF。8.0 时刻只有作业 1 就绪，先运行作业 1（8.0～10.0）；10.0 时刻作业 2、3、4 均已到达，按估计运行时间从短到长依次调度：作业 4（0.2，10.0～10.2）→ 作业 3（0.5，10.2～10.7）→ 作业 2（1，10.7～11.7）。结果如表 2.3 所示。</p>
 <table>
@@ -208,7 +211,7 @@ $$\text{带权周转时间}=\frac{\text{作业周转时间}}{\text{作业实际�
   <figcaption>SJF 算法的最优性条件（王道教材 P85 原图「注意」框）</figcaption>
 </figure>
 
-<h3>3. 高响应比优先（HRRN）调度算法</h3>
+<h3 id="toc-20">3. 高响应比优先（HRRN）调度算法</h3>
 <p>高响应比优先调度算法<strong>主要用于作业调度</strong>，是对 FCFS 和 SJF 的综合平衡：每次作业调度时，先计算后备队列中每个作业的响应比，选择响应比最高者调入内存执行。响应比定义为：</p>
 $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{估计运行时间}}=1+\frac{\text{等待时间}}{\text{估计运行时间}}$$
 <p>由公式可直接读出三条性质：</p>
@@ -219,7 +222,7 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>HRRN 的计算题：给定各作业到达时间与估计运行时间，每轮调度前<strong>重新计算所有等待作业的响应比</strong>再比较（响应比 = 1 + 等待时间/估计运行时间），选出最高者运行；作业运行期间不计算、不抢占。注意等待时间要用「当前时刻 − 到达时刻」现算。</div>
 
-<h3>4. 优先级调度算法</h3>
+<h3 id="toc-21">4. 优先级调度算法</h3>
 <p>优先级调度算法为每个作业或进程分配一个优先级以反映其紧迫程度：作业调度时每次从后备队列中选优先级最高的一个或多个作业调入；进程调度时每次从就绪队列中选优先级最高的进程投入运行。</p>
 <p><strong>按是否允许抢占分两类</strong>：</p>
 <ul>
@@ -239,16 +242,16 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>优先级调度是高频考点（非抢占式 2018、抢占式 2022/2023、静态与动态 2016、调整优先级的合理时机 2010、I/O 型与计算型 2013、应用分析 2025 均考过）。重点记忆三条设置原则及理由；「为防止低优先级饥饿而随等待时间提高优先级」是动态优先级的典型设计。</div>
 
-<h3>5. 时间片轮转（RR）调度算法</h3>
+<h3 id="toc-22">5. 时间片轮转（RR）调度算法</h3>
 <p>RR 主要适用于<strong>分时系统</strong>，最大特点是<strong>公平</strong>。系统将所有就绪进程按 FCFS 原则排成一个就绪队列，每隔固定时间间隔（<strong>时间片</strong>，如 30 ms）产生一次时钟中断，激活调度程序，把 CPU 分给队首进程执行一个时间片。时间片用完时，即使进程尚未运行完也必须剥夺 CPU、重新排到就绪队列<strong>末尾</strong>，下一个队首进程获得 CPU。</p>
 <p>RR 的调度时机有两种：① 当前进程在时间片结束前<strong>运行完成</strong>，调度程序立即被激活进行切换；② 时间片<strong>用尽</strong>，由时钟中断处理程序触发调度程序完成上下文切换。</p>
 <p><strong>时间片大小对性能影响显著</strong>：时间片过大，大到每个进程都能在一个时间片内完成时，RR 退化为 FCFS，无法满足短作业和交互用户对快速响应的要求；时间片过小，进程频繁切换、上下文切换开销大增，真正用于用户程序的 CPU 时间反而减少。因此时间片应<strong>略长于一次典型交互所需的时间</strong>，其取值需综合考虑：系统的期望响应时间、就绪队列中的进程数量以及系统的处理能力。例如用户键入命令、在终端按下回车键这类典型交互通常只需几十至上百毫秒即可完成，时间片略长于它，既能保证大多数交互进程在一个时间片内完成、获得流畅响应，又能有效控制切换频率。</p>
 <div class="callout kao"><span class="callout-title">考点</span>RR 的原理与特点是 2021、2024（原理）、2017（特点）真题考点：①RR 是抢占式的（时钟中断剥夺）；②时间片太大→退化为 FCFS，太小→切换开销剧增；③RR 有利于短作业和交互式作业、响应快，但不利于紧急任务优先处理；④进程在时间片内运行完成则立即调度，不必等时间片用完。</div>
 
-<h3>6. 多级队列调度算法</h3>
+<h3 id="toc-23">6. 多级队列调度算法</h3>
 <p>前面的算法通常只设一个就绪队列、采用固定单一的策略，难以满足不同类型进程的需求（交互型进程要快速响应，批处理进程更关注吞吐量与资源利用率）。多级队列调度算法把就绪进程<strong>划分为多个独立的就绪队列</strong>，每个队列对应一类特性相似的进程（如系统进程、交互型进程、批处理进程），并可<strong>独立选择适合的算法</strong>——例如交互型队列用 RR 保证响应性，批处理队列用 FCFS 或 SJF 提高吞吐量。更重要的是，<strong>各队列具有不同的优先级</strong>：调度时总是优先调度高优先级队列中的进程，只有所有高优先级队列均为空才调度低优先级队列，从而保证关键任务（系统服务、用户交互）及时获得 CPU。</p>
 
-<h3>7. 多级反馈队列调度算法</h3>
+<h3 id="toc-24">7. 多级反馈队列调度算法</h3>
 <p>多级反馈队列调度算法是<strong>时间片轮转与优先级调度的综合与发展</strong>（图 2.10），融合了前几种算法的优点。通过动态调整进程所处的队列（优先级）和对应的时间片大小，它既有利于短进程（提高吞吐量、缩短平均周转时间），又有利于 I/O 型进程（提升设备利用率和响应速度），同时<strong>无须事先知道进程的运行时间</strong>。</p>
 <figure>
   <img src="../assets/ch2/ch2-p087-01.png" loading="lazy" alt="多级反馈队列调度算法示意图（上半部分）：第 1 级队列中的进程使用 CPU，时间片用完未完成则被剥夺并降级">
@@ -269,7 +272,7 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>多级反馈队列是 2019（应用分析）、2020（实现思想）真题考点。三条规则（多队列优先级递减、时间片逐级加倍、队列内 RR + 高优先级可抢占低优先级）与「长作业是否饥饿（否）」要能默写；注意被抢占的进程是<strong>回到原队列末尾</strong>，而不是降级。</div>
 
-<h3>8. 基于公平原则的调度算法</h3>
+<h3 id="toc-25">8. 基于公平原则的调度算法</h3>
 <p>前面的算法主要关注响应时间、吞吐量或周转时间等性能指标，通常未把公平性作为主要设计目标。以下两种算法以公平性为核心。</p>
 <p><strong>（1）保证调度算法</strong>：为每个进程提供可量化的 CPU 时间分配保证——若系统中有 \(n\) 个并发进程，每个进程应获得约 \(1/n\) 的 CPU 时间。为此系统需要：① 跟踪每个进程自创建以来实际获得的 CPU 时间；② 计算其应获得的 CPU 时间（自创建以来经历的时间除以 \(n\)）；③ 计算公平比率（实际获得 ÷ 应获得，比率小于 1 表示未达应得份额）；④ 调度程序选择<strong>当前比率最小</strong>的进程运行，直到它的比率超过最接近它的进程的比率为止。</p>
 <p><strong>（2）公平分享调度算法</strong>：保证调度对进程公平，但未必对用户公平。例如用户 1 启动 4 个进程（A、B、C、D），用户 2 仅启动 1 个进程（E），采用 RR 调度时每个进程确实公平，但用户 1 将获得 80% 的 CPU 时间、用户 2 只有 20%，对用户 2 有失公平。公平分享调度保证<strong>每个用户</strong>获得相同的 CPU 时间，或按要求的比例分配：</p>
@@ -279,7 +282,7 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
 </ul>
 <p>这类策略通过按用户权重分配调度机会，在用户层面实现公平。</p>
 
-<h3>9. 常见调度算法对比</h3>
+<h3 id="toc-26">9. 常见调度算法对比</h3>
 <p>表 2.4 对本节主要调度算法的特性做了汇总，在教材 5 种算法的基础上，把优先级、多级队列与公平分享一并列入，便于对照记忆。</p>
 <table>
   <caption>表2.4 几种常见进程调度算法的特点（扩展对照）</caption>
@@ -302,31 +305,34 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
 </figure>
 <div class="callout kao"><span class="callout-title">考点</span>调度算法的特点与对比是 2009、2011、2014 真题考点。高频辨析：①同时到达时 SJF 平均等待/周转时间最优；②会饥饿的算法：SJF（长作业饥饿）、静态优先级（低优先级饥饿）；不会饥饿的：FCFS、HRRN、RR、多级反馈队列；③「相当通用」的是多级反馈队列；④FCFS 有利于 CPU 繁忙型作业。</div>
 
-<h2>2.2.6 多处理机调度</h2>
+<h2 id="toc-27">2.2.6 多处理机调度</h2>
 <p>多处理机系统的进程调度比单处理机系统更复杂，调度策略与系统结构有关。按处理机之间的协作方式，多处理机系统分为<strong>非对称多处理机</strong>和<strong>对称多处理机</strong>两类。</p>
 <ul>
   <li><strong>非对称多处理机（AMP）</strong>：通常采用<strong>主从式架构</strong>——一个主 CPU 负责全部调度决策和系统管理，其余从 CPU 只执行任务、不参与调度；内核一般运行在主 CPU 上，从 CPU 执行主 CPU 分配的进程。从 CPU 空闲时向主 CPU 发送进程请求信号，主 CPU 维护一个<strong>全局就绪队列</strong>，队列非空时就取出一个进程分配给请求的从 CPU。该方案实现简单，但主 CPU 承担所有调度开销，高负载下容易成为性能瓶颈。</li>
   <li><strong>对称多处理机（SMP）</strong>：所有 CPU 地位对等，均可参与调度，调度程序可将任意就绪进程分配给任意空闲 CPU。下面主要讨论 SMP 系统的调度问题。</li>
 </ul>
-<h3>1. 处理器亲和性和负载平衡</h3>
+<h3 id="toc-28">1. 处理器亲和性和负载平衡</h3>
 <p>SMP 调度面临两个核心矛盾。<strong>处理器亲和性</strong>：进程从一个 CPU 迁移到另一个 CPU 时，须把原 CPU 的缓存置为无效，再重新填充新 CPU 的缓存，代价较高；因此系统应尽量让一个进程运行在同一个 CPU 上，这称为处理器亲和性。<strong>负载平衡（负载均衡）</strong>：应尽量使所有 CPU 的负载均衡，否则会出现部分 CPU 空闲、部分 CPU 高负载且仍有进程等待的局面。</p>
 <p>二者存在矛盾：负载平衡要求进程在 CPU 间迁移，而迁移会失去进程在原 CPU 缓存上的好处，抵消亲和性带来的收益。因此某些系统<strong>只有当不平衡达到一定程度后才会触发进程迁移</strong>。</p>
-<h3>2. 多处理机调度方案</h3>
+<h3 id="toc-29">2. 多处理机调度方案</h3>
 <p><strong>方案一：公共就绪队列</strong>。为所有 CPU 设置一个公共就绪队列，CPU 一旦空闲就立刻从该队列中选择一个进程运行。缺点是各进程可能频繁地在不同 CPU 之间切换，处理器亲和性不好。提升亲和性的方法有两种：①<strong>软亲和</strong>——由调度程序尽量把一个进程保持在某个 CPU 上运行，但该进程仍可能被迁移到其他 CPU；②<strong>硬亲和</strong>——由用户进程通过系统调用主动请求把自己绑定到固定 CPU 上。例如 Linux 系统既实现了软亲和，也支持硬亲和的系统调用。</p>
 <p><strong>方案二：私有就绪队列</strong>。为每个 CPU 设置一个私有就绪队列，CPU 空闲时从自己的私有队列中选进程运行。这种方案很好地实现了处理器亲和性，缺点是必须进行负载平衡。平衡负载的方法通常有两种：①<strong>推迁移</strong>——由特定的系统程序周期性检查各 CPU 负载，发现不平衡就从超载 CPU 的就绪队列中「推」出部分进程，迁入空闲 CPU 的就绪队列；②<strong>拉迁移</strong>——当某个 CPU 负载很低时，主动从超载 CPU 的就绪队列中「拉」取部分进程到自己的就绪队列。实际系统中推迁移和拉迁移常结合使用。</p>
 <div class="callout kao"><span class="callout-title">考点</span>方案与性质的对应关系是选择题套路：<strong>公共就绪队列 → 亲和性差、无须负载平衡</strong>；<strong>私有就绪队列 → 亲和性好、必须负载平衡</strong>（推迁移由系统程序主动检查、拉迁移由空闲 CPU 发起）；软亲和 vs 硬亲和（谁发起、能否保证不迁移）易混。</div>
 
-<h2>2.2.7 本节小结</h2>
+<h2 id="toc-30">2.2.7 本节小结</h2>
 <p>开头提出的两个问题，参考答案如下。</p>
 <p><strong>1）为什么要进行 CPU 调度？</strong>若没有 CPU 调度，必须等当前进程执行完毕下一个进程才能获得 CPU。而实际系统中进程经常要等待外部设备输入，外设速度远低于 CPU，让 CPU 长时间等待 I/O 完成会造成极大浪费。引入 CPU 调度后，运行中的进程因等待 I/O 而阻塞时，系统可把 CPU 分给其他就绪进程，从而显著提高 CPU 利用率。简言之，CPU 调度的目的在于<strong>高效、合理地管理和分配计算机的软硬件资源</strong>。</p>
 <p><strong>2）哪些调度算法比较适合分时系统和实时系统？</strong>FCFS 和 SJF 都无法保证在限定时间内响应用户请求，既不适合分时系统，也无法满足实时系统对及时性、可预测性的要求。<strong>优先级调度</strong>按任务紧急程度赋予优先级、对高优先级任务优先服务，尤其适合<strong>实时系统</strong>（通常需配合抢占机制确保关键任务及时执行）；<strong>高响应比优先、时间片轮转和多级反馈队列</strong>都能保证每个就绪进程在一定时间内获得 CPU 时间片，通过轮转方式公平共享 CPU，更适合<strong>分时系统</strong>。</p>
 <p>本节介绍了 CPU 调度的概念。操作系统管理 CPU、内存、文件和设备等资源，当对某类资源的请求超过其可用数量时就需要调度——单处理器系统中 CPU 只有一个而请求运行的进程有多个，必须靠 CPU 调度来协调分配。随之而来的问题是：如何调度？优先满足谁？谁该等待？这正是调度算法要解决的核心问题，而答案要依据一定的调度准则来确定。调度概念贯穿操作系统始终，后续还将接触内存调度、磁盘调度、I/O 调度等资源调度问题，它们与 CPU 调度在设计思想上异曲同工，可对比学习。</p>
 
+</article>
 <nav class="pager"><a href="../ch2/s2-1.html">← 2.1 进程与线程简介</a><a href="../ch2/s2-3.html">下一页：2.3 同步与互斥 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">2.2.1 调度的概念</a></li><li class="lv3"><a href="#toc-2">1. 调度的基本概念</a></li><li class="lv3"><a href="#toc-3">2. 调度的层次</a></li><li class="lv3"><a href="#toc-4">3. 三级调度的联系</a></li><li class="lv2"><a href="#toc-5">2.2.2 进程调度</a></li><li class="lv3"><a href="#toc-6">1. 进程调度的任务</a></li><li class="lv3"><a href="#toc-7">2. 调度程序（调度器）</a></li><li class="lv3"><a href="#toc-8">3. 调度的时机、切换与过程</a></li><li class="lv3"><a href="#toc-9">4. 进程调度的方式</a></li><li class="lv3"><a href="#toc-10">5. 闲逛进程</a></li><li class="lv3"><a href="#toc-11">6. 两种线程的调度</a></li><li class="lv2"><a href="#toc-12">2.2.3 调度的目标</a></li><li class="lv2"><a href="#toc-13">2.2.4 进程切换</a></li><li class="lv3"><a href="#toc-14">1. 上下文切换</a></li><li class="lv3"><a href="#toc-15">2. 上下文切换的消耗</a></li><li class="lv3"><a href="#toc-16">3. 上下文切换与模式切换</a></li><li class="lv2"><a href="#toc-17">2.2.5 CPU 调度算法</a></li><li class="lv3"><a href="#toc-18">1. 先来先服务（FCFS）调度算法</a></li><li class="lv3"><a href="#toc-19">2. 短作业优先（SJF）调度算法</a></li><li class="lv3"><a href="#toc-20">3. 高响应比优先（HRRN）调度算法</a></li><li class="lv3"><a href="#toc-21">4. 优先级调度算法</a></li><li class="lv3"><a href="#toc-22">5. 时间片轮转（RR）调度算法</a></li><li class="lv3"><a href="#toc-23">6. 多级队列调度算法</a></li><li class="lv3"><a href="#toc-24">7. 多级反馈队列调度算法</a></li><li class="lv3"><a href="#toc-25">8. 基于公平原则的调度算法</a></li><li class="lv3"><a href="#toc-26">9. 常见调度算法对比</a></li><li class="lv2"><a href="#toc-27">2.2.6 多处理机调度</a></li><li class="lv3"><a href="#toc-28">1. 处理器亲和性和负载平衡</a></li><li class="lv3"><a href="#toc-29">2. 多处理机调度方案</a></li><li class="lv2"><a href="#toc-30">2.2.7 本节小结</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -336,6 +342,17 @@ $$\text{响应比}=\frac{\text{等待时间}+\text{估计运行时间}}{\text{�
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

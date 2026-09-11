@@ -11,25 +11,28 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> 第2章 进程与线程 <span style="opacity:.55">/</span> 本章导学</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> 第2章 进程与线程 <span class="sep">/</span> 本章导学</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html" class="active">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html" active>📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>第2章 进程与线程</h1>
 
 <p>本章是全书体量最大、地位最核心的一章：从<strong>进程与线程的基本概念</strong>出发，依次学习 <strong>CPU 调度</strong>、<strong>同步与互斥</strong>、<strong>死锁</strong>四大板块。它既是选择题的稳定出题区，更是综合题的头号来源——PV 操作、调度算法计算、银行家算法几乎每年都在综合题中轮番登场，务必尽早投入、扎实训练。</p>
 
-<h2>考纲要求</h2>
+<h2 id="toc-1">考纲要求</h2>
 <ol>
   <li><strong>（一）进程与线程</strong>：进程与线程的基本概念；进程/线程的状态与转换；线程的实现（内核支持的线程、线程库支持的线程）；进程与线程的组织与控制；进程间通信（共享内存、消息传递、管道、信号）</li>
   <li><strong>（二）CPU 调度与上下文切换</strong>：调度的基本概念；调度的目标；调度的实现（调度器/调度程序、调度的时机与调度方式（抢占式/非抢占式）、闲逛进程、内核级线程与用户级线程调度）；CPU 调度算法；多处理机调度；上下文及其切换机制</li>
@@ -37,10 +40,10 @@
   <li><strong>（四）死锁</strong>：死锁的基本概念；死锁预防；死锁避免；死锁检测和解除</li>
 </ol>
 
-<h2>复习提示</h2>
+<h2 id="toc-2">复习提示</h2>
 <p>进程管理是操作系统的核心，也是每年必考的重点。其中<strong>进程的概念、进程调度、信号量机制实现同步与互斥、死锁问题</strong>更是重中之重，必须深入掌握。要特别注意：本章除常考选择题外，还易出综合题——利用信号量实现进程同步、调度算法分析、死锁相关判定均可能作为综合题考查，其中"信号量实现进程同步"在历年统考中频繁出现。</p>
 
-<h2>章节地图</h2>
+<h2 id="toc-3">章节地图</h2>
 <ul>
   <li><a href="s2-1.html">2.1 进程与线程简介</a>——进程的概念、特征与组成（PCB），进程的五状态模型与状态转换，进程控制（创建、终止、阻塞、切换），线程的概念及用户级/内核级线程的实现，进程间通信（共享内存、消息传递、管道、信号）。</li>
   <li><a href="s2-2.html">2.2 CPU调度</a>——调度的概念、层次与目标，调度的时机与抢占/非抢占方式，闲逛进程，FCFS、SJF、HRRN、RR、优先级、多级反馈队列等调度算法及周转时间计算，多处理机调度与上下文切换机制。</li>
@@ -50,7 +53,7 @@
   <li><a href="quiz.html">本章习题</a>——按节整理的选择题与综合应用题，答案可折叠查看。</li>
 </ul>
 
-<h2>本章考点分布</h2>
+<h2 id="toc-4">本章考点分布</h2>
 <ul>
   <li><strong>进程状态转换与进程/线程对比</strong>是选择题常客：五状态图的转换条件、用户级与内核级线程在调度和阻塞上的差异，都值得反复推敲。</li>
   <li><strong>调度算法</strong>是选择与综合的"双料"高频点：FCFS、SJF、HRRN、时间片轮转、优先级与多级反馈队列的执行过程，以及周转时间、带权周转时间、等待时间的计算必须练到熟练。</li>
@@ -59,11 +62,14 @@
   <li><strong>进程间通信</strong>（共享内存、消息传递、管道、信号）的方式特点与比较，偶尔以选择题形式出现，注意管道通信的特殊性。</li>
 </ul>
 
+</article>
 <nav class="pager"><a href="../ch1/quiz.html">← 本章习题</a><a href="../ch2/s2-1.html">下一页：2.1 进程与线程简介 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">考纲要求</a></li><li class="lv2"><a href="#toc-2">复习提示</a></li><li class="lv2"><a href="#toc-3">章节地图</a></li><li class="lv2"><a href="#toc-4">本章考点分布</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -73,6 +79,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

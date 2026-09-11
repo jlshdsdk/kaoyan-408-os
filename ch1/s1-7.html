@@ -11,24 +11,27 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch1/index.html">第1章 计算机系统概述</a> <span style="opacity:.55">/</span> 1.7 本章疑难点</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch1/index.html">第1章 计算机系统概述</a> <span class="sep">/</span> 1.7 本章疑难点</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html" class="active">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html" active>1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>1.7 本章疑难点</h1>
 <p>本节集中辨析本章最容易混淆的四组概念，均为选择题的「命题富矿」，建议结合 1.1～1.4 的正文反复对照。</p>
 
-<h2>1. 并行性与并发性的区别和联系</h2>
+<h2 id="toc-1">1. 并行性与并发性的区别和联系</h2>
 <p>两者既相似又有区别：<strong>并行性</strong>指多个事件在<strong>同一时刻</strong>发生；<strong>并发性</strong>指多个事件在<strong>同一时间间隔内</strong>发生。在多道程序环境下，并发性表现为<strong>宏观上</strong>多个程序同时运行；但在单处理器系统中，任一时刻仅能执行一个程序，因此<strong>微观上</strong>这些程序分时交替执行。若系统配备多个处理器，则可以把并发执行的程序分配到不同处理器上，实现真正的并行。</p>
 <table>
   <thead><tr><th></th><th>并发性</th><th>并行性</th></tr></thead>
@@ -39,16 +42,16 @@
   </tbody>
 </table>
 
-<h2>2. 特权指令与非特权指令</h2>
+<h2 id="toc-2">2. 特权指令与非特权指令</h2>
 <p><strong>特权指令</strong>是具有特殊权限的指令，用于执行清内存、置时钟、分配系统资源、修改虚存页表、调整用户访问权限等关键操作。由于权限极高、使用不当可能导致系统崩溃，为保障系统安全，特权指令<strong>仅允许在内核态执行</strong>；实际上，CPU 在内核态下可执行<strong>完整的指令集</strong>（特权指令+非特权指令）。</p>
 <p>为防止用户程序误用特权指令，<strong>用户态下仅允许执行非特权指令</strong>；用户程序试图执行特权指令时，硬件将触发异常加以阻止。因此，操作系统中涉及特权操作的部分必须运行在内核态，以确保系统的安全性与可靠性。要注意的结论是：<strong>从用户态切换至内核态的唯一途径是中断或异常</strong>。</p>
 
-<h2>3. 访管指令与访管中断</h2>
+<h2 id="toc-3">3. 访管指令与访管中断</h2>
 <p><strong>访管指令（Trap 指令）</strong>是一条可在用户态执行的特殊指令。用户程序需要请求操作系统服务时，会<strong>主动</strong>执行该指令，引发一个自愿中断——<strong>访管中断</strong>，使系统从用户态切换到内核态，由操作系统内核处理相应请求。<strong>系统调用正是通过访管指令实现的</strong>。</p>
 <p>为什么需要访管指令？因为用户程序运行在用户态，而 I/O 操作、进程创建、内存分配等任务涉及特权资源，无法在用户态直接完成，必须借助访管指令主动触发中断、进入内核态获取所需服务。特别值得注意的是：<strong>访管指令本身并不是特权指令</strong>——它的核心作用是为用户提供一种受控且主动的内核态入口机制，在保障系统安全的同时，实现用户程序与操作系统的高效交互。</p>
 <div class="callout notice"><span class="callout-title">易错</span>「访管指令是特权指令」是典型错误说法：访管指令在<strong>用户态</strong>就能执行（否则用户程序无从发起系统调用），而陷入后的系统调用服务程序在内核态执行；「调用发生在用户态、执行在内核态」要分开表述。</div>
 
-<h2>4. 定义微内核结构操作系统的四个方面</h2>
+<h2 id="toc-4">4. 定义微内核结构操作系统的四个方面</h2>
 <ol>
   <li><strong>足够小的内核</strong>：微内核仅包含最基础的核心功能，如进程间通信、基本调度等；</li>
   <li><strong>基于客户/服务器模式</strong>：内核作为服务器提供基础服务，应用程序作为客户端请求服务；</li>
@@ -57,11 +60,14 @@
 </ol>
 <div class="callout tip"><span class="callout-title">提示</span>这四个方面是简答式记忆点，也常被拆成单选判断（如「微内核基于客户/服务器模式」「机制与策略分离使内核规模减小」），四条原文表述建议完整背一遍。</div>
 
+</article>
 <nav class="pager"><a href="../ch1/s1-6.html">← 1.6 虚拟机</a><a href="../ch1/quiz.html">下一页：本章习题 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">1. 并行性与并发性的区别和联系</a></li><li class="lv2"><a href="#toc-2">2. 特权指令与非特权指令</a></li><li class="lv2"><a href="#toc-3">3. 访管指令与访管中断</a></li><li class="lv2"><a href="#toc-4">4. 定义微内核结构操作系统的四个方面</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -71,6 +77,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

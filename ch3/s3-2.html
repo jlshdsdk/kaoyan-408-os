@@ -14,20 +14,23 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch3/index.html">第3章 内存管理</a> <span style="opacity:.55">/</span> 3.2 虚拟内存管理</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch3/index.html">第3章 内存管理</a> <span class="sep">/</span> 3.2 虚拟内存管理</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html" class="active">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html" active>3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>3.2 虚拟内存管理</h1>
 <p>3.1 节的各种内存管理方式都有一个共同前提：程序必须（基本）整体装入内存才能运行。本节介绍的<strong>虚拟内存</strong>打破了这一前提，让系统能够运行比物理内存大得多的程序。学习时请带着三个问题：</p>
 <ol>
@@ -37,9 +40,9 @@
 </ol>
 <p>本节要求掌握虚拟内存解决问题的思想，了解各种页面置换算法的优劣，并熟练掌握逻辑地址（虚地址）到物理地址（实地址）的变换方法。（本节末尾的 3.2.9 会结合计算机组成原理中的 Cache 给出一个完整的地址翻译实例。）</p>
 
-<h2>3.2.1 虚拟内存的基本概念</h2>
+<h2 id="toc-1">3.2.1 虚拟内存的基本概念</h2>
 
-<h3>传统存储管理方式的两个特征</h3>
+<h3 id="toc-2">传统存储管理方式的两个特征</h3>
 <p>3.1 节讨论的各种内存管理策略，目的都是让多个进程同时保留在内存中以支持多道程序设计，它们有两个共同特征：</p>
 <ul>
   <li><strong>一次性</strong>：作业必须一次性全部装入内存后才能开始运行。由此带来两个问题：①作业过大、无法全部装入时，该作业根本无法运行；②大量作业请求运行而内存不足时，只能让少数作业先运行，系统并发度因此下降。</li>
@@ -47,7 +50,7 @@
 </ul>
 <p>可见，许多暂时不用的代码和数据占据着大量内存空间，而急需运行的作业却因内存不足无法装入——这是对宝贵内存资源的浪费。要突破这个瓶颈，就要靠虚拟内存技术。</p>
 
-<h3>局部性原理</h3>
+<h3 id="toc-3">局部性原理</h3>
 <p>广义上讲，快表、页高速缓存及虚拟内存都属于缓存技术，它们共同依赖的原理就是<strong>局部性原理</strong>。局部性既适用于程序结构，也适用于数据结构，表现在两个方面：</p>
 <ul>
   <li><strong>时间局部性</strong>：某条指令或某个数据项一旦被访问，不久之后很可能再次被访问，主要源于程序中大量的循环和重复操作。</li>
@@ -56,7 +59,7 @@
 <p>时间局部性通过把近期使用的指令和数据保存在高速缓存中、借助多级缓存层次加以利用；空间局部性则通过采用较大容量的缓存并在缓存控制逻辑中集成预取机制来实现。虚拟内存技术正是基于局部性原理，把外存作为内存的“透明扩展”，从而有效缓解物理内存的不足。</p>
 <div class="callout kao"><span class="callout-title">考点</span>局部性原理是理解页面置换的钥匙。2012 年统考曾要求用时间局部性分析页面置换算法；后面学习 LRU、CLOCK 时要能意识到：它们之所以有效，正是因为程序具有时间局部性。</div>
 
-<h3>虚拟存储器的定义与特征</h3>
+<h3 id="toc-4">虚拟存储器的定义与特征</h3>
 <p>基于局部性原理，程序装入时只需将当前运行所需的少数页面（或段）装入内存，其余留在外存，即可启动执行。执行过程中若访问的信息不在内存，由操作系统自动将其从外存调入（<strong>请求调页</strong>／请求调段）；内存不足时，再把暂时不用的信息换出到外存以腾出空间（<strong>页面置换</strong>／段置换）。通过这两种机制的配合，系统为用户提供了一个<strong>逻辑上远大于物理内存的地址空间</strong>，这就是虚拟存储器（虚拟内存）。</p>
 <p>之所以称“虚拟”，是因为它并非真实存在的物理实体，而是操作系统通过部分装入、请求调入和置换功能（均对用户透明）构造出的一种逻辑抽象——用户程序可以像使用大容量内存一样运行，无须关心物理内存的实际大小。虚拟存储器有三个主要特征：</p>
 <ul>
@@ -66,7 +69,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>虚拟存储器的特征是高频选择题考点（2012 年统考考过）。注意对比记忆：一次性、驻留性是<strong>传统</strong>存储管理方式的特征，不属于虚拟内存；多次性、对换性、虚拟性才是虚拟存储器的三大特征。</div>
 
-<h3>虚拟内存技术的实现</h3>
+<h3 id="toc-5">虚拟内存技术的实现</h3>
 <p>虚拟内存允许把一个作业分多次调入内存。若采用连续分配方式，会在内存中留下大片暂时甚至“永久”空闲的区域，既浪费内存，也无法从逻辑上扩充容量。因此，<strong>虚拟内存的实现必须建立在离散分配的基础之上</strong>。目前主要有三种实现方式：</p>
 <ul>
   <li>请求分页存储管理；</li>
@@ -81,10 +84,10 @@
   <li><strong>地址变换机构</strong>：在程序运行过程中动态完成逻辑地址到物理地址的转换。</li>
 </ul>
 
-<h2>3.2.2 请求分页管理方式</h2>
+<h2 id="toc-6">3.2.2 请求分页管理方式</h2>
 <p>请求分页系统建立在基本分页系统之上，为支持虚拟存储器增加了<strong>请求调页</strong>和<strong>页面置换</strong>两大功能：作业运行前只需装入一部分页面即可启动；运行中访问的页面不在内存时，通过请求调页功能从外存调入；内存不足时，通过页面置换功能把暂时不用的页面换出。由于每次换入换出的单位都是长度固定的页面，请求分页比以长度可变的段为单位的请求分段更容易实现，也因此成为目前最常用的虚拟存储器实现方式。实现请求分页所需的硬件支持包括：足够容量的内存和外存、页表机制、缺页中断机构以及地址变换机构。</p>
 
-<h3>页表机制</h3>
+<h3 id="toc-7">页表机制</h3>
 <p>与基本分页系统相比，请求分页的页表要回答四个问题：①该页是否已调入内存；②若未调入，它在外存的什么位置；③置换时依据什么挑选换出页；④要换出的页是否被修改过（决定是否需要写回外存）。为此，页表项在“页号＋物理块号”的基础上增加了四个字段，其结构如下表所示（对应教材图 3.19）。</p>
 <table>
   <caption>请求分页系统中的页表项（图 3.19）</caption>
@@ -98,7 +101,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>各字段的含义及作用是选择题常考内容。特别要记住：<strong>修改位决定换出时是否写回外存</strong>——未修改的页换出时可直接丢弃，修改过的页必须写回，这是改进型 CLOCK 算法和页面缓冲算法的出发点。</div>
 
-<h3>缺页中断机构</h3>
+<h3 id="toc-8">缺页中断机构</h3>
 <p>当进程访问的页面尚未调入内存时，硬件会自动触发<strong>缺页中断</strong>，转由操作系统的缺页中断处理程序处理：把所需页面从外存调入内存（必要时先换出一页）。具体地：若内存中有空闲页框，则分配一个页框装入所缺页面，并更新页表中的相应表项；若无空闲页框，则先由置换算法选出一个页面淘汰——被淘汰页若在内存中被修改过，必须先写回外存，否则可直接丢弃。由于页面调入通常涉及较长时间的磁盘 I/O，系统在此期间可以调度其他进程运行；待页面调入完成后，<strong>重新执行引发缺页的那条指令</strong>。</p>
 <p>缺页中断属于内中断，其处理过程与其他中断类似，同样要经历保护 CPU 现场、分析中断原因、转入中断处理程序、恢复 CPU 现场等步骤，但它有两个显著特点：</p>
 <ul>
@@ -107,7 +110,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>缺页处理的过程及效率分析是本节最高频的考点之一（2011、2013、2014、2020、2022 年多次考查），2023 年还考查了缺页异常导致的进程状态变化。记住两条：缺页中断在<strong>指令执行期间</strong>产生，属于<strong>内中断</strong>；缺页处理后要<strong>重新执行被中断的那条指令</strong>。</div>
 
-<h3>地址变换机构</h3>
+<h3 id="toc-9">地址变换机构</h3>
 <p>请求分页的地址变换机构在基本分页的基础上增加了缺页（越界）处理与请求调页的逻辑，完整流程如教材图 3.20 所示。</p>
 <figure>
   <img src="../assets/ch3/ch3-p226-01.png" loading="lazy" alt="地址变换流程入口：开始，判断页号是否大于页表长度">
@@ -123,10 +126,10 @@
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>分页系统的地址变换过程及分析是多年反复考查的重点（2009、2010、2014、2024）。做题时注意细节：越界判断在最前面；快表命中时也要置访问位，写操作还要置修改位；缺页调入后要“重执行该指令”而不是继续下一条。</div>
 
-<h2>3.2.3 页框分配</h2>
+<h2 id="toc-10">3.2.3 页框分配</h2>
 <p>为进程分配内存时，需要解决三个问题：①为保证进程正常运行，最小页框数如何确定；②分配给进程的页框是固定的还是可变的；③在各进程之间是平均分配还是按进程大小比例分配。</p>
 
-<h3>最小页框数与驻留集</h3>
+<h3 id="toc-11">最小页框数与驻留集</h3>
 <p><strong>最小页框数</strong>（最小物理块数）指保证进程正常运行所需的最少页框数量，少于该值进程将无法执行。它由计算机的硬件结构决定，具体取决于指令的格式、功能和寻址方式：</p>
 <ul>
   <li>采用单地址指令、直接寻址的简单机器：至少 2 个页框，一个放指令、一个放数据；</li>
@@ -140,7 +143,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>最小物理块数的确定原则在 2025 年统考中考过：它与<strong>指令的格式、功能和寻址方式</strong>有关，与程序的长度没有直接关系，注意与“驻留集大小的权衡”区分开。</div>
 
-<h3>内存分配策略</h3>
+<h3 id="toc-12">内存分配策略</h3>
 <p>分配策略有<strong>固定分配</strong>和<strong>可变分配</strong>两种，置换策略有<strong>全局置换</strong>和<strong>局部置换</strong>两种，二者组合出三种实际可用的策略：</p>
 <ul>
   <li><strong>固定分配局部置换</strong>：为每个进程分配固定数目的页框，运行期间保持不变；缺页时只能从该进程自己的页框中选一页换出，驻留集大小恒定。难点在于初始分配量难以拿捏：太少则频繁缺页，太多则浪费内存并减少可容纳的并发进程数。</li>
@@ -150,7 +153,7 @@
 <div class="callout notice"><span class="callout-title">易错</span>分配与置换理论上可组合出四种策略，但“固定分配”要求进程页框数不变，而“全局置换”会引起页框数变化，两者互斥，因此实际可行的只有上述三种。</div>
 <div class="callout kao"><span class="callout-title">考点</span>2015 年统考直接考查了这三种策略的名称。记忆要点：固定分配只能配局部置换；含“全局置换”的策略一定是可变分配。</div>
 
-<h3>页框调入算法</h3>
+<h3 id="toc-13">页框调入算法</h3>
 <p>采用固定分配策略时，系统需要把空闲页框分给各进程，常见算法有三种：</p>
 <ol>
   <li><strong>平均分配算法</strong>：把系统中所有可供分配的页框平均分给各个进程；</li>
@@ -158,7 +161,7 @@
   <li><strong>优先权分配算法</strong>：为重要、紧迫的进程分配更多页框，通常做法是把可分配页框分成两部分，一部分按比例分配，另一部分按进程优先权动态分配。</li>
 </ol>
 
-<h3>调入页面的时机</h3>
+<h3 id="toc-14">调入页面的时机</h3>
 <p>决定何时把所缺页面调入内存，有两种调页策略：</p>
 <ul>
   <li><strong>预调页策略</strong>：由局部性原理可知，一次调入若干相邻页面通常比逐页调入更高效。但如果预调入的页面大多未被访问，反而浪费内存。目前预测的成功率仅约 50%，效果有限，因此该策略主要用于<strong>进程首次装入时</strong>，由程序员显式指定应优先加载的页面。</li>
@@ -166,7 +169,7 @@
 </ul>
 <p>简言之，预调页是在进程<strong>运行前</strong>完成页面加载，请求调页是在<strong>运行期间</strong>动态调入。</p>
 
-<h3>从何处调入页面</h3>
+<h3 id="toc-15">从何处调入页面</h3>
 <p>请求分页系统的外存分为两部分：存放文件的<strong>文件区</strong>（离散分配）和存放换出页面的<strong>对换区</strong>（连续分配）。对换区采用连续分配方式，其磁盘 I/O 速度通常快于文件区。发生缺页时，页面来源有三种情况：</p>
 <ol>
   <li><strong>系统拥有足够的对换区空间</strong>：页面一律从对换区调入以提高调页速度；为此需在进程运行前把相关文件从文件区复制到对换区。</li>
@@ -174,13 +177,13 @@
   <li><strong>UNIX 方式</strong>：与进程相关的文件始终保留在文件区。从未运行过的页面从文件区调入；曾经运行过、后来被换出的页面存放在对换区，再调入时从对换区读取。若多个进程共享同一页面且该页已在内存，其他进程直接复用，无须重复调入。</li>
 </ol>
 
-<h3>如何调入页面</h3>
+<h3 id="toc-16">如何调入页面</h3>
 <p>进程访问的页面不在内存时（页表项的存在位为 0），CPU 触发缺页中断并转入缺页中断处理程序：先从页表项取得该页的外存地址，再判断内存是否已满。若未满，分配一个空闲页框，发起磁盘 I/O 调入所缺页面，并更新页表项（填写物理块号、置存在位为 1）；若已满，按某种置换算法选出一页准备换出——修改位为 0 的直接丢弃，修改位为 1 的先写回对换区再释放页框——然后把所缺页面调入该页框并更新页表项。调入完成后，进程即可通过更新后的页表形成正确的物理地址。整个调入过程由操作系统自动完成，对用户完全透明。</p>
 
-<h2>3.2.4 页面置换算法</h2>
+<h2 id="toc-17">3.2.4 页面置换算法</h2>
 <p>进程运行中要调入的页面不在内存、而内存又无空闲页框时，必须从内存中换出一页。选择换出哪一页的算法称为<strong>页面置换算法</strong>（也常称淘汰算法）。页面的换入换出都要进行磁盘 I/O、开销较大，因此好的置换算法应致力于<strong>降低缺页率</strong>。常见的算法有 OPT、FIFO、LRU、CLOCK 四种，学习时要牢牢把握每种算法“依据什么挑选被淘汰页”这一核心。</p>
 
-<h3>最佳（OPT）置换算法</h3>
+<h3 id="toc-18">最佳（OPT）置换算法</h3>
 <p>最佳（Optimal, OPT）置换算法在缺页时选择<strong>以后永不使用、或在最长时间内不再被访问</strong>的页面淘汰，理论上可获得最低缺页率。但操作系统无法预知进程未来的访问序列，所以 OPT <strong>无法实现</strong>；它的价值在于理论标杆作用，常用来评价其他算法的优劣。</p>
 <p>【例】为某进程分配 3 个物理块，页面访问序列为</p>
 <pre><code>7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1</code></pre>
@@ -192,7 +195,7 @@
 <p>整个过程中共发生 <strong>9 次缺页中断</strong>，其中 <strong>6 次</strong>触发了页面置换（不计初始装入的 3 次）。</p>
 <div class="callout kao"><span class="callout-title">考点</span><strong>缺页率计算</strong>：缺页率 = 缺页次数 ÷ 访问次数。上例中 9 ÷ 20 = 45%。做题时务必看清题目口径：若问“发生缺页中断的次数”是 9 次，若问“因缺页而进行页面置换的次数”则要扣除初始装入，为 9 − 3 = 6 次。这是最常见的失分点。</div>
 
-<h3>先进先出（FIFO）置换算法</h3>
+<h3 id="toc-19">先进先出（FIFO）置换算法</h3>
 <p>先进先出（First In First Out, FIFO）算法淘汰<strong>最早进入内存</strong>的页面：把内存中的页面按调入时间组织成队列，换出时直接移除队首页面，实现非常简单。但 FIFO 没有利用局部性原理，与进程实际运行规律不符——最早装入的页面往往仍被频繁访问，因此性能通常较差。</p>
 <p>仍用上面的例子：访问页面 2 时缺页，淘汰最早进入的页面 7；随后访问页面 3 时再次缺页，把 2、0、1 中最先进入的页面 0 换出。以此类推，过程如图 3.22 所示，共发生 <strong>15 次缺页中断</strong>，其中 <strong>12 次</strong>触发页面置换。</p>
 <figure>
@@ -208,7 +211,7 @@
 </figure>
 <div class="callout kao"><span class="callout-title">考点</span>只有 FIFO 可能出现 Belady 异常，OPT 和 LRU <strong>永远不会</strong>出现此类异常——这是选择题的常见判定点（2010 年考过 FIFO 的应用分析）。</div>
 
-<h3>最近最久未使用（LRU）置换算法</h3>
+<h3 id="toc-20">最近最久未使用（LRU）置换算法</h3>
 <p>最近最久未使用（Least Recently Used, LRU）算法淘汰<strong>最近最长时间未使用</strong>的页面，其依据是：若某页面在过去很长一段时间未被访问，则近期它也很可能不会被访问。为此需为每个页面设置访问字段，记录该页自上次被访问以来所经历的时间，淘汰时选择该值最大的页面。</p>
 <p>仍用前面的例子：首次访问页面 2 时缺页，换出最近最久未使用的页面 7；随后访问页面 3 时缺页，换出最近最久未使用的页面 1。过程如图 3.24 所示。</p>
 <figure>
@@ -218,7 +221,7 @@
 <p>由图可见，LRU <strong>前 5 次缺页的处理结果与 OPT 相同</strong>——但这只是巧合，并无必然联系：LRU 依据页面<strong>过去</strong>的使用情况判断，是“向前看”的；OPT 依据页面<strong>未来</strong>的使用情况判断，是“向后看”的，而过去与未来之间并无必然联系。</p>
 <div class="callout kao"><span class="callout-title">考点</span><strong>LRU 与 FIFO 的对比</strong>是高频考点（2009、2015、2019、2025 年多次考查 LRU 的应用分析）：OPT 性能最好但无法实现；FIFO 实现简单但忽略局部性、性能较差；LRU 性能接近 OPT，但需要专门的硬件支持来记录访问时间，实现开销大。手算 LRU 时，每访问一个页面都要更新所有在内存页面的“最近访问时间”，逐列填表即可避免出错。</div>
 
-<h3>时钟（CLOCK）置换算法</h3>
+<h3 id="toc-21">时钟（CLOCK）置换算法</h3>
 <p>LRU 性能接近 OPT，但实现开销大。为此人们设计了许多以较小开销逼近 LRU 性能的算法，这类算法统称为 CLOCK 算法（及其变体）。</p>
 <h4>简单的 CLOCK 算法</h4>
 <p>简单的 CLOCK 算法为每个页面设置一个<strong>访问位</strong>：某页首次装入内存或被访问时，访问位置 1。所有页框组织成一个<strong>循环队列</strong>，并设一个替换指针指向当前检查位置。缺页需置换时按如下规则操作：若指针所指页面的访问位为 0，直接淘汰该页；若为 1，则把它置 0，指针移向下一页面，给这页一次“宽恕”机会，待后续轮询再判断。因为指针在队列上循环移动、形如时钟指针，故得名 CLOCK 算法；又因它仅依据“最近是否被使用”这一粗略信息决策，也称最近未用（NRU）算法。</p>
@@ -264,22 +267,22 @@
 <p>改进型 CLOCK 优于简单 CLOCK 之处在于：优先淘汰未修改的页面，从而减少磁盘写回的 I/O 开销；代价是为找到合适的淘汰页可能要多轮扫描，算法本身的运行开销增加。各种置换算法遵循同一原则：<strong>尽可能保留近期访问过的页面，优先淘汰未访问过的页面</strong>。简单 CLOCK 只用访问位区分“是否被访问过”；改进型则进一步细化——对未访问过的页面优先换出其中未修改者；即使所有页面都被访问过，也优先换出未修改者，把磁盘写回成本降到最低。</p>
 <div class="callout kao"><span class="callout-title">考点</span>2018 年考过改进型 CLOCK 的思想，2016、2021 年考过其应用分析。手算时牢记“两轮扫描、四种页面”的优先级顺序，以及“第②轮扫过的页 A 要置 0”这一细节。</div>
 
-<h2>*3.2.5 抖动和工作集 <span class="badge extra">课外拓展</span></h2>
+<h2 id="toc-22">*3.2.5 抖动和工作集 <span class="badge extra">课外拓展</span></h2>
 
-<h3>抖动</h3>
+<h3 id="toc-23">抖动</h3>
 <p>页面置换中最糟糕的情形是：刚换出的页面马上又要换入，刚换入的页面又立刻被换出。这种频繁的页面调度行为称为<strong>抖动</strong>（又称颠簸）。</p>
 <p>发生抖动的根本原因是：分配给进程的物理块太少，无法满足其正常运行的基本需求，导致进程执行过程中频繁缺页、反复请求调页。此时磁盘 I/O 频率急剧上升，进程的大部分时间耗费在页面换入换出上，几乎无法完成有效计算，CPU 利用率随之急剧下降，甚至趋近于零。抖动是虚拟存储系统的严重性能问题：既然其根源是进程驻留集过少，人们就提出了<strong>工作集</strong>的概念，用以动态指导页框分配。</p>
 <div class="callout kao"><span class="callout-title">考点</span>2011 年考过抖动的处理措施。答题思路围绕“增大驻留集、降低缺页率”展开：根据缺页率或工作集动态调整分配给进程的页框数、必要时挂起（换出）部分进程以腾出页框等。</div>
 
-<h3>工作集</h3>
+<h3 id="toc-24">工作集</h3>
 <p><strong>工作集</strong>指在某段时间间隔内，进程实际访问页面的集合，通常用时间 \(t\) 和工作集窗口尺寸 \(\Delta\) 描述，记作 \(W(t,\Delta)\)。例如某进程的页面访问序列为</p>
 <pre><code>1, 4, 2, 3, 5, 3, 2, 2, 1, 1, 1, 3, 4, 5, 4, 4, 2, 1, 1, 3, 3</code></pre>
 <p>取窗口尺寸 \(\Delta = 5\)：若某时刻之前（含该时刻）的 5 次访问为 3, 5, 3, 2, 2，则此刻的工作集为 {2, 3, 5}；若为 4, 2, 1, 1, 3，则工作集为 {1, 2, 3, 4}。实际应用中窗口通常设置得较大，对局部性好的程序，其工作集大小一般远小于 \(\Delta\)。由于工作集反映了进程随后一段时间内很可能频繁访问的页面集合，<strong>驻留集大小不应小于工作集大小</strong>，否则进程将频繁缺页。</p>
 
-<h2>3.2.6 页框回收</h2>
+<h2 id="toc-25">3.2.6 页框回收</h2>
 <p>页框回收是 2025 年统考大纲新增考点。2012 年统考真题第 45 题其实已经涉及：它把页框回收的过程描述为“被系统回收的页框，放入空闲页框链尾，其中内容在下一次分配之前不清空”——这正是页面缓冲算法中空闲页面链表的定义。页框回收算法本身较为复杂，主流教材通常不系统介绍，细节多见于剖析 Linux 内核的图书，在 408 中出现的概率极低，这里只要求掌握页面缓冲算法的思想。</p>
 
-<h3>页面缓冲算法</h3>
+<h3 id="toc-26">页面缓冲算法</h3>
 <p>在页式虚拟存储系统中，页面换入换出的开销对性能影响显著，主要影响因素有：</p>
 <ol>
   <li><strong>页面置换算法的选择</strong>：好的置换算法能降低缺页率，减少换入换出频率；</li>
@@ -293,12 +296,12 @@
 </ul>
 <p>这种用链表管理物理页框、延迟实际 I/O 的机制，就是页框回收的过程。页面缓冲算法的优点：①显著降低页面换入换出频率，大幅减少磁盘 I/O 开销；②即使采用简单的置换策略（如 FIFO）也能获得良好性能，且无须特殊硬件支持，实现简单高效。</p>
 
-<h3>页框回收的过程</h3>
+<h3 id="toc-27">页框回收的过程</h3>
 <p>系统可分配内存不足时必须回收页框，但并非所有页框都可回收：属于内核的大部分页框（内核栈、内核代码段、内核数据段及大部分内核使用的页框）不可回收；进程使用的页框（进程代码段、数据段、堆栈、访问文件时映射的文件页、进程间共享内存占用的页框）则大多可以回收。</p>
 <p>Linux 内核设置了负责页面换出的守护进程 <strong>kswapd</strong>，它定期检查内存使用情况，当空闲页框数低于特定值时主动发起回收。之所以不能等空闲页框完全耗尽才回收，是因为释放脏页通常要先把它写回磁盘，而磁盘 I/O 往往需要临时页框作为缓冲区——若此时已无空闲页框，既分不到 I/O 缓冲区、也无法完成页面释放，内核可能陷入内存分配死锁甚至崩溃。</p>
 <p>Linux 采用 3.1.2 节介绍的<strong>伙伴算法</strong>统计和管理不同长度的连续空闲页框：连续空闲页组织成“空闲块”，按大小（所含连续页框数）分组。分配页框是“化整为零”的过程，会产生外部碎片，因此系统必须能把零碎页框重新合并成较大的连续块。页框回收正是伙伴算法的逆操作：一个页框被释放时，先检查是否存在大小相等的伙伴空闲块；若存在，则合并为一个大小翻倍的新空闲块，再继续向上检查新块能否与更高一级的伙伴合并，直至无法合并为止。</p>
 
-<h2>3.2.7 内存映射文件</h2>
+<h2 id="toc-28">3.2.7 内存映射文件</h2>
 <p><strong>内存映射文件</strong>（Memory-Mapped Files）是操作系统向应用程序提供的一种系统调用机制，它在磁盘文件与进程的虚拟地址空间之间建立直接映射关系，与虚拟内存机制紧密相关。</p>
 <p>进程通过该系统调用把一个文件映射到自己虚拟地址空间的某一区域后，就可以像访问内存一样读写文件——相当于把文件当作内存中的一个大字符数组来访问，而无须调用传统的文件 I/O 接口，使用更为便捷。磁盘文件的实际读写由操作系统完成，对进程透明。建立映射时并不立即装入文件内容，而是进程<strong>首次访问某一页时才按需调入</strong>；待进程退出或显式解除映射时，所有被修改的页面才写回磁盘文件。</p>
 <p>进程间的高效通信可以通过共享内存实现，而这种共享内存往往正是<strong>通过将同一文件映射到多个通信进程的虚拟地址空间来实现的</strong>：各进程的虚拟地址空间相互独立，但操作系统通过页表把它们对应的虚拟页映射到相同的物理页（见图 3.27）。于是一个进程在共享区域写入后，另一个进程立即能在自己的映射区域读到更新——二者访问的是同一块物理内存，数据天然一致，无须额外的复制或同步机制。</p>
@@ -313,7 +316,7 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>2025 年统考考查了内存映射文件的原理与特点。抓住三点：映射建立后按“访存”方式读写文件、磁盘读写由操作系统透明完成、多进程映射同一文件即可共享内存。</div>
 
-<h2>3.2.8 虚拟存储器性能影响因素</h2>
+<h2 id="toc-29">3.2.8 虚拟存储器性能影响因素</h2>
 <p><strong>缺页率</strong>是决定虚拟存储器性能的核心因素，它又受页面大小、分配给进程的物理块数、页面置换算法、写回磁盘的频率以及程序局部化程度等因素影响。</p>
 <ul>
   <li><strong>页面大小</strong>：根据局部性原理，页面较大时单次装入能覆盖更多局部访问区域，缺页率较低；页面较小时缺页率相对较高。但小页面页内碎片小、内存利用率高，大页面虽能缩短页表却会增大页内碎片；且页面越小，进程所需页数越多、页表越长。因此页面大小要在<strong>碎片控制</strong>与<strong>页表开销</strong>之间取得平衡。</li>
@@ -324,10 +327,10 @@
 </ul>
 <div class="callout kao"><span class="callout-title">考点</span>2020、2022 年考过请求分页系统性能影响因素的分析。答题时按“页面大小、物理块数、置换算法、写回频率、程序局部性”五个维度逐条展开，并说明各因素影响缺页率的机理。</div>
 
-<h2>3.2.9 地址翻译的示例</h2>
+<h2 id="toc-30">3.2.9 地址翻译的示例</h2>
 <p>408 统考越来越注重学科综合能力的考查。本节把操作系统的虚拟内存与《计算机组成原理》中 Cache 的内容结合起来，完整分析一次虚实地址的翻译过程。</p>
 <div class="callout tip"><span class="callout-title">提示</span>本节需要组相联、直接映射、标记匹配等 Cache 基础知识。尚未复习计组 Cache 部分的读者，建议先学完相关内容再回来看，事半功倍。</div>
-<h3>题目条件</h3>
+<h3 id="toc-31">题目条件</h3>
 <ul>
   <li>系统配置一个 TLB（快表）和一个 data Cache；</li>
   <li>存储器按字节编址；</li>
@@ -337,7 +340,7 @@
   <li>data Cache 采用物理寻址、直接映射方式，行大小 4 B，共 16 组。</li>
 </ul>
 <p>要求分析对虚拟地址 0x03d4、0x00F1、0x0229 的访问过程。</p>
-<h3>地址结构的划分</h3>
+<h3 id="toc-32">地址结构的划分</h3>
 <p>按字节编址、页面 64 B，故页内偏移占 \(\log_2 64 = 6\) 位。虚拟地址 14 位，虚拟页号占 14 − 6 = 8 位；物理地址 12 位，物理页号占 12 − 6 = 6 位。TLB 四路组相联、共 16 个条目，故组数为 16 ÷ 4 = 4，组索引占 \(\log_2 4 = 2\) 位（取虚拟页号低 2 位），虚拟页号高 6 位作为 TLB 标记。data Cache 行大小 4 B，故物理地址最低 \(\log_2 4 = 2\) 位为块内偏移；Cache 共 16 组，接下来的 \(\log_2 16 = 4\) 位为组索引，剩余高 6 位为标记。地址结构如图 3.28 所示。</p>
 <pre><code>虚拟地址（14 位）：| TLB 标记（6 位） | TLB 组索引（2 位） | 页内偏移（6 位） |
                     └──────── 虚拟页号（8 位） ────────┘
@@ -363,14 +366,14 @@
   <img src="../assets/ch3/ch3-p236-05.png" loading="lazy" alt="表3.4 三个虚拟地址的逐位拆分：TLB标记（位13~8）、组索引（位7~6）与页内偏移（位5~0）">
   <figcaption>表 3.4　虚拟地址结构（王道教材 P236）</figcaption>
 </figure>
-<h3>TLB 与页表的查找</h3>
+<h3 id="toc-33">TLB 与页表的查找</h3>
 <p>由表 3.4 得到各地址的 TLB 标记、组索引和页内偏移，逐一判断对应页面是否已在主存中，并确定其物理地址：</p>
 <ol>
   <li><strong>0x03d4</strong>：TLB 标记 0x03、组索引 3。查 TLB 第 3 组，存在标记为 03 且有效位为 1 的项，<strong>TLB 命中</strong>，得物理页号 0x0D（001101）；拼接页内偏移 010100，物理地址为 0x354（0011 0101 0100）。</li>
   <li><strong>0x00F1</strong>：TLB 标记 0x00、组索引 3。查 TLB 第 3 组无匹配项，<strong>TLB 未命中</strong>，转查页表：虚拟页号 0x03，页表第 3 行有效位为 1，页面在主存中，物理页号 0x02（000010）；拼接页内偏移 110001，物理地址为 0x0B1（0000 1011 0001）。</li>
   <li><strong>0x0229</strong>：TLB 标记 0x02、组索引 0。查 TLB 第 0 组无匹配项；再查页表，虚拟页号 0x08 对应表项有效位为 0，页面不在主存中，<strong>触发缺页中断</strong>。</li>
 </ol>
-<h3>Cache 的查找</h3>
+<h3 id="toc-34">Cache 的查找</h3>
 <p>得到主存中页面的物理地址后，还要用物理地址访问数据，检查内容是否在 Cache 中。两个物理地址的拆分如表 3.5 所示。</p>
 <figure>
   <img src="../assets/ch3/ch3-p237-01.png" loading="lazy" alt="表3.5 物理地址0x354与0x0B1的逐位拆分：Cache标记（位11~6）、Cache索引（位5~2）与偏移（位1~0）">
@@ -382,7 +385,7 @@
 </ol>
 <p>该示例覆盖了从虚拟地址到 Cache 查找的典型情形，完整流程是：<strong>先查 TLB</strong>；TLB 未命中则访问页表完成虚实转换，若发现页面未调入主存（页表项无效）则触发缺页中断、从外存调页；<strong>再用得到的物理地址访问 Cache</strong>；Cache 未命中则进一步从主存读取数据。</p>
 
-<h2>3.2.10 本节小结</h2>
+<h2 id="toc-35">3.2.10 本节小结</h2>
 <p>回应本节开头提出的三个问题：</p>
 <ol>
   <li><strong>为什么要引入虚拟内存？</strong>多道程序并发执行使进程共享处理器和内存：并发进程增多时，每个进程分到的处理器时间会平滑减少，但内存需求会急剧上升，进程可能因分不到足够内存而根本无法装入。物理内存的扩展受硬件限制，因此需要通过其他方式在<strong>逻辑上扩充内存容量</strong>，虚拟内存技术由此产生。</li>
@@ -391,11 +394,14 @@
 </ol>
 <p>本节学习了 OPT、FIFO、LRU、CLOCK 四种页面置换算法，注意把它们与处理机调度算法区分开——当然二者也有内在联系：都属于资源调度机制，核心都是依据某种准则决定把有限资源分配给哪个请求者。处理机调度的准则包括优先级、响应比、时间片等；页面置换则聚焦页面的使用历史（是否被访问过、近期是否经常使用）。事实上，操作系统中几乎每类资源都有相应的调度策略，以“调度”为线索串联各类算法，有助于构建对操作系统整体架构的系统性理解。</p>
 
+</article>
 <nav class="pager"><a href="../ch3/s3-1.html">← 3.1 内存管理概念</a><a href="../ch3/s3-3.html">下一页：3.3 本章疑难点 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">3.2.1 虚拟内存的基本概念</a></li><li class="lv3"><a href="#toc-2">传统存储管理方式的两个特征</a></li><li class="lv3"><a href="#toc-3">局部性原理</a></li><li class="lv3"><a href="#toc-4">虚拟存储器的定义与特征</a></li><li class="lv3"><a href="#toc-5">虚拟内存技术的实现</a></li><li class="lv2"><a href="#toc-6">3.2.2 请求分页管理方式</a></li><li class="lv3"><a href="#toc-7">页表机制</a></li><li class="lv3"><a href="#toc-8">缺页中断机构</a></li><li class="lv3"><a href="#toc-9">地址变换机构</a></li><li class="lv2"><a href="#toc-10">3.2.3 页框分配</a></li><li class="lv3"><a href="#toc-11">最小页框数与驻留集</a></li><li class="lv3"><a href="#toc-12">内存分配策略</a></li><li class="lv3"><a href="#toc-13">页框调入算法</a></li><li class="lv3"><a href="#toc-14">调入页面的时机</a></li><li class="lv3"><a href="#toc-15">从何处调入页面</a></li><li class="lv3"><a href="#toc-16">如何调入页面</a></li><li class="lv2"><a href="#toc-17">3.2.4 页面置换算法</a></li><li class="lv3"><a href="#toc-18">最佳（OPT）置换算法</a></li><li class="lv3"><a href="#toc-19">先进先出（FIFO）置换算法</a></li><li class="lv3"><a href="#toc-20">最近最久未使用（LRU）置换算法</a></li><li class="lv3"><a href="#toc-21">时钟（CLOCK）置换算法</a></li><li class="lv2"><a href="#toc-22">*3.2.5 抖动和工作集 课外拓展</a></li><li class="lv3"><a href="#toc-23">抖动</a></li><li class="lv3"><a href="#toc-24">工作集</a></li><li class="lv2"><a href="#toc-25">3.2.6 页框回收</a></li><li class="lv3"><a href="#toc-26">页面缓冲算法</a></li><li class="lv3"><a href="#toc-27">页框回收的过程</a></li><li class="lv2"><a href="#toc-28">3.2.7 内存映射文件</a></li><li class="lv2"><a href="#toc-29">3.2.8 虚拟存储器性能影响因素</a></li><li class="lv2"><a href="#toc-30">3.2.9 地址翻译的示例</a></li><li class="lv3"><a href="#toc-31">题目条件</a></li><li class="lv3"><a href="#toc-32">地址结构的划分</a></li><li class="lv3"><a href="#toc-33">TLB 与页表的查找</a></li><li class="lv3"><a href="#toc-34">Cache 的查找</a></li><li class="lv2"><a href="#toc-35">3.2.10 本节小结</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -405,6 +411,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

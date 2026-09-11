@@ -11,45 +11,48 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch5/index.html">第5章 输入/输出管理</a> <span style="opacity:.55">/</span> 5.4 本章疑难点</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch5/index.html">第5章 输入/输出管理</a> <span class="sep">/</span> 5.4 本章疑难点</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html" class="active">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html" active>5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>5.4 本章疑难点</h1>
 
 <p>本章最后梳理两个容易混淆的疑难问题：一个是设备分配策略如何做到灵活、成功率高；另一个是用户缓冲区与内核缓冲区到底有什么区别、各自起什么作用。</p>
 
-<h2>疑难点一：如何改进设备分配策略，以提高其灵活性和成功率？</h2>
+<h2 id="toc-1">疑难点一：如何改进设备分配策略，以提高其灵活性和成功率？</h2>
 
 <p>可以从以下两个方面对基本的设备分配程序加以改进。</p>
 
-<h3>1）增强设备无关性</h3>
+<h3 id="toc-2">1）增强设备无关性</h3>
 <p>进程使用<strong>逻辑设备名</strong>发起 I/O 请求。系统首先从<strong>系统设备表（SDT）</strong>中查找该类设备的第一个<strong>设备控制表（DCT）</strong>；若该设备正忙，则继续查找下一个 DCT；仅当<strong>所有同类设备均处于忙碌状态</strong>时，才把进程挂起，并将其加入该类设备的等待队列。反过来说，只要存在一个可用设备，系统就进入后续的安全性检查与分配流程，不会让进程白等。</p>
 
-<h3>2）支持多通路 I/O 结构</h3>
+<h3 id="toc-3">2）支持多通路 I/O 结构</h3>
 <p>为避免 I/O 瓶颈，现代系统常采用<strong>多通路</strong>设计：一台设备可以连接多个控制器，一个控制器也可以连接多个通道。在这种结构下，控制器与通道的分配同样要<strong>逐级尝试</strong>：若设备所连接的第一个控制器（或该控制器所连接的第一个通道）正忙，就尝试下一个；仅当所有相关控制器（或通道）均不可用时，分配才宣告失败，进程被挂入相应的等待队列；只要有一个可用，即可完成分配。</p>
 
 <p>在具有通道的系统中，设备分配需要依次访问 <strong>SDT → DCT → COCT → CHCT</strong>。成功分配一个设备必须同时满足：<strong>设备可用、控制器可用、通道可用</strong>。因此常称——「设备分配，要过三关」。</p>
 
 <div class="callout kao"><span class="callout-title">考点</span>两条改进策略（增强设备无关性、多通路 I/O）与「三关」是本章收尾的常考内容：分配时要逐层查找、逐级尝试，<strong>只有全部同类设备（或全部相关控制器、通道）都忙才挂起进程</strong>，只要有一个空闲就继续分配流程。数据结构的访问顺序 SDT→DCT→COCT→CHCT 要能默写，并对应「设备—控制器—通道」三级层次。</div>
 
-<h2>疑难点二：用户缓冲区与内核缓冲区的定义及作用分别是什么？</h2>
+<h2 id="toc-4">疑难点二：用户缓冲区与内核缓冲区的定义及作用分别是什么？</h2>
 
-<h3>用户缓冲区</h3>
+<h3 id="toc-5">用户缓冲区</h3>
 <p>用户进程在读取文件时，通常会预先申请一块内存区域（如一个数组），称为<strong>缓冲区（Buffer）</strong>，用于暂存从文件中读取的数据。每次调用 <code>read</code> 系统调用时，操作系统把读取的数据填充到该缓冲区中，应用程序便可直接从中获取数据；其中的数据处理完毕后，再发起下一次 <code>read</code> 系统调用重新填充缓冲区。</p>
 <p><strong>用户缓冲区的主要作用是减少系统调用的次数</strong>，进而降低因频繁在用户态与内核态之间切换所带来的开销。</p>
 
-<h3>内核缓冲区</h3>
+<h3 id="toc-6">内核缓冲区</h3>
 <p><strong>内核缓冲区</strong>是操作系统在<strong>内核空间</strong>中维护的缓冲区。它对读、写两个方向的工作方式不同：</p>
 <ul>
   <li><strong>读方向</strong>：用户进程请求读取磁盘数据时，系统并不直接访问磁盘，而是先检查内核缓冲区中是否已缓存所需数据——若存在，直接把数据从内核缓冲区复制到用户缓冲区；若不存在，内核才发起磁盘 I/O 请求，并把当前进程挂起、转而调度其他进程执行；磁盘数据被读入内核缓冲区后，再复制到用户缓冲区，并唤醒该进程。</li>
@@ -57,7 +60,7 @@
 </ul>
 <p><strong>内核缓冲区的核心目的是提升磁盘 I/O 的整体效率</strong>，尤其对写操作具有突出的优化效果。</p>
 
-<h3>两者对比</h3>
+<h3 id="toc-7">两者对比</h3>
 <table>
   <thead><tr><th>维度</th><th>用户缓冲区</th><th>内核缓冲区</th></tr></thead>
   <tbody>
@@ -71,11 +74,14 @@
 
 <div class="callout tip"><span class="callout-title">提示</span>内核缓冲区「写操作先缓冲、满足条件再批量落盘」的做法，与 5.3.3 节「提高磁盘 I/O 速度的方法」中的<strong>延迟写</strong>是同一思想：合并多次写操作、减少 I/O 次数。分清记忆：用户缓冲区省的是<strong>系统调用与态切换</strong>的开销，内核缓冲区省的是<strong>磁盘 I/O</strong> 的开销。</div>
 
+</article>
 <nav class="pager"><a href="../ch5/s5-3.html">← 5.3 磁盘和固态硬盘</a><a href="../ch5/quiz.html">下一页：本章习题 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">疑难点一：如何改进设备分配策略，以提高其灵活性和成功率？</a></li><li class="lv3"><a href="#toc-2">1）增强设备无关性</a></li><li class="lv3"><a href="#toc-3">2）支持多通路 I/O 结构</a></li><li class="lv2"><a href="#toc-4">疑难点二：用户缓冲区与内核缓冲区的定义及作用分别是什么？</a></li><li class="lv3"><a href="#toc-5">用户缓冲区</a></li><li class="lv3"><a href="#toc-6">内核缓冲区</a></li><li class="lv3"><a href="#toc-7">两者对比</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -85,6 +91,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

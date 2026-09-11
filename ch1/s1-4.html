@@ -11,24 +11,27 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch1/index.html">第1章 计算机系统概述</a> <span style="opacity:.55">/</span> 1.4 操作系统结构</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch1/index.html">第1章 计算机系统概述</a> <span class="sep">/</span> 1.4 操作系统结构</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" class="active">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" active>1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>1.4 操作系统结构</h1>
 <p>随着操作系统功能不断扩展、代码规模持续增长，采用合理的结构设计对<strong>降低系统复杂度、提升安全性和可靠性</strong>至关重要。本节覆盖两类视角：一是经典的设计方法（分层法、模块化），二是从内核架构出发的三种形态（宏内核、微内核、外核）。</p>
 
-<h2>1. 分层法</h2>
+<h2 id="toc-1">1. 分层法</h2>
 <p>分层法把操作系统划分为若干层次：最底层（层 0）为硬件，顶层（层 N）为用户接口，<strong>各层只调用紧邻下层提供的功能与服务（单向依赖）</strong>。</p>
 <figure>
   <img src="../assets/ch1/ch1-p038-01.png" loading="lazy" alt="分层的操作系统示意图：自底向上依次为层0硬件、层1……层N用户接口，各层单向依赖紧邻下层">
@@ -45,7 +48,7 @@
   <li><strong>运行效率较低</strong>：执行一个高层功能通常要穿越多个中间层，每层的参数传递与控制转移都引入额外开销。</li>
 </ol>
 
-<h2>2. 模块化</h2>
+<h2 id="toc-2">2. 模块化</h2>
 <p>模块化把操作系统按功能划分为若干具有一定独立性的模块：每个模块实现特定的管理功能，并明确定义与其他模块的接口、通过接口通信；模块还可进一步细分为子模块并规定子模块间的接口——这种设计方法称为<strong>模块-接口法</strong>。</p>
 <figure>
   <img src="../assets/ch1/ch1-p039-01.png" loading="lazy" alt="模块化操作系统结构示意图：操作系统由进程管理、存储器管理、文件管理等模块组成，模块下再分为进程控制、进程调度、内存分配、内存保护、磁盘管理、目录管理等子模块">
@@ -60,14 +63,14 @@
 <p><strong>缺点</strong>：①模块间的接口规定很难满足对接口的实际需求；②各模块设计者齐头并进，每个决定无法建立在上一个已验证的正确决定的基础上，找不到一个可靠的决定顺序。</p>
 <div class="callout kao"><span class="callout-title">考点</span>本节虽少出大题，但选择题爱考「分层法的单向依赖」「高内聚、低耦合」「分层便于调试验证但效率低、模块化支持并行开发但接口难定」这类一一对应关系，注意两种方法的优缺点<strong>不要互换</strong>。</div>
 
-<h2>3. 宏内核</h2>
+<h2 id="toc-3">3. 宏内核</h2>
 <p>从内核架构看，操作系统可分为<strong>宏内核</strong>和<strong>微内核</strong>两类。</p>
 <p><strong>宏内核</strong>（也称单内核或大内核）把系统的主要功能模块集成在一个<strong>紧密耦合的整体</strong>中、运行于内核态，为用户程序提供高效的系统服务。由于各模块共享地址空间、可直接调用彼此的函数，省去了上下文切换和消息传递的开销，因此<strong>性能高</strong>。</p>
 <p>但随着体系结构和应用需求的发展，操作系统要提供的服务日益复杂、代码规模急剧膨胀，导致系统维护困难、可靠性下降，面临典型的「软件危机」。为提升模块化、可扩展性与安全性，微内核技术应运而生：只把最基本的功能（如进程调度、进程间通信等）保留在内核，把文件系统、设备驱动等非核心服务移到用户态运行。</p>
 <p>从发展现状看，主流操作系统（Linux、Windows、Android）主要采用<strong>宏内核或混合内核</strong>架构，在保持高性能的同时吸收微内核的部分设计理念；例如 macOS 和 iOS 的 XNU 内核就融合了 Mach 微内核与 BSD 宏内核的特性。宏内核与微内核并非对立，而是相互借鉴、融合发展。近年来随着对安全性和可验证性的重视，微内核重新受到关注——谷歌 Fuchsia 和华为 HarmonyOS NEXT 都采用微内核架构。</p>
 
-<h2>4. 微内核</h2>
-<h3>（1）微内核的基本概念</h3>
+<h2 id="toc-4">4. 微内核</h2>
+<h3 id="toc-5">（1）微内核的基本概念</h3>
 <p>微内核架构把操作系统<strong>最基本的功能保留在内核</strong>，把其他非核心功能移至用户态运行，以降低内核复杂性。移出的功能被组织成若干独立的服务程序，运行在用户态，它们之间以及与客户进程之间的交互都通过微内核提供的<strong>消息传递机制</strong>完成。</p>
 <p>微内核只实现操作系统最核心的机制，通常包括：①与硬件紧密相关的部分；②基本的资源管理机制；③客户与服务器间的通信支持。操作系统的绝大部分功能放在微内核外的<strong>一组服务器（进程）</strong>中实现、运行在用户态，如进程/线程服务器、虚拟存储器服务器等。</p>
 <figure>
@@ -75,14 +78,14 @@
   <figcaption>图1.7 单机环境下的客户/服务器模式（王道教材PDF P40）</figcaption>
 </figure>
 <p>在微内核结构中，<strong>只有微内核运行在内核态</strong>，其余模块都运行在用户态。因此某个模块（如文件服务器）发生故障时，只有该模块崩溃，系统可通过重启该服务恢复，不会导致整个系统宕机；相比之下，宏内核中文件系统运行在内核态，其崩溃将直接引发系统崩溃。</p>
-<h3>（2）微内核的基本功能</h3>
+<h3 id="toc-6">（2）微内核的基本功能</h3>
 <p>微内核操作系统遵循<strong>「机制与策略分离」</strong>的设计原则：与硬件紧密相关的机制置于微内核，策略交由用户态服务器实现。进程管理、存储器管理和 I/O 管理等功能都被拆成两部分——机制留在微内核，策略由外部服务器实现；由于服务器通常远大于微内核，这使微内核得以保持极小规模。微内核通常具备以下功能：</p>
 <ol>
   <li><strong>进程（线程）管理</strong>：微内核提供进程/线程的创建、切换、调度队列管理等<strong>机制</strong>，而进程分类、优先级分配等<strong>策略</strong>由用户态的进程管理服务器实现；</li>
   <li><strong>低级存储器管理</strong>：微内核只包含与硬件相关的地址转换机制（如页表管理、逻辑地址到物理地址的映射），页面置换算法、内存分配策略等由用户态的存储器管理服务器实现；</li>
   <li><strong>中断和陷入处理</strong>：微内核负责捕获硬件中断和陷入事件，识别类型后分发给相应的用户态服务器处理。中断与陷入的捕获及分发机制属于微内核的核心功能。</li>
 </ol>
-<h3>（3）微内核的特点</h3>
+<h3 id="toc-7">（3）微内核的特点</h3>
 <p><strong>优点</strong>：</p>
 <ol>
   <li><strong>扩展性和灵活性</strong>：新增或修改功能只需调整相应服务器，无须改动内核；</li>
@@ -93,7 +96,7 @@
 <p><strong>缺点</strong>：<strong>性能问题</strong>——每次服务请求需要多次穿越内核态与用户态，导致系统调用延迟增加。为缓解此问题，部分现代系统采用<strong>混合内核</strong>设计，在保留微内核思想的同时把高频服务移入内核以提升性能，但这又会使内核容量明显增大。尽管如此，微内核凭借高可靠性和可验证性，仍广泛应用于可靠性要求极高的关键任务领域，如实时操作系统、工业控制、航空航天及军事等。</p>
 <div class="callout kao"><span class="callout-title">考点</span>微内核的特点是 2023 真题考点：可靠性、安全性、可扩展性、可移植性是其优点，<strong>性能恰恰是它的短板</strong>（频繁的内核态/用户态切换开销）——「微内核使系统更高效」这类说法必错；「文件系统服务不宜放进微内核」也是常见判断点。</div>
 
-<h2>5. 外核</h2>
+<h2 id="toc-8">5. 外核</h2>
 <p>传统操作系统通过抽象层向应用程序提供统一接口，<strong>外核（exokernel）</strong>则采用截然不同的思路：<strong>把物理资源直接暴露给用户级系统</strong>，自身只负责资源的安全分配与隔离。</p>
 <p>外核是运行在内核态的极小程序，核心职责是把底层硬件资源（磁盘块、内存页、网络包缓冲区等）划分为<strong>互不重叠的子集</strong>并分配给不同的用户级系统——例如一个用户级系统分到磁盘的 0～1023 块，另一个分到 1024～2047 块。外核通过权限检查机制确保各用户级系统只能访问被明确授权的资源、防止越权访问。在外核之上，可在用户空间构建<strong>库操作系统（library OS）</strong>，自主实现文件系统、进程调度、虚拟内存管理等传统操作系统功能；由于库操作系统直接操作物理资源、无须经过传统内核强制性的抽象层，避免了不必要的数据拷贝、地址转换和上下文切换开销，显著提升系统性能与灵活性。</p>
 <p>外核机制的主要优点：</p>
@@ -104,11 +107,14 @@
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>外核的定位是「只管资源分配与保护，不管进程调度等功能实现——功能由用户态的库操作系统完成」，这与宏内核/微内核的分工完全不同，选择题常拿「外核负责完成进程调度」当错误选项。</div>
 
+</article>
 <nav class="pager"><a href="../ch1/s1-3.html">← 1.3 操作系统的运行环境</a><a href="../ch1/s1-5.html">下一页：1.5 操作系统引导 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">1. 分层法</a></li><li class="lv2"><a href="#toc-2">2. 模块化</a></li><li class="lv2"><a href="#toc-3">3. 宏内核</a></li><li class="lv2"><a href="#toc-4">4. 微内核</a></li><li class="lv3"><a href="#toc-5">（1）微内核的基本概念</a></li><li class="lv3"><a href="#toc-6">（2）微内核的基本功能</a></li><li class="lv3"><a href="#toc-7">（3）微内核的特点</a></li><li class="lv2"><a href="#toc-8">5. 外核</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -118,6 +124,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

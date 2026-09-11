@@ -11,35 +11,38 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> 第5章 输入/输出管理 <span style="opacity:.55">/</span> 本章导学</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> 第5章 输入/输出管理 <span class="sep">/</span> 本章导学</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html" class="active">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html" active>📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>第5章 输入/输出管理</h1>
 
 <p>本章内容较为分散，从 <strong>I/O 管理基础</strong>（设备分类、I/O 接口、控制方式、软件层次）讲到<strong>设备独立性软件</strong>（缓冲、分配、SPOOLing），最后落到<strong>磁盘和固态硬盘</strong>。本章硬件相关知识较多，建议结合《计算机组成原理》的相关内容一起复习；统考中分值虽小，但命题通常较为直接，认真复习者基本能稳拿分。</p>
 
-<h2>考纲要求</h2>
+<h2 id="toc-1">考纲要求</h2>
 <ol>
   <li><strong>（一）输入/输出（I/O）管理基础</strong>：设备（设备的基本概念、设备的分类、I/O 接口）；I/O 控制方式（轮询方式、中断方式、DMA 方式）；I/O 软件层次结构（中断处理程序、驱动程序、设备独立性软件、用户层 I/O 软件）；输入/输出应用程序接口（字符设备接口、块设备接口、网络设备接口、阻塞/非阻塞 I/O）</li>
   <li><strong>（二）设备独立软件</strong>：缓冲区管理；设备分配与回收；假脱机技术（SPOOLing）；设备驱动程序接口</li>
   <li><strong>（三）外存管理</strong>：磁盘（磁盘结构、格式化、分区、磁盘调度算法）；固态硬盘（读/写性能特性、磨损均衡）</li>
 </ol>
 
-<h2>复习提示</h2>
+<h2 id="toc-2">复习提示</h2>
 <p>本章内容较为分散，重点掌握 <strong>I/O 接口、I/O 软件、I/O 控制方式、缓冲区管理、SPOOLing 技术，以及磁盘特性与调度算法</strong>。由于涉及较多硬件知识，建议结合计算机组成原理的相关内容复习。本章在历年统考中分值较小且命题直接：认真复习者一般能准确作答，未接触相关内容者则难以凭直觉判断——复习务必全面、反复。</p>
 
-<h2>章节地图</h2>
+<h2 id="toc-3">章节地图</h2>
 <ul>
   <li><a href="s5-1.html">5.1 I/O管理概述</a>——I/O 设备的分类（块/字符、独占/共享等）与 I/O 接口（设备控制器）的组成，轮询、中断、DMA 三种 I/O 控制方式，I/O 软件四层结构及各类应用程序接口。</li>
   <li><a href="s5-2.html">5.2 设备独立性软件</a>——设备独立性软件的五项公共功能，单/双/环形缓冲与缓冲池的耗时分析，设备分配中的数据结构与安全分配，SPOOLing 假脱机技术，设备驱动程序接口。</li>
@@ -48,7 +51,7 @@
   <li><a href="quiz.html">本章习题</a>——按节整理的选择题与综合应用题，答案可折叠查看。</li>
 </ul>
 
-<h2>本章考点分布</h2>
+<h2 id="toc-4">本章考点分布</h2>
 <ul>
   <li><strong>I/O 控制方式</strong>是选择题常客：轮询、中断、DMA 三种方式下 CPU 的介入时机与干预粒度的比较，以及各自适用的传输单位，要求一一分清。</li>
   <li><strong>I/O 软件四层结构</strong>高频考查"某一操作属于哪一层"：中断处理程序、设备驱动程序、设备独立性软件、用户层 I/O 软件的职责边界要能准确判断。</li>
@@ -57,11 +60,14 @@
   <li><strong>磁盘时间构成与固态硬盘</strong>：寻道时间、旋转延迟、传输时间的计算偶有考查；固态硬盘"读快写慢、以页为单位写、磨损均衡"的特点近年偶尔进入选择题。</li>
 </ul>
 
+</article>
 <nav class="pager"><a href="../ch4/quiz.html">← 本章习题</a><a href="../ch5/s5-1.html">下一页：5.1 I/O管理概述 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">考纲要求</a></li><li class="lv2"><a href="#toc-2">复习提示</a></li><li class="lv2"><a href="#toc-3">章节地图</a></li><li class="lv2"><a href="#toc-4">本章考点分布</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -71,6 +77,17 @@
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

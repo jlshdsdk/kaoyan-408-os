@@ -14,21 +14,24 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span style="opacity:.55">/</span> 本章习题</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span class="sep">/</span> 本章习题</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="active" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" active quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
-<h2>2.1 进程与线程简介 · 选择题</h2>
+<article>
+<h2 id="toc-1">2.1 进程与线程简介 · 选择题</h2>
 
 <div class="q">
 <p><strong>第 1 题</strong> 一个进程映像是（　）。</p>
@@ -769,7 +772,7 @@
 </div></details>
 </div>
 
-<h2>2.2 CPU 调度 · 选择题</h2>
+<h2 id="toc-2">2.2 CPU 调度 · 选择题</h2>
 
 <div class="q">
 <p><strong>第 1 题</strong> 中级调度的目的是（　）。</p>
@@ -1425,7 +1428,7 @@
 </div></details>
 </div>
 
-<h2>2.3 同步与互斥 · 选择题</h2>
+<h2 id="toc-3">2.3 同步与互斥 · 选择题</h2>
 
 <div class="q">
 <p><strong>第 1 题</strong> 下列对临界区的论述中，正确的是（　）。</p>
@@ -2065,7 +2068,7 @@ mov  x, R1     //(R1)→x       mov  x, R2     //(R2)→x</code></pre>
 </div></details>
 </div>
 
-<h2>2.4 死锁 · 选择题</h2>
+<h2 id="toc-4">2.4 死锁 · 选择题</h2>
 
 <div class="q">
 <p><strong>第 1 题</strong> 下列情况中，可能导致死锁的是（　）。</p>
@@ -2589,11 +2592,11 @@ while(1) {                        while(1) {
 </div></details>
 </div>
 
-<h2>综合应用题（一）进程与调度</h2>
+<h2 id="toc-5">综合应用题（一）进程与调度</h2>
 
 <p>本页为 2.1 与 2.2 节的综合应用题：第 1 题考查进程实体与进程状态，第 2～11 题围绕 CPU 调度展开（抢占式优先级、时间片轮转、短作业/短进程优先、高响应比优先、多道批处理下的作业与进程两级调度等）。建议先自己动手推时序、算周转时间，再展开解析逐步核对。</p>
 
-<h3>第 1 题（2025 统考真题）进程的实体与状态</h3>
+<h3 id="toc-6">第 1 题（2025 统考真题）进程的实体与状态</h3>
 <p><strong>第 1 题</strong> 某系统中进程的虚拟地址空间包括内核区、用户栈、运行时堆、可读/写数据段、只读代码段等区域。现有 C 语言程序的部分代码如下：</p>
 <pre><code>char *ptr;
 void main() {
@@ -2616,7 +2619,7 @@ void main() {
 <p>3）ptr 是全局指针变量，分配在可读/写数据段；length 是 main() 中的局部变量，若未被编译器优化进寄存器，则分配在用户栈；ptr 指向的字符串由 malloc() 动态分配，位于运行时堆中。</p>
 </div></details>
 
-<h3>第 2 题 抢占式优先级调度（CPU 与双外设并行）</h3>
+<h3 id="toc-7">第 2 题 抢占式优先级调度（CPU 与双外设并行）</h3>
 <p><strong>第 2 题</strong> 有一个 CPU 和两台外设 D1、D2，在能够实现抢占式优先级调度算法的多道程序环境中，同时进入优先级由高到低的 P1、P2、P3 三个作业，每个作业的处理顺序和使用资源的时间如下：</p>
 <p class="mono">P1：D2(30ms) → CPU(10ms) → D1(30ms) → CPU(10ms)<br>
 P2：D1(20ms) → CPU(20ms) → D2(40ms)<br>
@@ -2657,7 +2660,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>D1 占用 = 20（P2）+ 30（P1）+ 20（P3）= 70ms，D1 利用率 = 70ms / 90ms ≈ 77.8%。（D2 占用 = 30 + 40 = 70ms，利用率同为 77.8%。）</p>
 </div></details>
 
-<h3>第 3 题 不可抢占优先级调度（CPU 与 I/O 设备并行）</h3>
+<h3 id="toc-8">第 3 题 不可抢占优先级调度（CPU 与 I/O 设备并行）</h3>
 <p><strong>第 3 题</strong> 有三个作业 A、B、C，它们分别单独运行时的 CPU 和 I/O 占用顺序如下表所示（时间单位 ms）：</p>
 <table>
 <tr><th>作业</th><th>单独运行时的资源占用顺序</th></tr>
@@ -2703,7 +2706,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>CPU 利用率 = 180ms / 210ms ≈ 85.7%。</p>
 </div></details>
 
-<h3>第 4 题 分时系统的调度策略与状态变化</h3>
+<h3 id="toc-9">第 4 题 分时系统的调度策略与状态变化</h3>
 <p><strong>第 4 题</strong> 某分时系统中的进程可能出现如下图所示的状态变化：就绪队列中的进程经变化①进入运行态；运行态进程可经变化⑥回到就绪队列末尾，也可经变化②转入"等待磁盘读文件"阻塞队列、经变化③转入"等待打印机输出"阻塞队列；两个阻塞队列分别经变化⑤、变化④回到就绪队列。请回答：</p>
 <p>1）根据图示，该系统应采用什么进程调度策略？</p>
 <p>2）将图中每个状态变化（①～⑥）的可能原因填写在下表中。</p>
@@ -2722,7 +2725,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 </table>
 </div></details>
 
-<h3>第 5 题 FCFS、RR、SJF 与非剥夺优先级的对比</h3>
+<h3 id="toc-10">第 5 题 FCFS、RR、SJF 与非剥夺优先级的对比</h3>
 <p><strong>第 5 题</strong> 假定要在一台处理器上执行下表所示的作业，且这些作业在时刻 0 以 1、2、3、4、5 的顺序到达（单位为题表中的时间单位）。说明分别使用 FCFS、RR（时间片 = 1）、SJF 及非剥夺式优先级调度算法时这些作业的执行情况（优先级 1 最高、5 最低），并给出每种算法的平均周转时间和平均带权周转时间。</p>
 <table>
 <tr><th>作业号</th><th>执行时间</th><th>优先级</th></tr>
@@ -2793,7 +2796,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <div class="callout tip"><span class="callout-title">提示</span>SJF 的平均周转时间在所有算法中必然最短（本例 7 最小），算完可用这一性质自检。</div>
 </div></details>
 
-<h3>第 6 题 两道批处理系统（SJF 作业调度 + 抢占式优先级进程调度）</h3>
+<h3 id="toc-11">第 6 题 两道批处理系统（SJF 作业调度 + 抢占式优先级进程调度）</h3>
 <p><strong>第 6 题</strong> 有一个具有两道作业的批处理系统，作业调度采用短作业优先调度算法，进程调度采用抢占式优先级调度算法。作业的运行情况见下表，其中作业的优先数即进程的优先数，优先数越小，优先级越高。</p>
 <table>
 <tr><th>作业号</th><th>到达时间</th><th>运行时间</th><th>优先数</th></tr>
@@ -2831,7 +2834,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>平均周转时间 =（70 + 30 + 90 + 90）/ 4 = 280 / 4 = 70min。</p>
 </div></details>
 
-<h3>第 7 题 可抢占短进程优先与时间片轮转</h3>
+<h3 id="toc-12">第 7 题 可抢占短进程优先与时间片轮转</h3>
 <p><strong>第 7 题</strong> 假设某计算机系统有 4 个进程，各进程的预计运行时间和到达就绪队列的时刻见下表（相对时间，单位为"时间配额"）。试用可抢占式短进程优先调度算法和时间片轮转调度算法（时间配额为 2）进行调度，分别计算各个进程的调度次序及平均周转时间。</p>
 <table>
 <tr><th>进程名</th><th>到达就绪队列时刻</th><th>预计运行时间</th></tr>
@@ -2893,7 +2896,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>平均周转时间 =（22 + 11 + 24 + 20）/ 4 = 77 / 4 = 19.25。</p>
 </div></details>
 
-<h3>第 8 题 时钟中断与进程切换的系统开销</h3>
+<h3 id="toc-13">第 8 题 时钟中断与进程切换的系统开销</h3>
 <p><strong>第 8 题</strong> 假设一个计算机系统具有如下性能特征：处理一次中断平均需要 500μs，一次进程调度平均需要花费 1ms，进程的切换平均需要花费 2ms。若该计算机系统的定时器每秒发出 120 次时钟中断，忽略其他 I/O 中断的影响，请问：</p>
 <p>1）操作系统将百分之几的 CPU 时间分配给时钟中断处理程序？</p>
 <p>2）若采用时间片轮转调度，24 个时钟中断为一个时间片，操作系统每进行一次进程的切换，需要花费百分之几的 CPU 时间？</p>
@@ -2906,7 +2909,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>3）两项合计约 7.5% 的 CPU 时间花在了中断处理与调度切换上。为提高 CPU 效率可以：①减少时钟中断次数，如由每秒 120 次降到 100 次，延长中断间隔；②加大每个时间片内的时钟中断数（即增大时间片），如由 24 个增大到 36 个，减少切换次数；③优化中断处理程序，减少单次处理开销，如由 500μs 降到 400μs。若三项同时实施：每个时间片开销 = 36 × 400μs + 1ms + 2ms = 14.4ms + 3ms = 17.4ms，每秒时间片数 = 100 / 36 ≈ 2.78 个，总开销占比 = 17.4ms × 2.78 / 1000ms ≈ 48.3 / 1000 ≈ 4.8%，明显低于原来的 7.5%。</p>
 </div></details>
 
-<h3>第 9 题 高响应比优先调度（单道）</h3>
+<h3 id="toc-14">第 9 题 高响应比优先调度（单道）</h3>
 <p><strong>第 9 题</strong> 设有 4 个作业 J1、J2、J3、J4，它们的到达时间和计算时间见下表。若这 4 个作业在一台处理器上按单道方式运行，采用高响应比优先调度算法，试写出各作业的执行顺序、各作业的周转时间及平均周转时间。</p>
 <table>
 <tr><th>作业号</th><th>到达时间</th><th>计算时间</th></tr>
@@ -2938,7 +2941,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>可见高响应比优先是 FCFS 与 SJF 的折中：等待足够久后响应比必然升高，短作业仍占优势，但不会像纯 SJF 那样让长作业无限期饥饿。</p>
 </div></details>
 
-<h3>第 10 题 两道批处理系统（高响应比作业调度 + 抢占式短进程优先）</h3>
+<h3 id="toc-15">第 10 题 两道批处理系统（高响应比作业调度 + 抢占式短进程优先）</h3>
 <p><strong>第 10 题</strong> 在一个有两道作业的批处理系统中，有一作业序列，其到达时间及估计运行时间见下表。系统作业调度采用最高响应比优先调度算法【响应比 =（等待时间 + 估计运行时间）/ 估计运行时间】，进程调度采用短进程优先的抢占式调度算法。</p>
 <table>
 <tr><th>作业号</th><th>到达时间/min</th><th>估计运行时间/min</th></tr>
@@ -2973,7 +2976,7 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>平均周转时间 =（35 + 75 + 145 + 35 + 85）/ 5 = 375 / 5 = 75min。</p>
 </div></details>
 
-<h3>第 11 题（2016 统考真题）动态优先数与饥饿</h3>
+<h3 id="toc-16">第 11 题（2016 统考真题）动态优先数与饥饿</h3>
 <p><strong>第 11 题</strong> 某进程调度程序采用基于优先数（priority）的调度策略，即选择优先数最小的进程运行，进程创建时由用户指定一个 nice 作为静态优先数。为了动态调整优先数，引入运行时间 cpuTime 和等待时间 waitTime，初值均为 0。进程处于执行态时，cpuTime 定时加 1，且 waitTime 置 0；进程处于就绪态时，cpuTime 置 0，waitTime 定时加 1。请回答：</p>
 <p>1）若调度程序只将 nice 的值作为进程的优先数，即 priority = nice，则可能出现饥饿现象。为什么？</p>
 <p>2）使用 nice、cpuTime 和 waitTime 设计一种动态优先数计算方法，以避免产生饥饿现象，并说明 waitTime 的作用。</p>
@@ -2984,13 +2987,13 @@ P3：CPU(30ms) → D1(20ms)</p>
 <p>2）一种动态优先数计算方法为：priority = nice + k1 × cpuTime − k2 × waitTime，其中 k1 &gt; 0、k2 &gt; 0，分别用来调整 cpuTime 和 waitTime 在 priority 中所占的比例。若一个进程占用处理器的时间较长，其 cpuTime 增大，优先数随之变大、优先级降低，从而给其他进程让出机会；若一个进程在就绪队列中等待了很久，其 waitTime 增大，优先数随之减小、优先级逐步抬高。waitTime 的作用正在于此：让长时间等待的进程优先数不断减小，保证它们最终能被调度运行，从而避免饥饿现象。</p>
 </div></details>
 
-<h2>综合应用题（二）同步与互斥</h2>
+<h2 id="toc-17">综合应用题（二）同步与互斥</h2>
 
 <p>本页为 2.3 节同步与互斥的综合应用题，共 29 题，是全站最重要的解析页之一。其中第 17～29 题全部为统考真题（2009～2025）。题型覆盖：并发进程错误分析、生产者—消费者变形（货架、水缸、信箱、银行叫号等）、读者—写者变形（过桥、录像厅）、前驱图定同步、以及哲学家进餐、抽烟者、理发师等经典模型。建议先自己画同步/互斥关系图、定义信号量并写出完整伪代码，再展开解析逐行核对每个 P、V 的位置。</p>
 
 <div class="callout tip"><span class="callout-title">约定</span>解析中代码均为记录型信号量的标准伪代码：<code>P(S)</code> 即 <code>wait(S)</code>，<code>V(S)</code> 即 <code>signal(S)</code>。信号量含义表中"取值范围"的统一口径：记录型信号量取负值时，绝对值等于正在等待它的进程数，故区间下界为 <code>-k</code>（k 为最多可能阻塞在该信号量上的进程数）。</div>
 
-<h3>第 1 题 两个并发进程共享变量 x 的错误分析</h3>
+<h3 id="toc-18">第 1 题 两个并发进程共享变量 x 的错误分析</h3>
 <p><strong>第 1 题【教材 P132】</strong>下面是两个并发执行的进程，它们能正确运行吗？若不能请举例说明并改正。</p>
 <pre><code>int x;                  // 共享全局变量
 process P1 {            // process P2 {
@@ -3028,7 +3031,7 @@ process P1 {                process P2 {
 </table>
 </div></details>
 
-<h3>第 2 题 仓库存放 A、B 两种产品（数量差受限）</h3>
+<h3 id="toc-19">第 2 题 仓库存放 A、B 两种产品（数量差受限）</h3>
 <p><strong>第 2 题【教材 P133】</strong>在一个仓库中可以存放 A 和 B 两种产品，要求：①每次只能存入一种产品；②A 产品数量 − B 产品数量 &lt; \(M\)，其中 \(M\) 是正整数；③B 产品数量 − A 产品数量 &lt; \(N\)，其中 \(N\) 是正整数。假设仓库的容量是无限的，试用 P、V 操作描述产品 A 和 B 的入库过程。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3068,7 +3071,7 @@ process B() {
 </table>
 </div></details>
 
-<h3>第 3 题 面包师与 n 名销售人员的取号叫号同步</h3>
+<h3 id="toc-20">第 3 题 面包师与 n 名销售人员的取号叫号同步</h3>
 <p><strong>第 3 题【教材 P133】</strong>面包师有很多面包，由 n 名销售人员推销。每名顾客进店后按序取一个号，并且等待叫号；当一名销售人员空闲时，就按序叫下一个号。可以用两个整型变量来记录当前的取号值和叫号值，试设计一个使销售人员和顾客同步的算法。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3111,7 +3114,7 @@ process Seller() {           // 销售人员
 </table>
 </div></details>
 
-<h3>第 4 题 装配车间：双货架 A、B 零件组装</h3>
+<h3 id="toc-21">第 4 题 装配车间：双货架 A、B 零件组装</h3>
 <p><strong>第 4 题【教材 P133】</strong>某工厂有两个生产车间和一个装配车间，两个生产车间分别生产 A、B 两种零件，装配车间的任务是把 A、B 两种零件组装成产品。两个生产车间每生产一个零件后，都要分别把它们送到专配车间的货架 F1 和 F2 上。F1 存放零件 A，F2 存放零件 B，F1 和 F2 的容量均可存放 10 个零件。装配工人每次从货架上取一个零件 A 和一个零件 B 后组装成产品。请用 P、V 操作进行正确管理。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3173,7 +3176,7 @@ semaphore mutex2 = 1;    // 互斥访问货架 F2
 </table>
 </div></details>
 
-<h3>第 5 题 小和尚挑水：井、缸、桶三重制约</h3>
+<h3 id="toc-22">第 5 题 小和尚挑水：井、缸、桶三重制约</h3>
 <p><strong>第 5 题【教材 P134】</strong>某寺庙有小和尚、老和尚若干，有一水缸，由小和尚提水入缸供老和尚饮用。水缸可容 10 桶水，水取自同一井中。水井径窄，每次只能容一个桶取水。水桶总数为 3 个。每次入缸取水仅为 1 桶水，且不可同时进行。试给出有关从缸取水、入水的算法描述。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3223,7 +3226,7 @@ semaphore pail  = 3;     // 可用水桶数，初值为 3
 </table>
 </div></details>
 
-<h3>第 6 题 三进程共享输入设备并合作计算打印</h3>
+<h3 id="toc-23">第 6 题 三进程共享输入设备并合作计算打印</h3>
 <p><strong>第 6 题【教材 P135】</strong>如下图所示，三个合作进程 P1、P2、P3 需要通过同一台非抢占式输入设备输入各自的数据 a、b、c（设备一次只能被一个进程使用，图中 P1、P2、P3 依次排队使用）。然后，三个进程分别对输入数据进行计算：\(P_1: x=a+b\)；\(P_2: y=a \times b\)；\(P_3: z=y+c-a\)。最后，P1 进程通过所连接的打印机将计算结果 x、y、z 的值打印出来。请用信号量实现它们的同步。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3270,7 +3273,7 @@ P3() {
 </table>
 </div></details>
 
-<h3>第 7 题 单行桥的交通管理（读者—写者变形）</h3>
+<h3 id="toc-24">第 7 题 单行桥的交通管理（读者—写者变形）</h3>
 <p><strong>第 7 题【教材 P135】</strong>有一座南北向的桥，两个方向的车流如箭头所示。回答如下问题：</p>
 <p>(1) 假设桥上每次只能有一辆车行驶，试用信号灯的 P、V 操作实现交通管理。</p>
 <p>(2) 假设桥上不允许两车交会，但允许同方向多辆车一次通过（即桥上可有多辆同方向行驶的车），试用信号灯的 P、V 操作实现桥上的交通管理。</p>
@@ -3334,7 +3337,7 @@ NtoS() {                 // 从北向南，与 StoN 完全对称
 </table>
 </div></details>
 
-<h3>第 8 题 flag 标志法互斥机制的正确性分析</h3>
+<h3 id="toc-25">第 8 题 flag 标志法互斥机制的正确性分析</h3>
 <p><strong>第 8 题【教材 P136】</strong>假设有两个线程（编号为 0 和 1）需要去访问同一个共享资源，为避免竞争状态的问题，我们必须实现一种互斥机制，使得在任何时候只能有一个线程访问这个资源。假设有如下一段代码：</p>
 <pre><code>bool flag[2];              // flag 数组，初始化为 FALSE
 Enter_Critical_Section(int my_thread_id, int other_thread_id) {
@@ -3359,7 +3362,7 @@ Exit_Critical_Section(int my_thread_id, int other_thread_id) {
 </table>
 </div></details>
 
-<h3>第 9 题 自行车生产线：车架、车轮、组装三工人防死锁</h3>
+<h3 id="toc-26">第 9 题 自行车生产线：车架、车轮、组装三工人防死锁</h3>
 <p><strong>第 9 题【教材 P137】</strong>设自行车生产线上有一个箱子，其中有 N 个位置（\(N \ge 3\)），每个位置可存放一个车架或一个车轮；又设有 3 名工人，其活动分别为：</p>
 <pre><code>工人1活动：              工人2活动：              工人3活动：
 do {                     do {                     do {
@@ -3422,7 +3425,7 @@ do {
 </table>
 </div></details>
 
-<h3>第 10 题 P、Q、R 共享单缓冲区（R 既生产又消费）</h3>
+<h3 id="toc-27">第 10 题 P、Q、R 共享单缓冲区（R 既生产又消费）</h3>
 <p><strong>第 10 题【教材 P138】</strong>设 P、Q、R 共享一个缓冲区，P、Q 构成一对生产者—消费者，R 既为生产者又为消费者：若缓冲区为空，则 R 可以写入；若缓冲区不空，则 R 可以读出。使用 P、V 操作实现其同步。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3479,7 +3482,7 @@ R() {
 </table>
 </div></details>
 
-<h3>第 11 题 理发师问题（n 把等候椅）</h3>
+<h3 id="toc-28">第 11 题 理发师问题（n 把等候椅）</h3>
 <p><strong>第 11 题【教材 P138】</strong>理发店里有一位理发师、一把理发椅和 n 把供等候理发的顾客坐的椅子。若没有顾客，理发师便在理发椅上睡觉；顾客到来时必须唤醒理发师。若理发师正在理发时又有顾客来到：有空椅子则坐下来等待，否则就离开。试用 P、V 操作实现，并说明信号量的定义和初值。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3523,7 +3526,7 @@ customer() {             // 顾客进程
 </table>
 </div></details>
 
-<h3>第 12 题 录像厅三部影片的放映管理</h3>
+<h3 id="toc-29">第 12 题 录像厅三部影片的放映管理</h3>
 <p><strong>第 12 题【教材 P139】</strong>某录像厅一次只能放映一部（一种）录像片，现有三种录像片供观众选择，放映规则如下：</p>
 <p>(1) 一部录像片开始放映后持续放映，只有当不再有观众观看时，才结束当前录像片的放映；</p>
 <p>(2) 选择当前正在放映的录像片的观众可立即进入，允许同时有多位选择同一种录像片的观众同时观看，同时观看的观众数量不受限制；</p>
@@ -3582,7 +3585,7 @@ process videoshow3() {            // 观看第三部影片的观众（结构与 
 </table>
 </div></details>
 
-<h3>第 13 题 公共汽车司机与售票员的同步</h3>
+<h3 id="toc-30">第 13 题 公共汽车司机与售票员的同步</h3>
 <p><strong>第 13 题【教材 P140】</strong>设公共汽车上驾驶员和售票员的活动分别如下图所示。驾驶员的活动：启动车辆、正常行车、到站停车；售票员的活动：关车门、售票、开车门。</p>
 <pre><code>驾驶员：                售票员：
 启动车辆                关车门
@@ -3623,7 +3626,7 @@ conductor() {            // 售票员
 </table>
 </div></details>
 
-<h3>第 14 题 六进程前驱图定同步</h3>
+<h3 id="toc-31">第 14 题 六进程前驱图定同步</h3>
 <p><strong>第 14 题【教材 P140】</strong>一组进程的执行顺序如下图（前驱图）所示，圆圈 P1～P6 表示进程，弧上的字母 a～h 表示同步信号量。弧约束为：P1→P2（a）、P1→P3（b）、P2→P4（c）、P2→P5（d）、P3→P4（e）、P3→P5（f）、P4→P6（g）、P5→P6（h）。请用 P、V 操作实现进程的同步。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3688,7 +3691,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 15 题 1000 字缓冲区的读数、取算、打印合作</h3>
+<h3 id="toc-32">第 15 题 1000 字缓冲区的读数、取算、打印合作</h3>
 <p><strong>第 15 题【教材 P141】</strong>有 3 个进程 P、P1、P2 合作处理数据：P 从输入设备读数据到缓冲区，缓冲区可存 1000 个字；P1 和 P2 的功能一样，都是从缓冲区取出数据并计算，再打印结果。请用信号量的 P、V 操作实现。其中，语句 read() 从输入设备读入 20 个字到缓冲区；get() 从缓冲区取出 20 个字；comp() 计算 40 个字并输出得到结果的 1 个字；print() 打印结果的 2 个字。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3731,7 +3734,7 @@ process P1() {               // P2 与 P1 完全一样
 </table>
 </div></details>
 
-<h3>第 16 题 抽烟者问题（供应者放两种材料）</h3>
+<h3 id="toc-33">第 16 题 抽烟者问题（供应者放两种材料）</h3>
 <p><strong>第 16 题【教材 P142】</strong>假设有 3 个抽烟者和 1 个供应者。每个抽烟者不停地卷烟并抽掉它，但要卷起并抽掉一支烟，抽烟者需要有三种材料：烟草、纸和胶水。三个抽烟者中，第一个拥有烟草，第二个拥有纸，第三个拥有胶水。供应者无限提供三种材料：供应者每次将两种材料放到桌子上，拥有剩下那种材料的抽烟者卷一根烟并抽掉它，并给供应者一个信号告诉已完成，此时供应者就将另外两种材料放到桌上，如此重复，让 3 个抽烟者轮流抽烟。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3790,7 +3793,7 @@ process P4() {               // 拥有胶水者
 </table>
 </div></details>
 
-<h3>第 17 题（2009 统考真题）奇数偶数分离的生产者—消费者</h3>
+<h3 id="toc-34">第 17 题（2009 统考真题）奇数偶数分离的生产者—消费者</h3>
 <p><strong>第 17 题【教材 P142】【2009 统考真题】</strong>三个进程 P1、P2、P3 互斥使用一个包含 N（\(N&gt;0\)）个单元的缓冲区。P1 每次用 produce() 生成一个正整数并用 put() 送入缓冲区某一空单元；P2 用 getodd() 从该缓冲区中取出一个奇数并用 countodd() 统计奇数个数；P3 每次用 geteven() 从该缓冲区中取出一个偶数并用 counteven() 统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动，并说明所定义的信号量的含义（要求用伪代码描述）。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3849,7 +3852,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 18 题（2011 统考真题）银行叫号服务</h3>
+<h3 id="toc-35">第 18 题（2011 统考真题）银行叫号服务</h3>
 <p><strong>第 18 题【教材 P143】【2011 统考真题】</strong>某银行提供 1 个服务窗口和 10 个供顾客等待的座位。顾客到达银行时，若有空座位，则到取号机上领取一个号，等待叫号。取号机每次仅允许一位顾客使用。当营业员空闲时，通过叫号选取一位顾客，并为其服务。顾客和营业员的活动过程描述如下：</p>
 <pre><code>cobegin
 process 顾客i {
@@ -3905,7 +3908,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 19 题（2013 统考真题）博物馆 500 人限流</h3>
+<h3 id="toc-36">第 19 题（2013 统考真题）博物馆 500 人限流</h3>
 <p><strong>第 19 题【教材 P143】【2013 统考真题】</strong>某博物馆最多可容纳 500 人同时参观，有一个出入口，该出入口一次仅允许一人通过。参观者的活动描述如下：</p>
 <pre><code>cobegin
 参观者进程i：
@@ -3940,7 +3943,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 20 题（2014 统考真题）多生产多消费 + 连续取 10 件</h3>
+<h3 id="toc-37">第 20 题（2014 统考真题）多生产多消费 + 连续取 10 件</h3>
 <p><strong>第 20 题【教材 P144】【2014 统考真题】</strong>系统中有多个生产者进程和多个消费者进程，共享一个能存放 1000 件产品的环形缓冲区（初始为空）。缓冲区未满时，生产者进程可以放入其生产的一件产品，否则等待；缓冲区未空时，消费者进程可从缓冲区取走一件产品，否则等待。要求一个消费者进程从缓冲区连续取出 10 件产品后，其他消费者进程才可以取产品。请使用信号量 P、V（或 wait()、signal()）操作实现进程间的互斥与同步，要求写出完整的过程，并说明所用信号量的含义和初值。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -3984,7 +3987,7 @@ while (TRUE) {
 </table>
 </div></details>
 
-<h3>第 21 题（2015 统考真题）A、B 信箱辩论</h3>
+<h3 id="toc-38">第 21 题（2015 统考真题）A、B 信箱辩论</h3>
 <p><strong>第 21 题【教材 P144】【2015 统考真题】</strong>有 A、B 两人通过信箱进行辩论，每个人都从自己的信箱中取得对方的问题，将答案和向对方提出的新问题组成一个邮件放入对方的邮箱中。假设 A 的信箱最多放 M 个邮件，B 的信箱最多放 N 个邮件。初始时 A 的信箱中有 x 个邮件（\(0&lt;x&lt;M\)），B 的信箱中有 y 个邮件（\(0&lt;y&lt;N\)）。辩论者每取出一个邮件，邮件数减 1。A 和 B 两人的操作过程描述如下：</p>
 <pre><code>coBegin
 A:                                   B:
@@ -4033,7 +4036,7 @@ coend</code></pre>
 </table>
 </div></details>
 
-<h3>第 22 题（2017 统考真题）三线程复数运算的精准互斥</h3>
+<h3 id="toc-39">第 22 题（2017 统考真题）三线程复数运算的精准互斥</h3>
 <p><strong>第 22 题【教材 P145】【2017 统考真题】</strong>某进程中有 3 个并发执行的线程 thread1、thread2 和 thread3，其伪代码如下所示：</p>
 <pre><code>// 复数的结构类型定义
 typedef struct {
@@ -4083,7 +4086,7 @@ signal(mutex_y1);            signal(mutex_y2);            y = add(y, w);   // �
 </table>
 </div></details>
 
-<h3>第 23 题（2019 统考真题）哲学家进餐：m 个碗 n 根筷子</h3>
+<h3 id="toc-40">第 23 题（2019 统考真题）哲学家进餐：m 个碗 n 根筷子</h3>
 <p><strong>第 23 题【教材 P146】【2019 统考真题】</strong>有 n（\(n \ge 3\)）名哲学家围坐在一张圆桌边，每名哲学家交替地就餐和思考。在圆桌中心有 m（\(m \ge 1\)）个碗，每两名哲学家之间有一根筷子。每名哲学家必须取到一个碗和两侧的筷子后才能就餐，进餐完毕，将碗和筷子放回原位，并继续思考。为使尽可能多的哲学家同时就餐，且防止出现死锁现象，请使用信号量的 P、V 操作（wait()、signal() 操作）描述上述过程中的互斥与同步，并说明所用信号量及初值的含义。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -4116,7 +4119,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 24 题（2020 统考真题）五个操作的前驱同步</h3>
+<h3 id="toc-41">第 24 题（2020 统考真题）五个操作的前驱同步</h3>
 <p><strong>第 24 题【教材 P147】【2020 统考真题】</strong>现有 5 个操作 A、B、C、D 和 E：操作 C 必须在 A 和 B 完成后执行，操作 E 必须在 C 和 D 完成后执行。请使用信号量的 wait()、signal() 操作（P、V 操作）描述上述操作之间的同步关系，并说明所用信号量及其初值。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -4161,7 +4164,7 @@ coEnd</code></pre>
 </table>
 </div></details>
 
-<h3>第 25 题（2021 统考真题）用开/关中断实现 wait、signal 的正确性</h3>
+<h3 id="toc-42">第 25 题（2021 统考真题）用开/关中断实现 wait、signal 的正确性</h3>
 <p><strong>第 25 题【教材 P147】【2021 统考真题】</strong>下表给出了整型信号量 S 的 wait() 和 signal() 操作的功能描述，以及采用开/关中断指令实现信号量操作互斥的两种方法：</p>
 <table>
 <tr><th>项目</th><th>功能描述</th><th>方法 1</th><th>方法 2</th></tr>
@@ -4189,7 +4192,7 @@ coEnd</code></pre>
 <p>本题的分析对象就是信号量机制本身的实现，不涉及用户级信号量的定义，故无信号量含义表。</p>
 </div></details>
 
-<h3>第 26 题（2022 统考真题）两线程六操作的前驱同步</h3>
+<h3 id="toc-43">第 26 题（2022 统考真题）两线程六操作的前驱同步</h3>
 <p><strong>第 26 题【教材 P148】【2022 统考真题】</strong>某进程的两个线程 T1 和 T2 并发执行 A、B、C、D、E 和 F 共 6 个操作，其中 T1 执行 A、E 和 F，T2 执行 B、C 和 D。下图表示上述 6 个操作的执行顺序所必须满足的约束：C 在 A 和 B 完成后执行，D 和 E 在 C 完成后执行，F 在 E 完成后执行。请使用信号量的 wait()、signal() 操作描述 T1 和 T2 之间的同步关系，并说明所用信号量的作用及其初值。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -4211,7 +4214,7 @@ F;                       D;</code></pre>
 </table>
 </div></details>
 
-<h3>第 27 题（2023 统考真题）swap 指令实现互斥的正确写法</h3>
+<h3 id="toc-44">第 27 题（2023 统考真题）swap 指令实现互斥的正确写法</h3>
 <p><strong>第 27 题【教材 P148】【2023 统考真题】</strong>现要求学生使用 swap 指令和布尔型变量 lock 实现临界区互斥。lock 为线程间共享的变量，当 lock 的值为 TRUE 时线程不能进入临界区，为 FALSE 时线程能够进入临界区。某同学编写的实现临界区互斥的伪代码如图 (a) 所示：</p>
 <pre><code>bool lock = FALSE;           // 共享变量
 // 进入区
@@ -4248,7 +4251,7 @@ lock = FALSE;</code></pre>
 </table>
 </div></details>
 
-<h3>第 28 题（2024 统考真题）单分组缓冲区 B 的临界区与同步</h3>
+<h3 id="toc-45">第 28 题（2024 统考真题）单分组缓冲区 B 的临界区与同步</h3>
 <p><strong>第 28 题【教材 P148】【2024 统考真题】</strong>计算机系统中的进程之间往往需要相互协作以完成一个任务。在某网络系统中，缓冲区 B 用于存放一个数据分组，对 B 的操作有 C1、C2 和 C3：C1 将一个数据分组写入 B 中，C2 从 B 中读出一个数据分组，C3 对 B 中的数据分组进行修改。要求 B 为空时才能执行 C1，B 非空时才能执行 C2 和 C3。请回答下列问题：</p>
 <p>(1) 假设进程 P1 和 P2 均需要执行 C1，实现 C1 的代码是否为临界区？为什么？</p>
 <p>(2) 假设 B 初始为空，进程 P1 执行一次 C1，进程 P2 执行一次 C2。请定义尽可能少的信号量，并用 wait()、signal() 操作描述进程 P1 和 P2 之间的同步或互斥关系，说明所用信号量的作用及其初值。</p>
@@ -4277,7 +4280,7 @@ signal(mutex);           signal(mutex);</code></pre>
 </table>
 </div></details>
 
-<h3>第 29 题（2025 统考真题）三人协作植树</h3>
+<h3 id="toc-46">第 29 题（2025 统考真题）三人协作植树</h3>
 <p><strong>第 29 题【教材 P149】【2025 统考真题】</strong>甲、乙、丙三人一起植树：甲负责挖树坑，乙负责将树苗放入树坑并填土，丙负责为新种的树苗浇水。植树的步骤依次为：挖树坑、放树苗、填土和浇水。现有铁锹和水桶各 1 个，铁锹用于挖树坑和填土，水桶用于浇水。当树坑的数量小于 3 时，甲才可以挖树坑。假设初始时树坑的数量为 0，铁锹和水桶均可用。请定义尽可能少的信号量，用 wait()、signal() 操作描述植树过程中三人之间的同步或互斥关系，并说明所用信号量的作用及其初值。</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
@@ -4307,11 +4310,11 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 </table>
 </div></details>
 
-<h2>综合应用题（三）死锁</h2>
+<h2 id="toc-47">综合应用题（三）死锁</h2>
 
 <p>本页为 2.4 节死锁的综合应用题：第 1 题考查"资源总数 \(m\)—进程数 \(n\)—最大需求量 \(k\)"之间的不死锁判别式，第 2 题考查死锁的产生原因与三种应对策略，第 3～5 题是银行家算法的安全性判定与请求判定。银行家算法题建议先自己逐轮推出 Work 向量，再展开解析核对每一步。</p>
 
-<h3>第 1 题 m、n、k 取值与死锁判定</h3>
+<h3 id="toc-48">第 1 题 m、n、k 取值与死锁判定</h3>
 <p><strong>第 1 题</strong> 系统有同类资源 \(m\) 个，供 \(n\) 个进程共享，若每个进程对资源的最大需求量为 \(k\)。试问：当 \(m\)、\(n\)、\(k\) 的值分别为下表所列情况时，是否会发生死锁？</p>
 <table>
 <tr><th>序号</th><th>\(m\)</th><th>\(n\)</th><th>\(k\)</th><th>是否会死锁</th><th>说明</th></tr>
@@ -4334,7 +4337,7 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 <p>注意序号 1 的结论是"可能会"而非"一定会"：只有当最坏情况出现（例如每个进程都已占有 2 个资源，6 个资源被占完，三个进程都在等待第 3 个资源且互不释放）时才死锁，若推进顺序得当也可能不死锁。序号 3 中 \(m=13\) 恰好等于临界值 13，满足 \(m \ge n(k-1)+1\)，同样不会死锁。</p>
 </div></details>
 
-<h3>第 2 题 三个进程竞争三类资源的死锁分析</h3>
+<h3 id="toc-49">第 2 题 三个进程竞争三类资源的死锁分析</h3>
 <p><strong>第 2 题</strong> 有三个进程 \(P_1\)、\(P_2\) 和 \(P_3\) 并发工作。进程 \(P_1\) 需要资源 \(S_3\) 和资源 \(S_1\)；进程 \(P_2\) 需要资源 \(S_2\) 和资源 \(S_1\)；进程 \(P_3\) 需要资源 \(S_3\) 和资源 \(S_2\)。问：</p>
 <p>(1) 若对资源分配不加限制，会发生什么情况？为什么？</p>
 <p>(2) 为保证进程正确运行，应采用怎样的分配策略？列出所有可能的方法。</p>
@@ -4350,7 +4353,7 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 </ul>
 </div></details>
 
-<h3>第 3 题 银行家算法：T0 安全性判定与两个相同请求的处理</h3>
+<h3 id="toc-50">第 3 题 银行家算法：T0 安全性判定与两个相同请求的处理</h3>
 <p><strong>第 3 题</strong> 某系统有 \(R_1\)、\(R_2\)、\(R_3\) 共三种资源，在 \(T_0\) 时刻 \(P_1\)、\(P_2\)、\(P_3\)、\(P_4\) 这四个进程对资源的占用和需求情况见下表，此时系统的可用资源向量为 Available = (2,1,2)。试问：</p>
 <table>
 <tr><th rowspan="2">进程名</th><th colspan="3">最大资源需求量（Max）</th><th colspan="3">已分配资源数量（Allocation）</th></tr>
@@ -4419,7 +4422,7 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 <p>(3) 不是死锁状态。即使两个请求都立即得到满足（此时 Available = (2,1,2) − (1,0,1) − (1,0,1) = (0,1,0)，系统处于不安全状态），此刻所有进程都没有提出新的资源申请，没有任何进程因资源请求得不到满足而进入阻塞态。只有当进程提出资源申请、且全部进程都因请求得不到满足而进入阻塞态时，系统才处于死锁状态。不安全状态只意味着<strong>可能</strong>发生死锁，并不等于死锁。</p>
 </div></details>
 
-<h3>第 4 题 银行家算法：Need 矩阵、安全性检查与 P1 的请求判定</h3>
+<h3 id="toc-51">第 4 题 银行家算法：Need 矩阵、安全性检查与 P1 的请求判定</h3>
 <p><strong>第 4 题</strong> 考虑某个系统在下表时刻的状态。使用银行家算法回答下面的问题：</p>
 <table>
 <tr><th rowspan="2">进程名</th><th colspan="4">Allocation</th><th colspan="4">Max</th><th colspan="4">Available</th></tr>
@@ -4484,7 +4487,7 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 <p>③ 仍存在安全序列 &lt;P0, P2, P1, P3&gt;，系统在试探分配后依然安全，所以 P1 的这个请求应该马上（立刻）被满足，试探分配即为正式分配。</p>
 </div></details>
 
-<h3>第 5 题 五个进程、三类资源在两种 Available 下的安全性对比</h3>
+<h3 id="toc-52">第 5 题 五个进程、三类资源在两种 Available 下的安全性对比</h3>
 <p><strong>第 5 题</strong> 假设具有 5 个进程的进程集合 P = {P0, P1, P2, P3, P4}，系统中有三类资源 A、B、C，假设在某时刻有如下状态：</p>
 <table>
 <tr><th rowspan="2">进程名</th><th colspan="3">Allocation</th><th colspan="3">Max</th><th colspan="3">Available</th></tr>
@@ -4527,11 +4530,14 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
 <p>因此此时系统处于非安全状态：无论按什么顺序推进，进程 P1 和 P2 都无法获得所需资源而完成，找不到一个安全序列。</p>
 </div></details>
 
+</article>
 <nav class="pager"><a href="../ch2/s2-5.html">← 2.5 本章疑难点</a><a href="../ch3/index.html">下一页：本章导学 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -4541,6 +4547,17 @@ while (TRUE) {               while (TRUE) {               while (TRUE) {
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

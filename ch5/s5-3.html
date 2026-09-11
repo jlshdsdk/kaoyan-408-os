@@ -14,20 +14,23 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch5/index.html">第5章 输入/输出管理</a> <span style="opacity:.55">/</span> 5.3 磁盘和固态硬盘</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch5/index.html">第5章 输入/输出管理</a> <span class="sep">/</span> 5.3 磁盘和固态硬盘</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html" class="active">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html" active>5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>5.3 磁盘和固态硬盘</h1>
 
 <p>文件的最终归宿是外存，而外存的主体是磁盘。学习本节前，请先带着两个问题：</p>
@@ -37,11 +40,11 @@
 </ol>
 <p>本节要求重点掌握两类计算：<strong>计算一次磁盘读/写操作所花的时间</strong>；对给定的磁道访问序列，按特定调度算法求出<strong>磁头移动的总磁道数</strong>与<strong>平均寻道长度</strong>。本节与《计算机组成原理考研复习指导》3.4 节联系密切，建议结合复习。</p>
 
-<h2>5.3.1 磁盘</h2>
+<h2 id="toc-1">5.3.1 磁盘</h2>
 
 <p><strong>磁盘（Disk）</strong>是由表面涂有磁性物质的盘片构成的存储设备，通过磁头（一个导体线圈）读/写数据。读/写期间盘片高速旋转，磁头沿盘片径向移动以定位目标位置。</p>
 
-<h3>1. 磁道、扇区与柱面</h3>
+<h3 id="toc-2">1. 磁道、扇区与柱面</h3>
 <p>盘面上的数据存储在一组同心圆中，称为<strong>磁道</strong>。每个磁道的宽度与磁头相当，一个盘面包含上千个磁道。每个磁道又划分为数百个<strong>扇区</strong>，扇区具有固定大小（如 1KB），是<strong>磁盘寻址的最小物理单位</strong>。相邻磁道及扇区间都留有间隙，以避免读/写干扰。传统设计中每个磁道的扇区数相同，由于外道周长更大，其线性存储密度反而低于内道，因此磁盘的存储能力受限于最内道的最大存储密度。</p>
 <figure>
   <img src="../assets/ch5/ch5-p353-02.png" loading="lazy" alt="磁盘盘片示意图：盘面数据存储在同心圆状的磁道中，磁道划分为扇区，相邻磁道之间和扇区之间分别留有磁道间隙与扇区间隙">
@@ -58,14 +61,14 @@
 $$\text{磁盘容量} = \text{柱面数} \times \text{盘面数} \times \text{每磁道扇区数} \times \text{每扇区字节数}$$
 <div class="callout kao"><span class="callout-title">考点</span>磁盘容量计算（2019 统考）与「簇号 → 磁盘物理地址」的转换（2019 统考）都考过。转换思路：先算出<strong>每个柱面容纳的簇（块）数 = 盘面数 × 每磁道扇区数（或除以每簇扇区数）</strong>，用簇号整除得到柱面号，余数再对盘面号、扇区号逐层分解（见本章习题页的综合题）。此外要记住：磁道号通常从最外侧的 0 号开始、由外向内递增，柱面号相同的所有磁道位于同一半径上。</div>
 
-<h3>2. 读/写磁盘数据块的过程</h3>
+<h3 id="toc-3">2. 读/写磁盘数据块的过程</h3>
 <ol>
   <li>根据<strong>柱面号</strong>移动磁头臂，使磁头定位到目标柱面（这一步对应后文的寻道时间）；</li>
   <li>激活对应<strong>盘面</strong>的磁头（电子选头动作，几乎不耗时）；</li>
   <li>等待目标<strong>扇区</strong>随盘片旋转至磁头下方，完成读/写操作（这一步对应旋转延迟）。</li>
 </ol>
 
-<h3>3. 磁盘的类型</h3>
+<h3 id="toc-4">3. 磁盘的类型</h3>
 <ul>
   <li><strong>固定头磁盘</strong>：每个磁道配备一个磁头，磁头位置固定；</li>
   <li><strong>活动头磁盘</strong>：磁头可沿径向移动，通过磁头臂定位到目标磁道；</li>
@@ -75,18 +78,18 @@ $$\text{磁盘容量} = \text{柱面数} \times \text{盘面数} \times \text{�
 <p>最早的磁盘由 IBM 公司于 1973 年推出，称为<strong>温彻斯特磁盘（温盘）</strong>，采用活动磁头与固定盘片结构，是现代机械硬盘的雏形。</p>
 <p>在操作系统中，每类资源的管理都涉及调度算法。用户访问文件时，操作系统要先完成权限检查、逻辑地址到物理地址的转换等步骤，最终把请求转化为对磁盘的读/写操作；当多个 I/O 请求同时到达时，系统必须决定服务顺序——这正是<strong>磁盘调度算法</strong>要解决的核心问题。</p>
 
-<h2>5.3.2 磁盘的管理</h2>
+<h2 id="toc-5">5.3.2 磁盘的管理</h2>
 
-<h3>1. 磁盘初始化</h3>
+<h3 id="toc-6">1. 磁盘初始化</h3>
 <p>一块新磁盘只是涂有磁性材料的空白盘，在能够存储数据之前必须把它划分为扇区，以便磁盘控制器进行读/写——这个过程称为<strong>低级格式化（物理格式化）</strong>。每个扇区通常由<strong>头部、数据区域和尾部</strong>组成：头部和尾部存放磁盘控制器使用的相关信息，其中利用<strong>磁道号、磁头号和扇区号</strong>来标志一个扇区，利用 <strong>CRC 字段</strong>对扇区进行校验。</p>
 <p>大多数磁盘出厂时已完成低级格式化，这使制造商能够测试磁盘，并建立逻辑块地址到物理扇区的初始映射；许多磁盘的控制器还可在低级格式化时指定扇区中数据区域的大小，通常为 256 字节、512 字节或 4KB 等。</p>
 
-<h3>2. 分区</h3>
+<h3 id="toc-7">2. 分区</h3>
 <p>在使用磁盘存储文件之前，还要完成两个步骤。<strong>第一步是分区</strong>：把磁盘划分为若干逻辑区域（如常见的 C 盘、D 盘），每个分区的起始位置和大小记录在<strong>主引导记录（MBR）</strong>的分区表中。<strong>第二步是对分区进行逻辑格式化（高级格式化）</strong>，即在分区上建立文件系统：初始化根目录、创建用于管理空闲与已分配空间的数据结构，并将初始目录置为空。</p>
 <p>由于扇区单位太小，为提高 I/O 效率，操作系统把多个连续扇区组合成一<strong>簇</strong>（在文件系统中也称<strong>块</strong>）。为简化管理，通常把一簇分配给单个文件，因此<strong>文件占用的空间是簇的整数倍</strong>——即使文件不足一簇（甚至是 0 字节），也要占用一整簇空间。</p>
 <div class="callout kao"><span class="callout-title">考点</span>低级格式化与逻辑格式化的内容辨析是选择题高频点（2017、2021 统考）：<strong>低级（物理）格式化</strong>负责划分扇区、写入扇区头尾的控制信息（磁道号、磁头号、扇区号、CRC）；<strong>分区</strong>把磁盘划成若干逻辑区域并记录在 MBR 分区表；<strong>逻辑（高级）格式化</strong>负责建立文件系统——初始化根目录、建立空闲/已分配空间管理数据结构。注意「划分扇区」永远属于低级格式化，「建立根目录」永远属于逻辑格式化。</div>
 
-<h3>3. 引导块</h3>
+<h3 id="toc-8">3. 引导块</h3>
 <p>计算机启动时需要运行一个初始化程序（<strong>自举程序</strong>），用于初始化 CPU、寄存器、设备控制器和内存等，随后加载并启动操作系统：自举程序要定位磁盘上的操作系统内核，把它载入内存并跳转到入口地址，开始操作系统的执行。</p>
 <p>自举程序通常存放在 ROM 中。为避免「修改自举代码就要更换 ROM 硬件」，一般只在 ROM 中保留一个小型自举装入程序，而把功能完整的引导程序存放在磁盘固定位置的<strong>引导块</strong>中。含有引导块的磁盘称为<strong>启动磁盘（系统磁盘）</strong>。ROM 中的代码指示磁盘控制器把引导块读入内存并执行，后者再从指定位置加载操作系统内核并启动。</p>
 <p>以 Windows 为例：磁盘可划分为多个分区，其中<strong>活动分区（引导分区）</strong>包含操作系统核心文件；初始引导代码存放在磁盘的 0 号扇区，称为<strong>主引导记录（MBR）</strong>。启动时，ROM 中的代码首先读取 MBR——除引导代码外，MBR 还包含分区表和一个标志位，用于指明应从哪个分区引导；随后系统读取该分区的首扇区（<strong>引导扇区</strong>），继续完成加载系统服务与驱动程序等后续引导步骤。</p>
@@ -96,7 +99,7 @@ $$\text{磁盘容量} = \text{柱面数} \times \text{盘面数} \times \text{�
 </figure>
 <div class="callout kao"><span class="callout-title">考点</span>多阶段引导的<strong>执行顺序</strong>考过综合题（2021 统考）：ROM 中的引导程序 → 磁盘引导程序（MBR 中，选分区）→ 分区引导程序（引导扇区中，引导该分区操作系统）→ 操作系统初始化程序。制作启动盘时的操作顺序：物理格式化（出厂）→ 分区 → 逻辑格式化 → 安装操作系统。「引导块位于磁盘的固定位置」「只有含引导块的磁盘才是启动盘」也是常考判断句。</div>
 
-<h3>4. 坏块</h3>
+<h3 id="toc-9">4. 坏块</h3>
 <p>磁盘含有机械部件且容错能力较弱，容易出现一个或多个扇区损坏，部分坏块甚至在出厂时就已存在。根据磁盘类型和控制器能力，坏块的处理方式有所不同：</p>
 <ul>
   <li><strong>简单磁盘</strong>（如采用 IDE 控制器的磁盘）：坏块由操作系统在逻辑格式化时检测。例如 MS-DOS 的 Format 命令会识别坏扇区，并在 FAT 表中标记为不可用，避免程序使用。</li>
@@ -104,9 +107,9 @@ $$\text{磁盘容量} = \text{柱面数} \times \text{盘面数} \times \text{�
 </ul>
 <p>坏块处理的核心思想是：通过<strong>软件标记</strong>或<strong>硬件重映射</strong>，确保系统不会使用坏块。</p>
 
-<h2>5.3.3 磁盘调度算法</h2>
+<h2 id="toc-10">5.3.3 磁盘调度算法</h2>
 
-<h3>1. 磁盘的存取时间</h3>
+<h3 id="toc-11">1. 磁盘的存取时间</h3>
 <p>一次磁盘读/写操作的时间由<strong>寻道时间、旋转延迟时间和数据传输时间</strong>三部分组成。</p>
 <p><strong>1）寻道时间 \(T_s\)。</strong>活动头磁盘在读/写数据前，把磁头移动到目标磁道所需的时间，包括磁头臂的启动时间 \(s\) 和跨越 \(n\) 条磁道的移动时间：</p>
 $$T_s = m \times n + s$$
@@ -121,7 +124,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p>在磁盘存取时间中，<strong>寻道时间占主导地位</strong>，且直接受磁盘调度算法影响；旋转延迟时间和数据传输时间都与磁盘转速成反比，因此转速是磁盘性能非常重要的硬件参数，但难以从操作系统层面优化。所以，<strong>磁盘调度的主要目标是减少磁盘的平均寻道时间</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>「存取时间由哪三部分组成」「哪部分影响最大/最长（寻道时间）」是高频选择题；旋转延迟相关判断句也常考：旋转延迟大小与磁盘调度算法<strong>无关</strong>，与文件的物理结构（分配方式）<strong>有关</strong>，而扇区数据的处理时间主要影响的是传输时间而非旋转延迟。</div>
 
-<h3>2. 磁盘调度算法</h3>
+<h3 id="toc-12">2. 磁盘调度算法</h3>
 <p>下面用一道贯穿全节的例题演示各种算法（2010、2018 统考考查各种磁盘调度算法的比较）：假设磁盘请求队列为 <code>55,58,39,18,90,160,150,38,184</code>，磁头初始位于 <strong>100 号磁道</strong>，磁道号范围 0～200。</p>
 
 <h4>（1）先来先服务（FCFS）算法</h4>
@@ -240,7 +243,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p><strong>FSCAN 算法</strong>是 NStepSCAN 的简化形式，把请求队列固定划分为两个子队列：①<strong>当前服务队列</strong>——调度开始时已存在的所有请求，按 SCAN 算法处理；②<strong>新请求队列</strong>——扫描过程中新到达的请求全部暂存于此，推迟到下一轮扫描处理。通过「冻结当前、延后新请求」的策略，FSCAN 既保留了 SCAN 的特性，又避免了磁臂黏着，且实现简单、开销低。</p>
 <div class="callout kao"><span class="callout-title">考点</span>磁头移动道数计算是本节必考题型（2009、2015、2021、2024 统考），两个提速技巧：①逐段累加 \(|\text{下一磁道} - \text{当前磁道}|\)；②<strong>同方向连续服务段可用「跨度法」</strong>——如 SSTF 例题磁头从 100 一路递减到 18 再一路递增到 184，总距离 = (100−18) + (184−18) = 248，无须逐段求和。此外注意审题：SCAN 要不要扫到物理端点（题目说「SCAN（非 LOOK）」就必须扫到端点）；C-SCAN 的回扫距离教材口径是计入总移动距离的。</div>
 
-<h3>综合例题：位示图管理空闲块 + C-SCAN 调度 + 存取时间</h3>
+<h3 id="toc-13">综合例题：位示图管理空闲块 + C-SCAN 调度 + 存取时间</h3>
 <p>下面用一道统考真题（2010）把本小节的知识串起来。计算机系统采用 C-SCAN（循环扫描）磁盘调度策略，使用 2KB 内存空间记录 16384 个磁盘块的空闲状态。</p>
 <figure>
   <img src="../assets/ch5/ch5-p364-01.png" loading="lazy" alt="2010统考真题配图：单面磁盘的磁道示意，标注了0号磁道、随机分布的某扇区以及磁头沿磁道号增大方向的移动方向">
@@ -274,7 +277,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p>总时间 = 170 + 20 + 0.4 = <strong>190.4ms</strong>。</p>
 <p><strong>3）若把磁盘换成随机访问的 Flash 半导体存储器（如 U 盘、固态硬盘）</strong>，则有比 C-SCAN 更高效的策略——直接用<strong>先来先服务（FCFS）</strong>：Flash 无机械部件，不存在寻道时间和旋转延迟，无须优化磁头移动轨迹，按请求先后顺序服务即可。</p>
 
-<h3>3. 减少延迟时间的方法</h3>
+<h3 id="toc-14">3. 减少延迟时间的方法</h3>
 <p>除减少寻道时间外，<strong>减少旋转延迟时间</strong>也是提高磁盘 I/O 效率的重要途径。磁盘是连续旋转的设备：磁头读出一个扇区后，系统需要一定时间处理数据，才能开始读下一个扇区。若逻辑上相邻的块在物理上也相邻，那么处理当前扇区期间，下一个目标扇区可能已经随盘片旋转掠过了磁头；等处理完毕，该扇区已不可访问，只能再等近一整圈才能轮到它，造成显著延迟。针对这一问题有两种布局优化手段。</p>
 <h4>（1）交替编号（单盘面内）</h4>
 <p>对单个盘面的扇区采用<strong>交替（交叉）编号</strong>：假设盘面有 8 个扇区，让逻辑相邻的块在物理布局上保持适当间隔，确保处理完一个扇区后，下一个目标扇区恰好（或即将）旋转到磁头下方，从而避免「错过一整圈」的长延迟。</p>
@@ -289,7 +292,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p>磁盘的所有盘面同步旋转，同一柱面内的块通常按盘面顺序连续存放：盘面 0 扇区 0、盘面 0 扇区 1、…、盘面 0 扇区 7、盘面 1 扇区 0、…。若要读取不同盘面上的连续块，例如读完盘面 0 扇区 7 后，系统仍需一段处理时间，而期间盘面持续旋转，下一个目标块（盘面 1 扇区 0）可能已被磁头错过，只能等它下次转回来。为此，可对不同盘面实施<strong>错位命名</strong>（假设有 2 个盘面且已采用交替编号）：让处理完盘面 0 扇区 7 后，盘面 1 扇区 0 恰好或即将到达磁头位置，从而在首次经过时就能读取，显著减少旋转延迟。</p>
 <p>小结：寻道时间和旋转延迟属于「找」的时间，可以通过合理的调度算法或布局优化来降低；而传输时间主要由磁盘本身的特性决定，难以通过软件手段减少。</p>
 
-<h3>4. 提高磁盘 I/O 速度的方法</h3>
+<h3 id="toc-15">4. 提高磁盘 I/O 速度的方法</h3>
 <p>文件的访问速度是衡量文件系统性能最重要的因素，可从三个方面优化：①改进文件的目录结构和检索目录的方法，减少目录查找时间；②选取好的文件存储结构，提高文件访问速度；③提高磁盘 I/O 速度，实现文件数据在磁盘与内存间的快速传送。①②已在第 4 章介绍，这里集中介绍③的常用手段：</p>
 <ol>
   <li><strong>采用磁盘高速缓存</strong>：利用内存缓存磁盘块（概念见 5.2.2 节）；</li>
@@ -302,9 +305,9 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 </ol>
 <div class="callout kao"><span class="callout-title">考点</span>「哪些方法能改善磁盘 I/O 性能/提高文件访问速度」考过选择题（2012、2018 统考）。提前读、延迟写、磁盘高速缓存、优化物理块分布、为文件分配连续的簇都能提高访问速度；而「在一个磁盘上设置多个分区」只是划分逻辑区域，与改善 I/O 性能没有多大联系，反而增加处理复杂性（2012 统考）。</div>
 
-<h2>5.3.4 固态硬盘</h2>
+<h2 id="toc-16">5.3.4 固态硬盘</h2>
 
-<h3>1. 固态硬盘的特性</h3>
+<h3 id="toc-17">1. 固态硬盘的特性</h3>
 <p><strong>固态硬盘（SSD）</strong>是一种基于<strong>闪存</strong>技术的存储设备，存储介质与 U 盘类似，但容量更大、存取性能更优。一个 SSD 由<strong>一个或多个闪存芯片</strong>以及<strong>闪存翻译层</strong>组成：闪存芯片替代了传统磁盘中的机械驱动器；闪存翻译层负责把 CPU 发出的逻辑块读/写请求转换为对底层物理闪存的读/写控制信号，相当于代替了磁盘控制器的角色。</p>
 <figure>
   <img src="../assets/ch5/ch5-p359-01.png" loading="lazy" alt="固态硬盘结构图：固态硬盘经I/O总线连接计算机，CPU发出读写逻辑磁盘块的请求；固态硬盘内部由闪存翻译层把逻辑块请求转换为对闪存芯片的操作，闪存由块0到块B-1组成，每块包含页0、页1直至页P-1">
@@ -315,7 +318,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p>相比传统机械磁盘，SSD 由半导体器件构成、<strong>无机械运动部件</strong>，因此随机访问延迟极低，且无噪声、无振动、功耗更低、抗震性强、安全性更高。</p>
 <div class="callout kao"><span class="callout-title">考点</span>机械磁盘与 SSD 的对比考过选择题与统考真题（2025）：SSD 基于闪存、无机械部件，<strong>随机读/写性能明显高于机械磁盘</strong>，但<strong>随机写比较慢</strong>（擦除慢 + 改页要先搬有效页），且<strong>容易磨损</strong>——「不易磨损」的说法是错的。文件系统层面：无论温彻斯特硬盘还是 SSD，都需要文件系统<strong>确定盘块大小</strong>；「划分扇区」「降低寻道时间」只与机械盘有关，「磨损均衡」是 SSD 特有的机制。</div>
 
-<h3>2. 磨损均衡（Wear Leveling）</h3>
+<h3 id="toc-18">2. 磨损均衡（Wear Leveling）</h3>
 <p>SSD 的主要缺点在于闪存的擦写寿命有限，通常仅为几百至几千次。若直接用普通闪存构建 SSD 而不加管理，实际寿命可能令人失望——读/写操作往往集中在少数物理块上，导致这些区域迅速磨损；一旦这部分闪存损坏，整块 SSD 即告失效。这种磨损不均衡的情况，可能让一块 256GB 的 SSD 仅因几兆字节的闪存损坏而报废。</p>
 <p>为此，SSD 引入<strong>磨损均衡</strong>技术，分两类：</p>
 <ul>
@@ -325,7 +328,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
 <p>得益于磨损均衡算法，SSD 的实际使用寿命显著提升。来算一笔账：一块 256GB 的 SSD，若闪存擦写寿命为 500 次，则理论总写入量 = 256GB × 500 = 128000GB = 125TB；即使每天持续写入 10GB 数据，也需要 125000GB ÷ 10GB/天 = 12500 天 ≈ 34 年（三十多年）才会达到寿命极限，而普通用户的日均写入量通常远低于此。</p>
 <div class="callout kao"><span class="callout-title">考点</span>两个易错点：①磨损均衡的目的是<strong>延长 SSD 寿命</strong>，而不是加快读/写速度；②动态与静态的区别——动态磨损均衡只在<strong>写入时</strong>挑选擦写次数少的空闲块，静态磨损均衡则是在<strong>空闲期间</strong>由后台主动把长期未更新的「冷数据」迁出高磨损块，并非发生在写入时刻。「反复写同一个块会缩短 SSD 寿命」是对的。</div>
 
-<h2>5.3.5 本节小结</h2>
+<h2 id="toc-19">5.3.5 本节小结</h2>
 <p>本节开头提出的两个问题，参考答案如下。</p>
 <p><strong>1）磁盘一次读/写操作包含哪几部分时间？其中哪部分最长？</strong></p>
 <p>由三部分组成：<strong>寻道时间</strong>（把磁头臂移动到指定磁道所需的时间）、<strong>旋转延迟</strong>（等待目标扇区旋转到磁头下方所需的时间）和<strong>传输时间</strong>（实际读出或写入数据所经历的时间）。由于磁头臂的机械运动较慢，<strong>寻道时间通常最长</strong>。</p>
@@ -340,11 +343,14 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
   <li>SSD 以页为读/写单位、以块为擦除单位，随机写慢、易磨损，需要动态/静态磨损均衡来延长寿命。</li>
 </ul>
 
+</article>
 <nav class="pager"><a href="../ch5/s5-2.html">← 5.2 设备独立性软件</a><a href="../ch5/s5-4.html">下一页：5.4 本章疑难点 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">5.3.1 磁盘</a></li><li class="lv3"><a href="#toc-2">1. 磁道、扇区与柱面</a></li><li class="lv3"><a href="#toc-3">2. 读/写磁盘数据块的过程</a></li><li class="lv3"><a href="#toc-4">3. 磁盘的类型</a></li><li class="lv2"><a href="#toc-5">5.3.2 磁盘的管理</a></li><li class="lv3"><a href="#toc-6">1. 磁盘初始化</a></li><li class="lv3"><a href="#toc-7">2. 分区</a></li><li class="lv3"><a href="#toc-8">3. 引导块</a></li><li class="lv3"><a href="#toc-9">4. 坏块</a></li><li class="lv2"><a href="#toc-10">5.3.3 磁盘调度算法</a></li><li class="lv3"><a href="#toc-11">1. 磁盘的存取时间</a></li><li class="lv3"><a href="#toc-12">2. 磁盘调度算法</a></li><li class="lv3"><a href="#toc-13">综合例题：位示图管理空闲块 + C-SCAN 调度 + 存取时间</a></li><li class="lv3"><a href="#toc-14">3. 减少延迟时间的方法</a></li><li class="lv3"><a href="#toc-15">4. 提高磁盘 I/O 速度的方法</a></li><li class="lv2"><a href="#toc-16">5.3.4 固态硬盘</a></li><li class="lv3"><a href="#toc-17">1. 固态硬盘的特性</a></li><li class="lv3"><a href="#toc-18">2. 磨损均衡（Wear Leveling）</a></li><li class="lv2"><a href="#toc-19">5.3.5 本节小结</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -354,6 +360,17 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>

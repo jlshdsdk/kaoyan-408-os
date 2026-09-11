@@ -14,20 +14,23 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
-<nav class="crumbs"><a href="../index.html">首页</a> <span style="opacity:.55">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span style="opacity:.55">/</span> 2.4 死锁</nav>
+<nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch2/index.html">第2章 进程与线程</a> <span class="sep">/</span> 2.4 死锁</nav>
+<div class="read-progress" id="readProgress"></div>
 </header>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
-<nav class="nav-links" style="padding-left:0"><a href="../index.html">🏠 首页 · 考纲对照</a></nav>
-<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html" class="active">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" class="quiz-link">✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html" active>2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
 <main>
+<article>
 <h1>2.4 死锁</h1>
 
 <p>学习本节时，请读者思考以下两个问题：</p>
@@ -37,9 +40,9 @@
 </ol>
 <p>学完本节，你应当了解死锁的由来、产生条件及基本解决方法，并能区分<strong>预防死锁</strong>和<strong>避免死锁</strong>这两种容易混淆的策略。答案将在「2.4.5 本节小结」中给出。</p>
 
-<h2>2.4.1 死锁的概念</h2>
+<h2 id="toc-1">2.4.1 死锁的概念</h2>
 
-<h3>1. 死锁的定义</h3>
+<h3 id="toc-2">1. 死锁的定义</h3>
 
 <p>在多道程序系统中，进程的并发执行显著提高了资源利用率和系统整体效率，但并发也带来了新的问题——<strong>死锁</strong>。<strong>所谓死锁，是指多个进程因竞争资源而造成的一种互相等待的僵局：每个进程都在等待另一个进程所占有的资源，而这些资源又不会被释放，从而形成一条循环等待链。若无外部干预，卷入僵局的所有进程都将被永久阻塞，无法继续向前推进。</strong></p>
 
@@ -49,7 +52,7 @@
 
 <div class="callout kao"><span class="callout-title">考点</span>死锁定义中的三个关键词——<strong>「竞争资源」「循环等待」「若无外力干预无法推进」</strong>——是选择题的常设陷阱点。特别注意：处于死锁状态的进程<strong>必定全部处于阻塞态</strong>，且死锁<strong>至少涉及两个进程</strong>。</div>
 
-<h3>2. 死锁与饥饿、死循环的区别</h3>
+<h3 id="toc-3">2. 死锁与饥饿、死循环的区别</h3>
 
 <p>与死锁密切相关但本质不同的另一个问题是<strong>饥饿</strong>：某个进程因资源分配策略的不公平性，长期得不到所需资源，从而无法推进。产生饥饿的主要原因是：多个进程竞争同一类资源时，若分配策略不能保证「等待时间有上界」（无法确保每个等待进程最终都能获得服务），某些进程就可能被无限期推迟。例如打印服务采用「最短作业优先」调度时，长文件的打印请求可能因不断有新的短文件到达而始终轮不到自己，最终陷入饥饿。此时<strong>系统整体仍在正常运行，其他进程不受影响，只是个别进程被持续忽略</strong>——这一点与死锁不同。</p>
 
@@ -69,7 +72,7 @@
 
 <div class="callout notice"><span class="callout-title">易错</span>死循环不是死锁：单个进程进入死循环只是它自己在「空转」，它并未阻塞，也没有和其他进程形成资源上的相互等待，最多造成该进程自身「饥饿」。同理，单个进程「饿死」也不是死锁——<strong>判断死锁要抓三条：进程数 ≥ 2、全部阻塞、存在循环等待</strong>。</div>
 
-<h3>3. 死锁产生的原因</h3>
+<h3 id="toc-4">3. 死锁产生的原因</h3>
 
 <p><strong>（1）系统资源的竞争。</strong>系统中不可剥夺资源（如打印机、磁带机等）数量有限，难以满足所有并发进程的需求。当多个进程竞争这类资源且分配策略不当时，就可能因相互等待而陷入僵局，引发死锁。需要强调：死锁的发生与<strong>不可剥夺资源</strong>的存在密切相关；对于可剥夺资源（如 CPU 时间片），操作系统可在必要时强制回收，因此单纯竞争这类资源一般不会导致死锁。</p>
 
@@ -79,7 +82,7 @@
 
 <div class="callout kao"><span class="callout-title">考点</span>死锁产生的原因（资源竞争、推进顺序非法）及「单类资源竞争时发生死锁的临界条件」的分析已考查（2009、2014）。后者有一常用结论：系统共有同类资源 \(m\) 个，\(n\) 个进程共享，每个进程最多申请 \(k\) 个（每次申请一个），则当 \(m \ge n(k-1)+1\)（即 \(m > n(k-1)\)）时，<strong>必然不会发生死锁</strong>——最坏情况下每个进程都已握有 \(k-1\) 个资源，此时至少还剩 1 个空闲，总有一个进程能凑齐 \(k\) 个并顺利运行完、释放资源。反之，若 \(m \le n(k-1)\)，则<strong>可能</strong>发生死锁。</div>
 
-<h3>4. 死锁产生的必要条件</h3>
+<h3 id="toc-5">4. 死锁产生的必要条件</h3>
 
 <p>死锁的发生必须<strong>同时满足</strong>以下四个条件；只要其中<strong>任何一个不成立</strong>，死锁就不可能发生。</p>
 
@@ -108,7 +111,7 @@
 
 <div class="callout kao"><span class="callout-title">考点</span>四个必要条件「缺一不可、破坏其一即可防死锁」是高频命题点。易错处：①必要条件是「发生死锁必满足」，而非「满足必死锁」——多实例资源下有环也未必死锁（图2.15）；②「每类资源仅一个实例时，有环 ⟺ 死锁」这一充要条件的适用前提常被偷换。</div>
 
-<h3>5. 死锁的处理策略</h3>
+<h3 id="toc-6">5. 死锁的处理策略</h3>
 
 <p>处理死锁主要有三种策略：一是通过协议<strong>预防</strong>或<strong>避免</strong>死锁，确保系统永不进入死锁状态；二是允许死锁发生，但系统能够<strong>检测</strong>并<strong>解除</strong>；三是完全忽略死锁问题，假定它不会出现。其中第一种策略包含预防死锁和避免死锁两种方法，第二种策略包含检测及解除死锁方法，第三种策略则被大多数通用操作系统（如 Linux 和 Windows）所采用。三种策略的具体含义如下：</p>
 
@@ -125,23 +128,23 @@
   <figcaption>表2.5 死锁处理策略的比较（王道教材 P164）</figcaption>
 </figure>
 
-<h2>2.4.2 死锁预防</h2>
+<h2 id="toc-7">2.4.2 死锁预防</h2>
 
 <p>预防死锁的发生，只需<strong>破坏死锁四个必要条件中的任何一个</strong>即可。下面逐条讨论破坏各条件的可行性与代价。</p>
 
-<h3>1. 破坏互斥条件</h3>
+<h3 id="toc-8">1. 破坏互斥条件</h3>
 
 <p>若能把原本只能互斥使用的资源改造成允许多个进程共享访问，互斥条件即被破坏，死锁自然无从谈起。然而，打印机、磁带机等许多临界资源本质上不支持并发访问，强行共享会导致数据不一致或设备冲突，而互斥性恰恰是保障系统正确性的基本要求。因此，<strong>破坏互斥条件在实践中通常并不可行</strong>。</p>
 
 <div class="callout tip"><span class="callout-title">提示</span>有一个常见的变通思路：用 SPOOLing 技术（见第 5 章）把打印机这样的独占设备改造成逻辑上的共享设备——各进程的打印请求先排入队列，由专门进程统一输出，进程间不再直接争抢物理打印机。但这只是把「争抢设备」转化为「争抢队列资源」，并未真正破坏互斥条件。</div>
 
-<h3>2. 破坏不可剥夺条件</h3>
+<h3 id="toc-9">2. 破坏不可剥夺条件</h3>
 
 <p>约定：当一个已占有若干不可剥夺资源的进程请求新资源而得不到满足时，它必须<strong>释放已占有的全部资源</strong>，待以后需要时再重新申请——相当于资源被临时剥夺，从而破坏不可剥夺条件。</p>
 
 <p>该策略实现复杂且代价高昂：对打印机这类不可剥夺的外部设备而言，中途强制释放可能导致已完成的打印工作作废，甚至引发设备状态混乱；而频繁地申请与释放也会显著增加系统开销，延长进程周转时间、降低吞吐量。因此，<strong>这种方法在实际系统中极少采用</strong>。</p>
 
-<h3>3. 破坏请求并保持条件</h3>
+<h3 id="toc-10">3. 破坏请求并保持条件</h3>
 
 <p>要求进程在请求新资源时不得持有任何不可剥夺资源，可采用两种实现方式：</p>
 
@@ -152,7 +155,7 @@
 
 <p>方式一实现简单，但缺点明显：①<strong>资源浪费严重</strong>——进程在运行初期就占有全部所需资源，其中部分资源可能要到运行末期才使用、甚至从未被使用，长期闲置；②<strong>容易引发饥饿</strong>——某些资源被个别进程长期整体占有，等待这些资源的其他进程可能迟迟无法启动。</p>
 
-<h3>4. 破坏循环等待条件</h3>
+<h3 id="toc-11">4. 破坏循环等待条件</h3>
 
 <p>采用<strong>资源有序分配法</strong>：为系统中每类资源规定一个唯一的编号，进程申请不同类资源时必须<strong>按编号递增的顺序</strong>进行，同类资源则须一次性申请。换言之，只有在未持有任何资源、或已持有资源的编号都较小时，进程才允许申请更大编号的资源。这样一来，任何已持有大编号资源的进程都无法再申请小编号资源，资源分配图中便不可能出现环，从结构上杜绝了死锁。</p>
 
@@ -160,11 +163,11 @@
 
 <div class="callout kao"><span class="callout-title">考点</span>「具体措施 ⟷ 破坏的条件」的对应关系是选择题的固定套路：<strong>一次性/静态分配 → 破坏请求并保持；申请新资源得不到满足就释放全部已有资源 → 破坏不可剥夺；资源有序分配 → 破坏循环等待</strong>。四个条件中互斥条件一般被认为无法破坏（许多资源的互斥是正确性的前提）。死锁预防的特点已单独考查（2019）。</div>
 
-<h2>2.4.3 死锁避免</h2>
+<h2 id="toc-12">2.4.3 死锁避免</h2>
 
 <p>死锁避免不追求「事先立规矩」，而是在<strong>每次分配资源时动态判断</strong>：这次分配是否可能引发死锁？只有在确认不会导致死锁的情况下才予以分配。由于施加的约束较为宽松，死锁避免能取得较好的系统性能。</p>
 
-<h3>1. 系统安全状态</h3>
+<h3 id="toc-13">1. 系统安全状态</h3>
 
 <p>在死锁避免机制下，系统允许进程动态申请资源，但每次分配前必须先评估这次分配的安全性：分配后系统仍处于<strong>安全状态</strong>才允许分配，否则让进程等待。</p>
 
@@ -183,7 +186,7 @@
 
 <div class="callout kao"><span class="callout-title">考点</span>安全状态与死锁的关系（2018 考查）必须刻画准确，可用三句话概括：①系统处于<strong>安全状态时一定不会发生死锁</strong>；②<strong>死锁发生时系统必定处于不安全状态</strong>；③<strong>不安全状态未必演变为死锁</strong>——只是「可能」死锁，并非必然。选择题常把③偷换成「不安全状态就是死锁状态」，务必警惕。</div>
 
-<h3>2. 利用银行家算法避免死锁</h3>
+<h3 id="toc-14">2. 利用银行家算法避免死锁</h3>
 
 <p><strong>银行家算法</strong>是最著名的死锁避免算法。其基本思想是：把操作系统看作银行家，系统管理的资源视为银行资金，进程申请资源相当于用户申请贷款。每个进程在运行前必须预先声明对各类资源的<strong>最大需求量</strong>（该最大需求量在整个生命周期内不得更改，否则算法的安全性保证失效），且总量不能超过系统所拥有的资源总量。进程运行中申请资源时，系统先检查当前是否有足够资源可供分配；若有，再进一步试探：把这些资源分给它之后，系统是否仍处于安全状态？只有在确保安全的前提下才正式分配，否则让进程等待。</p>
 
@@ -244,7 +247,7 @@ $$Need[i,j] = Max[i,j] - Allocation[i,j]$$
 
 <div class="callout kao"><span class="callout-title">考点</span>银行家算法的特点（2013、2019 考查）：它属于<strong>死锁避免</strong>而非预防或检测；每次分配都要经过「合法性 → 可用性 → 试探分配 → 安全性检查」四步，<strong>不安全就回滚</strong>；代价是必须<strong>预先知道进程的最大资源需求</strong>且该值不可更改。另外，<strong>安全序列不唯一</strong>，只要存在一个即可。</div>
 
-<h3>3. 安全性算法举例</h3>
+<h3 id="toc-15">3. 安全性算法举例</h3>
 
 <p>假定系统中有 5 个进程 \(\{P_0, P_1, P_2, P_3, P_4\}\) 和 3 类资源 \(\{A, B, C\}\)，三类资源的总量分别为 10、5、7。T0 时刻的资源分配情况见表2.7。现利用安全性算法判断系统此时是否处于安全状态。</p>
 
@@ -275,7 +278,7 @@ $$Need[i,j] = Max[i,j] - Allocation[i,j]$$
 
 <div class="callout kao"><span class="callout-title">考点</span>银行家算法的安全序列分析是统考超高频考点（2011、2012、2018、2020、2022 均有考查），综合大题的固定套路是：先算 Need 矩阵，再以 Work=Available 为起点反复「找可完成进程 → 回收资源」，每一步都要写出 Work 的更新算式，最后给出安全序列或判定不安全。注意选择下一个进程时<strong>可能同时有多个候选，安全序列因此不唯一</strong>。</div>
 
-<h3>4. 银行家算法举例</h3>
+<h3 id="toc-16">4. 银行家算法举例</h3>
 
 <p>安全性算法是银行家算法的核心。典型考题会给出某进程的资源请求向量：只需执行银行家算法的前三步（合法性检查、可用性检查、试探性分配），得到更新后的 Allocation 和 Need，再按上一节的安全性算法判断系统是否仍安全，即可决定是否批准该请求。仍以表2.7 的 T0 状态为初始状态，分析三个请求。</p>
 
@@ -334,11 +337,11 @@ Need0        = Need0 - Request0 = (7,4,3) - (0,2,0) = (7,2,3)
 
 <div class="callout notice"><span class="callout-title">易错</span>对比请求 1）与请求 3）：两者都通过了前两步检查，区别在第四步——分配后仍安全才真正批准。<strong>「试探分配后不安全」的分配必须回滚</strong>，而不是「分配下去等着看」。另外，步骤②不通过时进程只是等待，系统数据结构保持原样。</div>
 
-<h2>2.4.4 死锁检测与解除</h2>
+<h2 id="toc-17">2.4.4 死锁检测与解除</h2>
 
 <p>前面介绍的死锁预防和避免算法，都要在分配资源时施加限制条件或进行安全性检查。若系统在资源分配时不采取任何预防或避免措施，就必须提供<strong>死锁检测与解除</strong>机制作为兜底。</p>
 
-<h3>1. 死锁检测</h3>
+<h3 id="toc-18">1. 死锁检测</h3>
 
 <div class="callout kao"><span class="callout-title">考点</span>区分<strong>死锁避免</strong>与<strong>死锁检测</strong>（2015 考查）：死锁避免要求在进程运行过程中始终确保系统不进入死锁状态，因此需要<strong>预先知道</strong>进程从开始到结束的全部资源需求；死锁检测只判断<strong>当前时刻</strong>系统是否已发生死锁，无须预知进程未来的资源请求，仅依据当前的资源分配和请求情况即可。</div>
 
@@ -365,7 +368,7 @@ Need0        = Need0 - Request0 = (7,4,3) - (0,2,0) = (7,2,3)
 
 <div class="callout notice"><span class="callout-title">易错</span>资源分配图经化简后，<strong>仍有边相连的进程即为死锁进程</strong>。另外回扣 2.4.1 的结论：每类资源只有一个实例时，图中有环 ⟺ 死锁；每类资源有多个实例时，有环只是死锁的必要条件，必须借助化简（或安全分析）才能下结论。「多类资源竞争时死锁临界条件的分析」已考查（2016、2021）。</div>
 
-<h3>2. 死锁解除</h3>
+<h3 id="toc-19">2. 死锁解除</h3>
 
 <p>一旦检测出死锁，系统应立即采取措施予以解除，主要方法有三种：</p>
 
@@ -377,7 +380,7 @@ Need0        = Need0 - Request0 = (7,4,3) - (0,2,0) = (7,2,3)
 
 <div class="callout kao"><span class="callout-title">考点</span>解除死锁的方式已考查（2019）：<strong>可用的方法是「资源剥夺」与「撤销进程」</strong>；干扰项常出现「降低死锁进程的优先级」——降低优先级既不能改变进程对资源的占有，也打不破循环等待，<strong>无法解除死锁</strong>。此外「从非死锁进程处抢资源」也不是解除死锁的方法（要抢的是死锁进程的资源）。</div>
 
-<h2>2.4.5 本节小结</h2>
+<h2 id="toc-20">2.4.5 本节小结</h2>
 
 <p>开头提出的两个问题，参考答案如下。</p>
 
@@ -385,11 +388,14 @@ Need0        = Need0 - Request0 = (7,4,3) - (0,2,0) = (7,2,3)
 
 <p><strong>2）有什么办法可以解决死锁问题？</strong>死锁的处理策略分为三类：①<strong>死锁预防</strong>——通过限制资源分配方式，破坏四个必要条件中的某一个，从根源上防止死锁发生；②<strong>死锁避免</strong>——在动态分配资源的过程中，用安全性算法判断系统是否仍处于安全状态，只有分配后仍然安全才批准请求（典型算法为银行家算法），从而避免进入可能导致死锁的不安全状态；③<strong>死锁检测与解除</strong>——不对资源申请施加限制，允许死锁发生，定期检测系统是否已死锁，一旦发现便予以解除，例如剥夺部分死锁进程的资源、终止或回退部分死锁进程。</p>
 
+</article>
 <nav class="pager"><a href="../ch2/s2-3.html">← 2.3 同步与互斥</a><a href="../ch2/s2-5.html">下一页：2.5 本章疑难点 →</a></nav>
 <footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
 </main>
 </div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">2.4.1 死锁的概念</a></li><li class="lv3"><a href="#toc-2">1. 死锁的定义</a></li><li class="lv3"><a href="#toc-3">2. 死锁与饥饿、死循环的区别</a></li><li class="lv3"><a href="#toc-4">3. 死锁产生的原因</a></li><li class="lv3"><a href="#toc-5">4. 死锁产生的必要条件</a></li><li class="lv3"><a href="#toc-6">5. 死锁的处理策略</a></li><li class="lv2"><a href="#toc-7">2.4.2 死锁预防</a></li><li class="lv3"><a href="#toc-8">1. 破坏互斥条件</a></li><li class="lv3"><a href="#toc-9">2. 破坏不可剥夺条件</a></li><li class="lv3"><a href="#toc-10">3. 破坏请求并保持条件</a></li><li class="lv3"><a href="#toc-11">4. 破坏循环等待条件</a></li><li class="lv2"><a href="#toc-12">2.4.3 死锁避免</a></li><li class="lv3"><a href="#toc-13">1. 系统安全状态</a></li><li class="lv3"><a href="#toc-14">2. 利用银行家算法避免死锁</a></li><li class="lv3"><a href="#toc-15">3. 安全性算法举例</a></li><li class="lv3"><a href="#toc-16">4. 银行家算法举例</a></li><li class="lv2"><a href="#toc-17">2.4.4 死锁检测与解除</a></li><li class="lv3"><a href="#toc-18">1. 死锁检测</a></li><li class="lv3"><a href="#toc-19">2. 死锁解除</a></li><li class="lv2"><a href="#toc-20">2.4.5 本节小结</a></li></ul></nav>
 </div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn');
@@ -399,6 +405,17 @@ Need0        = Need0 - Request0 = (7,4,3) - (0,2,0) = (7,2,3)
   document.querySelectorAll('.sidebar a').forEach(function(a){
     a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
   });
+  var bar=document.getElementById('readProgress');
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
+    if(top) top.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
 </script>
 </body>
