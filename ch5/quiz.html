@@ -532,7 +532,7 @@
 
 <div class="q">
 <p><strong>第 25 题</strong> 下面关于 SPOOLing 系统的说法中，正确的是（　）。</p>
-<p class="mono">A. 构成 SPOOLing 系统的基本条件是有外围输入机与外围输出机<br>B. 构成 SPOOLing 系统的基本条件仅是要有高速的大容量硬盘作为输入井和输出井<br>C. 当输出设备忙时，SPOOLing 系统中的用户程序暂停执行，待 I/O 空闲时再被唤醒执行输出操作<br>D. SPOOLing 系统中的用户程序可以随时将输出数据送到输出井中，待输出设备空闲时再由 SPOOLing 系统完成数据的输出操作</p>
+<p class="mono">A. 构成 SPOOLing 系统的基本条件是有外围输入机与外围输出机<br>B. 构成 SPOOLing 系统的基本条件仅是要有高速的大容量硬盘作为输入井和输出井<br>C. 当输入设备忙时，SPOOLing 系统中的用户程序暂停执行，待 I/O 空闲时再被唤醒执行输出操作<br>D. SPOOLing 系统中的用户程序可以随时将输出数据送到输出井中，待输出设备空闲时再由 SPOOLing 系统完成数据的输出操作</p>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
 <p><span class="answer-tag">答案：D</span></p>
@@ -1236,7 +1236,7 @@ IV. 采用磁盘高速缓存</p>
 <p>【另解】从开始读 A 到最后读完 I，磁头恰好转过 9 圈，即 \(27 \times 9 = 243\text{ ms}\)，再加上最后一条记录的处理时间 2ms，共 \(243 + 2 = 245\text{ ms}\)。</p>
 <p><strong>（2）交错存放。</strong>读出一条记录（3ms）并处理完（2ms）后，磁头刚越过下一个相邻块，故应把下一条记录安排在再下一个块的位置，即隔一放二：A 放第 1 块，B 放第 3 块，以此类推。存放位置安排如下表：</p>
 <table>
-  <thead><tr><th>盘块号</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></thead>
+  <thead><tr><th>盘块号</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
   <tbody>
     <tr><th>记录</th><td>A</td><td>F</td><td>B</td><td>G</td><td>C</td><td>H</td><td>D</td><td>I</td><td>E</td></tr>
   </tbody>
@@ -1355,7 +1355,7 @@ IV. 采用磁盘高速缓存</p>
 <p>\(16384 \div 32 = 512\) 个字 \(= 512 \times 4\text{ B} = 2\text{ KB}\)，正好可放在系统提供的 2KB 内存中。</p>
 <p><strong>（2）</strong>C-SCAN 沿磁道号增大方向单向服务，到最大请求磁道后折返回最小请求磁道重新开始。从 100 号磁道出发，访问顺序和每次移动的磁道数如下表：</p>
 <table>
-  <thead><tr><th>被访问的下一个磁道号</th><td>120</td><td>30</td><td>50</td><td>90</td></tr></thead>
+  <thead><tr><th>被访问的下一个磁道号</th><th>120</th><th>30</th><th>50</th><th>90</th></tr></thead>
   <tbody>
     <tr><th>移动距离（磁道数）</th><td>20</td><td>90</td><td>20</td><td>40</td></tr>
   </tbody>

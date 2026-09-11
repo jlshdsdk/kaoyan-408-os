@@ -32,19 +32,19 @@
 <h3>1. 磁道、扇区与柱面</h3>
 <p>盘面上的数据存储在一组同心圆中，称为<strong>磁道</strong>。每个磁道的宽度与磁头相当，一个盘面包含上千个磁道。每个磁道又划分为数百个<strong>扇区</strong>，扇区具有固定大小（如 1KB），是<strong>磁盘寻址的最小物理单位</strong>。相邻磁道及扇区间都留有间隙，以避免读/写干扰。传统设计中每个磁道的扇区数相同，由于外道周长更大，其线性存储密度反而低于内道，因此磁盘的存储能力受限于最内道的最大存储密度。</p>
 <figure>
-  <img src="../assets/ch5/ch5-p353-01.png" loading="lazy" alt="磁盘盘片示意图：盘面数据存储在同心圆状的磁道中，磁道划分为扇区，相邻磁道之间和扇区之间分别留有磁道间隙与扇区间隙">
+  <img src="../assets/ch5/ch5-p353-02.png" loading="lazy" alt="磁盘盘片示意图：盘面数据存储在同心圆状的磁道中，磁道划分为扇区，相邻磁道之间和扇区之间分别留有磁道间隙与扇区间隙">
   <figcaption>图 5.19 磁盘盘片（王道教材 PDF P353）</figcaption>
 </figure>
 <div class="callout tip"><span class="callout-title">提示</span>为了提高磁盘容量、充分利用外层磁道，现代磁盘采用<strong>区域记录（ZBR）</strong>技术：把盘面划分为若干环带，同一环带内所有磁道的扇区数相同，而外层环带磁道的扇区数多于内层环带。</div>
 
 <p>多个盘片垂直堆叠形成<strong>盘组</strong>，每个盘面对应一个磁头，所有磁头安装在同一磁头臂上、同步沿径向移动。所有盘面上半径相同的磁道构成一个<strong>柱面</strong>。</p>
 <figure>
-  <img src="../assets/ch5/ch5-p353-02.png" loading="lazy" alt="磁盘结构示意图：多个盘片绕转轴高速旋转，每个盘面对应一个读/写磁头，所有磁头固定在磁头臂上同步径向移动；各盘面上半径相同的磁道构成柱面">
+  <img src="../assets/ch5/ch5-p353-01.png" loading="lazy" alt="磁盘结构示意图：多个盘片绕转轴高速旋转，每个盘面对应一个读/写磁头，所有磁头固定在磁头臂上同步径向移动；各盘面上半径相同的磁道构成柱面">
   <figcaption>图 5.20 磁盘的结构（王道教材 PDF P353）</figcaption>
 </figure>
 <p><strong>磁盘地址</strong>用「柱面号·盘面号·扇区号」表示；磁盘的总存储容量由柱面数、盘面数和每磁道扇区数共同决定：</p>
 $$\text{磁盘容量} = \text{柱面数} \times \text{盘面数} \times \text{每磁道扇区数} \times \text{每扇区字节数}$$
-<div class="callout kao"><span class="callout-title">考点</span>磁盘容量计算（2019 统考）与「簇号 → 磁盘物理地址」的转换（2019 统考）都考过。转换思路：先算出<strong>每个柱面容纳的簇（块）数 = 盘面数 × 每磁道扇区数（或除以每簇扇区数）</strong>，用簇号整除得到柱面号，余数再对盘面号、扇区号逐层分解（见本节习题精选综合题）。此外要记住：磁道在盘面上由内到外编号，柱面号相同的所有磁道位于同一半径上。</div>
+<div class="callout kao"><span class="callout-title">考点</span>磁盘容量计算（2019 统考）与「簇号 → 磁盘物理地址」的转换（2019 统考）都考过。转换思路：先算出<strong>每个柱面容纳的簇（块）数 = 盘面数 × 每磁道扇区数（或除以每簇扇区数）</strong>，用簇号整除得到柱面号，余数再对盘面号、扇区号逐层分解（见本章习题页的综合题）。此外要记住：磁道号通常从最外侧的 0 号开始、由外向内递增，柱面号相同的所有磁道位于同一半径上。</div>
 
 <h3>2. 读/写磁盘数据块的过程</h3>
 <ol>
@@ -220,7 +220,7 @@ $$T_a = T_s + \frac{1}{2r} + \frac{b}{rN}$$
     <tr><td><strong>C-LOOK</strong></td><td>C-SCAN 的改进：单向扫描到最远请求处即快速回返</td><td>兼顾单向公平与更少的空跑距离</td><td>—</td></tr>
   </tbody>
 </table>
-<div class="callout kao"><span class="callout-title">考点</span>调度算法的比较是超高频考点（2009、2010、2015、2018、2024 统考均考过）。记三条铁律：①<strong>只有 FCFS 可能随时改变磁头移动方向</strong>，SSTF/SCAN/C-SCAN 中 SCAN 系算法方向受约束，SSTF 虽无方向约束但由「最近」决定方向；②<strong>可能出现饥饿的是 SSTF</strong>（电梯调度、循环扫描都不会）；③用于磁盘调度的是 SSTF，CLOCK 是页面置换算法，别混淆。</div>
+<div class="callout kao"><span class="callout-title">考点</span>调度算法的比较是超高频考点（2009、2010、2015、2018、2024 统考均考过）。记三条铁律：①<strong>FCFS、SSTF 的磁头移动方向均不受约束、可能随时折返</strong>，SSTF/SCAN/C-SCAN 中 SCAN 系算法方向受约束，SSTF 虽无方向约束但由「最近」决定方向；②<strong>可能出现饥饿的是 SSTF</strong>（电梯调度、循环扫描都不会）；③用于磁盘调度的是 SSTF，CLOCK 是页面置换算法，别混淆。</div>
 
 <h4>（6）NStepSCAN 算法和 FSCAN 算法</h4>
 <p>SSTF、SCAN 和 C-SCAN 在特定情况下可能出现<strong>磁臂黏着</strong>现象：一个或多个进程频繁地对某磁道发出 I/O 请求时，磁头会长期滞留于该区域，其他进程难以获得服务。</p>

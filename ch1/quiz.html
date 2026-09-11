@@ -640,7 +640,7 @@ III. 需要运行在多 CPU 的硬件平台上</p>
 </div></details>
 </div>
 
-<h2>1.6 虚拟机 · 选择题</h2>
+<h2>1.4～1.6 操作系统结构、引导与虚拟机 · 选择题</h2>
 <div class="q">
 <p><strong>第 1 题</strong> 用（）设计的操作系统结构清晰且便于调试。</p>
 <p class="mono">A. 分层式架构　B. 模块化架构　C. 微内核架构　D. 宏内核架构</p>
@@ -859,7 +859,7 @@ III. 需要运行在多 CPU 的硬件平台上</p>
 <tr><th>程序 A</th><td>CPU</td><td>设备甲</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><th>程序 B</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>设备甲</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>设备乙</td></tr>
 </table>
-<p>可见单道执行时，程序进行 I/O 的 55s（A 的 25s + B 的 30s）内 CPU 只能空等，利用率低。</p>
+<p>可见单道执行时，程序进行 I/O 的 40s（A 的 15s + B 的 25s）内 CPU 只能空等，利用率低。</p>
 <p><strong>（2）多道程序环境</strong>：两道程序同时驻留内存并发执行，一道程序使用设备（I/O）时，CPU 可切换去执行另一道程序；但 CPU 与每台设备同一时刻只能被一个程序占用，其余程序须排队等待。逐步分析如下：</p>
 <ul>
 <li>t = 0s：程序 A 获得 CPU（用 10s），程序 B 同时使用设备甲（用 10s）；</li>
@@ -873,9 +873,9 @@ III. 需要运行在多 CPU 的硬件平台上</p>
 </ul>
 <table>
 <caption>多道环境下的执行过程（甘特图）</caption>
-<tr><th>程序＼时间/s</th><td>0～10</td><td>10～15</td><td>15～20</td><td>20～25</td><td>25～35</td><td>35～45</td></tr>
-<tr><th>程序 A</th><td>CPU</td><td>设备甲</td><td>等待 CPU</td><td>CPU</td><td>设备乙</td><td>CPU</td></tr>
-<tr><th>程序 B</th><td>设备甲</td><td>CPU</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>设备乙</td></tr>
+<tr><th>程序＼时间/s</th><td>0～10</td><td>10～15</td><td>15～20</td><td>20～25</td><td>25～30</td><td>30～35</td><td>35～45</td></tr>
+<tr><th>程序 A</th><td>CPU</td><td>设备甲</td><td>等待 CPU</td><td>CPU</td><td>设备乙</td><td>设备乙</td><td>CPU</td></tr>
+<tr><th>程序 B</th><td>设备甲</td><td>CPU</td><td>CPU</td><td>设备乙</td><td>CPU</td><td>等待设备乙</td><td>设备乙</td></tr>
 </table>
 <p>CPU 工作时间 = 10s + 5s + 10s（程序 A）+ 10s + 5s（程序 B）= 40s；两程序运行总时间 = 45s。CPU 利用率 = \( \dfrac{40\,\text{s}}{45\,\text{s}} \approx 88.9\% \)。</p>
 <p>可见多道程序设计使 CPU 与设备并行工作，将总时间从 80s 缩短到 45s，CPU 利用率从 50% 提高到约 88.9%。</p>
@@ -890,26 +890,25 @@ III. 需要运行在多 CPU 的硬件平台上</p>
 </ol>
 <details class="qa"><summary>查看答案与解析</summary>
 <div class="qa-body">
-<p><span class="answer-tag">答案：CPU 有空闲等待，空闲时段为 100～150ms，CPU 利用率约为 76.7%；进程 A 无等待现象；进程 B 有等待现象，分别发生在 0～50ms 和 180～200ms。</span></p>
+<p><span class="answer-tag">答案：CPU 有空闲等待，空闲时段为 100～150ms，CPU 利用率约为 83.3%；进程 A 无等待现象；进程 B 有等待现象，分别发生在 0～50ms 和 180～200ms。</span></p>
 <p>因进程 A 先得到 CPU，逐步分析调度过程：</p>
 <ul>
 <li>t = 0ms：A 获得 CPU 计算 50ms；B 就绪等待；</li>
 <li>t = 50ms：A 计算完毕，转用打印机打印 100ms；B 获得 CPU 计算 50ms；</li>
 <li>t = 100ms：B 计算完毕，转用输入设备输入 80ms；A 仍在打印——CPU 上无进程可运行，<strong>CPU 开始空闲</strong>；</li>
-<li>t = 150ms：A 打印完毕，申请 CPU，此时 CPU 空闲，A 立即获得 CPU 计算 50ms；B 仍在输入；</li>
+<li>t = 150ms：A 打印完毕，申请 CPU，此时 CPU 空闲，A 立即获得 CPU 计算 50ms；</li>
 <li>t = 180ms：B 输入完毕，申请 CPU，但 CPU 正被 A 占用，B 等待；</li>
-<li>t = 200ms：A 计算完毕，转用打印机打印 100ms；B 获得 CPU 计算 80ms；</li>
-<li>t = 280ms：B 计算完毕，结束；</li>
-<li>t = 300ms：A 打印完毕，结束。</li>
+<li>t = 200ms：A 计算完毕，转用打印机打印 100ms；B 获得 CPU 计算 100ms；</li>
+<li>t = 300ms：A 打印完毕、B 计算完毕，两进程同时结束。</li>
 </ul>
 <table>
 <caption>两进程运行时的甘特图（单位：ms）</caption>
-<tr><th>＼时间/ms</th><td>0～50</td><td>50～100</td><td>100～150</td><td>150～180</td><td>180～200</td><td>200～280</td><td>280～300</td></tr>
-<tr><th>CPU</th><td>A 计算</td><td>B 计算</td><td>空闲</td><td>A 计算</td><td>A 计算</td><td>B 计算</td><td>空闲</td></tr>
-<tr><th>进程 A</th><td>计算</td><td>打印</td><td>打印</td><td>计算</td><td>计算</td><td>打印</td><td>打印</td></tr>
-<tr><th>进程 B</th><td>等待</td><td>计算</td><td>输入</td><td>输入</td><td>等待 CPU</td><td>计算</td><td>已结束</td></tr>
+<tr><th>＼时间/ms</th><td>0～50</td><td>50～100</td><td>100～150</td><td>150～180</td><td>180～200</td><td>200～300</td></tr>
+<tr><th>CPU</th><td>A 计算</td><td>B 计算</td><td>空闲</td><td>A 计算</td><td>A 计算</td><td>B 计算</td></tr>
+<tr><th>进程 A</th><td>计算</td><td>打印</td><td>打印</td><td>计算</td><td>计算</td><td>打印</td></tr>
+<tr><th>进程 B</th><td>等待</td><td>计算</td><td>输入</td><td>输入</td><td>等待 CPU</td><td>计算</td></tr>
 </table>
-<p><strong>1）</strong>CPU 有空闲等待。空闲时段为 <strong>100～150ms</strong>（共 50ms）：此时 A 在打印、B 在输入，两进程都在使用 I/O 设备，无进程需要 CPU。CPU 的忙碌时间 = 50ms（A 计算）+ 50ms（B 计算）+ 50ms（A 再计算）+ 80ms（B 再计算）= 230ms；从开始运行到两进程全部结束共经历 300ms。CPU 利用率 = \( \dfrac{230\,\text{ms}}{300\,\text{ms}} \approx 76.7\% \)。</p>
+<p><strong>1）</strong>CPU 有空闲等待。空闲时段为 <strong>100～150ms</strong>（共 50ms）：此时 A 在打印、B 在输入，两进程都在使用 I/O 设备，无进程需要 CPU。CPU 的忙碌时间 = 50ms（A 计算）+ 50ms（B 计算）+ 50ms（A 再计算）+ 100ms（B 再计算）= 250ms；从开始运行到两进程全部结束共经历 300ms。CPU 利用率 = \( \dfrac{250\,\text{ms}}{300\,\text{ms}} \approx 83.3\% \)。</p>
 <p><strong>2）</strong>进程 A 运行时<strong>无等待现象</strong>：A 在 t = 50ms 和 t = 200ms 申请打印机时打印机均空闲，在 t = 150ms 申请 CPU 时 CPU 也空闲，每次申请资源都能立即得到满足。</p>
 <p><strong>3）</strong>进程 B 运行时<strong>有等待现象</strong>，共两段：① 0～50ms，B 就绪时 CPU 已被先到的 A 占用，只能等待；② 180～200ms，B 输入完毕申请 CPU 时，CPU 正被 A 的第二次计算占用，等待了 200ms − 180ms = 20ms。</p>
 </div></details>

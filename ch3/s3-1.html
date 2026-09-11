@@ -184,7 +184,7 @@
 </figure>
 <div class="callout notice"><span class="callout-title">易错</span>页表项在页表中<strong>按页号顺序连续存放</strong>且长度相同，所以页号是隐含的索引，<strong>页表项中不存储页号本身</strong>。「页表项里存什么」是常见的干扰选项设问点。另外，页表由<strong>操作系统</strong>建立，不由编译器或用户程序建立。</div>
 
-<h3>4. 基本地址变换机构 <span class="badge extra">必考重点</span></h3>
+<h3>4. 基本地址变换机构 <span class="badge mast">必考重点</span></h3>
 <p>地址变换机构的任务是把逻辑地址 A 转换为物理地址 E，整个过程借助页表完成。系统设一个<strong>页表寄存器（PTR）</strong>，存放页表在内存中的<strong>始址 F</strong> 和<strong>页表长度 M</strong>（页表项个数）。寄存器昂贵，单 CPU 系统通常只设一个 PTR：进程未执行时，其页表始址和长度保存在该进程的 <strong>PCB</strong> 中；进程被调度上 CPU 时才装入 PTR。</p>
 <p>设页面大小为 L，逻辑地址 A 到物理地址 E 的变换过程分四步：</p>
 <ol>
@@ -213,7 +213,7 @@
 <p>分页管理面临两个主要挑战：①每次访存都要做地址转换，转换不够快会拖慢系统；②页表本身占内存，页表过大时利用率下降。这两个痛点分别催生了<strong>快表（TLB）</strong>和<strong>多级页表</strong>。</p>
 <div class="callout kao"><span class="callout-title">考点</span>页式系统的地址变换过程（2013、2021、2024 统考）与页表项地址的计算（2024 统考）都是高频综合题：牢记「页表项地址 = 页表始址 F + 页号 P × 页表项长度」「物理地址 = 块号 × 页面大小 + 页内偏移」，每一步都要带单位换算。</div>
 
-<h3>5. 具有快表的地址变换机构 <span class="badge extra">必考重点</span></h3>
+<h3>5. 具有快表的地址变换机构 <span class="badge mast">必考重点</span></h3>
 <figure>
   <img src="../assets/ch3/ch3-p198-01.png" loading="lazy" alt="图3.9 具有快表的地址变换机构：在页表之上增加快表（TLB），CPU给出页号P先与快表中各页号并行比较，命中则直接取出块号b与页内偏移W拼接成物理地址，仅需一次访存；未命中再查内存中的慢表">
   <figcaption>图 3.9 具有快表（TLB）的地址变换机构（王道教材PDF P198）</figcaption>
@@ -238,7 +238,7 @@
 <div class="callout tip"><span class="callout-title">提示</span>快表之所以有效，靠的是程序的<strong>局部性原理</strong>（3.2 节详述）：程序倾向于在一段时间内集中访问少数页面。在局部性良好的前提下，快表命中率可达 <strong>90% 以上</strong>，分页机制带来的性能开销可控制在 <strong>10% 以内</strong>。</div>
 <div class="callout kao"><span class="callout-title">考点</span>具有快表的地址变换性能分析（2009 统考）：有效访问时间 = 命中率 ×（查快表时间 + 1 次访存）+ 未命中率 ×（查快表时间 + 2 次访存）。注意题目是否说「查快表时间可忽略」，以及「命中时是否还需再访存一次」——两种口径答案不同。</div>
 
-<h3>6. 两级页表 <span class="badge extra">必考重点</span></h3>
+<h3>6. 两级页表 <span class="badge mast">必考重点</span></h3>
 <p>引入分页后，进程的页面无须全部常驻内存，但<strong>页表本身必须整个驻留内存</strong>（且要求连续）。页表可能非常庞大：以 32 位逻辑地址、页面 4KB、页表项 4B 为例：</p>
 <pre><code>页内偏移 = log2(4KB) = log2(2^12 B) = 12 位 → 页号占 20 位
 页表项个数最多 = 2^20 个
@@ -301,7 +301,7 @@
 </figure>
 <p>段表项同样连续存放且长度相同，段号作为隐含索引，无须存储。段表项大小的推算：某 32 位分段系统，段号 16 位、段内偏移 16 位（段长字段 16 位，最大段长 64KB），物理地址 32 位（可寻址 4GB），则每个段表项至少需要 \(16\)（段长）\(+ 32\)（基址）\(= 48\) 位 \(= 6\text{B}\)。若段表首地址为 M，第 K 号段的段表项就存放在地址 \(M + K \times 6\) 处。</p>
 
-<h3>4. 分段的地址变换机构 <span class="badge extra">必考重点</span></h3>
+<h3>4. 分段的地址变换机构 <span class="badge mast">必考重点</span></h3>
 <p>系统设一个<strong>段表寄存器</strong>，存放段表始址 F 和段表长度 M。从逻辑地址 A 到物理地址 E 的变换过程：</p>
 <ol>
   <li>从逻辑地址 A 中分离出<strong>段号 S</strong> 和<strong>段内偏移量 W</strong>；</li>
@@ -356,7 +356,7 @@
 <p>数据结构上：系统为<strong>每个进程</strong>建立<strong>一张段表</strong>，每个段对应一个段表项，记录该段的<strong>页表始址</strong>和<strong>页表长度</strong>（段号是段表的隐含索引）；<strong>每个段</strong>对应<strong>一张页表</strong>，页表项记录对应页的物理块号（页号是页表的隐含索引）。另设一个<strong>段表寄存器</strong>，存放当前进程段表的始址和段表长度，既用于定位段表，也用于段号越界检查。</p>
 <div class="callout notice"><span class="callout-title">易错</span>段页式系统中，<strong>每个进程只有一张段表，但有多张页表（每个段一张）</strong>——与「每进程一张页表」的纯分页系统对比记忆，这是选择题的经典设问点。</div>
 
-<h3>段页式的地址变换过程 <span class="badge extra">必考重点</span></h3>
+<h3>段页式的地址变换过程 <span class="badge mast">必考重点</span></h3>
 <ol>
   <li>根据逻辑地址中的<strong>段号 S</strong>，借段表寄存器定位段表（第 1 次访存），先做段号越界检查，再查出该段<strong>页表的起始地址</strong>；</li>
   <li>用<strong>页号 P</strong> 访问该段对应的页表（第 2 次访存），取出目标页面的<strong>物理块号</strong>；</li>
