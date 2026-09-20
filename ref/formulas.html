@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📐 公式与结论速查卡 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+<header class="topbar">
+<button class="menu-btn" aria-label="打开目录">☰</button>
+<a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
+<div class="search-wrap">
+<input id="searchBox" class="search-box" type="search" placeholder="搜索全站…（如：银行家 / LRU）" autocomplete="off">
+<div id="searchDrop" class="search-drop"></div>
+</div>
+<button id="searchBtn" class="menu-btn search-open-btn" aria-label="搜索">🔍</button>
+<nav class="crumbs">首页 <span class="sep">/</span> 复习工具 <span class="sep">/</span> 📐 公式与结论速查卡</nav>
+<div class="read-progress" id="readProgress"></div>
+</header>
+<div id="searchOverlay" class="search-overlay">
+<div class="search-panel">
+<div class="sp-head"><input id="searchInput" type="search" placeholder="搜索全站：银行家 / LRU / 快表 / 甘特图…"><button id="searchClose" class="menu-btn" aria-label="关闭">✕</button></div>
+<div id="searchResults" class="search-results"></div>
+</div>
+</div>
+<div class="sidebar-mask"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html" data-rel="ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html" data-rel="ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html" data-rel="ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html" data-rel="ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" data-rel="ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html" data-rel="ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html" data-rel="ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html" data-rel="ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link data-rel="ch1/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html" data-rel="ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html" data-rel="ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html" data-rel="ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html" data-rel="ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html" data-rel="ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html" data-rel="ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link data-rel="ch2/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html" data-rel="ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html" data-rel="ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html" data-rel="ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html" data-rel="ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link data-rel="ch3/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html" data-rel="ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html" data-rel="ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html" data-rel="ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html" data-rel="ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html" data-rel="ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link data-rel="ch4/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html" data-rel="ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html" data-rel="ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html" data-rel="ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html" data-rel="ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html" data-rel="ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link data-rel="ch5/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">工具</span> 复习工具箱</summary><div class="nav-links"><a href="../ref/exam-stats.html" data-rel="ref/exam-stats.html">📊 真题考点统计</a><a href="../ref/mixups.html" data-rel="ref/mixups.html">🤔 易混淆概念速查</a><a href="../ref/formulas.html" active data-rel="ref/formulas.html">📐 公式与结论速查卡</a><a href="../ref/guide.html" data-rel="ref/guide.html">🧭 备考指南与资源</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
+</aside>
+<div class="content-wrap">
+<main>
+<article>
+<h1>📐 公式与结论速查卡</h1>
+<p>本页按章汇总全书需要代入计算的公式与硬结论，每张卡固定为「公式 → 适用 → 例」三段。所有例题数值均取自正文片段中的教材例题与统考真题原数，未做任何改动；建议配合各章综合题一起使用。</p>
+
+<h2 id="toc-1">第1章 操作系统基本概念</h2>
+
+<div class="callout kao"><span class="callout-title">CPU 利用率（调度目标之一）</span>\(\text{CPU 利用率}=\dfrac{\text{CPU 有效工作时间}}{\text{CPU 有效工作时间}+\text{CPU 空闲等待时间}}\)<br>适用：<strong>资源利用率类计算（公式见 2.2.3，全章调度算法比较的基础指标）</strong>　例：教材仅给出定义式、未附具体数值；同小节的例题提醒——计算作业完成时间时注意 <strong>CPU 与 I/O 设备之间、不同 I/O 设备之间可以并行</strong>，这是周转时间计算题最常见的隐藏条件。</div>
+
+<h2 id="toc-2">第2章 进程与线程、CPU 调度、同步互斥与死锁</h2>
+
+<div class="callout kao"><span class="callout-title">周转时间</span>\(T=\text{作业完成时间}-\text{作业提交时间}\)；平均周转时间 \(=\dfrac{1}{n}\sum T_i\)<br>适用：<strong>调度算法性能计算（2.2.3，表 2.2/2.3）</strong>　例：FCFS 下作业 1（提交 8.0、完成 10.0）：\(T=10.0-8.0=2.0\)；四作业平均周转 \(=(2+2.6+2.7+2.7)/4=2.5\)（同组数据改用 SJF 降为 2.1）。</div>
+
+<div class="callout kao"><span class="callout-title">带权周转时间</span>\(W=\dfrac{\text{作业周转时间}}{\text{作业实际运行时间}}\)，必然 \(W\ge 1\)<br>适用：<strong>衡量作业的相对等待程度（2.2.3）</strong>　例：FCFS 下作业 4：周转 2.7、运行 0.2，\(W=2.7/0.2=13.5\)；平均带权周转 FCFS 为 5.625，SJF 为 3.525（表 2.2/2.3）。</div>
+
+<div class="callout kao"><span class="callout-title">等待时间</span>\(\text{等待时间}=\text{周转时间}-\text{运行时间}\)（即开始时间 − 提交时间）<br>适用：<strong>评估调度算法的核心指标，调度只影响就绪队列中的等待时长（2.2.3）</strong>　例：FCFS 下作业 2：\(2.6-1=1.6\)；平均等待时间 FCFS 为 1.575、SJF 为 1.175（表 2.2/2.3）。</div>
+
+<div class="callout kao"><span class="callout-title">响应比（HRRN）</span>\(R=\dfrac{\text{等待时间}+\text{要求服务时间}}{\text{要求服务时间}}=1+\dfrac{\text{等待时间}}{\text{要求服务时间}}\)<br>适用：<strong>高响应比优先调度，每轮调度前对全部等待作业重算（2.2.5）</strong>　例：作业 4（提交 9.0、运行 0.2）在 10.0 时刻被 SJF 调度前已等待 1.0（表 2.3），此刻响应比 \(=(1.0+0.2)/0.2=6.0\)——恰等于它在该轮的带权周转时间 6.0。</div>
+
+<div class="callout kao"><span class="callout-title">信号量取值含义</span>\(S&gt;0\)：可用资源数；\(S=0\)：资源刚好用完且无人等待；\(S&lt;0\)：资源已用完，\(|S|\)=等待队列中阻塞进程数<br>适用：<strong>记录型信号量分析（2.3.4）</strong>　例：互斥信号量初值为 1 时，\(S=0\) 表示恰有一个进程在临界区；\(S=-1\) 表示一个在临界区、另一个在等待。推论：P 操作可能使进程阻塞（运行→阻塞），V 操作唤醒进程（阻塞→就绪，而非直接运行）。</div>
+
+<div class="callout kao"><span class="callout-title">死锁最大资源数判别</span>同类资源 \(m\) 个、\(n\) 个进程、每进程最多申请 \(k\) 个（每次申请 1 个）：\(m\ge n(k-1)+1\)（即 \(m&gt;n(k-1)\)）时<strong>必然不会死锁</strong>；\(m\le n(k-1)\) 时<strong>可能</strong>死锁<br>适用：<strong>单类资源竞争的死锁临界条件判断（2.4.1）</strong>　例（推导口径）：最坏情况下每个进程都已握有 \(k-1\) 个资源、仍差 1 个，此时只要系统还剩 1 个空闲（\(m=n(k-1)+1\)），总有一个进程能凑齐 \(k\) 个并顺利运行完、释放资源。</div>
+
+<div class="callout kao"><span class="callout-title">银行家算法</span>\(Need[i,j]=Max[i,j]-Allocation[i,j]\)；请求判定四步：①合法性 \(Request_i\le Need_i\) → ②可用性 \(Request_i\le Available\) → ③试探分配（Available−、Allocation+、Need−）→ ④安全性检查：\(Work=Available\) 起，反复找 \(Need_i\le Work\) 的进程，\(Work\mathrel{+}=Allocation_i\)，全部 Finish 即安全；不安全则回滚<br>适用：<strong>死锁避免（2.4.3）</strong>　例：P0：\((7,5,3)-(0,1,0)=(7,4,3)\)；T0 时刻 \(Work=(3,3,2)\)，按安全序列 \(\{P_1,P_3,P_4,P_2,P_0\}\) 依次更新为 \((5,3,2)\to(7,4,3)\to(7,4,5)\to(10,4,7)\to(10,5,7)\)；P1 请求 \((1,0,2)\) 试探后 Available\(=(2,3,0)\) 仍安全→批准；P4 请求 \((3,3,0)&gt;(2,3,0)\)→等待；P0 请求 \((0,2,0)\) 试探后 Available\(=(2,1,0)\) 找不到安全序列→拒绝并回滚。</div>
+
+<h2 id="toc-3">第3章 内存管理</h2>
+
+<div class="callout kao"><span class="callout-title">页内偏移位数 / 地址结构</span>页内偏移位数 \(=\log_2(\text{页面大小})\)；页面大小 \(L=2^{\text{偏移位数}}\)；页面数 \(=2^{\text{页号位数}}\)<br>适用：<strong>一切分页地址计算的第一步（3.1.3）</strong>　例：4KB\(=2^{12}\)B → 偏移占低 12 位；32 位地址 → 页号占高 20 位 → 最多 \(2^{20}\) 个页面。</div>
+
+<div class="callout kao"><span class="callout-title">页表项地址与页表项大小</span>页表项地址 \(=\) 页表始址 \(F+\) 页号 \(P\times\) 页表项长度；页表项须能容纳全部页框号：位数 \(=\log_2(\text{页框总数})\)<br>适用：<strong>基本分页地址变换第 3 步（第 1 次访存）（3.1.3）</strong>　例：32 位空间、4KB 页：页框总数 \(=2^{32}B/4KB=2^{20}\) 个 → 页框号 20 位 → 页表项至少 \(\lceil 20/8\rceil=3B\)，实际取 4B（段表同理：段长 16 位＋基址 32 位＝48 位＝6B，第 K 号段表项在 \(M+K\times 6\) 处）。</div>
+
+<div class="callout kao"><span class="callout-title">物理地址拼接</span>\(E=\text{物理块号}\,b\times\text{页面大小}\,L+\text{页内偏移}\,W\)（先 \(P=\lfloor A/L\rfloor\)、\(W=A\bmod L\)，越界检查 \(P\ge M\) 则中断）<br>适用：<strong>分页地址变换（3.1.3 教材例题）</strong>　例：L=1KB、页号 2 对应块号 8、逻辑地址 A=2500：\(W=2500\%1024=452\)，\(E=8\times1024+452=8644\)B。</div>
+
+<div class="callout kao"><span class="callout-title">两级页表 10+10+12 推导</span>32 位地址、页面 4KB、页表项 4B：页表 \(2^{20}\) 项 \(\times 4B=4MB\)（连续存放需 1024 页，不现实）→ 每页可放 \(4KB/4B=2^{10}\) 个表项 → 页目录恰好 \(2^{10}\) 项占 1 页 → 地址结构＝<strong>一级页号 10 位＋二级页号 10 位＋页内偏移 12 位</strong><br>适用：<strong>两级页表结构与地址变换（3.1.3）</strong>　例：无快表时两级页表一次变换需 <strong>3 次访存</strong>，N 级页表需 N+1 次；多级页表的目的的是<strong>减少页表占用的连续内存、按需分配页表页</strong>，并不加快变换。</div>
+
+<div class="callout kao"><span class="callout-title">缺页率</span>\(\text{缺页率}=\dfrac{\text{缺页次数}}{\text{页面访问次数}}\)；置换次数 \(=\) 缺页次数 − 初始装入次数<br>适用：<strong>页面置换算法性能统计（3.2.4）</strong>　例：OPT 例题 20 次访问、9 次缺页：缺页率 \(9/20=45\%\)；因缺页而置换的次数 \(=9-3=6\)（3 个物理块的初始装入不计）。</div>
+
+<div class="callout kao"><span class="callout-title">有效访问时间（TLB 命中率版）</span>\(EAT=\text{命中率}\times(\text{查快表}+1\text{ 次访存})+\text{未命中率}\times(\text{查快表}+2\text{ 次访存})\)<br>适用：<strong>具有快表的地址变换性能分析（3.1.3，2009 统考）</strong>　例：注意题目口径——「查快表时间可忽略」与「命中后是否再访存」会改变答案；局部性良好时快表命中率可达 90% 以上，分页开销可控制在 10% 以内。</div>
+
+<div class="callout kao"><span class="callout-title">段地址变换（先判越界）</span>两次越界检查：段号 \(S\ge\) 段表长度 M 中断；偏移 \(W\ge\) 段长 C 中断（\(W=C\) 也算越界）；通过后 \(E=\text{段基址}\,b+\text{段内偏移}\,W\)<br>适用：<strong>分段地址变换（3.1.4）</strong>　例：段号 2、偏移 100、段长 500、基址 8KB：\(E=8192+100=8292\)（图 3.15）。</div>
+
+<h2 id="toc-4">第4章 文件管理</h2>
+
+<div class="callout kao"><span class="callout-title">混合索引最大文件长度</span>最大 \(=10\times\text{块大小}+\dfrac{\text{块大小}}{\text{地址项}}\times\text{块大小}+\left(\dfrac{\text{块大小}}{\text{地址项}}\right)^2\times\text{块大小}+\left(\dfrac{\text{块大小}}{\text{地址项}}\right)^3\times\text{块大小}\)（直接＋一级＋二级＋三级间接）<br>适用：<strong>UNIX 混合索引计算（4.2.6）</strong>　例：盘块 4KB、盘块号 4B → 每个索引块放 \(4KB/4B=1024\) 项：10 个直接地址 \(=40KB\)；一次间址 \(=1K\times4KB=4MB\)；二次 \(=4GB\)；三次 \(=4TB\)；全部用上 \(=4TB+4GB+4MB+40KB\)。</div>
+
+<div class="callout kao"><span class="callout-title">访问第 n 条记录的访盘次数</span>连续分配 <strong>1</strong> 次；隐式链接 <strong>n</strong> 次（逐块跟指针）；索引分配：单级 <strong>2</strong> 次、m 级索引 \(m+1\) 次（直接块 1 次、一次间址 2 次、二次 3 次、三次 4 次）<br>适用：<strong>物理结构与多级索引的效率分析（4.4、4.2.6）</strong>　例：FAT 常驻内存，查链不占访盘次数，访问第 n 块实际只需 1 次访盘；「读文件偏移 X 字节需访盘几次」——先按各级容量判断偏移落在哪级间址，再数「索引块＋数据块」的读盘次数。</div>
+
+<div class="callout kao"><span class="callout-title">位示图：行列号 ↔ 盘块号</span>分配：\(b=n(i-1)+j\)；回收：\(i=(b-1)\,\mathrm{DIV}\,n+1\)，\(j=(b-1)\,\mathrm{MOD}\,n+1\)（行、列从 1 开始编号，每行 n 位）<br>适用：<strong>位示图法空闲空间管理（4.3.2）</strong>　例：\(n=16\)，第 1 行第 3 列的 0 位：\(b=16\times(1-1)+3=3\) 号盘块；回收 3 号盘块：\(i=(3-1)\,\mathrm{DIV}\,16+1=1\)，\(j=(3-1)\,\mathrm{MOD}\,16+1=3\)，置 map[1,3]=0。若题目行列从 0 开始编号，公式需相应调整。</div>
+
+<div class="callout kao"><span class="callout-title">成组链接的换组操作</span>分配：从空闲盘块号栈顶取号、栈指针上移；<strong>取到栈中最后一个盘块号时</strong>，先把该块内容（下一组全部空闲块号）读入栈，再把该块本身分配出去。回收：压入栈顶；<strong>栈满（100 项）时</strong>，把整栈盘块号写入新回收的盘块使其成为新索引块，栈中只留该盘块号、计数重置为 1<br>适用：<strong>UNIX 成组链接法（4.3.2）</strong>　例：空闲区 201～7999 号按 100 块分组，第一组 201～300：依次分配 201～299 后，要分配 300 号时先把 300 号块中的下一组块号列表读入空闲盘块号栈，随后将 300 号盘块分配给用户。</div>
+
+<div class="callout kao"><span class="callout-title">索引顺序文件最优分组</span>平均查找次数 \(=\dfrac{m}{2}+\dfrac{s}{2}=\dfrac{m}{2}+\dfrac{N/m}{2}\)（先查索引表 m/2 次，再组内查 s/2 次）；当 \(m=\sqrt{N}\) 时取最小值<br>适用：<strong>索引顺序文件检索效率（4.1.3）</strong>　例：普通顺序文件平均需查找 \(N/2\) 次；分成 \(\sqrt{N}\) 组、每组 \(\sqrt{N}\) 条时平均查找次数最少，记录极多时还可引入两级或多级索引。</div>
+
+<div class="callout kao"><span class="callout-title">目录检索平均读盘次数</span>平均读盘次数 \(=\) 目录占用盘块数 \(\div 2\)（顺序查找）；盘块数 \(=\dfrac{\text{目录项总数}\times\text{每项大小}}{\text{盘块大小}}\)<br>适用：<strong>FCB 分解（文件名与索引节点分离）的收益计算（4.2.2）</strong>　例：FCB 64B、盘块 1KB → 每块 16 个 FCB → 640 个 FCB 占 40 块 → 平均读盘 \(40/2=20\) 次；分解为 16B 目录项（14B 文件名＋2B 索引节点号）后每块 64 项 → 占 10 块 → 平均 \(10/2=5\) 次，磁盘启动次数降至原来的 1/4。</div>
+
+<h2 id="toc-5">第5章 输入/输出管理</h2>
+
+<div class="callout kao"><span class="callout-title">单缓冲每块平均耗时</span>\(T_{单}=\max(T,C)+M\)（T＝设备输入一块，M＝缓冲区传工作区，C＝CPU 处理一块；第 1 块需串行 \(T+M+C\)）<br>适用：<strong>单缓冲性能计算（5.2.2）</strong>　例（2011 统考）：文件占 10 块、\(T=100\mu s\)、\(M=50\mu s\)、\(C=50\mu s\)：每块增量 \(\max(100,50)+50=150\mu s\)，总计 \(200+9\times150=1550\mu s\)。变式（2013 统考，2 块、\(T=100\)、\(M=5\)、\(C=90\)）：\(105+105+90=300\mu s\)——本质是「谁慢听谁的，M 永远串行」。</div>
+
+<div class="callout kao"><span class="callout-title">双缓冲每块平均耗时</span>\(T_{双}=\max(T,\;C+M)\)（设备写入 T 与「传送＋处理另一块」的 C+M 并行）<br>适用：<strong>双缓冲性能计算（5.2.2）</strong>　例（2011 统考）：\(\max(100,50+50)=100\mu s\)，10 块连续读入、最后一块再 \(M+C\) 收尾：\(100\times10+50+50=1100\mu s\)（与单缓冲 1550μs 对比选 B）。</div>
+
+<div class="callout kao"><span class="callout-title">磁盘存取时间</span>\(T_a=T_s+\dfrac{1}{2r}+\dfrac{b}{rN}\)；寻道 \(T_s=m\times n+s\)（m≈0.2ms/道，启动 s≈2ms）；旋转延迟取半圈；传输 \(\dfrac{b}{rN}\)（r＝转/秒，N＝每道字节，b＝传送字节数）；磁盘容量 \(=\) 柱面数×盘面数×每磁道扇区数×每扇区字节数<br>适用：<strong>磁盘读写时间与容量计算（5.3.1、5.3.3）</strong>　例：7200 转/分 → 平均旋转延迟 \(\dfrac{60}{2\times7200}s\approx4.17ms\)（5400 转/分约 11.1ms/圈、延迟 5.56ms）；2010 统考真题：6000 转/分（一圈 10ms）、移动 170 道×1ms/道＝170ms 寻道、4 个随机扇区旋转 \(4\times5=20\)ms、传输 \(4\times(10/100)=0.4\)ms，总计 170＋20＋0.4＝<strong>190.4ms</strong>。簇号换算：先算每柱面簇数＝盘面数×每磁道扇区数，再整除逐层分解。</div>
+
+<div class="callout kao"><span class="callout-title">旋转调度：顺序存放 vs 交替编号读一圈</span>读一块＋处理一块若超过相邻块的转角，就要多等近一圈；交替编号让下一目标块恰好转到磁头下<br>适用：<strong>减少旋转延迟的布局计算（5.3.3）</strong>　例：转速 27ms/转、每磁道 9 块（读一块 3ms）、处理 2ms：顺序存放总时间 \(=8\times(27+3)+(3+2)=245\)ms；隔一块交替存放每条 \(3+2+1=6\)ms，总计 \(6\times8+(3+2)=53\)ms——缩短近 5 倍。</div>
+
+<div class="callout kao"><span class="callout-title">SSD 擦写寿命账</span>理论总写入量 \(=\) 容量×每块擦写次数；使用天数 \(=\dfrac{\text{总写入量}}{\text{日均写入量}}\)<br>适用：<strong>磨损均衡延长 SSD 寿命的量化理解（5.3.4）</strong>　例：256GB、擦写寿命 500 次 → 总写入 \(256GB\times500=125TB\)；即使每天写 10GB，也需 12500 天≈34 年才达寿命极限。</div>
+
+</article>
+<footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
+</main>
+</div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">第1章 操作系统基本概念</a></li><li class="lv2"><a href="#toc-2">第2章 进程与线程、CPU 调度、同步互斥与死锁</a></li><li class="lv2"><a href="#toc-3">第3章 内存管理</a></li><li class="lv2"><a href="#toc-4">第4章 文件管理</a></li><li class="lv2"><a href="#toc-5">第5章 输入/输出管理</a></li></ul></nav>
+</div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
+<script>
+(function(){
+"use strict";
+function rel(url){var m=location.pathname.match(/kaoyan-408-os\/(.*)$/);var r=m?m[1]:url.split('/').slice(-2).join('/');return decodeURIComponent(r||'index.html');}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
+/* ---- 目录抽屉 ---- */
+var btn=document.querySelector('.menu-btn');
+if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('nav-open')});
+var mask=document.querySelector('.sidebar-mask');
+if(mask)mask.addEventListener('click',function(){document.body.classList.remove('nav-open')});
+document.querySelectorAll('.sidebar a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open')})});
+/* ---- 阅读进度条 + 返回顶部 ---- */
+var bar=document.getElementById('readProgress');
+var toTop=document.getElementById('toTop');
+function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+if(bar&&max>0)bar.style.width=(h.scrollTop/max*100)+'%';
+if(toTop)toTop.classList.toggle('show',h.scrollTop>600);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+if(toTop)toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+/* ---- 键盘翻页 ---- */
+document.addEventListener('keydown',function(e){
+if(e.target.matches('input,textarea,select')||e.metaKey||e.ctrlKey||e.altKey)return;
+var pager=document.querySelector('.pager');if(!pager)return;
+var as=pager.querySelectorAll('a');if(as.length<1)return;
+if(e.key==='ArrowRight'&&as[as.length-1])location.href=as[as.length-1].href;
+if(e.key==='ArrowLeft'&&as[0])location.href=as[0].href;
+});
+/* ---- 学习打卡 ---- */
+try{
+var KEY='os408-done';var cur=rel(location.href);
+var done=store(KEY)||{};var list=document.querySelectorAll('.sidebar a[data-rel]');
+function paint(){var done=store(KEY)||{};list.forEach(function(a){var r=a.getAttribute('data-rel');
+var mark=a.querySelector('.done-mark');
+if(done[r]&&!mark){var s=document.createElement('span');s.className='done-mark';s.textContent=' ✓';a.appendChild(s);}
+if(!done[r]&&mark)mark.remove();});}
+var host=document.querySelector('main article')||document.querySelector('main');
+if(host&&!/index\.html$/.test(location.href)||location.pathname.endsWith('quiz.html')){
+var b=document.createElement('button');b.className='done-btn';b.type='button';
+b.textContent=done[cur]?'✓ 本页已学完（点击取消）':'○ 标记本页已学完';
+b.addEventListener('click',function(){var d=store(KEY)||{};if(d[cur]){delete d[cur];b.textContent='○ 标记本页已学完';b.classList.remove('is-done');}
+else{d[cur]=1;b.textContent='✓ 本页已学完（点击取消）';b.classList.add('is-done');}
+store(KEY,d);paint();});
+if(done[cur])b.classList.add('is-done');
+host.appendChild(b);
+}
+paint();
+}catch(e){}
+/* ---- 选择题自测模式 ---- */
+try{
+if(document.querySelector('details.qa')){
+var qs=[];document.querySelectorAll('details.qa').forEach(function(d){
+var tag=d.querySelector('.answer-tag');if(!tag)return;
+var ans=(tag.textContent||'').replace(/\s+/g,'').match(/^答案：([A-D])$/);
+if(!ans)return;
+var p=d.previousElementSibling;
+while(p&&!(p.tagName==='P'&&/^[\s\S]*?A[.．、]/.test(p.textContent)))p=p.previousElementSibling;
+if(!p)return;
+var m=p.textContent.match(/A[.．、]([\s\S]*?)B[.．、]([\s\S]*?)C[.．、]([\s\S]*?)D[.．、]([\s\S]*)$/);
+if(!m)return;
+qs.push({d:d,p:p,ans:ans[1],opts:m});
+});
+if(qs.length){
+var host2=document.querySelector('main');
+var panel=document.createElement('div');panel.className='quiz-panel';
+panel.innerHTML='<div class="qp-row"><b>自测模式</b><span class="qp-stat" id="qpStat">点击选项即判分，进度自动保存</span><button type="button" class="qp-reset" id="qpReset">重置本页记录</button></div>';
+host2.insertBefore(panel,host2.firstChild);
+var KEY2='os408-quiz-'+cur;
+function stat(){var rec=store(KEY2)||{};var n=0,c=0;for(var k in rec){n++;c+=rec[k];}
+var el=document.getElementById('qpStat');
+if(el)el.textContent=n?('已作答 '+n+'/'+qs.length+' 题 · 正确 '+c+' 题 · 正确率 '+(n?Math.round(c/n*100):0)+'%'):'点击选项即判分，进度自动保存';}
+function bind(){
+var rec=store(KEY2)||{};
+qs.forEach(function(q,i){
+if(q._bound)return;q._bound=1;
+var box=document.createElement('div');box.className='opt-row';
+q.opts.slice(1).forEach(function(txt,j){
+var k='ABCD'[j];var bt=document.createElement('button');
+bt.type='button';bt.className='opt';bt.dataset.k=k;bt.textContent=k+'. '+txt.replace(/^\s+/,'');
+bt.addEventListener('click',function(){
+if(box.classList.contains('answered'))return;
+box.classList.add('answered');
+var ok=k===q.ans;
+bt.classList.add(ok?'right':'wrong');
+if(!ok)box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');});
+q.d.setAttribute('open','');
+var rec2=store(KEY2)||{};rec2[i]=ok?1:0;store(KEY2,rec2);stat();
+});
+box.appendChild(bt);
+});
+q.p.style.display='none';q.p.parentNode.insertBefore(box,q.p.nextSibling);
+if(rec[i]!==undefined){box.classList.add('answered');
+box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');else if(o.textContent[0]&&!o.classList.contains('right'))o.classList.add('dim');});}
+});
+}
+var rs=document.getElementById('qpReset');
+if(rs)rs.addEventListener('click',function(){store(KEY2,{});location.reload();});
+stat();bind();
+}
+}
+}catch(e){}
+/* ---- 全站搜索 ---- */
+try{
+var sbox=document.getElementById('searchBox');
+var sbtn=document.getElementById('searchBtn');
+var ovl=document.getElementById('searchOverlay');
+var oin=document.getElementById('searchInput');
+var ores=document.getElementById('searchResults');
+var IDX=null;
+function root(){var m=location.pathname.match(/^(.*kaoyan-408-os\/)/);return m?m[1]:'/';}
+function load(cb){if(IDX)return cb();fetch(root()+'search-index.json').then(function(r){return r.json()}).then(function(d){IDX=d;cb();}).catch(function(){});}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function run(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){ores.innerHTML='<div class="sr-hint">输入关键词，如：银行家 / LRU / 快表 / 甘特图</div>';return;}
+var hits=[];
+IDX.forEach(function(it){
+var t=it.t.indexOf(q)>=0, x=it.x.indexOf(q)>=0;
+if(t||x){var pos=Math.max(0,it.x.indexOf(q)-30);
+hits.push({u:it.u,t:it.t,ctx:it.x.slice(pos,pos+70),score:(t?100:0)+(x?10:0)+ (it.t.indexOf('第')===0?0:5)});}
+});
+hits.sort(function(a,b){return b.score-a.score;});
+ores.innerHTML=hits.length?hits.slice(0,14).map(function(h){
+return '<a class="sr-item" href="'+root()+h.u+'"><b>'+esc(h.t)+'</b><span>'+esc(h.ctx)+'</span></a>';}).join('')
+:'<div class="sr-hint">没有匹配「'+esc(q)+'」的页面</div>';
+}
+function openOvl(){ovl.classList.add('show');setTimeout(function(){oin.focus();},50);}
+function closeOvl(){ovl.classList.remove('show');}
+if(sbtn)sbtn.addEventListener('click',function(){load(function(){openOvl();run(oin.value);});});
+if(sbox)sbox.addEventListener('focus',function(){load();});
+if(sbox)sbox.addEventListener('input',function(){var v=sbox.value;load(function(){dropShow(v);});});
+var drop=document.getElementById('searchDrop');
+function dropShow(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){drop.classList.remove('show');return;}
+var hits=[];IDX.forEach(function(it){var t=it.t.indexOf(q)>=0,x=it.x.indexOf(q)>=0;if(t||x)hits.push({u:it.u,t:it.t,score:(t?100:0)+10});});
+hits.sort(function(a,b){return b.score-a.score;});
+if(!hits.length){drop.classList.remove('show');return;}
+drop.innerHTML=hits.slice(0,10).map(function(h){return '<a href="'+root()+h.u+'">'+esc(h.t)+'</a>';}).join('');
+drop.classList.add('show');
+}
+document.addEventListener('click',function(e){if(drop&&!drop.contains(e.target)&&e.target!==sbox)drop.classList.remove('show');});
+[oin].forEach(function(i){if(!i)return;
+i.addEventListener('input',function(){run(i.value);});
+i.addEventListener('keydown',function(e){if(e.key==='Escape')closeOvl();});});
+if(ovl){ovl.addEventListener('click',function(e){if(e.target===ovl)closeOvl();});
+var oc=document.getElementById('searchClose');if(oc)oc.addEventListener('click',closeOvl);}
+}catch(e){}
+})();
+</script>
+</body>
+</html>

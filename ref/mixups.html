@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤔 易混淆概念速查 · 考研408操作系统</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+</head>
+<body>
+<header class="topbar">
+<button class="menu-btn" aria-label="打开目录">☰</button>
+<a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
+<div class="search-wrap">
+<input id="searchBox" class="search-box" type="search" placeholder="搜索全站…（如：银行家 / LRU）" autocomplete="off">
+<div id="searchDrop" class="search-drop"></div>
+</div>
+<button id="searchBtn" class="menu-btn search-open-btn" aria-label="搜索">🔍</button>
+<nav class="crumbs">首页 <span class="sep">/</span> 复习工具 <span class="sep">/</span> 🤔 易混淆概念速查</nav>
+<div class="read-progress" id="readProgress"></div>
+</header>
+<div id="searchOverlay" class="search-overlay">
+<div class="search-panel">
+<div class="sp-head"><input id="searchInput" type="search" placeholder="搜索全站：银行家 / LRU / 快表 / 甘特图…"><button id="searchClose" class="menu-btn" aria-label="关闭">✕</button></div>
+<div id="searchResults" class="search-results"></div>
+</div>
+</div>
+<div class="sidebar-mask"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+<div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
+<details class="nav-group"><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html" data-rel="ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html" data-rel="ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html" data-rel="ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html" data-rel="ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" data-rel="ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html" data-rel="ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html" data-rel="ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html" data-rel="ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link data-rel="ch1/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html" data-rel="ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html" data-rel="ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html" data-rel="ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html" data-rel="ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html" data-rel="ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html" data-rel="ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link data-rel="ch2/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html" data-rel="ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html" data-rel="ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html" data-rel="ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html" data-rel="ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link data-rel="ch3/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html" data-rel="ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html" data-rel="ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html" data-rel="ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html" data-rel="ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html" data-rel="ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link data-rel="ch4/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html" data-rel="ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html" data-rel="ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html" data-rel="ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html" data-rel="ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html" data-rel="ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link data-rel="ch5/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">工具</span> 复习工具箱</summary><div class="nav-links"><a href="../ref/exam-stats.html" data-rel="ref/exam-stats.html">📊 真题考点统计</a><a href="../ref/mixups.html" active data-rel="ref/mixups.html">🤔 易混淆概念速查</a><a href="../ref/formulas.html" data-rel="ref/formulas.html">📐 公式与结论速查卡</a><a href="../ref/guide.html" data-rel="ref/guide.html">🧭 备考指南与资源</a></div></details>
+<div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
+</aside>
+<div class="content-wrap">
+<main>
+<article>
+<h1>🤔 易混淆概念速查</h1>
+<p>本页把五章正文中最容易「张冠李戴」的概念对（组）集中成速查表：每张表只保留选择题最爱设坑的对比维度，口径与正文各节完全一致（表标题括号内为出处小节，可回正文看完整讲解）。冲刺阶段建议遮住右列自测；每章末尾附一句从正文考点提炼的速记结论。</p>
+
+<h2 id="toc-1">第1章 操作系统概念、运行环境与结构</h2>
+
+<h3 id="toc-2">并发 vs 并行（1.1.3）</h3>
+<table>
+  <thead><tr><th></th><th>并发</th><th>并行</th></tr></thead>
+  <tbody>
+    <tr><td>发生时刻</td><td>同一<strong>时间间隔</strong>内</td><td>同一<strong>时刻</strong></td></tr>
+    <tr><td>微观实质</td><td>交替执行、分时占用 CPU</td><td>多个事件真正同时进行</td></tr>
+    <tr><td>硬件条件</td><td>单处理机即可（配合中断与调度）</td><td>需要多核 CPU / 多处理机</td></tr>
+    <tr><td>典型例子</td><td>单处理机上的多道程序（宏观并行、微观串行）</td><td>CPU 与 I/O 设备之间、多个 I/O 设备之间</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-3">共享的两种方式：互斥共享 vs 同时访问（1.1.3）</h3>
+<table>
+  <thead><tr><th></th><th>互斥共享方式</th><th>同时访问方式</th></tr></thead>
+  <tbody>
+    <tr><td>访问限制</td><td>一段时间内仅允许一个进程访问</td><td>允许多个进程在宏观上「同时」访问</td></tr>
+    <tr><td>微观实质</td><td>一个进程用完并释放后，另一进程才能用</td><td>通常是分时交替访问（分时共享）</td></tr>
+    <tr><td>典型资源</td><td>打印机等独占设备；栈、变量、表格等<strong>临界资源</strong></td><td>磁盘上的只读文件、可重入（纯）代码</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-4">中断（外中断）vs 异常（内中断）（1.3.3）</h3>
+<table>
+  <thead><tr><th></th><th>中断（外中断）</th><th>异常（内中断）</th></tr></thead>
+  <tbody>
+    <tr><td>来源</td><td>CPU 执行指令<strong>外部</strong>的事件</td><td>CPU 执行指令<strong>内部</strong>的事件</td></tr>
+    <tr><td>典型例子</td><td>I/O 结束中断、时钟中断</td><td>非法操作码、地址越界、运算溢出、<strong>缺页</strong>、陷入指令</td></tr>
+    <tr><td>分类</td><td>可屏蔽中断（INTR）、不可屏蔽中断（NMI，如掉电）</td><td>故障（缺页、除零）、自陷（系统调用）、终止（硬件故障）</td></tr>
+    <tr><td>可否屏蔽</td><td>分可屏蔽与不可屏蔽</td><td>一旦发生必须立即处理，<strong>不可屏蔽</strong></td></tr>
+    <tr><td>处理后返回</td><td>返回第 <em>i</em>+1 条指令</td><td>通常<strong>返回第 <em>i</em> 条重新执行</strong>（如缺页）</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-5">系统调用 vs 库函数（1.1.2 / 1.3.4）</h3>
+<table>
+  <thead><tr><th></th><th>系统调用</th><th>库函数</th></tr></thead>
+  <tbody>
+    <tr><td>身份</td><td>操作系统提供给应用程序的<strong>唯一程序接口</strong>，每个系统调用有唯一调用号</td><td>语言标准库提供的函数，<strong>不是</strong>操作系统接口</td></tr>
+    <tr><td>运行状态</td><td>经陷入指令进入<strong>内核态</strong>，由内核服务程序执行</td><td>在用户态运行；仅当封装了系统调用时才陷入内核</td></tr>
+    <tr><td>关系</td><td colspan="2">库函数是对系统调用的封装：printf() 最终经 write 输出、malloc() 可能调 brk/mmap；而 strlen()、sqrt() 等纯计算型库函数<strong>完全在用户空间运行</strong>，不涉及系统调用</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-6">内核态 vs 用户态（1.3.2）</h3>
+<table>
+  <thead><tr><th></th><th>内核态（管态）</th><th>用户态（目态）</th></tr></thead>
+  <tbody>
+    <tr><td>可执行指令</td><td>完整指令集（特权指令＋非特权指令）</td><td>仅非特权指令；执行特权指令触发异常并被终止</td></tr>
+    <tr><td>地址空间</td><td>可访问全部地址空间</td><td>内存访问被限制在用户地址空间</td></tr>
+    <tr><td>典型操作</td><td>启动外设、设置时钟、关闭中断、修改模式位</td><td>一般计算和数据处理</td></tr>
+    <tr><td>切换</td><td colspan="2">用户态→内核态的<strong>唯一途径是中断或异常</strong>（系统调用、外中断、异常、试图执行特权指令）；内核态→用户态由内核执行返回指令（如 IRET）完成</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-7">宏内核 vs 微内核（1.4）</h3>
+<table>
+  <thead><tr><th></th><th>宏内核（单内核/大内核）</th><th>微内核</th></tr></thead>
+  <tbody>
+    <tr><td>内核构成</td><td>主要功能模块集成在一个紧密耦合的整体中、运行于内核态</td><td>仅保留最基本功能（进程调度、进程间通信等），遵循「机制与策略分离」</td></tr>
+    <tr><td>非核心功能</td><td>文件系统、驱动等也在内核态</td><td>移到用户态服务器进程，经<strong>消息传递</strong>交互（客户/服务器模式）</td></tr>
+    <tr><td>性能</td><td><strong>高</strong>（免切换与消息传递开销）</td><td><strong>短板</strong>（频繁穿越内核态/用户态）</td></tr>
+    <tr><td>可靠性等</td><td>文件系统崩溃会拖垮整个系统</td><td>单个服务崩溃可重启恢复；扩展性、安全性、可移植性好</td></tr>
+    <tr><td>代表</td><td>Linux、Windows（宏内核或混合内核）</td><td>Fuchsia、HarmonyOS NEXT</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-8">第一类 vs 第二类虚拟机管理程序（1.6）</h3>
+<table>
+  <thead><tr><th></th><th>第一类虚拟机管理程序</th><th>第二类虚拟机管理程序</th></tr></thead>
+  <tbody>
+    <tr><td>别名</td><td>裸金属架构</td><td>寄居架构</td></tr>
+    <tr><td>运行位置</td><td>直接运行在物理硬件之上</td><td>以应用程序形式运行在宿主操作系统之上</td></tr>
+    <tr><td>特权地位</td><td>系统中唯一处于最高特权级的软件</td><td>本质是用户态进程</td></tr>
+    <tr><td>角色</td><td>类似一个轻量级的操作系统</td><td>向客户操作系统伪装成完整硬件平台</td></tr>
+    <tr><td>代表</td><td>——</td><td>VMware Workstation（x86 平台首个广泛使用者）</td></tr>
+  </tbody>
+</table>
+<div class="callout tip"><span class="callout-title">速记</span>并发＝同一时间间隔，并行＝同一时刻，<strong>并发与共享互为存在条件</strong>；用户态进内核态的唯一途径是中断/异常；访管（陷入）指令在<strong>用户态执行、不是特权指令</strong>，系统调用服务程序才在内核态执行。</div>
+
+<h2 id="toc-9">第2章 进程与线程、CPU 调度、同步互斥与死锁</h2>
+
+<h3 id="toc-10">进程 vs 程序（2.5）</h3>
+<table>
+  <thead><tr><th>维度</th><th>进程</th><th>程序</th></tr></thead>
+  <tbody>
+    <tr><td>动态 vs 静态</td><td>程序及数据的一次<strong>执行活动</strong>，有生命周期</td><td><strong>有序指令的集合</strong>，静态存放于外存</td></tr>
+    <tr><td>暂时 vs 永久</td><td>暂时存在（创建—运行—消亡）</td><td>可长期保存，永久存在</td></tr>
+    <tr><td>能否派生</td><td>能通过创建原语创建新进程</td><td>本身无法生成新进程</td></tr>
+    <tr><td>组成</td><td>程序段＋数据段＋<strong>PCB</strong>（PCB 是进程存在的唯一标志）</td><td>仅一组有序指令</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-11">进程 vs 线程（2.1.7）</h3>
+<table>
+  <thead><tr><th>维度</th><th>进程</th><th>线程</th></tr></thead>
+  <tbody>
+    <tr><td>基本单位</td><td><strong>资源分配的基本单位</strong></td><td><strong>CPU 调度和执行的基本单位</strong>（「轻量级进程」）</td></tr>
+    <tr><td>拥有资源</td><td>拥有独立地址空间与资源</td><td>不拥有系统资源，仅有 TCB、寄存器、栈等私有数据结构；同进程线程共享代码段、数据段、堆、文件描述符</td></tr>
+    <tr><td>切换开销</td><td>切换涉及整个地址空间，开销大</td><td><strong>同一进程内线程切换不引起进程切换</strong>，开销小；跨进程的线程切换才会引起进程切换</td></tr>
+    <tr><td>并发与多核</td><td>进程间可并发</td><td>并发性更强；多线程可同时调度到多个 CPU 并行</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-12">用户级线程 vs 内核级线程（2.1.7）</h3>
+<table>
+  <thead><tr><th>维度</th><th>用户级线程（ULT）</th><th>内核级线程（KLT）</th></tr></thead>
+  <tbody>
+    <tr><td>管理者</td><td>用户空间的线程库，<strong>内核感知不到</strong>，调度仍以进程为单位</td><td>操作系统内核，为每个 KLT 维护 TCB，直接以线程为调度单位</td></tr>
+    <tr><td>切换开销</td><td>在用户空间完成，无须进内核态，开销小</td><td>需陷入内核态，开销大</td></tr>
+    <tr><td>阻塞影响</td><td>一个线程执行阻塞型系统调用，<strong>整个进程被挂起</strong></td><td>仅该线程阻塞，同进程其他线程仍可被调度</td></tr>
+    <tr><td>多核并行</td><td>无法并行（内核只能看到进程）</td><td>可同时调度到多个 CPU 并行</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-13">五种状态的主动 / 被动转换（2.1.4）</h3>
+<table>
+  <thead><tr><th>转换</th><th>触发条件</th><th>性质</th></tr></thead>
+  <tbody>
+    <tr><td>创建 → 就绪</td><td>PCB 填写完成、资源到位，插入就绪队列</td><td>系统完成创建</td></tr>
+    <tr><td>就绪 → 运行</td><td>被调度程序选中获得 CPU</td><td>被动（被调度）</td></tr>
+    <tr><td>运行 → 就绪</td><td>时间片用完；或抢占式系统中被更高优先级进程剥夺 CPU</td><td>被动（被剥夺）</td></tr>
+    <tr><td>运行 → 阻塞</td><td>系统调用请求的服务需等待事件（如发起 I/O）</td><td><strong>主动</strong></td></tr>
+    <tr><td>阻塞 → 就绪</td><td>所等待事件发生（如 I/O 完成），由中断处理程序唤醒</td><td><strong>被动</strong></td></tr>
+    <tr><td>运行 → 终止</td><td>正常结束或异常/外界干预</td><td>—</td></tr>
+  </tbody>
+</table>
+<p><strong>不存在的边</strong>：阻塞态不能直接进入运行态（唤醒后只能回就绪队列重新排队）；「就绪→阻塞」也不存在——阻塞操作只能由运行态进程发起。</p>
+
+<h3 id="toc-14">CPU 调度算法全家（2.2.5）</h3>
+<table>
+  <thead><tr><th>算法</th><th>能否抢占</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>FCFS</strong> 先来先服务</td><td>否</td><td>公平、实现简单</td><td>不利于短作业；有利于 CPU 繁忙型、不利于 I/O 繁忙型；不适合分时/实时</td></tr>
+    <tr><td><strong>SJF/SPF</strong> 短作业优先</td><td>非抢占（抢占版＝最短剩余时间优先 SRTN）</td><td>所有作业同时到达且运行时间已知时，平均等待、平均周转时间<strong>最优</strong></td><td>长作业<strong>饥饿</strong>；估计时间难定；未考虑紧迫程度</td></tr>
+    <tr><td><strong>HRRN</strong> 高响应比优先</td><td>否</td><td>兼顾长短作业，长作业不会饥饿</td><td>每次调度都要计算响应比，开销大</td></tr>
+    <tr><td><strong>优先级调度</strong></td><td>分非抢占式与抢占式两种</td><td>灵活反映紧迫程度，配合抢占可满足实时要求</td><td>静态优先级下低优先级进程可能饥饿</td></tr>
+    <tr><td><strong>RR</strong> 时间片轮转</td><td>可以（时钟中断剥夺）</td><td>公平、响应快，适合分时系统</td><td>平均等待时间长、切换开销大；时间片过大退化为 FCFS、过小切换频繁</td></tr>
+    <tr><td><strong>多级反馈队列</strong></td><td>队列之间可抢占（新进程入 1 级队列立即抢占低级队列进程，被抢占者回<strong>原队列末尾</strong>）</td><td>「相当通用」；无须预知运行时间，长作业不会饥饿</td><td>最复杂</td></tr>
+  </tbody>
+</table>
+<p>会饥饿的算法：<strong>SJF</strong>（长作业）、<strong>静态优先级</strong>（低优先级）；不会饥饿：FCFS、HRRN、RR、多级反馈队列。</p>
+
+<h3 id="toc-15">死锁 vs 饥饿 vs 死循环（2.4.1）</h3>
+<table>
+  <thead><tr><th>维度</th><th>死锁</th><th>饥饿</th><th>死循环</th></tr></thead>
+  <tbody>
+    <tr><td>产生原因</td><td>竞争不可剥夺资源＋推进顺序非法，形成循环等待链</td><td>分配策略不公平，等待时间无上界（如 SPF 中长作业被无限推迟）</td><td>程序自身逻辑错误，与资源分配策略无关</td></tr>
+    <tr><td>涉及进程数</td><td>≥2 且相互构成循环等待</td><td>可以只有一个进程</td><td>只涉及该进程自身</td></tr>
+    <tr><td>进程状态</td><td>必定全部处于<strong>阻塞态</strong></td><td>可能就绪（分不到 CPU）也可能阻塞（等 I/O）</td><td>处于运行态，并未阻塞</td></tr>
+    <tr><td>系统表现</td><td>卷入进程全部卡死，无外力干预永不推进</td><td>系统整体正常运行，个别进程被「饿着」</td><td>其余部分照常运行，该进程空转</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-16">死锁的四个必要条件（2.4.1）</h3>
+<table>
+  <thead><tr><th>条件</th><th>含义</th><th>对应预防措施</th></tr></thead>
+  <tbody>
+    <tr><td><strong>互斥</strong></td><td>资源一段时间内只能被一个进程占有</td><td>一般无法破坏（互斥是正确性前提）</td></tr>
+    <tr><td><strong>不可剥夺</strong></td><td>已获资源使用完前不能被强行夺走</td><td>申请新资源得不到满足就<strong>释放已有全部资源</strong></td></tr>
+    <tr><td><strong>请求并保持</strong></td><td>持有资源又申请新资源，阻塞时不放手</td><td><strong>一次性申请全部资源</strong>（静态分配）</td></tr>
+    <tr><td><strong>循环等待</strong></td><td>存在进程环，每个都在等下一个占有的资源</td><td><strong>资源有序分配</strong>（按编号递增申请）</td></tr>
+  </tbody>
+</table>
+<p>四个条件须<strong>同时满足</strong>才会死锁，破坏其一即可预防；只有<strong>每类资源仅一个实例</strong>时，「资源分配图有环」才是死锁的充要条件，多实例时有环未必死锁。</p>
+
+<h3 id="toc-17">死锁预防 vs 避免 vs 检测解除（2.4.1–2.4.4）</h3>
+<table>
+  <thead><tr><th>策略</th><th>思路</th><th>代价</th></tr></thead>
+  <tbody>
+    <tr><td><strong>预防</strong></td><td>事先立规矩，破坏四个必要条件之一（一次性分配 / 剥夺 / 有序分配）</td><td>实现简单，但限制严格、资源利用率低</td></tr>
+    <tr><td><strong>避免</strong></td><td>每次分配前动态判断是否仍处于安全状态（<strong>银行家算法</strong>：合法性→可用性→试探分配→安全性检查，不安全就回滚）</td><td>限制较宽松、利用率较高，但须<strong>预知最大需求</strong>且每次分配都要算</td></tr>
+    <tr><td><strong>检测＋解除</strong></td><td>不限制申请，定期用资源分配图化简检测，发现后资源剥夺 / 撤销进程 / 进程回退</td><td>最宽松，但有检测与解除的开销，终止进程会丢失已完成的工作</td></tr>
+  </tbody>
+</table>
+<p>安全状态三句话：安全状态<strong>一定不会</strong>死锁；死锁时系统<strong>必定</strong>处于不安全状态；不安全状态<strong>未必</strong>演变为死锁。</p>
+
+<h3 id="toc-18">同步 vs 互斥（2.3.1 / 2.5）</h3>
+<table>
+  <thead><tr><th>对比项</th><th>互斥（间接制约）</th><th>同步（直接制约）</th></tr></thead>
+  <tbody>
+    <tr><td>制约来源</td><td>相互<strong>竞争</strong>临界资源</td><td>相互<strong>协作</strong>完成同一任务</td></tr>
+    <tr><td>表现形式</td><td>一个进程使用临界资源时其他进程必须等待</td><td>在关键点等待对方发出的信号，协调执行次序</td></tr>
+    <tr><td>典型例子</td><td>多进程争用一台打印机</td><td>单缓冲系统中输入进程与计算进程「先写后读」</td></tr>
+    <tr><td>信号量初值</td><td>互斥信号量固定为 <strong>1</strong></td><td>由具体情况确定：消息未产生为 0，已存在为相应非负整数</td></tr>
+  </tbody>
+</table>
+<p>联系：两者都源于并发进程对资源的共享与相互依赖；广义上<strong>互斥可视为一种特殊的同步</strong>。</p>
+
+<h3 id="toc-19">信号量 vs 管程（2.3.4 / 2.3.6）</h3>
+<table>
+  <thead><tr><th>维度</th><th>信号量机制</th><th>管程机制</th></tr></thead>
+  <tbody>
+    <tr><td>形态</td><td>整型变量 value＋等待队列，只能经 P/wait、V/signal 原语访问</td><td>名称＋共享数据结构＋一组过程＋初始化语句（与类 class 高度相似）</td></tr>
+    <tr><td>互斥的实现</td><td>P(S)、V(S) 由<strong>程序员自行</strong>夹紧临界区</td><td><strong>自动保证</strong>任一时刻仅一个进程在管程内执行，无须显式编写互斥代码</td></tr>
+    <tr><td>「值」的有无</td><td>有整数值：&gt;0 为可用资源数，&lt;0 时其绝对值为等待进程数</td><td>条件变量<strong>没有值</strong>，仅用于排队和通知；资源数由共享变量（如 S）显式记录</td></tr>
+    <tr><td>使用方式</td><td>分散在各进程中，顺序不当易死锁（如两个 P 操作顺序颠倒）</td><td>由进程<strong>被动调用</strong>管程过程；既能实现互斥又能实现同步</td></tr>
+  </tbody>
+</table>
+<div class="callout tip"><span class="callout-title">速记</span>进程是资源分配的基本单位、线程是调度的基本单位；<strong>运行→阻塞是主动行为，阻塞→就绪是被动行为</strong>，阻塞态永远不能直接进运行态；交换两个同步 P 操作的顺序可能死锁，交换两个 V 操作的顺序没有任何问题。</div>
+
+<h2 id="toc-20">第3章 内存管理</h2>
+
+<h3 id="toc-21">静态重定位 vs 动态重定位（3.1.1）</h3>
+<table>
+  <thead><tr><th>维度</th><th>静态重定位（可重定位装入）</th><th>动态重定位（动态运行时装入）</th></tr></thead>
+  <tbody>
+    <tr><td>转换时机</td><td>装入时<strong>一次性</strong>把所有逻辑地址改为物理地址</td><td>装入后不转换，推迟到指令<strong>真正执行时</strong>进行</td></tr>
+    <tr><td>实现依赖</td><td>装入程序直接修改地址</td><td><strong>重定位寄存器</strong>存起始地址，物理地址＝逻辑地址＋重定位寄存器值</td></tr>
+    <tr><td>能否移动</td><td>装入后不能移动，也不能运行中动态申请内存</td><td>支持程序移动，便于<strong>紧凑</strong>，减少外部碎片</td></tr>
+    <tr><td>硬件代价</td><td>无须额外硬件</td><td>需要重定位寄存器（特权指令装入）</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-22">内部碎片 vs 外部碎片（3.1.2）</h3>
+<table>
+  <thead><tr><th></th><th>内部碎片</th><th>外部碎片</th></tr></thead>
+  <tbody>
+    <tr><td>定义</td><td>分配给进程的分区（页框）<strong>内部</strong>未被利用的空间</td><td>分区（段）<strong>之间</strong>难以利用的小空闲块——总量够用但不连续</td></tr>
+    <tr><td>产生方式</td><td>单一连续分配、固定分区；分页的<strong>页内碎片</strong>（每进程平均约半页）</td><td>动态分区分配；分段（段间空隙）</td></tr>
+    <tr><td>对策</td><td>权衡页面/分区大小</td><td><strong>紧凑</strong>（拼凑），前提是系统支持动态重定位</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-23">四种动态分区分配算法（3.1.2）</h3>
+<table>
+  <thead><tr><th>算法</th><th>空闲链排列 / 查找</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>首次适应</strong></td><td>按地址<strong>递增</strong>，从链首找第一个够用的</td><td>保留高地址大空闲区；回收无须重排，<strong>综合性能最优</strong></td><td>低地址端易积累小碎片</td></tr>
+    <tr><td><strong>邻近适应</strong></td><td>同按地址递增，从<strong>上次结束位置</strong>继续循环查找</td><td>查找分布更均匀</td><td>大空闲区被逐渐切分，整体性能通常不如首次适应</td></tr>
+    <tr><td><strong>最佳适应</strong></td><td>按容量<strong>递增</strong>，取第一个能满足的（最小可用）</td><td>尽量保留大空闲区</td><td>每次留下极小剩余块，产生<strong>大量外部碎片</strong>，性能通常很差</td></tr>
+    <tr><td><strong>最坏适应</strong></td><td>按容量<strong>递减</strong>，取最大的切分</td><td>剩下的碎片通常仍可用，减少小碎片</td><td>大分区很快耗尽，难以满足大作业</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-24">分页 vs 分段 vs 段页式（3.1.3–3.1.5、3.3）</h3>
+<table>
+  <thead><tr><th>维度</th><th>分页</th><th>分段</th><th>段页式</th></tr></thead>
+  <tbody>
+    <tr><td>出发点</td><td><strong>系统管理</strong>需要，提高内存利用率，对用户透明</td><td><strong>用户</strong>需要：方便编程、共享与保护、动态增长、动态链接</td><td>先按用户视角分段、再在段内按系统视角分页</td></tr>
+    <tr><td>单位大小</td><td>页<strong>固定</strong>（2 的整数次幂，硬件划分）</td><td>段<strong>不固定</strong>（编译程序按逻辑划分）</td><td>段不固定，段内页固定</td></tr>
+    <tr><td>地址空间</td><td><strong>一维</strong>（一个线性地址即可定位）</td><td><strong>二维</strong>（须给段号＋段内偏移）</td><td>二维（对用户仍是段号＋段内地址）</td></tr>
+    <tr><td>碎片</td><td>无外部碎片，有<strong>页内碎片</strong></td><td>无内部碎片，有<strong>外部碎片</strong></td><td>段内再分固定大小的页，内存仍以<strong>页框</strong>为单位分配；兼有两者的表结构开销（每进程一张段表＋每段一张页表）</td></tr>
+    <tr><td>共享与保护</td><td>可以共享但以页为单位，繁琐</td><td>以段为单位，<strong>方便自然</strong>（每进程一个段表项即可）</td><td>以段为单位共享保护</td></tr>
+    <tr><td>无快表访存次数</td><td>2 次（查页表＋取数据）</td><td>2 次（查段表＋取数据）</td><td>3 次（查段表＋查页表＋取数据）</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-25">快表命中 vs 未命中（3.1.3）</h3>
+<table>
+  <thead><tr><th>步骤</th><th>快表命中</th><th>快表未命中</th></tr></thead>
+  <tbody>
+    <tr><td>查 TLB</td><td>并行比较命中，直接得块号 b（不访存）</td><td>无匹配页号</td></tr>
+    <tr><td>查慢表（内存中的页表）</td><td>不需要</td><td>需要，取出块号 b（第 1 次访存）</td></tr>
+    <tr><td>访问目标数据</td><td>第 1 次访存</td><td>第 2 次访存</td></tr>
+    <tr><td>合计</td><td><strong>1 次</strong></td><td><strong>2 次</strong>（并把该项调入快表，满则按置换算法淘汰）</td></tr>
+  </tbody>
+</table>
+<p>快表有效依赖<strong>局部性原理</strong>：局部性良好时命中率可达 90% 以上，分页引入的性能开销可控制在 10% 以内。</p>
+
+<h3 id="toc-26">缺页中断 vs 一般中断（3.2.2 / 1.3.3）</h3>
+<table>
+  <thead><tr><th></th><th>缺页中断</th><th>一般（外）中断</th></tr></thead>
+  <tbody>
+    <tr><td>归属</td><td><strong>内中断</strong>（异常中的「故障」）</td><td>外中断</td></tr>
+    <tr><td>产生时机</td><td>在<strong>指令执行期间</strong>产生并立即处理</td><td>指令执行结束后检测中断请求信号再响应</td></tr>
+    <tr><td>一条指令内次数</td><td>可能多次：copy A to B 若指令与两操作数各自跨页，最多 <strong>6 次</strong></td><td>每个事件对应一次中断</td></tr>
+    <tr><td>处理后走向</td><td><strong>重新执行引发缺页的那条指令</strong></td><td>返回第 <em>i</em>+1 条指令继续执行</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-27">OPT / FIFO / LRU / CLOCK 页面置换算法（3.2.4）</h3>
+<table>
+  <thead><tr><th>算法</th><th>淘汰依据</th><th>性能</th><th>开销与要点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>OPT</strong> 最佳置换</td><td>以后永不使用、或<strong>最长时间内不再被访问</strong>的页</td><td>理论缺页率最低</td><td><strong>无法实现</strong>（要预知未来），仅作评价标杆</td></tr>
+    <tr><td><strong>FIFO</strong> 先进先出</td><td><strong>最早进入内存</strong>的页（队首）</td><td>忽略局部性，性能通常较差</td><td>实现最简单；唯一可能出现 <strong>Belady 异常</strong>的算法</td></tr>
+    <tr><td><strong>LRU</strong> 最近最久未使用</td><td><strong>最近最长时间未使用</strong>的页（看过去）</td><td>性能接近 OPT</td><td>需硬件记录各页上次访问以来的时间，实现开销大；<strong>永远不会有 Belady 异常</strong></td></tr>
+    <tr><td><strong>CLOCK</strong>（NRU）</td><td>循环扫描<strong>访问位</strong>：为 1 先置 0 再下移（给一次机会），为 0 淘汰</td><td>以较小开销逼近 LRU</td><td>缺页才移动指针，命中不动；指针停在被替换帧的下一帧；改进型再引入<strong>修改位</strong>，优先淘汰 (A=0, M=0)</td></tr>
+  </tbody>
+</table>
+<p>同一访问序列、3 个物理块下的缺页次数：OPT <strong>9</strong> 次、FIFO <strong>15</strong> 次；LRU 依据「过去」、OPT 依据「未来」，LRU 前 5 次缺页与 OPT 相同只是巧合。</p>
+
+<h3 id="toc-28">Belady 异常（3.2.4）</h3>
+<table>
+  <thead><tr><th></th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>定义</td><td>分配的物理块数<strong>增加</strong>，缺页次数反而<strong>上升</strong>的反直觉现象</td></tr>
+    <tr><td>根源</td><td>FIFO 只依据调入时间决策，完全忽略页面实际使用情况</td></tr>
+    <tr><td>教材例</td><td>访问序列 3,2,1,0,3,2,4,3,2,1,0,4：3 个物理块缺页 <strong>9</strong> 次，4 个物理块反而 <strong>10</strong> 次</td></tr>
+    <tr><td>判定</td><td><strong>只有 FIFO</strong> 可能出现；OPT 和 LRU 永远不会</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-29">抖动 vs 工作集（3.2.5）</h3>
+<table>
+  <thead><tr><th></th><th>抖动（颠簸）</th><th>工作集</th></tr></thead>
+  <tbody>
+    <tr><td>是什么</td><td>刚换出的页面马上又要换入、刚换入的又立刻被换出的频繁调度</td><td>某段时间间隔内进程<strong>实际访问页面的集合</strong> \(W(t,\Delta)\)，Δ 为工作集窗口尺寸</td></tr>
+    <tr><td>根源 / 关系</td><td>分配的物理块（驻留集）太少，无法满足进程正常运行的基本需求，CPU 利用率急剧下降</td><td><strong>驻留集大小不应小于工作集大小</strong>，否则进程将频繁缺页</td></tr>
+    <tr><td>对策</td><td>按缺页率或工作集动态调整页框数，必要时挂起（换出）部分进程</td><td>对局部性好的程序，工作集大小一般远小于 Δ</td></tr>
+  </tbody>
+</table>
+<div class="callout tip"><span class="callout-title">速记</span>页为系统、段为用户；页定长、段变长；页一维、段二维；页内碎片、段外碎片。问「缺页中断次数」是 9，问「置换次数」是 6——<strong>扣不扣初始装入的 3 次</strong>是最大陷阱；多级页表省的是<strong>连续内存</strong>，并不会加快地址变换。</div>
+
+<h2 id="toc-30">第4章 文件管理</h2>
+
+<h3 id="toc-31">逻辑结构 vs 物理结构（4.1.3）</h3>
+<table>
+  <thead><tr><th></th><th>逻辑结构</th><th>物理结构（存储结构）</th></tr></thead>
+  <tbody>
+    <tr><td>视角</td><td><strong>用户视角</strong>看到的文件组织形式</td><td>文件在外存上的实际存储方式</td></tr>
+    <tr><td>范畴</td><td>无结构（流式）文件；有结构（记录式）文件的顺序、索引、索引顺序、散列组织</td><td>连续分配、链接分配（隐式/显式 FAT）、索引分配</td></tr>
+    <tr><td>透明性</td><td>用户可见</td><td>对用户<strong>透明</strong></td></tr>
+    <tr><td>关系</td><td colspan="2">逻辑结构说明「是什么」、物理结构说明「怎么存」，二者<strong>没有直接制约关系</strong>；但物理结构选择不当就难以体现逻辑结构的特点（如顺序逻辑文件配隐式链接物理结构便无法快速定位）</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-32">四种文件物理分配：连续 / 隐式链接 / 显式 FAT / 索引（4.2.6、4.4）</h3>
+<table>
+  <thead><tr><th>方式</th><th>访问第 n 条记录访盘次数</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>连续分配</strong></td><td><strong>1 次</strong>（起始块号＋记录长度直接换算）</td><td>顺序存取快；支持随机（直接）访问</td><td>要求连续空间，有外部碎片；须预知长度、<strong>不利于动态扩充</strong></td></tr>
+    <tr><td><strong>隐式链接</strong></td><td><strong>n 次</strong>（从链头逐块跟指针）</td><td>无外部碎片、利用率高；动态增长方便</td><td>只能<strong>顺序访问</strong>；任一指针坏则链断，可靠性差；指针占空间</td></tr>
+    <tr><td><strong>显式链接（FAT）</strong></td><td>实际 <strong>1 次</strong>（FAT 常驻内存，内存查链不占访盘）</td><td>支持直接访问；查找在内存完成、磁盘 I/O 少；FAT 中 -2 表项还能兼任空闲空间管理</td><td>FAT 需常驻内存，磁盘越大表越大，内存开销显著</td></tr>
+    <tr><td><strong>索引分配</strong></td><td>单级 <strong>2 次</strong>；m 级索引 <strong>m+1 次</strong></td><td>支持随机访问；易于增删；无外部碎片</td><td>每个文件都要索引块，小文件浪费；多级索引读盘次数增多</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-33">单级 / 两级 / 树形 / 无环图目录（4.2.3）</h3>
+<table>
+  <thead><tr><th>结构</th><th>组织</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>单级目录</strong></td><td>全系统一张线性目录表</td><td>实现简单，能按名存取</td><td>查找慢、<strong>不允许重名</strong>、难共享</td></tr>
+    <tr><td><strong>两级目录</strong></td><td>主文件目录 MFD＋各用户的用户文件目录 UFD</td><td>解决不同用户间的重名，检索快</td><td>用户内部无法再分类</td></tr>
+    <tr><td><strong>树形目录</strong></td><td>根目录＋多层子目录（主流结构）</td><td>便于分类、层次清晰、便于管理保护；设置当前目录可加快检索</td><td>按路径逐级访问中间目录，磁盘 I/O 较多</td></tr>
+    <tr><td><strong>无环图目录</strong></td><td>树形＋指向同一节点的共享边</td><td>支持文件/子目录跨目录<strong>共享</strong></td><td>须维护共享计数器，<strong>计数归零才能真删</strong>，管理开销增加</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-34">硬链接 vs 软链接（4.2.8）</h3>
+<table>
+  <thead><tr><th>比较项</th><th>硬链接（基于索引节点）</th><th>软链接（符号链）</th></tr></thead>
+  <tbody>
+    <tr><td>实现</td><td>多个目录项指向<strong>同一个索引节点</strong>，链接计数 count 记录链接数</td><td>新建 LINK 类型文件，内容只有被共享文件的<strong>路径名</strong></td></tr>
+    <tr><td>访问速度</td><td>经目录项指针直达索引节点，<strong>快</strong></td><td>先读符号链再按路径逐级查目录，可能多次读盘，<strong>慢</strong></td></tr>
+    <tr><td>拥有者删除后</td><td>仅删其目录项、count 减 1；count&gt;0 文件仍在，他人可继续用</td><td>文件被真正删除，他人访问失败（不悬空），可安全删除符号链</td></tr>
+    <tr><td>空间开销</td><td>索引节点多一个计数字段，很小</td><td>符号链是独立文件，占索引节点和磁盘空间</td></tr>
+    <tr><td>适用范围</td><td>依赖索引节点，限同一文件系统内</td><td>记录网络地址＋路径名可实现<strong>网络文件共享</strong></td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-35">位示图 vs 成组链接（4.3.2）</h3>
+<table>
+  <thead><tr><th></th><th>位示图法</th><th>成组链接法（UNIX）</th></tr></thead>
+  <tbody>
+    <tr><td>思想</td><td>一个二进制位对应一个盘块：0 空闲、1 已分配</td><td>空闲盘块分组（每组 100 块），每组的第一个盘块作<strong>索引块</strong>记录下一组，链接成链；第一组信息装入内存<strong>空闲盘块号栈</strong></td></tr>
+    <tr><td>分配</td><td>扫描找 0 位 → 换算盘块号 \(b=n(i-1)+j\) → 置 1</td><td>从栈顶取号；<strong>分到栈底号时先读入该块中的下一组信息，再分配该块</strong></td></tr>
+    <tr><td>回收</td><td>按 DIV/MOD 公式换算行列号 → 置 0</td><td>压入栈顶；<strong>栈满（100 项）时把整栈写入新回收的盘块</strong>作新索引块，栈中只留该块号</td></tr>
+    <tr><td>适用</td><td>结构紧凑、可常驻内存；位图大小随磁盘容量增大，适合中小规模</td><td>兼顾可扩展性与性能，适合大型文件系统</td></tr>
+  </tbody>
+</table>
+<p>另有空闲表法（连续分配，配合首次/最佳适应）与空闲盘块链 / 空闲盘区链（离散分配）：盘块链单块操作简单但链长，盘区链效率高、链短但回收要合并。</p>
+<div class="callout tip"><span class="callout-title">速记</span>访问第 n 条记录的访盘次数：<strong>连续 1 次、链接 n 次、m 级索引 m+1 次</strong>；FAT 常驻内存后查链不占访盘、实际 1 次。open 只把目录项/索引节点（控制信息）读入内存而非文件内容，之后一切操作凭<strong>文件描述符</strong>，不再用文件名。</div>
+
+<h2 id="toc-36">第5章 输入/输出管理</h2>
+
+<h3 id="toc-37">四种 I/O 控制方式（5.1.2）</h3>
+<table>
+  <thead><tr><th>对比项</th><th>程序直接控制（轮询）</th><th>中断驱动</th><th>DMA</th><th>通道</th></tr></thead>
+  <tbody>
+    <tr><td>CPU 干预频率</td><td>全程：发命令后不断循环测试状态</td><td>每个字（节）就绪中断一次</td><td>仅每块数据的开始（预处理）和结束（后处理）</td><td>只发一条 I/O 指令，整组完成或出错才中断</td></tr>
+    <tr><td>传送单位</td><td>字（节）</td><td>字（节）</td><td>数据块</td><td>一批数据块（一组通道指令）</td></tr>
+    <tr><td>数据流向</td><td colspan="2">设备→控制器→<strong>CPU 寄存器</strong>→内存（必经 CPU）</td><td colspan="2">设备↔内存<strong>直接传送</strong>，不经 CPU；通道还能管理多台设备</td></tr>
+    <tr><td>缺点</td><td>CPU 与设备串行、利用率极低</td><td>按字节中断、块设备场景低效</td><td>参数仍需 CPU 预置；一台控制器通常只服务一台设备</td><td>需专用硬件，成本高</td></tr>
+  </tbody>
+</table>
+<p>演进主线：每种新方式都是为了克服前一种的主要缺点——问「CPU 干预程度最低」答<strong>通道</strong>，四选项无通道时答 <strong>DMA</strong>。</p>
+
+<h3 id="toc-38">缓冲区 vs 高速缓存（5.2.2）</h3>
+<table>
+  <thead><tr><th></th><th>缓冲区（Buffer）</th><th>高速缓存（Cache，如磁盘高速缓存）</th></tr></thead>
+  <tbody>
+    <tr><td>存放内容</td><td>正在<strong>传输过程中</strong>的数据</td><td>已存在于慢速设备上的数据<strong>副本</strong></td></tr>
+    <tr><td>存活时间</td><td>传输完成通常<strong>立即释放</strong></td><td>可<strong>长期驻留</strong>直至被替换</td></tr>
+    <tr><td>目的</td><td>缓和速度差、减少中断频率、匹配数据粒度、提高并行性</td><td>提高<strong>重复访问</strong>的效率（命中则免访问低速设备，减少磁盘 I/O 次数）</td></tr>
+  </tbody>
+</table>
+<p>相同点：都位于高速设备与低速设备之间，都为缓解速度差异。</p>
+
+<h3 id="toc-39">单缓冲 vs 双缓冲（5.2.2）</h3>
+<table>
+  <thead><tr><th></th><th>单缓冲</th><th>双缓冲（缓冲对换）</th></tr></thead>
+  <tbody>
+    <tr><td>每块平均耗时</td><td>\(\max(T,C)+M\)</td><td>\(\max(T,\;C+M)\)</td></tr>
+    <tr><td>并行关系</td><td>设备写入 T 与 CPU 处理上一块的 C 并行；<strong>M 永远串行</strong>；缓冲区是临界资源须互斥访问</td><td>设备写入 T 与「传送＋处理另一块」的 C+M 并行</td></tr>
+    <tr><td>例（2011 统考）</td><td>10 块、T=100、M=50、C=50（μs）：第 1 块 200，其余每块增量 150，共 <strong>1550μs</strong></td><td>每块 100μs 连续读入，最后一块再 M+C 收尾，共 <strong>1100μs</strong></td></tr>
+  </tbody>
+</table>
+<p>双机全双工通信时，每台机器须分设<strong>发送缓冲区＋接收缓冲区</strong>；循环缓冲与缓冲池只考机制、不考定量计算。</p>
+
+<h3 id="toc-40">设备分配的数据结构：DCT / COCT / CHCT / SDT（5.2.3）</h3>
+<table>
+  <thead><tr><th>表</th><th>数量</th><th>记录内容</th></tr></thead>
+  <tbody>
+    <tr><td><strong>设备控制表 DCT</strong></td><td>每台物理设备一张</td><td>设备类型、标识符、状态（忙/闲）、指向 COCT 的指针、重复执行次数、设备队列队首指针</td></tr>
+    <tr><td><strong>控制器控制表 COCT</strong></td><td>每个控制器一张</td><td>控制器状态、连接的通道表指针、控制器等待队列</td></tr>
+    <tr><td><strong>通道控制表 CHCT</strong></td><td>每个通道一张</td><td>通道状态、连接的控制器表首址、通道等待队列</td></tr>
+    <tr><td><strong>系统设备表 SDT</strong></td><td>全系统<strong>一张</strong></td><td>设备类型、标识符、DCT、驱动程序入口——设备分配的查找起点</td></tr>
+  </tbody>
+</table>
+<p>分配按 <strong>SDT → DCT → COCT → CHCT</strong> 逐级查找，<strong>设备、控制器、通道三者都可用才算成功</strong>（「过三关」）；逻辑设备名→物理设备名由逻辑设备表 LUT 在设备独立性软件层完成映射。</p>
+
+<h3 id="toc-41">SPOOLing（假脱机）技术（5.2.4）</h3>
+<table>
+  <thead><tr><th></th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>组成</td><td><strong>输入井/输出井</strong>（磁盘）＋<strong>输入/输出缓冲区</strong>（内存）＋<strong>输入/输出进程</strong>（模拟外围机）＋井管理程序</td></tr>
+    <tr><td>数据流向</td><td>输入：输入设备→输入缓冲区→输入井→用户进程；输出：用户进程→输出井→输出缓冲区→输出设备</td></tr>
+    <tr><td>本质</td><td>用磁盘井＋软件模拟脱机外围机，把一台<strong>独占设备虚拟为多台逻辑共享设备</strong>，以空间换时间</td></tr>
+    <tr><td>常考结论</td><td>需要大容量外存与多道程序技术支持，<strong>不需要外围计算机</strong>；设备与井之间的传送由系统（输入/输出进程）完成；用户进程实际分到的是<strong>外存区（虚拟设备）</strong>而非物理设备</td></tr>
+  </tbody>
+</table>
+
+<h3 id="toc-42">六种磁盘调度算法（5.3.3）</h3>
+<table>
+  <thead><tr><th>算法</th><th>核心规则（方向约束）</th><th>优点</th><th>缺点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>FCFS</strong></td><td>按请求到达先后服务，方向无约束</td><td>公平、简单</td><td>平均寻道距离大，仅适用于 I/O 较少场合</td></tr>
+    <tr><td><strong>SSTF</strong></td><td>每次选距当前磁头最近的请求，方向由「最近」决定</td><td>性能优于 FCFS</td><td>不保证平均寻道最短，<strong>可能饥饿</strong></td></tr>
+    <tr><td><strong>SCAN</strong></td><td>必须扫到磁盘<strong>端点</strong>才能折返（电梯调度）</td><td>寻道性能较好、避免饥饿</td><td>对远离磁头一端的请求响应较慢</td></tr>
+    <tr><td><strong>C-SCAN</strong></td><td>单向扫描服务，<strong>回程快速跳转不服务</strong>（回扫距离计入总数）</td><td>消除对两端磁道请求的不公平</td><td>—</td></tr>
+    <tr><td><strong>LOOK</strong></td><td>SCAN 改进：到当前方向<strong>最远请求处</strong>即折返，无须抵达端点</td><td>省去到端点的空跑</td><td>仍双向扫描</td></tr>
+    <tr><td><strong>C-LOOK</strong></td><td>C-SCAN 改进：单向服务到最远请求处即快速回返</td><td>单向公平＋更少空跑</td><td>—</td></tr>
+  </tbody>
+</table>
+<p>同一请求队列（55,58,39,18,90,160,150,38,184，磁头在 100、向磁道号增大方向）的总移动道数：FCFS <strong>498</strong>、SSTF <strong>248</strong>、SCAN <strong>282</strong>、C-SCAN <strong>390</strong>、LOOK <strong>250</strong>、C-LOOK <strong>322</strong>。</p>
+
+<h3 id="toc-43">机械磁盘 vs 固态硬盘 SSD（5.3.4）</h3>
+<table>
+  <thead><tr><th></th><th>机械磁盘</th><th>固态硬盘（SSD）</th></tr></thead>
+  <tbody>
+    <tr><td>结构</td><td>磁性盘片＋磁头，有寻道与旋转延迟等机械延迟</td><td>闪存芯片＋闪存翻译层（替代磁盘控制器），<strong>无机械部件</strong></td></tr>
+    <tr><td>随机访问</td><td>慢（寻道时间占主导）</td><td>随机读/写延迟极低，性能明显优于机械盘</td></tr>
+    <tr><td>读写/擦除单位</td><td>以扇区（块）为单位读写</td><td><strong>读/写以页为单位（512B～4KB），擦除以块为单位</strong>；随机写慢：擦除慢一个数量级＋改页前要先把块内有效页搬走</td></tr>
+    <tr><td>寿命</td><td>无擦写次数限制问题</td><td>每块擦写寿命有限（几百至几千次），<strong>易磨损</strong>→动态磨损均衡（写入时选低擦写块）＋静态磨损均衡（空闲时迁移冷数据）延长寿命</td></tr>
+    <tr><td>调度</td><td>磁盘调度算法优化寻道</td><td>无寻道，<strong>FCFS 即可</strong>；划分扇区、降低寻道时间只与机械盘有关，磨损均衡是 SSD 特有</td></tr>
+  </tbody>
+</table>
+<div class="callout tip"><span class="callout-title">速记</span>CPU 干预最少的是<strong>通道</strong>（选项无通道时选 DMA）；<strong>寻道时间占主导</strong>，磁盘调度的目标就是减少平均寻道时间，旋转延迟与调度算法无关；可能饥饿的是 SSTF——CLOCK 是页面置换算法，不是磁盘调度。</div>
+
+</article>
+<footer class="site-footer">本站为个人学习笔记，基于王道《操作系统考研复习指导》整理，仅供学习交流；插图版权归原书作者所有。</footer>
+</main>
+</div>
+<nav class="toc" aria-label="本页目录"><div class="toc-title">本页目录</div><ul><li class="lv2"><a href="#toc-1">第1章 操作系统概念、运行环境与结构</a></li><li class="lv3"><a href="#toc-2">并发 vs 并行（1.1.3）</a></li><li class="lv3"><a href="#toc-3">共享的两种方式：互斥共享 vs 同时访问（1.1.3）</a></li><li class="lv3"><a href="#toc-4">中断（外中断）vs 异常（内中断）（1.3.3）</a></li><li class="lv3"><a href="#toc-5">系统调用 vs 库函数（1.1.2 / 1.3.4）</a></li><li class="lv3"><a href="#toc-6">内核态 vs 用户态（1.3.2）</a></li><li class="lv3"><a href="#toc-7">宏内核 vs 微内核（1.4）</a></li><li class="lv3"><a href="#toc-8">第一类 vs 第二类虚拟机管理程序（1.6）</a></li><li class="lv2"><a href="#toc-9">第2章 进程与线程、CPU 调度、同步互斥与死锁</a></li><li class="lv3"><a href="#toc-10">进程 vs 程序（2.5）</a></li><li class="lv3"><a href="#toc-11">进程 vs 线程（2.1.7）</a></li><li class="lv3"><a href="#toc-12">用户级线程 vs 内核级线程（2.1.7）</a></li><li class="lv3"><a href="#toc-13">五种状态的主动 / 被动转换（2.1.4）</a></li><li class="lv3"><a href="#toc-14">CPU 调度算法全家（2.2.5）</a></li><li class="lv3"><a href="#toc-15">死锁 vs 饥饿 vs 死循环（2.4.1）</a></li><li class="lv3"><a href="#toc-16">死锁的四个必要条件（2.4.1）</a></li><li class="lv3"><a href="#toc-17">死锁预防 vs 避免 vs 检测解除（2.4.1–2.4.4）</a></li><li class="lv3"><a href="#toc-18">同步 vs 互斥（2.3.1 / 2.5）</a></li><li class="lv3"><a href="#toc-19">信号量 vs 管程（2.3.4 / 2.3.6）</a></li><li class="lv2"><a href="#toc-20">第3章 内存管理</a></li><li class="lv3"><a href="#toc-21">静态重定位 vs 动态重定位（3.1.1）</a></li><li class="lv3"><a href="#toc-22">内部碎片 vs 外部碎片（3.1.2）</a></li><li class="lv3"><a href="#toc-23">四种动态分区分配算法（3.1.2）</a></li><li class="lv3"><a href="#toc-24">分页 vs 分段 vs 段页式（3.1.3–3.1.5、3.3）</a></li><li class="lv3"><a href="#toc-25">快表命中 vs 未命中（3.1.3）</a></li><li class="lv3"><a href="#toc-26">缺页中断 vs 一般中断（3.2.2 / 1.3.3）</a></li><li class="lv3"><a href="#toc-27">OPT / FIFO / LRU / CLOCK 页面置换算法（3.2.4）</a></li><li class="lv3"><a href="#toc-28">Belady 异常（3.2.4）</a></li><li class="lv3"><a href="#toc-29">抖动 vs 工作集（3.2.5）</a></li><li class="lv2"><a href="#toc-30">第4章 文件管理</a></li><li class="lv3"><a href="#toc-31">逻辑结构 vs 物理结构（4.1.3）</a></li><li class="lv3"><a href="#toc-32">四种文件物理分配：连续 / 隐式链接 / 显式 FAT / 索引（4.2.6、4.4）</a></li><li class="lv3"><a href="#toc-33">单级 / 两级 / 树形 / 无环图目录（4.2.3）</a></li><li class="lv3"><a href="#toc-34">硬链接 vs 软链接（4.2.8）</a></li><li class="lv3"><a href="#toc-35">位示图 vs 成组链接（4.3.2）</a></li><li class="lv2"><a href="#toc-36">第5章 输入/输出管理</a></li><li class="lv3"><a href="#toc-37">四种 I/O 控制方式（5.1.2）</a></li><li class="lv3"><a href="#toc-38">缓冲区 vs 高速缓存（5.2.2）</a></li><li class="lv3"><a href="#toc-39">单缓冲 vs 双缓冲（5.2.2）</a></li><li class="lv3"><a href="#toc-40">设备分配的数据结构：DCT / COCT / CHCT / SDT（5.2.3）</a></li><li class="lv3"><a href="#toc-41">SPOOLing（假脱机）技术（5.2.4）</a></li><li class="lv3"><a href="#toc-42">六种磁盘调度算法（5.3.3）</a></li><li class="lv3"><a href="#toc-43">机械磁盘 vs 固态硬盘 SSD（5.3.4）</a></li></ul></nav>
+</div>
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
+<script>
+(function(){
+"use strict";
+function rel(url){var m=location.pathname.match(/kaoyan-408-os\/(.*)$/);var r=m?m[1]:url.split('/').slice(-2).join('/');return decodeURIComponent(r||'index.html');}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
+/* ---- 目录抽屉 ---- */
+var btn=document.querySelector('.menu-btn');
+if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('nav-open')});
+var mask=document.querySelector('.sidebar-mask');
+if(mask)mask.addEventListener('click',function(){document.body.classList.remove('nav-open')});
+document.querySelectorAll('.sidebar a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open')})});
+/* ---- 阅读进度条 + 返回顶部 ---- */
+var bar=document.getElementById('readProgress');
+var toTop=document.getElementById('toTop');
+function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+if(bar&&max>0)bar.style.width=(h.scrollTop/max*100)+'%';
+if(toTop)toTop.classList.toggle('show',h.scrollTop>600);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+if(toTop)toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+/* ---- 键盘翻页 ---- */
+document.addEventListener('keydown',function(e){
+if(e.target.matches('input,textarea,select')||e.metaKey||e.ctrlKey||e.altKey)return;
+var pager=document.querySelector('.pager');if(!pager)return;
+var as=pager.querySelectorAll('a');if(as.length<1)return;
+if(e.key==='ArrowRight'&&as[as.length-1])location.href=as[as.length-1].href;
+if(e.key==='ArrowLeft'&&as[0])location.href=as[0].href;
+});
+/* ---- 学习打卡 ---- */
+try{
+var KEY='os408-done';var cur=rel(location.href);
+var done=store(KEY)||{};var list=document.querySelectorAll('.sidebar a[data-rel]');
+function paint(){var done=store(KEY)||{};list.forEach(function(a){var r=a.getAttribute('data-rel');
+var mark=a.querySelector('.done-mark');
+if(done[r]&&!mark){var s=document.createElement('span');s.className='done-mark';s.textContent=' ✓';a.appendChild(s);}
+if(!done[r]&&mark)mark.remove();});}
+var host=document.querySelector('main article')||document.querySelector('main');
+if(host&&!/index\.html$/.test(location.href)||location.pathname.endsWith('quiz.html')){
+var b=document.createElement('button');b.className='done-btn';b.type='button';
+b.textContent=done[cur]?'✓ 本页已学完（点击取消）':'○ 标记本页已学完';
+b.addEventListener('click',function(){var d=store(KEY)||{};if(d[cur]){delete d[cur];b.textContent='○ 标记本页已学完';b.classList.remove('is-done');}
+else{d[cur]=1;b.textContent='✓ 本页已学完（点击取消）';b.classList.add('is-done');}
+store(KEY,d);paint();});
+if(done[cur])b.classList.add('is-done');
+host.appendChild(b);
+}
+paint();
+}catch(e){}
+/* ---- 选择题自测模式 ---- */
+try{
+if(document.querySelector('details.qa')){
+var qs=[];document.querySelectorAll('details.qa').forEach(function(d){
+var tag=d.querySelector('.answer-tag');if(!tag)return;
+var ans=(tag.textContent||'').replace(/\s+/g,'').match(/^答案：([A-D])$/);
+if(!ans)return;
+var p=d.previousElementSibling;
+while(p&&!(p.tagName==='P'&&/^[\s\S]*?A[.．、]/.test(p.textContent)))p=p.previousElementSibling;
+if(!p)return;
+var m=p.textContent.match(/A[.．、]([\s\S]*?)B[.．、]([\s\S]*?)C[.．、]([\s\S]*?)D[.．、]([\s\S]*)$/);
+if(!m)return;
+qs.push({d:d,p:p,ans:ans[1],opts:m});
+});
+if(qs.length){
+var host2=document.querySelector('main');
+var panel=document.createElement('div');panel.className='quiz-panel';
+panel.innerHTML='<div class="qp-row"><b>自测模式</b><span class="qp-stat" id="qpStat">点击选项即判分，进度自动保存</span><button type="button" class="qp-reset" id="qpReset">重置本页记录</button></div>';
+host2.insertBefore(panel,host2.firstChild);
+var KEY2='os408-quiz-'+cur;
+function stat(){var rec=store(KEY2)||{};var n=0,c=0;for(var k in rec){n++;c+=rec[k];}
+var el=document.getElementById('qpStat');
+if(el)el.textContent=n?('已作答 '+n+'/'+qs.length+' 题 · 正确 '+c+' 题 · 正确率 '+(n?Math.round(c/n*100):0)+'%'):'点击选项即判分，进度自动保存';}
+function bind(){
+var rec=store(KEY2)||{};
+qs.forEach(function(q,i){
+if(q._bound)return;q._bound=1;
+var box=document.createElement('div');box.className='opt-row';
+q.opts.slice(1).forEach(function(txt,j){
+var k='ABCD'[j];var bt=document.createElement('button');
+bt.type='button';bt.className='opt';bt.dataset.k=k;bt.textContent=k+'. '+txt.replace(/^\s+/,'');
+bt.addEventListener('click',function(){
+if(box.classList.contains('answered'))return;
+box.classList.add('answered');
+var ok=k===q.ans;
+bt.classList.add(ok?'right':'wrong');
+if(!ok)box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');});
+q.d.setAttribute('open','');
+var rec2=store(KEY2)||{};rec2[i]=ok?1:0;store(KEY2,rec2);stat();
+});
+box.appendChild(bt);
+});
+q.p.style.display='none';q.p.parentNode.insertBefore(box,q.p.nextSibling);
+if(rec[i]!==undefined){box.classList.add('answered');
+box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');else if(o.textContent[0]&&!o.classList.contains('right'))o.classList.add('dim');});}
+});
+}
+var rs=document.getElementById('qpReset');
+if(rs)rs.addEventListener('click',function(){store(KEY2,{});location.reload();});
+stat();bind();
+}
+}
+}catch(e){}
+/* ---- 全站搜索 ---- */
+try{
+var sbox=document.getElementById('searchBox');
+var sbtn=document.getElementById('searchBtn');
+var ovl=document.getElementById('searchOverlay');
+var oin=document.getElementById('searchInput');
+var ores=document.getElementById('searchResults');
+var IDX=null;
+function root(){var m=location.pathname.match(/^(.*kaoyan-408-os\/)/);return m?m[1]:'/';}
+function load(cb){if(IDX)return cb();fetch(root()+'search-index.json').then(function(r){return r.json()}).then(function(d){IDX=d;cb();}).catch(function(){});}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function run(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){ores.innerHTML='<div class="sr-hint">输入关键词，如：银行家 / LRU / 快表 / 甘特图</div>';return;}
+var hits=[];
+IDX.forEach(function(it){
+var t=it.t.indexOf(q)>=0, x=it.x.indexOf(q)>=0;
+if(t||x){var pos=Math.max(0,it.x.indexOf(q)-30);
+hits.push({u:it.u,t:it.t,ctx:it.x.slice(pos,pos+70),score:(t?100:0)+(x?10:0)+ (it.t.indexOf('第')===0?0:5)});}
+});
+hits.sort(function(a,b){return b.score-a.score;});
+ores.innerHTML=hits.length?hits.slice(0,14).map(function(h){
+return '<a class="sr-item" href="'+root()+h.u+'"><b>'+esc(h.t)+'</b><span>'+esc(h.ctx)+'</span></a>';}).join('')
+:'<div class="sr-hint">没有匹配「'+esc(q)+'」的页面</div>';
+}
+function openOvl(){ovl.classList.add('show');setTimeout(function(){oin.focus();},50);}
+function closeOvl(){ovl.classList.remove('show');}
+if(sbtn)sbtn.addEventListener('click',function(){load(function(){openOvl();run(oin.value);});});
+if(sbox)sbox.addEventListener('focus',function(){load();});
+if(sbox)sbox.addEventListener('input',function(){var v=sbox.value;load(function(){dropShow(v);});});
+var drop=document.getElementById('searchDrop');
+function dropShow(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){drop.classList.remove('show');return;}
+var hits=[];IDX.forEach(function(it){var t=it.t.indexOf(q)>=0,x=it.x.indexOf(q)>=0;if(t||x)hits.push({u:it.u,t:it.t,score:(t?100:0)+10});});
+hits.sort(function(a,b){return b.score-a.score;});
+if(!hits.length){drop.classList.remove('show');return;}
+drop.innerHTML=hits.slice(0,10).map(function(h){return '<a href="'+root()+h.u+'">'+esc(h.t)+'</a>';}).join('');
+drop.classList.add('show');
+}
+document.addEventListener('click',function(e){if(drop&&!drop.contains(e.target)&&e.target!==sbox)drop.classList.remove('show');});
+[oin].forEach(function(i){if(!i)return;
+i.addEventListener('input',function(){run(i.value);});
+i.addEventListener('keydown',function(e){if(e.key==='Escape')closeOvl();});});
+if(ovl){ovl.addEventListener('click',function(e){if(e.target===ovl)closeOvl();});
+var oc=document.getElementById('searchClose');if(oc)oc.addEventListener('click',closeOvl);}
+}catch(e){}
+})();
+</script>
+</body>
+</html>

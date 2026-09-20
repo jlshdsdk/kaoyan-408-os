@@ -11,18 +11,30 @@
 <header class="topbar">
 <button class="menu-btn" aria-label="打开目录">☰</button>
 <a class="brand" href="../index.html"><span class="logo">OS</span>408 操作系统带学</a>
+<div class="search-wrap">
+<input id="searchBox" class="search-box" type="search" placeholder="搜索全站…（如：银行家 / LRU）" autocomplete="off">
+<div id="searchDrop" class="search-drop"></div>
+</div>
+<button id="searchBtn" class="menu-btn search-open-btn" aria-label="搜索">🔍</button>
 <nav class="crumbs"><a href="../index.html">首页</a> <span class="sep">/</span> <a href="../ch1/index.html">第1章 计算机系统概述</a> <span class="sep">/</span> 1.4 操作系统结构</nav>
 <div class="read-progress" id="readProgress"></div>
 </header>
+<div id="searchOverlay" class="search-overlay">
+<div class="search-panel">
+<div class="sp-head"><input id="searchInput" type="search" placeholder="搜索全站：银行家 / LRU / 快表 / 甘特图…"><button id="searchClose" class="menu-btn" aria-label="关闭">✕</button></div>
+<div id="searchResults" class="search-results"></div>
+</div>
+</div>
 <div class="sidebar-mask"></div>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
 <div class="side-label">目 录</div><a class="nav-home" href="../index.html"><span>🏠</span> 首页 · 考纲对照</a>
-<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" active>1.4 操作系统结构</a><a href="../ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
-<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link>✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group" open><summary><span class="ch-no">第1章</span> 计算机系统概述</summary><div class="nav-links"><a href="../ch1/index.html" data-rel="ch1/index.html">📋 本章导学</a><a href="../ch1/s1-1.html" data-rel="ch1/s1-1.html">1.1 操作系统的基本概念</a><a href="../ch1/s1-2.html" data-rel="ch1/s1-2.html">1.2 操作系统发展历程</a><a href="../ch1/s1-3.html" data-rel="ch1/s1-3.html">1.3 操作系统的运行环境</a><a href="../ch1/s1-4.html" active data-rel="ch1/s1-4.html">1.4 操作系统结构</a><a href="../ch1/s1-5.html" data-rel="ch1/s1-5.html">1.5 操作系统引导</a><a href="../ch1/s1-6.html" data-rel="ch1/s1-6.html">1.6 虚拟机</a><a href="../ch1/s1-7.html" data-rel="ch1/s1-7.html">1.7 本章疑难点</a><a href="../ch1/quiz.html" quiz-link data-rel="ch1/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第2章</span> 进程与线程</summary><div class="nav-links"><a href="../ch2/index.html" data-rel="ch2/index.html">📋 本章导学</a><a href="../ch2/s2-1.html" data-rel="ch2/s2-1.html">2.1 进程与线程简介</a><a href="../ch2/s2-2.html" data-rel="ch2/s2-2.html">2.2 CPU调度</a><a href="../ch2/s2-3.html" data-rel="ch2/s2-3.html">2.3 同步与互斥</a><a href="../ch2/s2-4.html" data-rel="ch2/s2-4.html">2.4 死锁</a><a href="../ch2/s2-5.html" data-rel="ch2/s2-5.html">2.5 本章疑难点</a><a href="../ch2/quiz.html" quiz-link data-rel="ch2/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第3章</span> 内存管理</summary><div class="nav-links"><a href="../ch3/index.html" data-rel="ch3/index.html">📋 本章导学</a><a href="../ch3/s3-1.html" data-rel="ch3/s3-1.html">3.1 内存管理概念</a><a href="../ch3/s3-2.html" data-rel="ch3/s3-2.html">3.2 虚拟内存管理</a><a href="../ch3/s3-3.html" data-rel="ch3/s3-3.html">3.3 本章疑难点</a><a href="../ch3/quiz.html" quiz-link data-rel="ch3/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第4章</span> 文件管理</summary><div class="nav-links"><a href="../ch4/index.html" data-rel="ch4/index.html">📋 本章导学</a><a href="../ch4/s4-1.html" data-rel="ch4/s4-1.html">4.1 文件系统基础</a><a href="../ch4/s4-2.html" data-rel="ch4/s4-2.html">4.2 目录与文件</a><a href="../ch4/s4-3.html" data-rel="ch4/s4-3.html">4.3 文件系统</a><a href="../ch4/s4-4.html" data-rel="ch4/s4-4.html">4.4 本章疑难点</a><a href="../ch4/quiz.html" quiz-link data-rel="ch4/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">第5章</span> 输入/输出管理</summary><div class="nav-links"><a href="../ch5/index.html" data-rel="ch5/index.html">📋 本章导学</a><a href="../ch5/s5-1.html" data-rel="ch5/s5-1.html">5.1 I/O管理概述</a><a href="../ch5/s5-2.html" data-rel="ch5/s5-2.html">5.2 设备独立性软件</a><a href="../ch5/s5-3.html" data-rel="ch5/s5-3.html">5.3 磁盘和固态硬盘</a><a href="../ch5/s5-4.html" data-rel="ch5/s5-4.html">5.4 本章疑难点</a><a href="../ch5/quiz.html" quiz-link data-rel="ch5/quiz.html">✏️ 本章习题（选择+综合）</a></div></details>
+<details class="nav-group"><summary><span class="ch-no">工具</span> 复习工具箱</summary><div class="nav-links"><a href="../ref/exam-stats.html" data-rel="ref/exam-stats.html">📊 真题考点统计</a><a href="../ref/mixups.html" data-rel="ref/mixups.html">🤔 易混淆概念速查</a><a href="../ref/formulas.html" data-rel="ref/formulas.html">📐 公式与结论速查卡</a><a href="../ref/guide.html" data-rel="ref/guide.html">🧭 备考指南与资源</a></div></details>
 <div class="side-foot">基于王道《操作系统考研复习指导》整理<br>章节目录与教材书签一一对应</div>
 </aside>
 <div class="content-wrap">
@@ -117,24 +129,149 @@
 <button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
 <script>
 (function(){
-  var btn=document.querySelector('.menu-btn');
-  if(btn) btn.addEventListener('click',function(){document.body.classList.toggle('nav-open')});
-  var mask=document.querySelector('.sidebar-mask');
-  if(mask) mask.addEventListener('click',function(){document.body.classList.remove('nav-open')});
-  document.querySelectorAll('.sidebar a').forEach(function(a){
-    a.addEventListener('click',function(){document.body.classList.remove('nav-open')});
-  });
-  var bar=document.getElementById('readProgress');
-  var top=document.getElementById('toTop');
-  function onScroll(){
-    var h=document.documentElement;
-    var max=h.scrollHeight-h.clientHeight;
-    if(bar&&max>0) bar.style.width=(h.scrollTop/max*100)+'%';
-    if(top) top.classList.toggle('show',h.scrollTop>600);
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
-  if(top) top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+"use strict";
+function rel(url){var m=location.pathname.match(/kaoyan-408-os\/(.*)$/);var r=m?m[1]:url.split('/').slice(-2).join('/');return decodeURIComponent(r||'index.html');}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
+/* ---- 目录抽屉 ---- */
+var btn=document.querySelector('.menu-btn');
+if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('nav-open')});
+var mask=document.querySelector('.sidebar-mask');
+if(mask)mask.addEventListener('click',function(){document.body.classList.remove('nav-open')});
+document.querySelectorAll('.sidebar a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open')})});
+/* ---- 阅读进度条 + 返回顶部 ---- */
+var bar=document.getElementById('readProgress');
+var toTop=document.getElementById('toTop');
+function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+if(bar&&max>0)bar.style.width=(h.scrollTop/max*100)+'%';
+if(toTop)toTop.classList.toggle('show',h.scrollTop>600);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+if(toTop)toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+/* ---- 键盘翻页 ---- */
+document.addEventListener('keydown',function(e){
+if(e.target.matches('input,textarea,select')||e.metaKey||e.ctrlKey||e.altKey)return;
+var pager=document.querySelector('.pager');if(!pager)return;
+var as=pager.querySelectorAll('a');if(as.length<1)return;
+if(e.key==='ArrowRight'&&as[as.length-1])location.href=as[as.length-1].href;
+if(e.key==='ArrowLeft'&&as[0])location.href=as[0].href;
+});
+/* ---- 学习打卡 ---- */
+try{
+var KEY='os408-done';var cur=rel(location.href);
+var done=store(KEY)||{};var list=document.querySelectorAll('.sidebar a[data-rel]');
+function paint(){var done=store(KEY)||{};list.forEach(function(a){var r=a.getAttribute('data-rel');
+var mark=a.querySelector('.done-mark');
+if(done[r]&&!mark){var s=document.createElement('span');s.className='done-mark';s.textContent=' ✓';a.appendChild(s);}
+if(!done[r]&&mark)mark.remove();});}
+var host=document.querySelector('main article')||document.querySelector('main');
+if(host&&!/index\.html$/.test(location.href)||location.pathname.endsWith('quiz.html')){
+var b=document.createElement('button');b.className='done-btn';b.type='button';
+b.textContent=done[cur]?'✓ 本页已学完（点击取消）':'○ 标记本页已学完';
+b.addEventListener('click',function(){var d=store(KEY)||{};if(d[cur]){delete d[cur];b.textContent='○ 标记本页已学完';b.classList.remove('is-done');}
+else{d[cur]=1;b.textContent='✓ 本页已学完（点击取消）';b.classList.add('is-done');}
+store(KEY,d);paint();});
+if(done[cur])b.classList.add('is-done');
+host.appendChild(b);
+}
+paint();
+}catch(e){}
+/* ---- 选择题自测模式 ---- */
+try{
+if(document.querySelector('details.qa')){
+var qs=[];document.querySelectorAll('details.qa').forEach(function(d){
+var tag=d.querySelector('.answer-tag');if(!tag)return;
+var ans=(tag.textContent||'').replace(/\s+/g,'').match(/^答案：([A-D])$/);
+if(!ans)return;
+var p=d.previousElementSibling;
+while(p&&!(p.tagName==='P'&&/^[\s\S]*?A[.．、]/.test(p.textContent)))p=p.previousElementSibling;
+if(!p)return;
+var m=p.textContent.match(/A[.．、]([\s\S]*?)B[.．、]([\s\S]*?)C[.．、]([\s\S]*?)D[.．、]([\s\S]*)$/);
+if(!m)return;
+qs.push({d:d,p:p,ans:ans[1],opts:m});
+});
+if(qs.length){
+var host2=document.querySelector('main');
+var panel=document.createElement('div');panel.className='quiz-panel';
+panel.innerHTML='<div class="qp-row"><b>自测模式</b><span class="qp-stat" id="qpStat">点击选项即判分，进度自动保存</span><button type="button" class="qp-reset" id="qpReset">重置本页记录</button></div>';
+host2.insertBefore(panel,host2.firstChild);
+var KEY2='os408-quiz-'+cur;
+function stat(){var rec=store(KEY2)||{};var n=0,c=0;for(var k in rec){n++;c+=rec[k];}
+var el=document.getElementById('qpStat');
+if(el)el.textContent=n?('已作答 '+n+'/'+qs.length+' 题 · 正确 '+c+' 题 · 正确率 '+(n?Math.round(c/n*100):0)+'%'):'点击选项即判分，进度自动保存';}
+function bind(){
+var rec=store(KEY2)||{};
+qs.forEach(function(q,i){
+if(q._bound)return;q._bound=1;
+var box=document.createElement('div');box.className='opt-row';
+q.opts.slice(1).forEach(function(txt,j){
+var k='ABCD'[j];var bt=document.createElement('button');
+bt.type='button';bt.className='opt';bt.dataset.k=k;bt.textContent=k+'. '+txt.replace(/^\s+/,'');
+bt.addEventListener('click',function(){
+if(box.classList.contains('answered'))return;
+box.classList.add('answered');
+var ok=k===q.ans;
+bt.classList.add(ok?'right':'wrong');
+if(!ok)box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');});
+q.d.setAttribute('open','');
+var rec2=store(KEY2)||{};rec2[i]=ok?1:0;store(KEY2,rec2);stat();
+});
+box.appendChild(bt);
+});
+q.p.style.display='none';q.p.parentNode.insertBefore(box,q.p.nextSibling);
+if(rec[i]!==undefined){box.classList.add('answered');
+box.querySelectorAll('.opt').forEach(function(o){if(o.dataset.k===q.ans)o.classList.add('right');else if(o.textContent[0]&&!o.classList.contains('right'))o.classList.add('dim');});}
+});
+}
+var rs=document.getElementById('qpReset');
+if(rs)rs.addEventListener('click',function(){store(KEY2,{});location.reload();});
+stat();bind();
+}
+}
+}catch(e){}
+/* ---- 全站搜索 ---- */
+try{
+var sbox=document.getElementById('searchBox');
+var sbtn=document.getElementById('searchBtn');
+var ovl=document.getElementById('searchOverlay');
+var oin=document.getElementById('searchInput');
+var ores=document.getElementById('searchResults');
+var IDX=null;
+function root(){var m=location.pathname.match(/^(.*kaoyan-408-os\/)/);return m?m[1]:'/';}
+function load(cb){if(IDX)return cb();fetch(root()+'search-index.json').then(function(r){return r.json()}).then(function(d){IDX=d;cb();}).catch(function(){});}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function run(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){ores.innerHTML='<div class="sr-hint">输入关键词，如：银行家 / LRU / 快表 / 甘特图</div>';return;}
+var hits=[];
+IDX.forEach(function(it){
+var t=it.t.indexOf(q)>=0, x=it.x.indexOf(q)>=0;
+if(t||x){var pos=Math.max(0,it.x.indexOf(q)-30);
+hits.push({u:it.u,t:it.t,ctx:it.x.slice(pos,pos+70),score:(t?100:0)+(x?10:0)+ (it.t.indexOf('第')===0?0:5)});}
+});
+hits.sort(function(a,b){return b.score-a.score;});
+ores.innerHTML=hits.length?hits.slice(0,14).map(function(h){
+return '<a class="sr-item" href="'+root()+h.u+'"><b>'+esc(h.t)+'</b><span>'+esc(h.ctx)+'</span></a>';}).join('')
+:'<div class="sr-hint">没有匹配「'+esc(q)+'」的页面</div>';
+}
+function openOvl(){ovl.classList.add('show');setTimeout(function(){oin.focus();},50);}
+function closeOvl(){ovl.classList.remove('show');}
+if(sbtn)sbtn.addEventListener('click',function(){load(function(){openOvl();run(oin.value);});});
+if(sbox)sbox.addEventListener('focus',function(){load();});
+if(sbox)sbox.addEventListener('input',function(){var v=sbox.value;load(function(){dropShow(v);});});
+var drop=document.getElementById('searchDrop');
+function dropShow(q){
+if(!IDX||!q||q.replace(/\s/g,'').length<1){drop.classList.remove('show');return;}
+var hits=[];IDX.forEach(function(it){var t=it.t.indexOf(q)>=0,x=it.x.indexOf(q)>=0;if(t||x)hits.push({u:it.u,t:it.t,score:(t?100:0)+10});});
+hits.sort(function(a,b){return b.score-a.score;});
+if(!hits.length){drop.classList.remove('show');return;}
+drop.innerHTML=hits.slice(0,10).map(function(h){return '<a href="'+root()+h.u+'">'+esc(h.t)+'</a>';}).join('');
+drop.classList.add('show');
+}
+document.addEventListener('click',function(e){if(drop&&!drop.contains(e.target)&&e.target!==sbox)drop.classList.remove('show');});
+[oin].forEach(function(i){if(!i)return;
+i.addEventListener('input',function(){run(i.value);});
+i.addEventListener('keydown',function(e){if(e.key==='Escape')closeOvl();});});
+if(ovl){ovl.addEventListener('click',function(e){if(e.target===ovl)closeOvl();});
+var oc=document.getElementById('searchClose');if(oc)oc.addEventListener('click',closeOvl);}
+}catch(e){}
 })();
 </script>
 </body>
